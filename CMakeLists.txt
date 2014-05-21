@@ -24,7 +24,7 @@ pkg_check_modules(OOBS REQUIRED
 )
 
 add_subdirectory(lxqt-admin-time)
-# add_subdirectory(lxqt-admin-user)
+add_subdirectory(lxqt-admin-user)
 
 # building tarball with CPack -------------------------------------------------
 include (InstallRequiredSystemLibraries)
