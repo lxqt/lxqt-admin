@@ -22,17 +22,16 @@
 
 UserDialog::UserDialog(OobsUser *user):
     QDialog(),
+    mFullNameChanged(false),
+    mHomeDirChanged(false),
     mUser(user ? OOBS_USER(g_object_ref(user)) : NULL)
 {
     ui.setupUi(this);
-    
-    if(user)
-    {
-        ui.loginName->setReadOnly(true);
-        ui.passwordLabel->hide();
-        ui.password->hide();
-    }
+    connect(ui.loginName, SIGNAL(textChanged(QString)), SLOT(onLoginNameChanged(QString)));
+
     OobsUsersConfig* userConfig = OOBS_USERS_CONFIG(oobs_users_config_get());
+
+    // add known shells to the combo box for selection
     GList* shells = oobs_users_config_get_available_shells(userConfig);
     for(GList* l = shells; l; l = l->next)
     {
@@ -40,13 +39,23 @@ UserDialog::UserDialog(OobsUser *user):
         ui.loginShell->addItem(QLatin1String(shell));
     }
 
-    if(user)
+    if(user) // edit an existing user
     {
+      ui.loginName->setReadOnly(true);
+      ui.passwordLabel->hide();
+      ui.password->hide();
+
       ui.loginName->setText(oobs_user_get_login_name(user));
       ui.uid->setValue(oobs_user_get_uid(user));
       ui.fullName->setText(oobs_user_get_full_name(user));
       ui.loginShell->setEditText(oobs_user_get_shell(user));
       ui.homeDir->setText(QString::fromLocal8Bit(oobs_user_get_home_directory(user)));
+    }
+    else // create a new user
+    {
+        ui.loginName->setReadOnly(false);
+        ui.uid->setValue(oobs_users_config_find_free_uid(userConfig, 1000, 32768));
+	ui.loginShell->setEditText(oobs_users_config_get_default_shell(userConfig));
     }
     
 }
@@ -55,4 +64,31 @@ UserDialog::~UserDialog()
 {
     if(mUser)
         g_object_unref(mUser);
+}
+
+void UserDialog::onLoginNameChanged(const QString& text)
+{
+    if(!mFullNameChanged)
+    {
+        ui.fullName->blockSignals(true);
+        ui.fullName->setText(text);
+	ui.fullName->blockSignals(false);
+    }
+    
+    if(!mHomeDirChanged)
+    {
+        ui.homeDir->blockSignals(true);
+        ui.homeDir->setText("/home/" + text);
+	ui.homeDir->blockSignals(false);
+    }
+}
+
+void UserDialog::onFullNameChanged(const QString& text)
+{
+   mFullNameChanged = true;
+}
+
+void UserDialog::onHomeDirChanged(const QString& text)
+{
+    mHomeDirChanged = true;
 }

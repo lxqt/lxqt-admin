@@ -108,7 +108,13 @@ void MainDialog::onAddUser()
 
 void MainDialog::onDeleteUser()
 {
-
+    QTreeWidgetItem* item = ui.userList->currentItem();
+    OobsUser* user = userFromItem(item);
+    if(user)
+    {
+        if(QMessageBox::question(this, tr("Confirm"), tr("Are you sure you want to delete the user?"), QMessageBox::Ok|QMessageBox::Cancel) == QMessageBox::Ok)
+            oobs_users_config_delete_user(mUserConfig, user);
+    }
 }
 
 void MainDialog::onEditUser()
