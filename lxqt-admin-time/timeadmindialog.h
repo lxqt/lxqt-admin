@@ -22,6 +22,8 @@
 #define TIMEADMINDIALOG_H
 
 #include <QDialog>
+#include <glib.h>
+#include <oobs/oobs-timeconfig.h>
 
 namespace Ui
 {
@@ -32,11 +34,17 @@ class TimeAdminDialog : public QDialog
 {
     Q_OBJECT
 public:
-  TimeAdminDialog();
-  ~TimeAdminDialog();
+    TimeAdminDialog();
+    ~TimeAdminDialog();
+
+    virtual void accept();
+
+private:
+    void loadTimeZones();
 
 private:
     Ui::TimeAdminDialog* ui;
+    OobsTimeConfig* mConfig;
 };
 
 #endif // TIMEADMINDIALOG_H

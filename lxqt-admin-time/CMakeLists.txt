@@ -5,6 +5,7 @@ include_directories (
     ${QT_QTGUI_INCLUDE_DIR}
     ${LXQT_INCLUDE_DIRS}
     ${QTXDG_INCLUDE_DIRS}
+    ${OOBS_INCLUDE_DIRS}
 )
 
 set ( lxqt-admin-time_HDRS
@@ -48,7 +49,9 @@ target_link_libraries(lxqt-admin-time
     ${QT_QTCORE_LIBRARY}
     ${QT_QTGUI_LIBRARY}
     ${QTXDG_LIBRARIES}
-    ${LXQT_LIBRARIES})
+    ${LXQT_LIBRARIES}
+    ${OOBS_LIBRARIES}
+)
 
 install(TARGETS lxqt-admin-time RUNTIME DESTINATION bin)
 install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)

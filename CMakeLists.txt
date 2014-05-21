@@ -17,6 +17,12 @@ include(${LXQT_USE_FILE})
 find_package(QTXDG REQUIRED)
 include(${QTXDG_USE_FILE})
 
+find_package(PkgConfig)
+pkg_check_modules(OOBS REQUIRED
+  glib-2.0
+  liboobs-1
+)
+
 add_subdirectory(lxqt-admin-time)
 # add_subdirectory(lxqt-admin-user)
 

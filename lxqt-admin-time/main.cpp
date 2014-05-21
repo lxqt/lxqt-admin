@@ -35,5 +35,5 @@ int main(int argc, char **argv)
     TRANSLATE_APP;
     TimeAdminDialog dlg;
     dlg.exec();
-    return app.exec();
+    return 0;
 }
