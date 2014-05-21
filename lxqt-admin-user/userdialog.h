@@ -1,56 +1,48 @@
 /*
  * <one line to give the library's name and an idea of what it does.>
  * Copyright (C) 2014  <copyright holder> <email>
- * 
+ *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
  * License as published by the Free Software Foundation; either
  * version 2.1 of the License, or (at your option) any later version.
- * 
+ *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
- * 
+ *
  */
 
-#ifndef MAINDIALOG_H
-#define MAINDIALOG_H
+#ifndef USERDIALOG_H
+#define USERDIALOG_H
 
 #include <QDialog>
-#include "ui_maindialog.h"
-
+#include "ui_userdialog.h"
 #include <glib.h>
 #include <oobs/oobs-usersconfig.h>
 #include <oobs/oobs-groupsconfig.h>
 
-class MainDialog : public QDialog
+class UserDialog : public QDialog
 {
     Q_OBJECT
+
 public:
-    MainDialog();
-    ~MainDialog();
+    UserDialog(OobsUser* user = NULL);
+    ~UserDialog();
+
+    OobsUser* user()
+    {
+        return mUser;
+    }
 
 private:
-    void loadUsers();
-    static void onUsersConfigChanged(OobsObject* obj, MainDialog* _this);
-    OobsUser *userFromItem(QTreeWidgetItem* item);
-
-private Q_SLOTS:
-    void onAddUser();
-    void onDeleteUser();
-    void onChangePasswd();
-    void onEditUser();
-    void onManageGroups();
-    
-private:
-    Ui::MainDialog ui;
-    OobsUsersConfig* mUserConfig;
-    OobsGroupsConfig* mGroupConfig;
+    Ui::UserDialog ui;
+    OobsUser* mUser;
 };
 
-#endif // MAINDIALOG_H
+#endif // USERDIALOG_H

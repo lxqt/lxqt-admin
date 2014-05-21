@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>512</width>
-    <height>384</height>
+    <height>405</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -68,6 +68,13 @@
         </widget>
        </item>
        <item>
+        <widget class="QPushButton" name="changePasswd">
+         <property name="text">
+          <string>Change Password</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QPushButton" name="deleteUser">
          <property name="text">
           <string>Delete User</string>
@@ -97,6 +104,16 @@
       </layout>
      </item>
     </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="showSystemUsers">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Show system users (for advanced users only)</string>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QDialogButtonBox" name="buttonBox">

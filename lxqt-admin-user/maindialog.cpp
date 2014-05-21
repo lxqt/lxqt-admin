@@ -19,18 +19,23 @@
  */
 
 #include "maindialog.h"
-#include "ui_maindialog.h"
 #include <QDebug>
 #include <QMessageBox>
+#include "userdialog.h"
 
 MainDialog::MainDialog():
     QDialog(),
     mUserConfig(OOBS_USERS_CONFIG(oobs_users_config_get())),
     mGroupConfig(OOBS_GROUPS_CONFIG(oobs_groups_config_get()))
 {
-    ui = new Ui::MainDialog;
-    ui->setupUi(this);
+    ui.setupUi(this);
+    connect(ui.addUser, SIGNAL(clicked(bool)), SLOT(onAddUser()));
+    connect(ui.deleteUser, SIGNAL(clicked(bool)), SLOT(onDeleteUser()));
+    connect(ui.editUser, SIGNAL(clicked(bool)), SLOT(onEditUser()));
+    connect(ui.changePasswd, SIGNAL(clicked(bool)), SLOT(onChangePasswd()));
+    connect(ui.manageGroups, SIGNAL(clicked(bool)), SLOT(onManageGroups()));
 
+    // load user data
     oobs_object_update(OOBS_OBJECT(mUserConfig));
     oobs_object_update(OOBS_OBJECT(mGroupConfig));
     loadUsers();
@@ -46,12 +51,11 @@ MainDialog::~MainDialog()
     }
     if(mGroupConfig)
         g_object_unref(mGroupConfig);
-    delete ui;
 }
 
 void MainDialog::loadUsers()
 {
-    ui->userList->clear();
+    ui.userList->clear();
     OobsList* users = oobs_users_config_get_users(mUserConfig);
     if(users)
     {
@@ -61,16 +65,19 @@ void MainDialog::loadUsers()
         {
             GObject* obj = oobs_list_get(users, &it);
             OobsUser* user = OOBS_USER(obj);
-            if(!oobs_user_get_shell(user)) // FIXME: how can we exclude non-desktop users?
-                continue;
-            QString fullName = QString::fromUtf8(oobs_user_get_full_name(user));
-            QString loginName = QString::fromLatin1(oobs_user_get_login_name(user));
-            QTreeWidgetItem* item = new QTreeWidgetItem();
-            item->setData(0, Qt::DisplayRole, loginName);
-            item->setData(1, Qt::DisplayRole, fullName);
-            item->setData(2, Qt::DisplayRole, oobs_user_get_uid(user));
-            ui->userList->addTopLevelItem(item);
-
+            uid_t uid = oobs_user_get_uid(user);
+            if(uid > 499 && oobs_user_get_shell(user)) // exclude system users
+            {
+                QString fullName = QString::fromUtf8(oobs_user_get_full_name(user));
+                QString loginName = QString::fromLatin1(oobs_user_get_login_name(user));
+                QTreeWidgetItem* item = new QTreeWidgetItem();
+                item->setData(0, Qt::DisplayRole, loginName);
+                QVariant obj = qVariantFromValue<void*>(user);
+                item->setData(0, Qt::UserRole, obj);
+                item->setData(1, Qt::DisplayRole, fullName);
+                item->setData(2, Qt::DisplayRole, uid);
+                ui.userList->addTopLevelItem(item);
+            }
             valid = oobs_list_iter_next(users, &it);
         }
     }
@@ -80,4 +87,47 @@ void MainDialog::onUsersConfigChanged(OobsObject *obj, MainDialog *_this)
 {
     qDebug() << "changed";
     _this->loadUsers();
+}
+
+OobsUser *MainDialog::userFromItem(QTreeWidgetItem *item)
+{
+    if(item)
+    {
+        QVariant obj = item->data(0, Qt::UserRole);
+        OobsUser* user = OOBS_USER(qVariantValue<void*>(obj));
+        return user;
+    }
+    return NULL;
+}
+
+void MainDialog::onAddUser()
+{
+    UserDialog dlg;
+    dlg.exec();
+}
+
+void MainDialog::onDeleteUser()
+{
+
+}
+
+void MainDialog::onEditUser()
+{
+    QTreeWidgetItem* item = ui.userList->currentItem();
+    OobsUser* user = userFromItem(item);
+    if(user)
+    {
+        UserDialog dlg(user);
+        dlg.exec();
+    }
+}
+
+void MainDialog::onManageGroups()
+{
+
+}
+
+void MainDialog::onChangePasswd()
+{
+
 }

@@ -17,14 +17,17 @@ set ( lxqt-admin-user_HDRS
 set ( lxqt-admin-user_SRCS
     main.cpp
     maindialog.cpp
+    userdialog.cpp
 )
 
 set ( lxqt-admin-user_MOCS
     maindialog.h
+    userdialog.h
 )
 
 set( lxqt-admin-user_UIS
     maindialog.ui
+    userdialog.ui
 )
 
 qt4_wrap_cpp(MOCS ${lxqt-admin-user_MOCS})
