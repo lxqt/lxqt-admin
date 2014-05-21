@@ -19,32 +19,52 @@
  */
 
 #include "timeadmindialog.h"
-#include "ui_timeadmindialog.h"
 #include <QFile>
 #include <QDebug>
 #include <QMessageBox>
+#include <QTimer>
 
 #define ZONETAB_PATH     "/usr/share/zoneinfo/zone.tab"
 
 TimeAdminDialog::TimeAdminDialog():
     QDialog(),
-    mConfig(OOBS_TIME_CONFIG(oobs_time_config_get()))
+    mChangeTime(false),
+    mTimeConfig(OOBS_TIME_CONFIG(oobs_time_config_get()))
 {
-    ui = new Ui::TimeAdminDialog;
-    ui->setupUi(this);
+    ui.setupUi(this);
 
+    oobs_object_update(OOBS_OBJECT(mTimeConfig));
     loadTimeZones();
 
-    ui->time->setTime(QTime::currentTime());
-    ui->calendar->showToday();
+    mTimer = new QTimer();
+    connect(mTimer, SIGNAL(timeout()), SLOT(updateTime()));
+    mTimer->start(1000);
+    updateTime();
+    ui.calendar->showToday();
 
+    connect(ui.time, SIGNAL(timeChanged(QTime)), SLOT(onTimeChanged()));
 }
 
 TimeAdminDialog::~TimeAdminDialog()
 {
-    if(mConfig)
-        g_object_unref(mConfig);
-    delete ui;
+    if(mTimeConfig)
+        g_object_unref(mTimeConfig);
+    delete mTimer;
+}
+
+void TimeAdminDialog::onTimeChanged()
+{
+    // stop the timer if the time is changed by the user
+    mTimer->stop();
+    mChangeTime = true;
+}
+
+void TimeAdminDialog::updateTime()
+{
+    // do not emit timeChanged() signal
+    ui.time->blockSignals(true);
+    ui.time->setTime(QTime::currentTime());
+    ui.time->blockSignals(false);
 }
 
 void TimeAdminDialog::loadTimeZones()
@@ -67,30 +87,33 @@ void TimeAdminDialog::loadTimeZones()
         file.close();
     }
     timeZones.sort();
-    ui->timeZone->addItems(timeZones);
+    ui.timeZone->addItems(timeZones);
     
     int sel = -1;
-    const char* currentTimeZone = oobs_time_config_get_timezone(mConfig);
+    const char* currentTimeZone = oobs_time_config_get_timezone(mTimeConfig);
     if(currentTimeZone)
         sel = timeZones.indexOf(QLatin1String(currentTimeZone));
-    ui->timeZone->setCurrentIndex(sel);
+    ui.timeZone->setCurrentIndex(sel);
 }
 
 void TimeAdminDialog::accept()
 {
     // relly apply the settings
     GError* err = NULL;
-    if(oobs_object_authenticate(OOBS_OBJECT(mConfig), &err))
+    if(oobs_object_authenticate(OOBS_OBJECT(mTimeConfig), &err))
     {
-        QByteArray timeZone = ui->timeZone->currentText().toLatin1();
+        QByteArray timeZone = ui.timeZone->currentText().toLatin1();
         // FIXME: currently timezone settings does not work. is this a bug of system-tools-backend?
         if(!timeZone.isEmpty())
-            oobs_time_config_set_timezone(mConfig, timeZone.constData());
-        QTime t = ui->time->time();
-        QDate d = ui->calendar->selectedDate();
-        // oobs seesm to use 0 based month
-        oobs_time_config_set_time(mConfig, d.year(), d.month() - 1, d.day(), t.hour(), t.minute(), t.second());
-        oobs_object_commit(OOBS_OBJECT(mConfig));
+            oobs_time_config_set_timezone(mTimeConfig, timeZone.constData());
+        QDate d = ui.calendar->selectedDate();
+        if(mChangeTime)
+        {
+            QTime t = ui.time->time();
+            // oobs seesm to use 0 based month
+            oobs_time_config_set_time(mTimeConfig, d.year(), d.month() - 1, d.day(), t.hour(), t.minute(), t.second());
+        }
+        oobs_object_commit(OOBS_OBJECT(mTimeConfig));
     }
     else if(err)
     {

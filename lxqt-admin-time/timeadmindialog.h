@@ -24,11 +24,9 @@
 #include <QDialog>
 #include <glib.h>
 #include <oobs/oobs-timeconfig.h>
+#include "ui_timeadmindialog.h"
 
-namespace Ui
-{
-class TimeAdminDialog;
-}
+class QTimer;
 
 class TimeAdminDialog : public QDialog
 {
@@ -39,12 +37,18 @@ public:
 
     virtual void accept();
 
+private Q_SLOTS:
+    void updateTime();
+    void onTimeChanged();
+    
 private:
     void loadTimeZones();
 
 private:
-    Ui::TimeAdminDialog* ui;
-    OobsTimeConfig* mConfig;
+    Ui::TimeAdminDialog ui;
+    OobsTimeConfig* mTimeConfig;
+    QTimer* mTimer;
+    bool mChangeTime;
 };
 
 #endif // TIMEADMINDIALOG_H

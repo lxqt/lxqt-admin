@@ -14,6 +14,16 @@
    <string>Time and Date Settings</string>
   </property>
   <layout class="QFormLayout" name="formLayout">
+   <property name="fieldGrowthPolicy">
+    <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+   </property>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Set current date and time</string>
+     </property>
+    </widget>
+   </item>
    <item row="1" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
@@ -34,7 +44,7 @@
    <item row="2" column="1">
     <widget class="QTimeEdit" name="time">
      <property name="displayFormat">
-      <string>h:mm:ss AP</string>
+      <string>hh:mm:ss AP</string>
      </property>
     </widget>
    </item>
@@ -45,13 +55,6 @@
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="standardButtons">
       <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="0" colspan="2">
-    <widget class="QLabel" name="label_3">
-     <property name="text">
-      <string>Set current date and time</string>
      </property>
     </widget>
    </item>
