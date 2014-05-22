@@ -22,6 +22,7 @@
 #include <QDebug>
 #include <QMessageBox>
 #include "userdialog.h"
+#include "groupmanagerdialog.h"
 
 MainDialog::MainDialog():
     QDialog(),
@@ -130,7 +131,8 @@ void MainDialog::onEditUser()
 
 void MainDialog::onManageGroups()
 {
-
+    GroupManagerDialog dlg;
+    dlg.exec();
 }
 
 void MainDialog::onChangePasswd()

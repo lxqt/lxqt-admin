@@ -1,90 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainDialog</class>
- <widget class="QDialog" name="MainDialog">
+ <class>GroupDialog</class>
+ <widget class="QDialog" name="GroupDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>512</width>
-    <height>405</height>
+    <width>480</width>
+    <height>360</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>User and Group Settings</string>
+   <string>Manage Groups</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
-    <widget class="QLabel" name="label_3">
-     <property name="text">
-      <string>Manage users and groups</string>
-     </property>
-    </widget>
-   </item>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="QTreeWidget" name="userList">
+      <widget class="QTreeWidget" name="groupList">
        <property name="rootIsDecorated">
         <bool>false</bool>
        </property>
        <property name="itemsExpandable">
         <bool>false</bool>
        </property>
-       <attribute name="headerStretchLastSection">
-        <bool>false</bool>
-       </attribute>
        <column>
         <property name="text">
-         <string>Login Name</string>
+         <string>Name</string>
         </property>
        </column>
        <column>
         <property name="text">
-         <string>Full Name</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>UID</string>
+         <string>Group ID</string>
         </property>
        </column>
       </widget>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
+      <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QPushButton" name="addUser">
+        <widget class="QPushButton" name="addGroup">
          <property name="text">
-          <string>&amp;Add User</string>
+          <string>&amp;Add Group</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="editUser">
+        <widget class="QPushButton" name="editGroup">
          <property name="text">
-          <string>&amp;Edit User</string>
+          <string>&amp;Edit Group</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="changePasswd">
+        <widget class="QPushButton" name="deleteGroup">
          <property name="text">
-          <string>Change Password</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="deleteUser">
-         <property name="text">
-          <string>&amp;Delete User</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="manageGroups">
-         <property name="text">
-          <string>Manage Groups</string>
+          <string>&amp;Delete Group</string>
          </property>
         </widget>
        </item>
@@ -106,19 +77,12 @@
     </layout>
    </item>
    <item>
-    <widget class="QCheckBox" name="showSystemUsers">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string>Show system users (for advanced users only)</string>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
      <property name="standardButtons">
-      <set>QDialogButtonBox::Close</set>
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
      </property>
     </widget>
    </item>
@@ -129,32 +93,32 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>MainDialog</receiver>
+   <receiver>GroupDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>174</x>
-     <y>285</y>
+     <x>248</x>
+     <y>254</y>
     </hint>
     <hint type="destinationlabel">
-     <x>1</x>
-     <y>228</y>
+     <x>157</x>
+     <y>274</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>MainDialog</receiver>
+   <receiver>GroupDialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>278</x>
-     <y>285</y>
+     <x>316</x>
+     <y>260</y>
     </hint>
     <hint type="destinationlabel">
-     <x>311</x>
-     <y>272</y>
+     <x>286</x>
+     <y>274</y>
     </hint>
    </hints>
   </connection>

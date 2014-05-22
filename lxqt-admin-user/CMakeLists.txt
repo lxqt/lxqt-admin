@@ -18,15 +18,18 @@ set ( lxqt-admin-user_SRCS
     main.cpp
     maindialog.cpp
     userdialog.cpp
+    groupmanagerdialog.cpp
 )
 
 set ( lxqt-admin-user_MOCS
     maindialog.h
     userdialog.h
+    groupmanagerdialog.h
 )
 
 set( lxqt-admin-user_UIS
     maindialog.ui
+    groupmanagerdialog.ui
     userdialog.ui
 )
 
