@@ -16,20 +16,17 @@ set ( lxqt-admin-user_HDRS
 
 set ( lxqt-admin-user_SRCS
     main.cpp
-    maindialog.cpp
+    mainwindow.cpp
     userdialog.cpp
-    groupmanagerdialog.cpp
 )
 
 set ( lxqt-admin-user_MOCS
-    maindialog.h
+    mainwindow.h
     userdialog.h
-    groupmanagerdialog.h
 )
 
 set( lxqt-admin-user_UIS
-    maindialog.ui
-    groupmanagerdialog.ui
+    mainwindow.ui
     userdialog.ui
 )
 

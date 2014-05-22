@@ -32,7 +32,7 @@ class UserDialog : public QDialog
     Q_OBJECT
 
 public:
-    UserDialog(OobsUser* user = NULL);
+    UserDialog(OobsUser* user = NULL, QWidget* parent = NULL);
     ~UserDialog();
 
     OobsUser* user()

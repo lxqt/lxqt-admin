@@ -18,39 +18,48 @@
  * 
  */
 
-#ifndef MAINDIALOG_H
-#define MAINDIALOG_H
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
-#include <QDialog>
-#include "ui_maindialog.h"
+#include <QMainWindow>
+#include "ui_mainwindow.h"
 
 #include <glib.h>
 #include <oobs/oobs-usersconfig.h>
 #include <oobs/oobs-groupsconfig.h>
 
-class MainDialog : public QDialog
+class MainWindow : public QMainWindow
 {
     Q_OBJECT
+
 public:
-    MainDialog();
-    ~MainDialog();
+  enum
+  {
+      PageUsers = 0,
+      PageGroups
+  };
+    
+public:
+    explicit MainWindow();
+    virtual ~MainWindow();
 
 private:
     void loadUsers();
-    static void onUsersConfigChanged(OobsObject* obj, MainDialog* _this);
-    OobsUser *userFromItem(QTreeWidgetItem* item);
+    void loadGroups();
+    static void onUsersConfigChanged(OobsObject* obj, MainWindow* _this);
+    OobsUser* userFromItem(QTreeWidgetItem* item);
+    OobsGroup* groupFromItem(QTreeWidgetItem *item);
 
 private Q_SLOTS:
-    void onAddUser();
-    void onDeleteUser();
-    void onChangePasswd();
-    void onEditUser();
-    void onManageGroups();
+    void onAdd();
+    void onDelete();
+    void onEditProperties();
+    void onRefresh();
     
 private:
-    Ui::MainDialog ui;
-    OobsUsersConfig* mUserConfig;
-    OobsGroupsConfig* mGroupConfig;
+    Ui::MainWindow ui;
+    OobsUsersConfig* mUsersConfig;
+    OobsGroupsConfig* mGroupsConfig;
 };
 
-#endif // MAINDIALOG_H
+#endif // MAINWINDOW_H

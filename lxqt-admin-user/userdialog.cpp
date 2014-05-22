@@ -20,7 +20,7 @@
 
 #include "userdialog.h"
 
-UserDialog::UserDialog(OobsUser *user):
+UserDialog::UserDialog(OobsUser* user, QWidget* parent):
     QDialog(),
     mFullNameChanged(false),
     mHomeDirChanged(false),

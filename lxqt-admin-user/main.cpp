@@ -27,13 +27,13 @@
 
 #include <lxqt/lxqtapplication.h>
 #include "lxqttranslate.h"
-#include "maindialog.h"
+#include "mainwindow.h"
 
 int main(int argc, char **argv)
 {
     LxQt::Application app(argc, argv);
     TRANSLATE_APP;
-    MainDialog dlg;
-    dlg.exec();
-    return 0;
+    MainWindow window;
+    window.show();
+    return app.exec();
 }
