@@ -18,16 +18,19 @@ set ( lxqt-admin-user_SRCS
     main.cpp
     mainwindow.cpp
     userdialog.cpp
+    groupdialog.cpp
 )
 
 set ( lxqt-admin-user_MOCS
     mainwindow.h
     userdialog.h
+    groupdialog.h
 )
 
 set( lxqt-admin-user_UIS
     mainwindow.ui
     userdialog.ui
+    groupdialog.ui
 )
 
 qt4_wrap_cpp(MOCS ${lxqt-admin-user_MOCS})

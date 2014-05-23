@@ -46,10 +46,22 @@ public:
 private:
     void loadUsers();
     void loadGroups();
-    static void onUsersConfigChanged(OobsObject* obj, MainWindow* _this);
     OobsUser* userFromItem(QTreeWidgetItem* item);
     OobsGroup* groupFromItem(QTreeWidgetItem *item);
 
+    template <class T>
+    bool authenticate(T* obj);
+
+    static void onUsersConfigChanged(OobsObject* obj, MainWindow* _this)
+    {
+        _this->loadUsers();
+    }
+    
+    static void onGroupsConfigChanged(OobsObject* obj, MainWindow* _this)
+    {
+        _this->loadGroups();
+    }
+    
 private Q_SLOTS:
     void onAdd();
     void onDelete();

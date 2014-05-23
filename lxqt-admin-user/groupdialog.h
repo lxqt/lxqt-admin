@@ -18,48 +18,34 @@
  *
  */
 
-#ifndef USERDIALOG_H
-#define USERDIALOG_H
+#ifndef GROUPDIALOG_H
+#define GROUPDIALOG_H
 
 #include <QDialog>
-#include "ui_userdialog.h"
+#include "ui_groupdialog.h"
 #include <glib.h>
 #include <oobs/oobs-usersconfig.h>
 #include <oobs/oobs-groupsconfig.h>
 
-class UserDialog : public QDialog
+class GroupDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    UserDialog(OobsUser* user = NULL, QWidget* parent = NULL);
-    ~UserDialog();
-
-    OobsUser* user()
+    GroupDialog(OobsGroup* group = NULL, QWidget *parent = NULL, Qt::WindowFlags f = 0);
+    ~GroupDialog();
+    
+    OobsGroup* group()
     {
-        return mUser;
+        return mGroup;
     }
-
+    
     virtual void accept();
-
-private Q_SLOTS:
-    void onLoginNameChanged(const QString& text);
-    void onFullNameChanged(const QString& text);
-    void onHomeDirChanged(const QString& text);
     
 private:
-    Ui::UserDialog ui;
-    OobsUser* mUser;
-    uid_t mOldUid;
-#if 0
-    QByteArray mOldLoginName;
-    QByteArray mOldFullName;
-    QByteArray mOldGroupName;
-    QByteArray mOldHomeDir;
-#endif
-
-    bool mFullNameChanged;
-    bool mHomeDirChanged;
+    Ui::GroupDialog ui;
+    OobsGroup* mGroup;
+    gid_t mOldGId;
 };
 
-#endif // USERDIALOG_H
+#endif // GROUPDIALOG_H

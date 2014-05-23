@@ -19,6 +19,7 @@
  */
 
 #include "userdialog.h"
+#include <QMessageBox>
 
 UserDialog::UserDialog(OobsUser* user, QWidget* parent):
     QDialog(),
@@ -41,21 +42,25 @@ UserDialog::UserDialog(OobsUser* user, QWidget* parent):
 
     if(user) // edit an existing user
     {
-      ui.loginName->setReadOnly(true);
-      ui.passwordLabel->hide();
-      ui.password->hide();
-
-      ui.loginName->setText(oobs_user_get_login_name(user));
-      ui.uid->setValue(oobs_user_get_uid(user));
-      ui.fullName->setText(oobs_user_get_full_name(user));
-      ui.loginShell->setEditText(oobs_user_get_shell(user));
-      ui.homeDir->setText(QString::fromLocal8Bit(oobs_user_get_home_directory(user)));
+        mOldUid = oobs_user_get_uid(user);
+        ui.loginName->setReadOnly(true);
+        ui.loginName->setText(oobs_user_get_login_name(user));
+        ui.changePasswd->setText(tr("Change password:"));
+        ui.uid->setValue(mOldUid);
+        ui.fullName->setText(oobs_user_get_full_name(user));
+        ui.loginShell->setEditText(oobs_user_get_shell(user));
+        ui.homeDir->setText(QString::fromLocal8Bit(oobs_user_get_home_directory(user)));
+        
+        OobsGroup* group = oobs_user_get_main_group(user);
+        ui.mainGroup->setEditText(oobs_group_get_name(group));
     }
     else // create a new user
     {
+        mOldUid = -1;
         ui.loginName->setReadOnly(false);
+        ui.changePasswd->setChecked(true);
         ui.uid->setValue(oobs_users_config_find_free_uid(userConfig, 1000, 32768));
-	ui.loginShell->setEditText(oobs_users_config_get_default_shell(userConfig));
+        ui.loginShell->setEditText(oobs_users_config_get_default_shell(userConfig));
     }
     
 }
@@ -72,14 +77,14 @@ void UserDialog::onLoginNameChanged(const QString& text)
     {
         ui.fullName->blockSignals(true);
         ui.fullName->setText(text);
-	ui.fullName->blockSignals(false);
+        ui.fullName->blockSignals(false);
     }
     
     if(!mHomeDirChanged)
     {
         ui.homeDir->blockSignals(true);
         ui.homeDir->setText("/home/" + text);
-	ui.homeDir->blockSignals(false);
+        ui.homeDir->blockSignals(false);
     }
 }
 
@@ -91,4 +96,65 @@ void UserDialog::onFullNameChanged(const QString& text)
 void UserDialog::onHomeDirChanged(const QString& text)
 {
     mHomeDirChanged = true;
+}
+
+void UserDialog::accept()
+{
+    OobsUsersConfig* usersConfig = OOBS_USERS_CONFIG(oobs_users_config_get());
+    uid_t uid = ui.uid->value();
+    if(uid != mOldUid && oobs_users_config_is_uid_used(usersConfig, uid))
+    {
+        QMessageBox::critical(this, tr("Error"), tr("The user ID is in use."));
+        return;
+    }
+
+    bool createNew;
+    if(mUser)
+        createNew = false;
+    else
+    {
+        createNew = true;
+        QByteArray loginName = ui.loginName->text().toLatin1();
+        if(loginName.isEmpty())
+        {
+            QMessageBox::critical(this, tr("Error"), tr("The user name cannot be empty."));
+            return;
+        }
+        if(oobs_users_config_is_login_used(usersConfig, loginName))
+        {
+            QMessageBox::critical(this, tr("Error"), tr("The user name is in use."));
+            return;
+        }
+        mUser = oobs_user_new(loginName);
+    }
+    oobs_user_set_uid(mUser, uid);
+
+    QByteArray fullName = ui.fullName->text().toUtf8();
+    oobs_user_set_full_name(mUser, fullName);
+
+    // change password
+    if(ui.changePasswd->isChecked())
+    {
+        QByteArray passwd = ui.passwd->text().toLatin1();
+        if(passwd.isEmpty()) // show warnings if the password is empty
+        {
+            if(QMessageBox::warning(this, tr("Confirm"), tr("Are you sure you want to use an \"empty password\" for the user?"), QMessageBox::Yes|QMessageBox::No) == QMessageBox::Yes)
+                oobs_user_set_password_empty(mUser, true);
+        }
+        else
+            oobs_user_set_password(mUser, passwd);
+    }
+
+    QByteArray homeDir = ui.homeDir->text().toLocal8Bit();
+    oobs_user_set_home_directory(mUser, homeDir);
+
+    // main group
+    OobsGroupsConfig* groupsConfig = OOBS_GROUPS_CONFIG(oobs_groups_config_get());
+    QByteArray groupName = ui.mainGroup->currentText().toLatin1();
+    OobsGroup* group = oobs_groups_config_get_from_name(groupsConfig, groupName);
+    oobs_user_set_main_group(mUser, group);
+
+    if(!createNew)
+        oobs_object_commit_async(OOBS_OBJECT(mUser), NULL, NULL);
+    QDialog::accept();
 }

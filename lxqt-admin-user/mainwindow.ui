@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>572</width>
-    <height>460</height>
+    <width>640</width>
+    <height>480</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,6 +39,9 @@
           <property name="itemsExpandable">
            <bool>false</bool>
           </property>
+          <property name="expandsOnDoubleClick">
+           <bool>false</bool>
+          </property>
           <attribute name="headerStretchLastSection">
            <bool>false</bool>
           </attribute>
@@ -49,12 +52,22 @@
           </column>
           <column>
            <property name="text">
+            <string>User ID</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
             <string>Full Name</string>
            </property>
           </column>
           <column>
            <property name="text">
-            <string>UID</string>
+            <string>Group</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Home Directory</string>
            </property>
           </column>
          </widget>
@@ -126,37 +139,54 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionAdd">
    <property name="icon">
-    <iconset theme="list-add"/>
+    <iconset theme="list-add">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>Add</string>
    </property>
    <property name="toolTip">
-    <string>Add</string>
+    <string>Add new users or groups</string>
    </property>
   </action>
   <action name="actionDelete">
    <property name="icon">
-    <iconset theme="list-remove"/>
+    <iconset theme="list-remove">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>Delete</string>
    </property>
+   <property name="toolTip">
+    <string>Delete selected item</string>
+   </property>
   </action>
   <action name="actionProperties">
    <property name="icon">
-    <iconset theme="document-properties"/>
+    <iconset theme="document-properties">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>Properties</string>
    </property>
+   <property name="toolTip">
+    <string>edit properties of the selected item</string>
+   </property>
   </action>
   <action name="actionRefresh">
    <property name="icon">
-    <iconset theme="view-refresh"/>
+    <iconset theme="view-refresh">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>Refresh</string>
+   </property>
+   <property name="toolTip">
+    <string>Refresh the lists</string>
    </property>
   </action>
  </widget>
