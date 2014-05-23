@@ -28,6 +28,22 @@ UserDialog::UserDialog(OobsUser* user, QWidget* parent):
     mUser(user ? OOBS_USER(g_object_ref(user)) : NULL)
 {
     ui.setupUi(this);
+
+    // load all groups
+    OobsGroupsConfig* groupsConfig = OOBS_GROUPS_CONFIG(oobs_groups_config_get());
+    OobsList* groups = oobs_groups_config_get_groups(groupsConfig);
+    if(groups)
+    {
+        OobsListIter it;
+        gboolean valid = oobs_list_get_iter_first(groups, &it);
+        while(valid)
+        {
+            OobsGroup* group = OOBS_GROUP(oobs_list_get(groups, &it));
+            ui.mainGroup->addItem(oobs_group_get_name(group));
+            valid = oobs_list_iter_next(groups, &it);
+        }
+    }
+
     connect(ui.loginName, SIGNAL(textChanged(QString)), SLOT(onLoginNameChanged(QString)));
 
     OobsUsersConfig* userConfig = OOBS_USERS_CONFIG(oobs_users_config_get());
@@ -58,9 +74,11 @@ UserDialog::UserDialog(OobsUser* user, QWidget* parent):
     {
         mOldUid = -1;
         ui.loginName->setReadOnly(false);
+        ui.loginName->setFocus();
         ui.changePasswd->setChecked(true);
         ui.uid->setValue(oobs_users_config_find_free_uid(userConfig, 1000, 32768));
         ui.loginShell->setEditText(oobs_users_config_get_default_shell(userConfig));
+        ui.mainGroup->setCurrentIndex(-1);
     }
     
 }

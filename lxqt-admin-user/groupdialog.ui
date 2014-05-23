@@ -46,7 +46,7 @@
     </widget>
    </item>
    <item row="3" column="0" colspan="2">
-    <widget class="QListWidget" name="listWidget">
+    <widget class="QListWidget" name="userList">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
        <horstretch>0</horstretch>

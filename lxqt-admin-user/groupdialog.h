@@ -43,6 +43,9 @@ public:
     virtual void accept();
     
 private:
+    bool hasUser(OobsUser* user);
+
+private:
     Ui::GroupDialog ui;
     OobsGroup* mGroup;
     gid_t mOldGId;

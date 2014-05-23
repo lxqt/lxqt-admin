@@ -40,6 +40,32 @@ GroupDialog::GroupDialog(OobsGroup *group, QWidget *parent, Qt::WindowFlags f):
         mOldGId = -1;
         ui.gid->setValue(oobs_groups_config_find_free_gid(groupsConfig, 0, 32768));
     }
+
+    GList* groupUsers = oobs_group_get_users(mGroup); // all users in this group
+    // load all users
+    OobsUsersConfig* usersConfig = OOBS_USERS_CONFIG(oobs_users_config_get());
+    OobsList* users = oobs_users_config_get_users(usersConfig);
+    if(users)
+    {
+        OobsListIter it;
+        gboolean valid = oobs_list_get_iter_first(users, &it);
+        while(valid)
+        {
+            OobsUser* user = OOBS_USER(oobs_list_get(users, &it));
+            QListWidgetItem* item = new QListWidgetItem();
+            item->setText(oobs_user_get_login_name(user));
+            item->setFlags(Qt::ItemIsEnabled|Qt::ItemIsUserCheckable|Qt::ItemIsSelectable);
+            if(g_list_find(groupUsers, user)) // the user is in this group
+                item->setCheckState(Qt::Checked);
+            else
+                item->setCheckState(Qt::Unchecked);
+            QVariant obj = qVariantFromValue<void*>(user);
+            item->setData(Qt::UserRole, obj);
+            ui.userList->addItem(item);
+            valid = oobs_list_iter_next(users, &it);
+        }
+    }
+    g_list_free(groupUsers);
 }
 
 GroupDialog::~GroupDialog()
@@ -57,6 +83,7 @@ void GroupDialog::accept()
         QMessageBox::critical(this, tr("Error"), tr("The group ID is in use."));
         return;
     }
+
     if(!mGroup) // create a new group
     {
         QByteArray groupName = ui.groupName->text().toLatin1();
@@ -73,6 +100,28 @@ void GroupDialog::accept()
         mGroup = oobs_group_new(groupName);
     }
     oobs_group_set_gid(mGroup, gid);
+    
+    // update users
+    GList* groupUsers = oobs_group_get_users(mGroup); // all users in this group
+    int rowCount = ui.userList->count();
+    for(int row = 0; row < rowCount; ++row)
+    {
+        QListWidgetItem* item = ui.userList->item(row);
+        QVariant obj = item->data(Qt::UserRole);
+        OobsUser* user = OOBS_USER(qVariantValue<void*>(obj));
+        if(g_list_find(groupUsers, user)) // the user belongs to this group previously
+        {
+            if(item->checkState() == Qt::Unchecked) // it's unchecked, remove it
+                oobs_group_remove_user(mGroup, user);
+        }
+        else // the user does not belong to this group previously
+        {
+            if(item->checkState() == Qt::Checked) // it's checked, we want it!
+                oobs_group_add_user(mGroup, user);
+        }
+    }
+    g_list_free(groupUsers);
+
     oobs_object_commit(OOBS_OBJECT(mGroup));
     QDialog::accept();
 }
