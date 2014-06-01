@@ -27,8 +27,13 @@ set( lxqt-admin-time_UIS
     timeadmindialog.ui
 )
 
-qt4_wrap_cpp(MOCS ${lxqt-admin-time_MOCS})
-qt4_wrap_ui(UIS ${lxqt-admin-time_UIS})
+if(USE_QT4)
+	qt4_wrap_cpp(MOCS ${lxqt-admin-time_MOCS})
+	qt4_wrap_ui(UIS ${lxqt-admin-time_UIS})
+elseif(USE_QT5)
+	qt5_wrap_cpp(MOCS ${lxqt-admin-time_MOCS})
+	qt5_wrap_ui(UIS ${lxqt-admin-time_UIS})
+endif()
 
 # Translations **********************************
 include(LxQtTranslate)
@@ -50,9 +55,7 @@ lxqt_translate_desktop(DESKTOP_FILES
 add_executable(lxqt-admin-time ${lxqt-admin-time_SRCS} ${UIS} ${MOCS} ${DESKTOP_FILES} ${lxqt-admin-time_QM_FILES})
 
 target_link_libraries(lxqt-admin-time
-    ${QT_QTCORE_LIBRARY}
-    ${QT_QTGUI_LIBRARY}
-    ${QTXDG_LIBRARIES}
+    ${QTX_LIBRARIES}
     ${LXQT_LIBRARIES}
     ${OOBS_LIBRARIES}
 )

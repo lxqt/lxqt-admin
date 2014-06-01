@@ -33,8 +33,13 @@ set( lxqt-admin-user_UIS
     groupdialog.ui
 )
 
-qt4_wrap_cpp(MOCS ${lxqt-admin-user_MOCS})
-qt4_wrap_ui(UIS ${lxqt-admin-user_UIS})
+if(USE_QT4)
+	qt4_wrap_cpp(MOCS ${lxqt-admin-user_MOCS})
+	qt4_wrap_ui(UIS ${lxqt-admin-user_UIS})
+elseif(USE_QT5)
+	qt5_wrap_cpp(MOCS ${lxqt-admin-user_MOCS})
+	qt5_wrap_ui(UIS ${lxqt-admin-user_UIS})
+endif()
 
 # Translations **********************************
 include(LxQtTranslate)
@@ -56,9 +61,7 @@ lxqt_translate_desktop(DESKTOP_FILES
 add_executable(lxqt-admin-user ${lxqt-admin-user_SRCS} ${UIS} ${MOCS} ${DESKTOP_FILES} ${lxqt-admin-user_QM_FILES})
 
 target_link_libraries(lxqt-admin-user
-    ${QT_QTCORE_LIBRARY}
-    ${QT_QTGUI_LIBRARY}
-    ${QTXDG_LIBRARIES}
+    ${QTX_LIBRARIES}
     ${LXQT_LIBRARIES}
     ${OOBS_LIBRARIES}
 )

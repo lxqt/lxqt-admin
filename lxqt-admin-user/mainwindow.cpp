@@ -77,7 +77,11 @@ void MainWindow::loadUsers()
 
                 QTreeWidgetItem* item = new QTreeWidgetItem();
                 item->setData(0, Qt::DisplayRole, loginName);
+#if QT_VESION >= QT_VERSION_CHECK(5, 0, 0)
+                QVariant obj = QVariant::fromValue<void*>(user);
+#else
                 QVariant obj = qVariantFromValue<void*>(user);
+#endif
                 item->setData(0, Qt::UserRole, obj);
                 item->setData(1, Qt::DisplayRole, uid);
                 item->setData(2, Qt::DisplayRole, fullName);
@@ -104,7 +108,11 @@ void MainWindow::loadGroups()
             OobsGroup* group = OOBS_GROUP(oobs_list_get(groups, &it));
             QTreeWidgetItem* item = new QTreeWidgetItem();
             item->setData(0, Qt::DisplayRole, QString::fromLatin1(oobs_group_get_name(group)));
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+            QVariant obj = QVariant::fromValue<void*>(group);
+#else
             QVariant obj = qVariantFromValue<void*>(group);
+#endif
             item->setData(0, Qt::UserRole, obj);
             item->setData(1, Qt::DisplayRole, oobs_group_get_gid(group));
             ui.groupList->addTopLevelItem(item);
@@ -118,7 +126,11 @@ OobsUser *MainWindow::userFromItem(QTreeWidgetItem *item)
     if(item)
     {
         QVariant obj = item->data(0, Qt::UserRole);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+        OobsUser* user = OOBS_USER(obj.value<void*>());
+#else
         OobsUser* user = OOBS_USER(qVariantValue<void*>(obj));
+#endif
         return user;
     }
     return NULL;
@@ -129,7 +141,11 @@ OobsGroup* MainWindow::groupFromItem(QTreeWidgetItem *item)
     if(item)
     {
         QVariant obj = item->data(0, Qt::UserRole);
+#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
+        return OOBS_GROUP(obj.value<void*>());
+#else
         return OOBS_GROUP(qVariantValue<void*>(obj));
+#endif
     }
     return NULL;
 }
