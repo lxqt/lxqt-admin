@@ -9,34 +9,19 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 set(LIB_INSTALL_DIR "lib${LIB_SUFFIX}" CACHE PATH "Installation path for libraries")
 
 # Support different versions of Qt
-option(USE_QT5 "Force use the Qt5." $ENV{USE_QT5})
-option(USE_QT4 "Force use the Qt4." $ENV{USE_QT4})
-if((USE_QT4 AND USE_QT5) OR
-   (NOT USE_QT4 AND NOT USE_QT5))
-    # Autodetect Qt version
-    find_package(Qt4 QUIET)
-    if (QT4_FOUND)
-        set(USE_QT4 ON)
-        set(USE_QT5 OFF)
-    else()
-        set(USE_QT4 OFF)
-        set(USE_QT5 ON)
-    endif()
-endif()
+option(USE_QT5 "Build with Qt5." $ENV{USE_QT5})
 
 if(USE_QT5)
     find_package(Qt5Widgets REQUIRED QUIET)
     set(QTX_LIBRARIES ${Qt5Widgets_LIBRARIES})
-
     find_package(lxqt-qt5 REQUIRED QUIET)
     include(${LXQT_USE_FILE})
 else()
-	find_package(Qt4 REQUIRED)
-	include(${QT_USE_FILE})
+    find_package(Qt4 REQUIRED)
+    include(${QT_USE_FILE})
     set(QTX_LIBRARIES ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY})
-
-	find_package(LXQT REQUIRED)
-	include(${LXQT_USE_FILE})
+    find_package(LXQT REQUIRED)
+    include(${LXQT_USE_FILE})
 endif()
 
 find_package(PkgConfig)

@@ -27,12 +27,12 @@ set( lxqt-admin-time_UIS
     timeadmindialog.ui
 )
 
-if(USE_QT4)
-	qt4_wrap_cpp(MOCS ${lxqt-admin-time_MOCS})
-	qt4_wrap_ui(UIS ${lxqt-admin-time_UIS})
-elseif(USE_QT5)
-	qt5_wrap_cpp(MOCS ${lxqt-admin-time_MOCS})
-	qt5_wrap_ui(UIS ${lxqt-admin-time_UIS})
+if(USE_QT5)
+    qt5_wrap_cpp(MOCS ${lxqt-admin-time_MOCS})
+    qt5_wrap_ui(UIS ${lxqt-admin-time_UIS})
+else()
+    qt4_wrap_cpp(MOCS ${lxqt-admin-time_MOCS})
+    qt4_wrap_ui(UIS ${lxqt-admin-time_UIS})
 endif()
 
 # Translations **********************************
