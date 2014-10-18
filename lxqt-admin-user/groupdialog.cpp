@@ -59,11 +59,7 @@ GroupDialog::GroupDialog(OobsGroup *group, QWidget *parent, Qt::WindowFlags f):
                 item->setCheckState(Qt::Checked);
             else
                 item->setCheckState(Qt::Unchecked);
-#if QT_VESION >= QT_VERSION_CHECK(5, 0, 0)
             QVariant obj = QVariant::fromValue<void*>(user);
-#else
-            QVariant obj = qVariantFromValue<void*>(user);
-#endif
             item->setData(Qt::UserRole, obj);
             ui.userList->addItem(item);
             valid = oobs_list_iter_next(users, &it);
@@ -104,7 +100,7 @@ void GroupDialog::accept()
         mGroup = oobs_group_new(groupName);
     }
     oobs_group_set_gid(mGroup, gid);
-    
+
     // update users
     GList* groupUsers = oobs_group_get_users(mGroup); // all users in this group
     int rowCount = ui.userList->count();
@@ -112,11 +108,7 @@ void GroupDialog::accept()
     {
         QListWidgetItem* item = ui.userList->item(row);
         QVariant obj = item->data(Qt::UserRole);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 0, 0)
         OobsUser* user = OOBS_USER(obj.value<void*>());
-#else
-        OobsUser* user = OOBS_USER(qVariantValue<void*>(obj));
-#endif
         if(g_list_find(groupUsers, user)) // the user belongs to this group previously
         {
             if(item->checkState() == Qt::Unchecked) // it's unchecked, remove it
