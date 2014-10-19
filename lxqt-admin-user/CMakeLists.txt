@@ -33,13 +33,8 @@ set( lxqt-admin-user_UIS
     groupdialog.ui
 )
 
-if(USE_QT5)
-    qt5_wrap_cpp(MOCS ${lxqt-admin-user_MOCS})
-    qt5_wrap_ui(UIS ${lxqt-admin-user_UIS})
-else()
-    qt4_wrap_cpp(MOCS ${lxqt-admin-user_MOCS})
-    qt4_wrap_ui(UIS ${lxqt-admin-user_UIS})
-endif()
+qt5_wrap_cpp(MOCS ${lxqt-admin-user_MOCS})
+qt5_wrap_ui(UIS ${lxqt-admin-user_UIS})
 
 # Translations **********************************
 include(LxQtTranslate)
