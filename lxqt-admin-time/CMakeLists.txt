@@ -31,23 +31,32 @@ qt5_wrap_cpp(MOCS ${lxqt-admin-time_MOCS})
 qt5_wrap_ui(UIS ${lxqt-admin-time_UIS})
 
 # Translations **********************************
-include(LxQtTranslate)
 lxqt_translate_ts(lxqt-admin-time_QM_FILES
+    UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
     SOURCES
     ${lxqt-admin-time_HDRS}
     ${lxqt-admin-time_SRCS}
     ${lxqt-admin-time_UIS}
-    INSTALLATION_DIR
-    ${CMAKE_INSTALL_PREFIX}/share/lxqt/lxqt-admin
+    INSTALL_DIR
+    "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
 )
 
 lxqt_translate_desktop(DESKTOP_FILES
     SOURCES
     lxqt-admin-time.desktop.in
 )
+
+lxqt_app_translation_loader(lxqt-admin-time_QM_LOADER ${PROJECT_NAME})
 #************************************************
 
-add_executable(lxqt-admin-time ${lxqt-admin-time_SRCS} ${UIS} ${MOCS} ${DESKTOP_FILES} ${lxqt-admin-time_QM_FILES})
+add_executable(lxqt-admin-time
+    ${lxqt-admin-time_SRCS}
+    ${UIS}
+    ${MOCS}
+    ${DESKTOP_FILES}
+    ${lxqt-admin-time_QM_FILES}
+    ${lxqt-admin-time_QM_LOADER}
+)
 
 target_link_libraries(lxqt-admin-time
     ${QTX_LIBRARIES}

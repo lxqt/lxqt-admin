@@ -2,8 +2,7 @@ cmake_minimum_required(VERSION 2.6)
 
 project(lxqt-admin)
 
-# additional cmake files
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 
 # Set default installation paths
 set(LIB_INSTALL_DIR "lib${LIB_SUFFIX}" CACHE PATH "Installation path for libraries")
@@ -18,6 +17,8 @@ pkg_check_modules(OOBS REQUIRED
     glib-2.0
     liboobs-1
 )
+
+include(LXQtTranslate)
 
 add_subdirectory(lxqt-admin-time)
 add_subdirectory(lxqt-admin-user)

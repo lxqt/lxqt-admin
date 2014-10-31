@@ -10,10 +10,6 @@ include_directories (
     ${OOBS_INCLUDE_DIRS}
 )
 
-set ( lxqt-admin-user_HDRS
-    maindialog.h
-)
-
 set ( lxqt-admin-user_SRCS
     main.cpp
     mainwindow.cpp
@@ -37,23 +33,31 @@ qt5_wrap_cpp(MOCS ${lxqt-admin-user_MOCS})
 qt5_wrap_ui(UIS ${lxqt-admin-user_UIS})
 
 # Translations **********************************
-include(LxQtTranslate)
 lxqt_translate_ts(lxqt-admin-user_QM_FILES
+    UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
     SOURCES
-    ${lxqt-admin-user_HDRS}
+    ${lxqt-admin-user_MOCS}
     ${lxqt-admin-user_SRCS}
     ${lxqt-admin-user_UIS}
-    INSTALLATION_DIR
-    ${CMAKE_INSTALL_PREFIX}/share/lxqt/lxqt-admin
+    INSTALL_DIR
+    "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
 )
 
 lxqt_translate_desktop(DESKTOP_FILES
     SOURCES
     lxqt-admin-user.desktop.in
 )
+lxqt_app_translation_loader(lxqt-admin-user_QM_LOADER ${PROJECT_NAME})
 #************************************************
 
-add_executable(lxqt-admin-user ${lxqt-admin-user_SRCS} ${UIS} ${MOCS} ${DESKTOP_FILES} ${lxqt-admin-user_QM_FILES})
+add_executable(lxqt-admin-user
+    ${lxqt-admin-user_SRCS}
+    ${UIS}
+    ${MOCS}
+    ${DESKTOP_FILES}
+    ${lxqt-admin-user_QM_FILES}
+    ${lxqt-admin-user_QM_LOADER}
+)
 
 target_link_libraries(lxqt-admin-user
     ${QTX_LIBRARIES}

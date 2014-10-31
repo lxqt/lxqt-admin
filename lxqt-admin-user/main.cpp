@@ -26,13 +26,11 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include <LXQt/Application>
-#include "lxqttranslate.h"
 #include "mainwindow.h"
 
 int main(int argc, char **argv)
 {
     LxQt::Application app(argc, argv);
-    TRANSLATE_APP;
     MainWindow window;
     window.show();
     return app.exec();
