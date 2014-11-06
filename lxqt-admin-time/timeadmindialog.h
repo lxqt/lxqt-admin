@@ -49,6 +49,8 @@ private:
     OobsTimeConfig* mTimeConfig;
     QTimer* mTimer;
     bool mChangeTime;
+    int mOldTimeZoneIndex;
+
 };
 
 #endif // TIMEADMINDIALOG_H
