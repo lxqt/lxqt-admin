@@ -42,6 +42,7 @@ TimeAdminDialog::TimeAdminDialog():
     updateTime();
     ui.calendar->showToday();
 
+    mOldTimeZoneIndex = ui.timeZone->currentIndex();
     connect(ui.time, SIGNAL(timeChanged(QTime)), SLOT(onTimeChanged()));
 }
 
@@ -98,6 +99,15 @@ void TimeAdminDialog::loadTimeZones()
 
 void TimeAdminDialog::accept()
 {
+    //if no changes then just quit application
+    if (!mChangeTime &&
+            QDate::currentDate() == ui.calendar->selectedDate() &&
+            ui.timeZone->currentIndex() == mOldTimeZoneIndex)
+    {
+        QDialog::accept();
+        return;
+    }
+
     // relly apply the settings
     GError* err = NULL;
     if(oobs_object_authenticate(OOBS_OBJECT(mTimeConfig), &err))
@@ -110,7 +120,7 @@ void TimeAdminDialog::accept()
         if(mChangeTime)
         {
             QTime t = ui.time->time();
-            // oobs seesm to use 0 based month
+            // oobs seems to use 0 based month
             oobs_time_config_set_time(mTimeConfig, d.year(), d.month() - 1, d.day(), t.hour(), t.minute(), t.second());
         }
         oobs_object_commit(OOBS_OBJECT(mTimeConfig));
