@@ -3,8 +3,6 @@ project(lxqt-admin-time)
 # build static helper class first
 include_directories (
     ${CMAKE_CURRENT_BINARY_DIR}
-    ${QT_QTCORE_INCLUDE_DIR}
-    ${QT_QTGUI_INCLUDE_DIR}
     ${LXQT_INCLUDE_DIRS}
     ${QTXDG_INCLUDE_DIRS}
     ${OOBS_INCLUDE_DIRS}
@@ -59,7 +57,7 @@ add_executable(lxqt-admin-time
 )
 
 target_link_libraries(lxqt-admin-time
-    ${QTX_LIBRARIES}
+    Qt5::Widgets
     ${LXQT_LIBRARIES}
     ${OOBS_LIBRARIES}
 )

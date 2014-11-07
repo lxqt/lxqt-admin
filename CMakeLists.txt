@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 2.8.11)
 
 project(lxqt-admin)
 
@@ -8,7 +8,6 @@ option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" O
 set(LIB_INSTALL_DIR "lib${LIB_SUFFIX}" CACHE PATH "Installation path for libraries")
 
 find_package(Qt5Widgets REQUIRED QUIET)
-set(QTX_LIBRARIES ${Qt5Widgets_LIBRARIES})
 find_package(lxqt-qt5 REQUIRED QUIET)
 include(${LXQT_USE_FILE})
 
