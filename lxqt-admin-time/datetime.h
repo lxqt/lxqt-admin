@@ -25,47 +25,47 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <LXQt/ConfigDialog>
-#include <glib.h>
-#include <oobs/oobs-timeconfig.h>
-#include <oobs/oobs-ntpconfig.h>
-#include <oobs/oobs-ntpserver.h>
+#ifndef DATETIME_H
+#define DATETIME_H
 
+#include <QWidget>
+
+namespace Ui {
 class DateTime;
-class Timezone;
+}
 
-class TimeAdminDialog: public LxQt::ConfigDialog
+class DateTime : public QWidget
 {
     Q_OBJECT
 
 public:
-    TimeAdminDialog(QWidget * parent = NULL) ;
-    ~TimeAdminDialog();
+    explicit DateTime(QWidget *parent = 0);
+    ~DateTime();
 
+    enum modified_enum {M_DATE = 0x1, M_TIME = 0x2};
+    Q_DECLARE_FLAGS(modified_t, modified_enum)
 
-    typedef enum  {M_TIMEDATE = 1 , M_TIMEZONE = 0x2} widgets_modified_enum;
-    Q_DECLARE_FLAGS(widgets_modified_t, widgets_modified_enum)
+    QDateTime dateTime() const;
+    inline modified_t modified() const {return mModified;}
 
-protected:
-    virtual void closeEvent(QCloseEvent  * event);
+public Q_SLOTS:
+    void reload();
+
 
 private Q_SLOTS:
-    void onChanged(bool);
+    void on_edit_time_userTimeChanged(const QTime &time);
+    void timeout();
+    void on_calendar_selectionChanged();
+
+Q_SIGNALS:
+    void changed(bool);
 
 private:
-    bool logInUser();
-    void saveChangesToSystem();
-    void loadTimeZones(QStringList & timeZones, QString & currentTimezone);
-    void showChangedStar();
-
-private:
-    OobsTimeConfig* mTimeConfig;
-    DateTime * mDateTimeWidget;
-    Timezone * mTimezoneWidget;
-    bool mUserLogedIn;
-    QString mWindowTitle;
-    widgets_modified_t mWidgetsModified;
+    Ui::DateTime *ui;
+    QTimer * mTimer;
+    modified_t  mModified;
 };
 
-Q_DECLARE_METATYPE(TimeAdminDialog::widgets_modified_enum)
-Q_DECLARE_OPERATORS_FOR_FLAGS(TimeAdminDialog::widgets_modified_t)
+Q_DECLARE_OPERATORS_FOR_FLAGS(DateTime::modified_t)
+
+#endif // DATETIME_H
