@@ -10,19 +10,26 @@ include_directories (
 
 set ( lxqt-admin-time_HDRS
     timeadmindialog.h
+    datetime.h
+    timezone.h
 )
 
 set ( lxqt-admin-time_SRCS
     main.cpp
     timeadmindialog.cpp
+    datetime.cpp
+    timezone.cpp
 )
 
 set ( lxqt-admin-time_MOCS
     timeadmindialog.h
+    datetime.h
+    timezone.h
 )
 
 set( lxqt-admin-time_UIS
-    timeadmindialog.ui
+    datetime.ui
+    timezone.ui
 )
 
 qt5_wrap_cpp(MOCS ${lxqt-admin-time_MOCS})
