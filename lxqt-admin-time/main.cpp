@@ -33,6 +33,6 @@ int main(int argc, char **argv)
     LxQt::SingleApplication app(argc, argv);
     TimeAdminDialog dlg;
     app.setActivationWindow(&dlg);
-    dlg.exec();
-    return 0;
+    dlg.show();
+    return app.exec();
 }
