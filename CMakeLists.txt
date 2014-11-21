@@ -9,6 +9,7 @@ set(LIB_INSTALL_DIR "lib${LIB_SUFFIX}" CACHE PATH "Installation path for librari
 
 find_package(Qt5Widgets REQUIRED QUIET)
 find_package(lxqt-qt5 REQUIRED QUIET)
+find_package(KF5WindowSystem REQUIRED QUIET)
 include(${LXQT_USE_FILE})
 
 find_package(PkgConfig)
