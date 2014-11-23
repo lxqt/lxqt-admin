@@ -32,6 +32,7 @@ int main(int argc, char **argv)
 {
     LxQt::SingleApplication app(argc, argv);
     TimeAdminDialog dlg;
+    dlg.setWindowIcon(QIcon::fromTheme("preferences-system"));
     app.setActivationWindow(&dlg);
     dlg.show();
     return app.exec();
