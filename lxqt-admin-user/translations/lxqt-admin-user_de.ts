@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.0" language="de">
 <context>
     <name>GroupDialog</name>
     <message>
@@ -81,7 +81,7 @@
     <message>
         <location filename="../mainwindow.ui" line="70"/>
         <source>Home Directory</source>
-        <translation>Heimatverzeichnis</translation>
+        <translation>Nutzerverzeichnis</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="81"/>
@@ -96,7 +96,7 @@
     <message>
         <location filename="../mainwindow.ui" line="102"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Name</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="107"/>
@@ -237,17 +237,17 @@
     <message>
         <location filename="../userdialog.cpp" line="125"/>
         <source>The user ID is in use.</source>
-        <translation>Die Gruppen-ID existiert bereits.</translation>
+        <translation>Die Nutzer-ID existiert bereits.</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="138"/>
         <source>The user name cannot be empty.</source>
-        <translation>Der Gruppen-Name kann nicht leer sein.</translation>
+        <translation>Der Nutzername kann nicht leer sein.</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="143"/>
         <source>The user name is in use.</source>
-        <translation>Der Gruppen-Name existiert bereits.</translation>
+        <translation>Der Nutzername existiert bereits.</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="159"/>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.0" language="de">
 <context>
     <name>DateTime</name>
     <message>
         <location filename="../datetime.ui" line="20"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Dialogfenster</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="32"/>
@@ -21,6 +21,7 @@
     <message>
         <location filename="../datetime.ui" line="55"/>
         <source>HH:mm:ss</source>
+        <translatorcomment>Übersetzung unnötig.</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -39,7 +40,7 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="42"/>
         <source>Time and date configuration</source>
-        <translation type="unfinished">Zeit und Datum einstellen</translation>
+        <translation>Zeit und Datum einstellen</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="53"/>
@@ -54,7 +55,7 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="162"/>
         <source>Authentication Error</source>
-        <translation type="unfinished">Authentifizierungsfehler</translation>
+        <translation>Authentifizierungsfehler</translation>
     </message>
 </context>
 <context>
@@ -62,7 +63,7 @@
     <message>
         <location filename="../timezone.ui" line="14"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Dialogfenster</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="26"/>
@@ -77,12 +78,12 @@
     <message>
         <location filename="../timezone.ui" line="42"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Textfeld</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="51"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filter</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="70"/>
