@@ -21,6 +21,9 @@
 #include "groupdialog.h"
 #include <QMessageBox>
 
+#define DEFAULT_GID_MIN 1000
+#define DEFAULT_GID_MAX 32768
+
 GroupDialog::GroupDialog(OobsGroup *group, QWidget *parent, Qt::WindowFlags f):
     QDialog(parent, f),
     mGroup(group ? OOBS_GROUP(g_object_ref(group)) : NULL)
@@ -38,7 +41,7 @@ GroupDialog::GroupDialog(OobsGroup *group, QWidget *parent, Qt::WindowFlags f):
     else // create a new group
     {
         mOldGId = -1;
-        ui.gid->setValue(oobs_groups_config_find_free_gid(groupsConfig, 0, 32768));
+        ui.gid->setValue(oobs_groups_config_find_free_gid(groupsConfig, DEFAULT_GID_MIN, DEFAULT_GID_MAX));
     }
 
     GList* groupUsers = oobs_group_get_users(mGroup); // all users in this group

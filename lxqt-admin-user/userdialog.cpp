@@ -21,6 +21,9 @@
 #include "userdialog.h"
 #include <QMessageBox>
 
+#define DEFAULT_UID_MIN 1000
+#define DEFAULT_UID_MAX 32768
+
 UserDialog::UserDialog(OobsUser* user, QWidget* parent):
     QDialog(),
     mFullNameChanged(false),
@@ -76,7 +79,7 @@ UserDialog::UserDialog(OobsUser* user, QWidget* parent):
         ui.loginName->setReadOnly(false);
         ui.loginName->setFocus();
         ui.changePasswd->setChecked(true);
-        ui.uid->setValue(oobs_users_config_find_free_uid(userConfig, 1000, 32768));
+        ui.uid->setValue(oobs_users_config_find_free_uid(userConfig, DEFAULT_UID_MIN, DEFAULT_UID_MAX));
         ui.loginShell->setEditText(oobs_users_config_get_default_shell(userConfig));
         ui.mainGroup->setCurrentIndex(-1);
     }
