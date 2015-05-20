@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de">
+<TS version="2.1" language="de">
 <context>
     <name>DateTime</name>
     <message>
         <location filename="../datetime.ui" line="20"/>
         <source>Form</source>
-        <translation>Dialogfenster</translation>
+        <translatorcomment>This is the caption of the form. I suggest a better name for it. What about &quot;Time and date setup&quot;?</translatorcomment>
+        <translation>Einstellen von Zeit und Datum</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="32"/>
@@ -21,7 +22,7 @@
     <message>
         <location filename="../datetime.ui" line="55"/>
         <source>HH:mm:ss</source>
-        <translatorcomment>Übersetzung unnötig.</translatorcomment>
+        <translatorcomment>No need to translate.</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -63,7 +64,8 @@
     <message>
         <location filename="../timezone.ui" line="14"/>
         <source>Form</source>
-        <translation>Dialogfenster</translation>
+        <translatorcomment>This is the caption of the form. I suggest a better name for it. What about &quot;Timezone setup&quot;?</translatorcomment>
+        <translation>Einstellen der Zeitzone</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="26"/>
@@ -73,7 +75,7 @@
     <message>
         <location filename="../timezone.ui" line="35"/>
         <source>Your current timezone:</source>
-        <translation>Ihre derzeitige Zeitzone:</translation>
+        <translation>Derzeitige Zeitzone:</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="42"/>

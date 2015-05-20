@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de">
+<TS version="2.1" language="de">
 <context>
     <name>GroupDialog</name>
     <message>
@@ -71,7 +71,7 @@
     <message>
         <location filename="../mainwindow.ui" line="60"/>
         <source>Full Name</source>
-        <translation>Ganzer Name</translation>
+        <translation>Vollständiger Name</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="65"/>
@@ -195,7 +195,7 @@
     <message>
         <location filename="../userdialog.ui" line="53"/>
         <source>Set password:</source>
-        <translation>Kennwort:</translation>
+        <translation>Kennwort setzen:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="77"/>
@@ -215,7 +215,7 @@
     <message>
         <location filename="../userdialog.ui" line="105"/>
         <source>Login shell:</source>
-        <translation>Befehlsinterpreter:</translation>
+        <translation>Befehlsinterpreter (shell):</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="122"/>
