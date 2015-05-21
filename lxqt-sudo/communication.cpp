@@ -81,7 +81,7 @@ Communication::Communication(QString const & key, bool master, QObject * parent/
 
     if (!mImpl->valid)
     {
-        qCritical() << QStringLiteral("lxqt-sudo: Communication - unable to create shared memory(%1B), ").arg(Impl::MEM_SIZE)
+        qCritical() << tr("%1: Communication - unable to create shared memory(%2B), ").arg(LXQTSUDO).arg(Impl::MEM_SIZE)
             << mImpl->memory->errorString();
         return;
     }
@@ -154,6 +154,7 @@ void Communication::timeout()
 //for master
 void Communication::setPassword(QString passwd)
 {
+    Q_ASSERT(mImpl->master);
     Locker guard{*mImpl->memory};
 
     uint8_t * data = static_cast<uint8_t *>(mImpl->memory->data());
@@ -162,6 +163,10 @@ void Communication::setPassword(QString passwd)
     Q_ASSERT(Impl::DATA_NEW == flag);
 
     *data = Impl::DATA_READY;
+    std::string passwd_s{passwd.toStdString()};
+    if (passwd_s.size() > Impl::MEM_SIZE - 2)
+        qCritical() << tr("%1: Communication - password is too long(%2) for aquired shared memory(%3), has to by cut-off...")
+            .arg(LXQTSUDO).arg(passwd_s.size()).arg(Impl::MEM_SIZE - 2);
     snprintf(reinterpret_cast<char *>(data + 1), Impl::MEM_SIZE - 1, "%s", passwd.toStdString().c_str());
     //to be sure there is a nul byte
     data[Impl::MEM_SIZE - 1] = 0;
@@ -170,6 +175,7 @@ void Communication::setPassword(QString passwd)
 //for slave
 void Communication::needPassword()
 {
+    Q_ASSERT(!mImpl->master);
     Locker guard{*mImpl->memory};
 
     uint8_t * data = static_cast<uint8_t *>(mImpl->memory->data());

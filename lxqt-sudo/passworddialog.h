@@ -50,6 +50,7 @@ public:
     ~PasswordDialog();
 
     virtual void accept() override;
+    virtual void hideEvent(QHideEvent * event) override;
 
 private:
     QScopedPointer<Ui::PasswordDialog> ui;

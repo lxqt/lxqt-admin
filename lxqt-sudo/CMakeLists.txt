@@ -71,7 +71,7 @@ target_link_libraries(lxqt-sudo
 add_custom_command(TARGET lxqt-sudo POST_BUILD
     COMMAND ln -f -s lxqt-sudo lxqt-sudo-helper
     WORKING_DIRECTORY .
-    COMMENT "Creating make-sudo-helper symlink")
+    COMMENT "Creating lxqt-sudo-helper symlink")
 
 install(TARGETS lxqt-sudo RUNTIME DESTINATION bin)
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/lxqt-sudo-helper" DESTINATION "${CMAKE_INSTALL_PREFIX}/bin")

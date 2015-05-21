@@ -53,6 +53,9 @@ PasswordDialog::PasswordDialog(QStringList argv
 
     connect(&mSudo, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), [this] (int exitCode, QProcess::ExitStatus exitStatus)
         {
+            if (!isVisible())
+                return;
+
             if (QProcess::NormalExit == exitStatus && 0 == exitCode)
                 QDialog::accept(); //sudo succeeded (with or w/o password)
             else
@@ -62,9 +65,6 @@ PasswordDialog::PasswordDialog(QStringList argv
                 b.exec();
                 reject();
             }
-
-            //TODO: handle error!?!
-            reject();
         });
 
     connect(&mComm, &Communication::passwordNeeded, [this]
@@ -87,4 +87,15 @@ void PasswordDialog::accept()
         mComm.waitForReady();
     } else
         reject();
+}
+
+void PasswordDialog::hideEvent(QHideEvent * event)
+{
+    if (QProcess::Running == mSudo.state())
+    {
+        mSudo.terminate();
+        mSudo.waitForFinished(1000);
+        mSudo.kill();
+    }
+    return QDialog::hideEvent(event);
 }

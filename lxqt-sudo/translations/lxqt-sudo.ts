@@ -2,6 +2,14 @@
 <!DOCTYPE TS>
 <TS version="2.0">
 <context>
+    <name>Communication</name>
+    <message>
+        <location filename="../communication.cpp" line="84"/>
+        <source>lxqt-sudo: Communication - unable to create shared memory(%1B), </source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>PasswordDialog</name>
     <message>
         <location filename="../passworddialog.ui" line="14"/>

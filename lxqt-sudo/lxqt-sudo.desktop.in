@@ -3,7 +3,7 @@ Type=Application
 Name=GUI sudo
 GenericName=QT frontend for sudo
 Comment=Run command by sudo with QT frontend
-Exec=lxqt-sudo
+Exec=lxqt-sudo %f
 Icon=security-high
 Categories=
 
