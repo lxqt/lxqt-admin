@@ -77,7 +77,8 @@ int master(int argc, char **argv)
     sudo->setInputChannelMode(QProcess::ForwardedInputChannel);
     sudo->setReadChannelMode(QProcess::ForwardedOutputChannel);
     sudo->setReadChannel(QProcess::StandardError);
-    sudo->start(QStringLiteral(LXQTSUDO_SUDO), QStringList() << QStringLiteral("-A")
+    sudo->setProgram(QStringLiteral(LXQTSUDO_SUDO));
+    sudo->setArguments(QStringList() << QStringLiteral("-A")
             << QStringLiteral("-b")
             << args);
 

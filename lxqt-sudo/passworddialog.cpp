@@ -66,6 +66,7 @@ PasswordDialog::PasswordDialog(QStringList argv
                 reject();
             }
         });
+    mSudo.start();
 
     connect(&mComm, &Communication::passwordNeeded, [this]
         {
