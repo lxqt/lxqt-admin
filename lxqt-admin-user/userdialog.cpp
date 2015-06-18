@@ -69,7 +69,7 @@ UserDialog::UserDialog(OobsUser* user, QWidget* parent):
         ui.fullName->setText(oobs_user_get_full_name(user));
         ui.loginShell->setEditText(oobs_user_get_shell(user));
         ui.homeDir->setText(QString::fromLocal8Bit(oobs_user_get_home_directory(user)));
-        
+
         OobsGroup* group = oobs_user_get_main_group(user);
         ui.mainGroup->setEditText(oobs_group_get_name(group));
     }
@@ -83,7 +83,7 @@ UserDialog::UserDialog(OobsUser* user, QWidget* parent):
         ui.loginShell->setEditText(oobs_users_config_get_default_shell(userConfig));
         ui.mainGroup->setCurrentIndex(-1);
     }
-    
+
 }
 
 UserDialog::~UserDialog()
@@ -100,7 +100,7 @@ void UserDialog::onLoginNameChanged(const QString& text)
         ui.fullName->setText(text);
         ui.fullName->blockSignals(false);
     }
-    
+
     if(!mHomeDirChanged)
     {
         ui.homeDir->blockSignals(true);

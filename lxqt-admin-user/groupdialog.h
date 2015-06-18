@@ -34,14 +34,14 @@ class GroupDialog : public QDialog
 public:
     GroupDialog(OobsGroup* group = NULL, QWidget *parent = NULL, Qt::WindowFlags f = 0);
     ~GroupDialog();
-    
+
     OobsGroup* group()
     {
         return mGroup;
     }
-    
+
     virtual void accept();
-    
+
 private:
     bool hasUser(OobsUser* user);
 

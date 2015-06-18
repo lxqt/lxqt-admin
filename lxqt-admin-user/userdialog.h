@@ -46,7 +46,7 @@ private Q_SLOTS:
     void onLoginNameChanged(const QString& text);
     void onFullNameChanged(const QString& text);
     void onHomeDirChanged(const QString& text);
-    
+
 private:
     Ui::UserDialog ui;
     OobsUser* mUser;
