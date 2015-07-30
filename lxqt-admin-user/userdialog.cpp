@@ -26,9 +26,9 @@
 
 UserDialog::UserDialog(OobsUser* user, QWidget* parent):
     QDialog(),
+    mUser(user ? OOBS_USER(g_object_ref(user)) : NULL),
     mFullNameChanged(false),
-    mHomeDirChanged(false),
-    mUser(user ? OOBS_USER(g_object_ref(user)) : NULL)
+    mHomeDirChanged(false)
 {
     ui.setupUi(this);
 
