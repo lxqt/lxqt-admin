@@ -17,7 +17,7 @@ pkg_check_modules(OOBS REQUIRED
     liboobs-1
 )
 
-include(LXQtCompilerSettings)
+include(LXQtCompilerSettings NO_POLICY_SCOPE)
 include(LXQtTranslate)
 
 add_subdirectory(lxqt-admin-time)
