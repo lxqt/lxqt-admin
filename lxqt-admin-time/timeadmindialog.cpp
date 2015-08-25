@@ -39,7 +39,7 @@
 #define ZONETAB_PATH "/usr/share/zoneinfo/zone.tab"
 
 TimeAdminDialog::TimeAdminDialog(QWidget *parent):
-    LxQt::ConfigDialog(tr("Time and date configuration"),new LxQt::Settings("TimeDate"), parent),
+    LXQt::ConfigDialog(tr("Time and date configuration"),new LXQt::Settings("TimeDate"), parent),
     mTimeConfig(OOBS_TIME_CONFIG(oobs_time_config_get())),
     mUserLogedIn(false)
 {

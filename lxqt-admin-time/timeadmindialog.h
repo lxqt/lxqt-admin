@@ -34,7 +34,7 @@
 class DateTime;
 class Timezone;
 
-class TimeAdminDialog: public LxQt::ConfigDialog
+class TimeAdminDialog: public LXQt::ConfigDialog
 {
     Q_OBJECT
 
