@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="hu_HU">
+<TS version="2.1" language="hu">
 <context>
     <name>GroupDialog</name>
     <message>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../groupdialog.ui" line="37"/>
         <source>Group ID:</source>
-        <translation>Csoport ID</translation>
+        <translation>Csoport ID:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="44"/>
@@ -205,7 +205,7 @@
     <message>
         <location filename="../userdialog.ui" line="84"/>
         <source>Main group:</source>
-        <translation>Főcsoport</translation>
+        <translation>Főcsoport:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="99"/>
