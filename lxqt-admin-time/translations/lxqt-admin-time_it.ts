@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="it_IT" sourcelanguage="it_IT">
+<TS version="2.0" language="it_IT" sourcelanguage="it_IT">
 <context>
     <name>DateTime</name>
     <message>
         <location filename="../datetime.ui" line="20"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Modulo</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="32"/>
         <source>Time and date setup</source>
-        <translation>Imposta data e ora</translation>
+        <translation>Configurazione di data e ora</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="39"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../datetime.ui" line="55"/>
         <source>HH:mm:ss</source>
-        <translation></translation>
+        <translation>HH:mm:ss</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="69"/>
@@ -31,8 +31,7 @@
     <message>
         <location filename="../datetime.ui" line="105"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>Il salvataggio richiede privilegi di amministratore, 
-saranno chiesti dopo la chiusura di questa finestra.</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Il salvataggio richiede privilegi di amministratore.&lt;br&gt;Saranno chiesti dopo aver fatto clic sul pulsante di chiusura&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -63,22 +62,22 @@ saranno chiesti dopo la chiusura di questa finestra.</translation>
     <message>
         <location filename="../timezone.ui" line="14"/>
         <source>Form</source>
-        <translation></translation>
+        <translation>Modulo</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="26"/>
         <source>Timezone setup</source>
-        <translation>Configura fuso orario</translation>
+        <translation>Configurazione fuso orario</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="35"/>
         <source>Your current timezone:</source>
-        <translation>Fuso orario attuale:</translation>
+        <translation>Il tuo fuso orario attuale:</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="42"/>
         <source>TextLabel</source>
-        <translation>nessuno</translation>
+        <translation>EtichettaTesto</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="51"/>
@@ -88,8 +87,7 @@ saranno chiesti dopo la chiusura di questa finestra.</translation>
     <message>
         <location filename="../timezone.ui" line="70"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">Il salvataggio richiede privilegi di amministratore, 
-saranno chiesti dopo la chiusura di questa finestra.</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Il salvataggio richiede privilegi di amministratore.&lt;br&gt;Saranno richiesti dopo aver fatto clic sul pulsante di chiusura&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../timezone.cpp" line="42"/>
