@@ -146,7 +146,7 @@
     <message>
         <location filename="../mainwindow.ui" line="189"/>
         <source>Refresh the lists</source>
-        <translation>Обновить список</translation>
+        <translation>Обновить списки</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="145"/>
@@ -215,7 +215,7 @@
     <message>
         <location filename="../userdialog.ui" line="105"/>
         <source>Login shell:</source>
-        <translation>Оболочка:</translation>
+        <translation>Командная оболочка:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="122"/>
