@@ -26,12 +26,7 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include <LXQt/ConfigDialog>
-#include <glib.h>
-#include <oobs/oobs-timeconfig.h>
-#include <oobs/oobs-ntpconfig.h>
-#include <oobs/oobs-ntpserver.h>
 #include "timedatectl.h"
-
 
 class DateTime;
 class Timezone;
@@ -55,17 +50,14 @@ private Q_SLOTS:
     void onChanged(bool);
 
 private:
-    bool logInUser();
     void saveChangesToSystem();
     void loadTimeZones(QStringList & timeZones, QString & currentTimezone);
     void showChangedStar();
 
 private:
     TimeDateCtl mTimeDateCtl;
-    OobsTimeConfig* mTimeConfig;
     DateTime * mDateTimeWidget;
     Timezone * mTimezoneWidget;
-    bool mUserLogedIn;
     QString mWindowTitle;
     widgets_modified_t mWidgetsModified;
 };

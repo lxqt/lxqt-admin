@@ -39,12 +39,8 @@
 #define ZONETAB_PATH "/usr/share/zoneinfo/zone.tab"
 
 TimeAdminDialog::TimeAdminDialog(QWidget *parent):
-    LXQt::ConfigDialog(tr("Time and date configuration"),new LXQt::Settings("TimeDate"), parent),
-    mTimeConfig(OOBS_TIME_CONFIG(oobs_time_config_get())),
-    mUserLogedIn(false)
+    LXQt::ConfigDialog(tr("Time and date configuration"),new LXQt::Settings("TimeDate"), parent)
 {
-    oobs_object_update(OOBS_OBJECT(mTimeConfig));
-
     setMinimumSize(QSize(400,400));
     mWindowTitle = windowTitle();
 
@@ -67,8 +63,6 @@ TimeAdminDialog::TimeAdminDialog(QWidget *parent):
 
 TimeAdminDialog::~TimeAdminDialog()
 {
-    if(mTimeConfig)
-        g_object_unref(mTimeConfig);
 }
 
 void TimeAdminDialog::onChanged(bool ch)
@@ -93,15 +87,8 @@ void TimeAdminDialog::closeEvent(QCloseEvent *event)
     //save changes to system
     if (mWidgetsModified)
     {
-        if (logInUser())
-        {
-            saveChangesToSystem();
-            event->accept();
-        }
-        else
-        {
-            event->ignore();
-        }
+        saveChangesToSystem();
+        event->accept();
     }
 }
 
@@ -136,35 +123,11 @@ void TimeAdminDialog::saveChangesToSystem()
     // FIXME: currently timezone settings does not work. is this a bug of system-tools-backend?
     if(!timeZone.isEmpty() && mWidgetsModified.testFlag(M_TIMEZONE)) {
         mTimeDateCtl.setTimeZone(timeZone);
-        mTimeDateCtl.commit();
     }
 
     if(mWidgetsModified.testFlag(M_TIMEDATE))
     {
-        QDate d = mDateTimeWidget->dateTime().date();
-        QTime t = mDateTimeWidget->dateTime().time();
-        // oobs seems to use 0 based month
-        oobs_time_config_set_time(mTimeConfig, d.year(), d.month() - 1, d.day(), t.hour(), t.minute(), t.second());
+        mTimeDateCtl.setDateTime(mDateTimeWidget->dateTime());
     }
-    oobs_object_commit(OOBS_OBJECT(mTimeConfig));
-}
-
-bool TimeAdminDialog::logInUser()
-{
-    if (mUserLogedIn)
-        return true;
-
-    GError* err = NULL;
-    if(oobs_object_authenticate(OOBS_OBJECT(mTimeConfig), &err))
-    {
-        mUserLogedIn = true;
-        return true;
-    }
-    else if(err)
-    {
-        QMessageBox::critical(this, tr("Authentication Error"), QString::fromUtf8(err->message));
-        g_error_free(err);
-    }
-
-    return false;
+    mTimeDateCtl.commit();
 }

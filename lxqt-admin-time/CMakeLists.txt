@@ -3,7 +3,6 @@ project(lxqt-admin-time)
 # build static helper class first
 include_directories (
     ${CMAKE_CURRENT_BINARY_DIR}
-    ${OOBS_INCLUDE_DIRS}
 )
 
 set ( lxqt-admin-time_HDRS
@@ -77,7 +76,6 @@ target_link_libraries(lxqt-admin-time
     KF5::WindowSystem
     Qt5::Widgets
     lxqt
-    ${OOBS_LIBRARIES}
 )
 
 install(TARGETS lxqt-admin-time RUNTIME DESTINATION bin)

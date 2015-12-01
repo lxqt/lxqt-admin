@@ -24,12 +24,21 @@ TimeDateCtl::TimeDateCtl()
 
 bool TimeDateCtl::commit()
 {
+    bool success = true;
     QProcess timedatectl;
     QStringList args;
     if(mTimeZoneChanged) {
-        args << "set-timezone" << mTimeZone;
+        timedatectl.start(QStringLiteral("timedatectl"), QStringList() << "set-timezone" << mTimeZone);
+        timedatectl.waitForFinished();
+        success = timedatectl.exitCode() == 0;
     }
-    timedatectl.start(QStringLiteral("timedatectl"), args);
-    timedatectl.waitForFinished();
-    return timedatectl.exitCode() == 0;
+    if(!success)
+        return success;
+
+    if(mTimeChanged) {
+        timedatectl.start(QStringLiteral("timedatectl"), QStringList() << "set-time" << mDateTime.toString("yyyy-MM-dd hh:mm:ss"));
+        timedatectl.waitForFinished();
+        success = timedatectl.exitCode() == 0;
+    }
+    return success;
 }
