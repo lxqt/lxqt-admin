@@ -31,10 +31,10 @@
 #include <QMessageBox>
 #include <QDateTime>
 #include <QMap>
+#include <QDebug>
 
 #include "datetime.h"
 #include "timezone.h"
-
 
 #define ZONETAB_PATH "/usr/share/zoneinfo/zone.tab"
 
@@ -107,6 +107,8 @@ void TimeAdminDialog::closeEvent(QCloseEvent *event)
 
 void TimeAdminDialog::loadTimeZones(QStringList & timeZones, QString & currentTimezone)
 {
+    currentTimezone = mTimeDateCtl.timeZone();
+
     timeZones.clear();
     QFile file(ZONETAB_PATH);
     if(file.open(QIODevice::ReadOnly))
@@ -124,17 +126,18 @@ void TimeAdminDialog::loadTimeZones(QStringList & timeZones, QString & currentTi
         }
         file.close();
     }
-    currentTimezone = QString::fromLatin1(oobs_time_config_get_timezone(mTimeConfig));
 }
 
 
 
 void TimeAdminDialog::saveChangesToSystem()
 {
-    QByteArray timeZone = mTimezoneWidget->timezone().toLatin1();
+    QString timeZone = mTimezoneWidget->timezone();
     // FIXME: currently timezone settings does not work. is this a bug of system-tools-backend?
-    if(!timeZone.isEmpty() && mWidgetsModified.testFlag(M_TIMEZONE))
-        oobs_time_config_set_timezone(mTimeConfig, timeZone.constData());
+    if(!timeZone.isEmpty() && mWidgetsModified.testFlag(M_TIMEZONE)) {
+        mTimeDateCtl.setTimeZone(timeZone);
+        mTimeDateCtl.commit();
+    }
 
     if(mWidgetsModified.testFlag(M_TIMEDATE))
     {

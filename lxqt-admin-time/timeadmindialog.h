@@ -30,6 +30,8 @@
 #include <oobs/oobs-timeconfig.h>
 #include <oobs/oobs-ntpconfig.h>
 #include <oobs/oobs-ntpserver.h>
+#include "timedatectl.h"
+
 
 class DateTime;
 class Timezone;
@@ -59,6 +61,7 @@ private:
     void showChangedStar();
 
 private:
+    TimeDateCtl mTimeDateCtl;
     OobsTimeConfig* mTimeConfig;
     DateTime * mDateTimeWidget;
     Timezone * mTimezoneWidget;

@@ -10,6 +10,7 @@ set ( lxqt-admin-time_HDRS
     timeadmindialog.h
     datetime.h
     timezone.h
+    timedatectl.h
 )
 
 set ( lxqt-admin-time_SRCS
@@ -17,6 +18,7 @@ set ( lxqt-admin-time_SRCS
     timeadmindialog.cpp
     datetime.cpp
     timezone.cpp
+    timedatectl.cpp
 )
 
 set ( lxqt-admin-time_MOCS
