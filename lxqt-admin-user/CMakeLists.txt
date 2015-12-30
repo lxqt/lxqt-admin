@@ -11,12 +11,14 @@ set ( lxqt-admin-user_SRCS
     mainwindow.cpp
     userdialog.cpp
     groupdialog.cpp
+    usermanager.cpp
 )
 
 set ( lxqt-admin-user_MOCS
     mainwindow.h
     userdialog.h
     groupdialog.h
+    usermanager.h
 )
 
 set( lxqt-admin-user_UIS
