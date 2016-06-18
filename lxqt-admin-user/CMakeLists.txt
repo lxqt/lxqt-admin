@@ -74,3 +74,13 @@ target_link_libraries(lxqt-admin-user
 
 install(TARGETS lxqt-admin-user RUNTIME DESTINATION bin)
 install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
+
+# for policykit
+# manpage for pcmanfm-qt
+configure_file(
+    "org.lxqt.lxqt-admin-user.policy.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/org.lxqt.lxqt-admin-user.policy"
+    @ONLY
+)
+install(PROGRAMS "lxqt-admin-user-helper" DESTINATION bin)
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/org.lxqt.lxqt-admin-user.policy" DESTINATION "share/polkit-1/actions")

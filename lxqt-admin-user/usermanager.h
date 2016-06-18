@@ -143,6 +143,8 @@ public:
         return mGroups;
     }
 
+    const QStringList& availableShells();
+
     bool addUser(UserInfo* user);
     bool modifyUser(UserInfo* user, UserInfo* newSettings);
     bool deleteUser(UserInfo* user);
@@ -164,7 +166,7 @@ public:
 private:
     void loadUsers();
     void loadGroups();
-    bool pkexec(QStringList& command);
+    bool pkexec(const QStringList &command);
 
 Q_SIGNALS:
     void usersChanged();
@@ -179,6 +181,7 @@ private:
     QList<UserInfo*> mUsers;
     QList<GroupInfo*> mGroups;
     QFileSystemWatcher* mWatcher;
+    QStringList mAvailableShells;
 };
 
 #endif // USERMANAGER_H

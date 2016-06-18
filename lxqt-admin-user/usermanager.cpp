@@ -4,6 +4,7 @@
 #include <QFileSystemWatcher>
 #include <QTimer>
 #include <QProcess>
+#include <QFile>
 
 static const QString PASSWD_FILE = QStringLiteral("/etc/passwd");
 static const QString GROUP_FILE = QStringLiteral("/etc/group");
@@ -29,7 +30,7 @@ void UserManager::loadUsers()
     while((pw = getpwent())) {
         UserInfo* user = new UserInfo(pw);
         mUsers.append(user);
-        qDebug() << pw->pw_name << pw->pw_gecos;
+        // qDebug() << pw->pw_name << pw->pw_gecos;
     }
     endpwent();
     std::sort(mUsers.begin(), mUsers.end(), [](UserInfo*& u1, UserInfo*& u2) {
@@ -126,10 +127,14 @@ void UserManager::onFileChanged(const QString &path) {
     }
 }
 
-bool UserManager::pkexec(QStringList& command) {
+bool UserManager::pkexec(const QStringList& command) {
     QProcess process;
     qDebug() << command;
-    process.start(QStringLiteral("pkexec"), command);
+    QStringList args;
+    args << QStringLiteral("--disable-internal-agent")
+        << QStringLiteral("lxqt-admin-user-helper")
+        << command;
+    process.start(QStringLiteral("pkexec"), args);
     process.waitForFinished(-1);
     return process.exitCode() == 0;
 }
@@ -232,3 +237,20 @@ bool UserManager::deleteGroup(GroupInfo* group) {
     command << group->name();
     return pkexec(command);
 }
+
+const QStringList& UserManager::availableShells() {
+    if(mAvailableShells.isEmpty()) {
+        QFile file("/etc/shells");
+        if(file.open(QIODevice::ReadOnly)) {
+            while(!file.atEnd()) {
+                QByteArray line = file.readLine().trimmed();
+                if(line.isEmpty() || line.startsWith('#'))
+                    continue;
+                mAvailableShells.append(QString::fromLocal8Bit(line));
+            }
+            file.close();
+        }
+    }
+    return mAvailableShells;
+}
+

@@ -96,7 +96,7 @@ UserInfo *MainWindow::userFromItem(QTreeWidgetItem *item)
         QVariant obj = item->data(0, Qt::UserRole);
         return reinterpret_cast<UserInfo*>(obj.value<void*>());
     }
-    return NULL;
+    return nullptr;
 }
 
 GroupInfo* MainWindow::groupFromItem(QTreeWidgetItem *item)
@@ -106,7 +106,7 @@ GroupInfo* MainWindow::groupFromItem(QTreeWidgetItem *item)
         QVariant obj = item->data(0, Qt::UserRole);
         return reinterpret_cast<GroupInfo*>(obj.value<void*>());
     }
-    return NULL;
+    return nullptr;
 }
 
 void MainWindow::onAdd()
@@ -136,8 +136,7 @@ void MainWindow::onDelete()
     if(ui.tabWidget->currentIndex() == PageUsers)
     {
         QTreeWidgetItem* item = ui.userList->currentItem();
-        QString userName = item->text(0);
-        UserInfo* user = mUserManager->findUserInfo(userName);
+        UserInfo* user = userFromItem(item);
         if(user)
         {
             if(QMessageBox::question(this, tr("Confirm"), tr("Are you sure you want to delete the selected user?"), QMessageBox::Ok|QMessageBox::Cancel) == QMessageBox::Ok)
@@ -149,8 +148,7 @@ void MainWindow::onDelete()
     else if(ui.tabWidget->currentIndex() == PageGroups)
     {
         QTreeWidgetItem* item = ui.groupList->currentItem();
-        QString groupName = item->text(0);
-        GroupInfo* group = mUserManager->findGroupInfo(groupName);
+        GroupInfo* group = groupFromItem(item);
         if(group)
         {
             if(QMessageBox::question(this, tr("Confirm"), tr("Are you sure you want to delete the selected group?"), QMessageBox::Ok|QMessageBox::Cancel) == QMessageBox::Ok)
@@ -166,11 +164,10 @@ void MainWindow::onEditProperties()
     if(ui.tabWidget->currentIndex() == PageUsers)
     {
         QTreeWidgetItem* item = ui.userList->currentItem();
-        QString name = item->text(0);
-        UserInfo* user = mUserManager->findUserInfo(name);
+        UserInfo* user = userFromItem(item);
         if(user) {
             UserInfo newSettings(*user);
-            UserDialog dlg(mUserManager, &newSettings);
+            UserDialog dlg(mUserManager, &newSettings, this);
             if(dlg.exec() == QDialog::Accepted)
             {
                 mUserManager->modifyUser(user, &newSettings);
@@ -180,11 +177,10 @@ void MainWindow::onEditProperties()
     else if(ui.tabWidget->currentIndex() == PageGroups)
     {
         QTreeWidgetItem* item = ui.groupList->currentItem();
-        QString name = item->text(0);
-        GroupInfo* group = mUserManager->findGroupInfo(name);
+        GroupInfo* group = groupFromItem(item);
         if(group) {
             GroupInfo newSettings(*group);
-            GroupDialog dlg(mUserManager, &newSettings);
+            GroupDialog dlg(mUserManager, &newSettings, this);
             if(dlg.exec() == QDialog::Accepted)
             {
                 mUserManager->modifyGroup(group, &newSettings);

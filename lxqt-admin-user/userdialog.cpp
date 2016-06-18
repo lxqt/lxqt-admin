@@ -34,33 +34,14 @@ UserDialog::UserDialog(UserManager* userManager, UserInfo* user, QWidget* parent
 {
     ui.setupUi(this);
 
-#if 0
     // load all groups
-    OobsGroupsConfig* groupsConfig = OOBS_GROUPS_CONFIG(oobs_groups_config_get());
-    OobsList* groups = oobs_groups_config_get_groups(groupsConfig);
-    if(groups)
-    {
-        OobsListIter it;
-        gboolean valid = oobs_list_get_iter_first(groups, &it);
-        while(valid)
-        {
-            OobsGroup* group = OOBS_GROUP(oobs_list_get(groups, &it));
-            ui.mainGroup->addItem(oobs_group_get_name(group));
-            valid = oobs_list_iter_next(groups, &it);
-        }
+    for(const GroupInfo* group: mUserManager->groups()) {
+        ui.mainGroup->addItem(group->name());
     }
-#endif
     connect(ui.loginName, SIGNAL(textChanged(QString)), SLOT(onLoginNameChanged(QString)));
 
-#if 0
-    // add known shells to the combo box for selection
-    GList* shells = oobs_users_config_get_available_shells(userConfig);
-    for(GList* l = shells; l; l = l->next)
-    {
-        const char* shell = (const char*)l->data;
-        ui.loginShell->addItem(QLatin1String(shell));
-    }
-#endif
+    ui.loginShell->addItems(mUserManager->availableShells());
+
     if(user) // edit an existing user
     {
         ui.loginName->setText(user->name());
