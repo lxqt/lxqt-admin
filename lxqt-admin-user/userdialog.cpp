@@ -20,18 +20,21 @@
 
 #include "userdialog.h"
 #include <QMessageBox>
+#include "usermanager.h"
 
 #define DEFAULT_UID_MIN 1000
 #define DEFAULT_UID_MAX 32768
 
-UserDialog::UserDialog(OobsUser* user, QWidget* parent):
-    QDialog(),
-    mUser(user ? OOBS_USER(g_object_ref(user)) : NULL),
+UserDialog::UserDialog(UserManager* userManager, UserInfo* user, QWidget* parent):
+    QDialog(parent),
+    mUserManager(userManager),
+    mUser(user),
     mFullNameChanged(false),
     mHomeDirChanged(false)
 {
     ui.setupUi(this);
 
+#if 0
     // load all groups
     OobsGroupsConfig* groupsConfig = OOBS_GROUPS_CONFIG(oobs_groups_config_get());
     OobsList* groups = oobs_groups_config_get_groups(groupsConfig);
@@ -46,11 +49,10 @@ UserDialog::UserDialog(OobsUser* user, QWidget* parent):
             valid = oobs_list_iter_next(groups, &it);
         }
     }
-
+#endif
     connect(ui.loginName, SIGNAL(textChanged(QString)), SLOT(onLoginNameChanged(QString)));
 
-    OobsUsersConfig* userConfig = OOBS_USERS_CONFIG(oobs_users_config_get());
-
+#if 0
     // add known shells to the combo box for selection
     GList* shells = oobs_users_config_get_available_shells(userConfig);
     for(GList* l = shells; l; l = l->next)
@@ -58,38 +60,23 @@ UserDialog::UserDialog(OobsUser* user, QWidget* parent):
         const char* shell = (const char*)l->data;
         ui.loginShell->addItem(QLatin1String(shell));
     }
-
+#endif
     if(user) // edit an existing user
     {
-        mOldUid = oobs_user_get_uid(user);
-        ui.loginName->setReadOnly(true);
-        ui.loginName->setText(oobs_user_get_login_name(user));
+        ui.loginName->setText(user->name());
         ui.changePasswd->setText(tr("Change password:"));
-        ui.uid->setValue(mOldUid);
-        ui.fullName->setText(oobs_user_get_full_name(user));
-        ui.loginShell->setEditText(oobs_user_get_shell(user));
-        ui.homeDir->setText(QString::fromLocal8Bit(oobs_user_get_home_directory(user)));
-
-        OobsGroup* group = oobs_user_get_main_group(user);
-        ui.mainGroup->setEditText(oobs_group_get_name(group));
+        ui.uid->setValue(user->uid());
+        ui.fullName->setText(user->fullName());
+        ui.loginShell->setEditText(user->shell());
+        ui.homeDir->setText(user->homeDir());
+        GroupInfo* group = userManager->findGroupInfo(user->gid());
+        if(group)
+            ui.mainGroup->setEditText(group->name());
     }
-    else // create a new user
-    {
-        mOldUid = -1;
-        ui.loginName->setReadOnly(false);
-        ui.loginName->setFocus();
-        ui.changePasswd->setChecked(true);
-        ui.uid->setValue(oobs_users_config_find_free_uid(userConfig, DEFAULT_UID_MIN, DEFAULT_UID_MAX));
-        ui.loginShell->setEditText(oobs_users_config_get_default_shell(userConfig));
-        ui.mainGroup->setCurrentIndex(-1);
-    }
-
 }
 
 UserDialog::~UserDialog()
 {
-    if(mUser)
-        g_object_unref(mUser);
 }
 
 void UserDialog::onLoginNameChanged(const QString& text)
@@ -121,38 +108,17 @@ void UserDialog::onHomeDirChanged(const QString& text)
 
 void UserDialog::accept()
 {
-    OobsUsersConfig* usersConfig = OOBS_USERS_CONFIG(oobs_users_config_get());
-    uid_t uid = ui.uid->value();
-    if(uid != mOldUid && oobs_users_config_is_uid_used(usersConfig, uid))
+    mUser->setUid(ui.uid->value());
+    bool createNew;
+    QString loginName = ui.loginName->text();
+    if(loginName.isEmpty())
     {
-        QMessageBox::critical(this, tr("Error"), tr("The user ID is in use."));
+        QMessageBox::critical(this, tr("Error"), tr("The user name cannot be empty."));
         return;
     }
+    mUser->setFullName(ui.fullName->text());
 
-    bool createNew;
-    if(mUser)
-        createNew = false;
-    else
-    {
-        createNew = true;
-        QByteArray loginName = ui.loginName->text().toLatin1();
-        if(loginName.isEmpty())
-        {
-            QMessageBox::critical(this, tr("Error"), tr("The user name cannot be empty."));
-            return;
-        }
-        if(oobs_users_config_is_login_used(usersConfig, loginName))
-        {
-            QMessageBox::critical(this, tr("Error"), tr("The user name is in use."));
-            return;
-        }
-        mUser = oobs_user_new(loginName);
-    }
-    oobs_user_set_uid(mUser, uid);
-
-    QByteArray fullName = ui.fullName->text().toUtf8();
-    oobs_user_set_full_name(mUser, fullName);
-
+#if 0
     // change password
     if(ui.changePasswd->isChecked())
     {
@@ -165,17 +131,16 @@ void UserDialog::accept()
         else
             oobs_user_set_password(mUser, passwd);
     }
+#endif
 
-    QByteArray homeDir = ui.homeDir->text().toLocal8Bit();
-    oobs_user_set_home_directory(mUser, homeDir);
+    mUser->setHomeDir(ui.homeDir->text());
 
     // main group
-    OobsGroupsConfig* groupsConfig = OOBS_GROUPS_CONFIG(oobs_groups_config_get());
-    QByteArray groupName = ui.mainGroup->currentText().toLatin1();
-    OobsGroup* group = oobs_groups_config_get_from_name(groupsConfig, groupName);
-    oobs_user_set_main_group(mUser, group);
-
-    if(!createNew)
-        oobs_object_commit_async(OOBS_OBJECT(mUser), NULL, NULL);
+    QString groupName = ui.mainGroup->currentText();
+    if(!groupName.isEmpty()) {
+        GroupInfo* group = mUserManager->findGroupInfo(groupName);
+        if(group)
+            mUser->setGid(group->gid());
+    }
     QDialog::accept();
 }

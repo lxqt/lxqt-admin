@@ -20,30 +20,21 @@
 
 #include "groupdialog.h"
 #include <QMessageBox>
+#include "usermanager.h"
 
 #define DEFAULT_GID_MIN 1000
 #define DEFAULT_GID_MAX 32768
 
-GroupDialog::GroupDialog(OobsGroup *group, QWidget *parent, Qt::WindowFlags f):
+GroupDialog::GroupDialog(UserManager* userManager, GroupInfo* group, QWidget *parent, Qt::WindowFlags f):
     QDialog(parent, f),
-    mGroup(group ? OOBS_GROUP(g_object_ref(group)) : NULL)
+    mUserManager(userManager),
+    mGroup(group)
 {
     ui.setupUi(this);
+    ui.groupName->setText(group->name());
+    ui.gid->setValue(group->gid());
 
-    OobsGroupsConfig* groupsConfig = OOBS_GROUPS_CONFIG(oobs_groups_config_get());
-    if(group) // edit an exiting group
-    {
-        ui.groupName->setReadOnly(true);
-        ui.groupName->setText(oobs_group_get_name(group));
-        mOldGId = oobs_group_get_gid(group);
-        ui.gid->setValue(mOldGId);
-    }
-    else // create a new group
-    {
-        mOldGId = -1;
-        ui.gid->setValue(oobs_groups_config_find_free_gid(groupsConfig, DEFAULT_GID_MIN, DEFAULT_GID_MAX));
-    }
-
+#if 0
     GList* groupUsers = oobs_group_get_users(mGroup); // all users in this group
     // load all users
     OobsUsersConfig* usersConfig = OOBS_USERS_CONFIG(oobs_users_config_get());
@@ -69,42 +60,26 @@ GroupDialog::GroupDialog(OobsGroup *group, QWidget *parent, Qt::WindowFlags f):
         }
     }
     g_list_free(groupUsers);
+#endif
 }
 
 GroupDialog::~GroupDialog()
 {
-    if(mGroup)
-        g_object_unref(mGroup);
 }
 
 void GroupDialog::accept()
 {
-    OobsGroupsConfig* groupsConfig = OOBS_GROUPS_CONFIG(oobs_groups_config_get());
-    gid_t gid = ui.gid->value();
-    if(gid != mOldGId && oobs_groups_config_is_gid_used(groupsConfig, gid))
+    QString groupName = ui.groupName->text();
+    if(groupName.isEmpty())
     {
-        QMessageBox::critical(this, tr("Error"), tr("The group ID is in use."));
+        QMessageBox::critical(this, tr("Error"), tr("The group name cannot be empty."));
         return;
     }
-
-    if(!mGroup) // create a new group
-    {
-        QByteArray groupName = ui.groupName->text().toLatin1();
-        if(groupName.isEmpty())
-        {
-            QMessageBox::critical(this, tr("Error"), tr("The group name cannot be empty."));
-            return;
-        }
-        if(oobs_groups_config_is_name_used(groupsConfig, groupName))
-        {
-            QMessageBox::critical(this, tr("Error"), tr("The group name is in use."));
-            return;
-        }
-        mGroup = oobs_group_new(groupName);
-    }
-    oobs_group_set_gid(mGroup, gid);
+    mGroup->setName(groupName);
+    mGroup->setGid(ui.gid->value());
 
     // update users
+#if 0
     GList* groupUsers = oobs_group_get_users(mGroup); // all users in this group
     int rowCount = ui.userList->count();
     for(int row = 0; row < rowCount; ++row)
@@ -124,7 +99,6 @@ void GroupDialog::accept()
         }
     }
     g_list_free(groupUsers);
-
-    oobs_object_commit(OOBS_OBJECT(mGroup));
+#endif
     QDialog::accept();
 }

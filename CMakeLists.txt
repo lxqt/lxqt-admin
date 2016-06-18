@@ -11,12 +11,6 @@ find_package(Qt5Widgets REQUIRED QUIET)
 find_package(lxqt REQUIRED QUIET)
 find_package(KF5WindowSystem REQUIRED QUIET)
 
-find_package(PkgConfig)
-pkg_check_modules(OOBS REQUIRED
-    glib-2.0
-    liboobs-1
-)
-
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
 include(LXQtTranslate)
 

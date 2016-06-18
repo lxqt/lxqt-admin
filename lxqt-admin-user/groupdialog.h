@@ -23,32 +23,24 @@
 
 #include <QDialog>
 #include "ui_groupdialog.h"
-#include <glib.h>
-#include <oobs/oobs-usersconfig.h>
-#include <oobs/oobs-groupsconfig.h>
+
+class GroupInfo;
+class UserManager;
 
 class GroupDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    GroupDialog(OobsGroup* group = NULL, QWidget *parent = NULL, Qt::WindowFlags f = 0);
+    GroupDialog(UserManager* userManager, GroupInfo* group, QWidget *parent = nullptr, Qt::WindowFlags f = 0);
     ~GroupDialog();
-
-    OobsGroup* group()
-    {
-        return mGroup;
-    }
 
     virtual void accept();
 
 private:
-    bool hasUser(OobsUser* user);
-
-private:
     Ui::GroupDialog ui;
-    OobsGroup* mGroup;
-    gid_t mOldGId;
+    UserManager* mUserManager;
+    GroupInfo* mGroup;
 };
 
 #endif // GROUPDIALOG_H

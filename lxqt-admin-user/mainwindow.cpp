@@ -23,159 +23,110 @@
 #include <QMessageBox>
 #include "userdialog.h"
 #include "groupdialog.h"
+#include "usermanager.h"
 
 MainWindow::MainWindow():
     QMainWindow(),
-    mUsersConfig(OOBS_USERS_CONFIG(oobs_users_config_get())),
-    mGroupsConfig(OOBS_GROUPS_CONFIG(oobs_groups_config_get()))
+    mUserManager(new UserManager(this))
 {
     ui.setupUi(this);
     connect(ui.actionAdd, SIGNAL(triggered(bool)), SLOT(onAdd()));
     connect(ui.actionDelete, SIGNAL(triggered(bool)), SLOT(onDelete()));
     connect(ui.actionProperties, SIGNAL(triggered(bool)), SLOT(onEditProperties()));
-    connect(ui.actionRefresh, SIGNAL(triggered(bool)), SLOT(onRefresh()));
 
-    onRefresh(); // load the settings
+    connect(ui.actionRefresh, SIGNAL(triggered(bool)), SLOT(reloadUsers()));
+    connect(ui.actionRefresh, SIGNAL(triggered(bool)), SLOT(reloadGroups()));
 
-    g_signal_connect(mUsersConfig, "changed" , G_CALLBACK(onUsersConfigChanged), this);
-    g_signal_connect(mGroupsConfig, "changed" , G_CALLBACK(onGroupsConfigChanged), this);
+    connect(mUserManager, &UserManager::usersChanged, this, &MainWindow::reloadUsers);
+    connect(mUserManager, &UserManager::groupsChanged, this, &MainWindow::reloadGroups);
+
+    reloadUsers();
+    reloadGroups();
 }
 
 MainWindow::~MainWindow()
 {
-    if(mUsersConfig)
-    {
-        g_signal_handlers_disconnect_by_func(mUsersConfig, (void*)G_CALLBACK(onUsersConfigChanged), this);
-        g_object_unref(mUsersConfig);
-    }
-    if(mGroupsConfig)
-        g_object_unref(mGroupsConfig);
 }
 
-void MainWindow::loadUsers()
+void MainWindow::reloadUsers()
 {
     ui.userList->clear();
-    OobsList* users = oobs_users_config_get_users(mUsersConfig);
-    if(users)
+    const auto& users = mUserManager->users();
+    for(const UserInfo* user: users)
     {
-        OobsListIter it;
-        gboolean valid = oobs_list_get_iter_first(users, &it);
-        while(valid)
+        uid_t uid = user->uid();
+        if(uid > 499 && !user->shell().isEmpty()) // exclude system users
         {
-            GObject* obj = oobs_list_get(users, &it);
-            OobsUser* user = OOBS_USER(obj);
-            uid_t uid = oobs_user_get_uid(user);
-            if(uid > 499 && oobs_user_get_shell(user)) // exclude system users
-            {
-                QString fullName = QString::fromUtf8(oobs_user_get_full_name(user));
-                QString loginName = QString::fromLatin1(oobs_user_get_login_name(user));
-                QString homeDir = QString::fromLocal8Bit(oobs_user_get_home_directory(user));
-                QString groupName;
-                OobsGroup* group = oobs_user_get_main_group(user);
-                if(group)
-                    groupName = QString::fromLatin1(oobs_group_get_name(group));
-
-                QTreeWidgetItem* item = new QTreeWidgetItem();
-                item->setData(0, Qt::DisplayRole, loginName);
-                QVariant obj = QVariant::fromValue<void*>(user);
-                item->setData(0, Qt::UserRole, obj);
-                item->setData(1, Qt::DisplayRole, uid);
-                item->setData(2, Qt::DisplayRole, fullName);
-                item->setData(3, Qt::DisplayRole, groupName);
-                item->setData(4, Qt::DisplayRole, homeDir);
-                ui.userList->addTopLevelItem(item);
+            QTreeWidgetItem* item = new QTreeWidgetItem();
+            item->setData(0, Qt::DisplayRole, user->name());
+            QVariant obj = QVariant::fromValue<void*>((void*)user);
+            item->setData(0, Qt::UserRole, obj);
+            item->setData(1, Qt::DisplayRole, uid);
+            item->setData(2, Qt::DisplayRole, user->fullName());
+            GroupInfo* group = mUserManager->findGroupInfo(user->gid());
+            if(group != nullptr) {
+                item->setData(3, Qt::DisplayRole, group->name());
             }
-            valid = oobs_list_iter_next(users, &it);
+            item->setData(4, Qt::DisplayRole, user->homeDir());
+            ui.userList->addTopLevelItem(item);
         }
     }
 }
 
-void MainWindow::loadGroups()
+void MainWindow::reloadGroups()
 {
     ui.groupList->clear();
     // load groups
-    OobsList* groups = oobs_groups_config_get_groups(mGroupsConfig);
-    if(groups)
+    const auto& groups = mUserManager->groups();
+    for(const GroupInfo* group: groups)
     {
-        OobsListIter it;
-        gboolean valid = oobs_list_get_iter_first(groups, &it);
-        while(valid)
-        {
-            OobsGroup* group = OOBS_GROUP(oobs_list_get(groups, &it));
-            QTreeWidgetItem* item = new QTreeWidgetItem();
-            item->setData(0, Qt::DisplayRole, QString::fromLatin1(oobs_group_get_name(group)));
-            QVariant obj = QVariant::fromValue<void*>(group);
-            item->setData(0, Qt::UserRole, obj);
-            item->setData(1, Qt::DisplayRole, oobs_group_get_gid(group));
-            ui.groupList->addTopLevelItem(item);
-            valid = oobs_list_iter_next(groups, &it);
-        }
+        QTreeWidgetItem* item = new QTreeWidgetItem();
+        item->setData(0, Qt::DisplayRole, group->name());
+        QVariant obj = QVariant::fromValue<void*>((void*)group);
+        item->setData(0, Qt::UserRole, obj);
+        item->setData(1, Qt::DisplayRole, group->gid());
+        ui.groupList->addTopLevelItem(item);
     }
 }
 
-OobsUser *MainWindow::userFromItem(QTreeWidgetItem *item)
+UserInfo *MainWindow::userFromItem(QTreeWidgetItem *item)
 {
     if(item)
     {
         QVariant obj = item->data(0, Qt::UserRole);
-        OobsUser* user = OOBS_USER(obj.value<void*>());
-        return user;
+        return reinterpret_cast<UserInfo*>(obj.value<void*>());
     }
     return NULL;
 }
 
-OobsGroup* MainWindow::groupFromItem(QTreeWidgetItem *item)
+GroupInfo* MainWindow::groupFromItem(QTreeWidgetItem *item)
 {
     if(item)
     {
         QVariant obj = item->data(0, Qt::UserRole);
-        return OOBS_GROUP(obj.value<void*>());
+        return reinterpret_cast<GroupInfo*>(obj.value<void*>());
     }
     return NULL;
-}
-
-template <class T>
-bool MainWindow::authenticate(T *obj)
-{
-    GError* err = NULL;
-    if(!oobs_object_authenticate(OOBS_OBJECT(obj), &err))
-    {
-        if(err)
-        {
-            QMessageBox::critical(this, tr("Error"), QString::fromUtf8(err->message));
-            g_error_free(err);
-        }
-        return false;
-    }
-    return true;
 }
 
 void MainWindow::onAdd()
 {
     if(ui.tabWidget->currentIndex() == PageUsers)
     {
-        if(authenticate(mUsersConfig))
+        UserInfo newUser;
+        UserDialog dlg(mUserManager, &newUser, this);
+        if(dlg.exec() == QDialog::Accepted)
         {
-            UserDialog dlg(NULL, this);
-            if(dlg.exec() == QDialog::Accepted)
-            {
-                OobsUser* user = dlg.user();
-                oobs_users_config_add_user(mUsersConfig, user);
-                oobs_object_commit(OOBS_OBJECT(mUsersConfig));
-            }
+            mUserManager->addUser(&newUser);
         }
     }
     else if (ui.tabWidget->currentIndex() == PageGroups)
     {
-        if(authenticate(mGroupsConfig))
+        GroupInfo newGroup;
+        GroupDialog dlg(mUserManager, &newGroup, this);
+        if(dlg.exec() == QDialog::Accepted)
         {
-            GroupDialog dlg(NULL, this);
-            if(dlg.exec() == QDialog::Accepted)
-            {
-                OobsGroup* group = dlg.group();
-                oobs_groups_config_add_group(mGroupsConfig, group);
-                oobs_object_commit(OOBS_OBJECT(mGroupsConfig));
-            }
+            mUserManager->addGroup(&newGroup);
         }
     }
 }
@@ -185,26 +136,26 @@ void MainWindow::onDelete()
     if(ui.tabWidget->currentIndex() == PageUsers)
     {
         QTreeWidgetItem* item = ui.userList->currentItem();
-        OobsUser* user = userFromItem(item);
+        QString userName = item->text(0);
+        UserInfo* user = mUserManager->findUserInfo(userName);
         if(user)
         {
             if(QMessageBox::question(this, tr("Confirm"), tr("Are you sure you want to delete the selected user?"), QMessageBox::Ok|QMessageBox::Cancel) == QMessageBox::Ok)
             {
-                oobs_users_config_delete_user(mUsersConfig, user);
-                oobs_object_commit(OOBS_OBJECT(mUsersConfig));
+                mUserManager->deleteUser(user);
             }
         }
     }
     else if(ui.tabWidget->currentIndex() == PageGroups)
     {
         QTreeWidgetItem* item = ui.groupList->currentItem();
-        OobsGroup* group = groupFromItem(item);
+        QString groupName = item->text(0);
+        GroupInfo* group = mUserManager->findGroupInfo(groupName);
         if(group)
         {
             if(QMessageBox::question(this, tr("Confirm"), tr("Are you sure you want to delete the selected group?"), QMessageBox::Ok|QMessageBox::Cancel) == QMessageBox::Ok)
             {
-                oobs_groups_config_delete_group(mGroupsConfig, group);
-                oobs_object_commit(OOBS_OBJECT(mGroupsConfig));
+                mUserManager->deleteGroup(group);
             }
         }
     }
@@ -215,35 +166,30 @@ void MainWindow::onEditProperties()
     if(ui.tabWidget->currentIndex() == PageUsers)
     {
         QTreeWidgetItem* item = ui.userList->currentItem();
-        OobsUser* user = userFromItem(item);
-        if(user)
-        {
-            if(authenticate(mUsersConfig))
+        QString name = item->text(0);
+        UserInfo* user = mUserManager->findUserInfo(name);
+        if(user) {
+            UserInfo newSettings(*user);
+            UserDialog dlg(mUserManager, &newSettings);
+            if(dlg.exec() == QDialog::Accepted)
             {
-                UserDialog dlg(user, this);
-                dlg.exec();
+                mUserManager->modifyUser(user, &newSettings);
             }
         }
     }
     else if(ui.tabWidget->currentIndex() == PageGroups)
     {
         QTreeWidgetItem* item = ui.groupList->currentItem();
-        OobsGroup* group = groupFromItem(item);
-        if(group)
-        {
-            if(authenticate(mGroupsConfig))
+        QString name = item->text(0);
+        GroupInfo* group = mUserManager->findGroupInfo(name);
+        if(group) {
+            GroupInfo newSettings(*group);
+            GroupDialog dlg(mUserManager, &newSettings);
+            if(dlg.exec() == QDialog::Accepted)
             {
-                GroupDialog dlg(group, this);
-                dlg.exec();
+                mUserManager->modifyGroup(group, &newSettings);
             }
         }
     }
 }
 
-void MainWindow::onRefresh()
-{
-    oobs_object_update(OOBS_OBJECT(mUsersConfig));
-    loadUsers();
-    oobs_object_update(OOBS_OBJECT(mGroupsConfig));
-    loadGroups();
-}

@@ -23,22 +23,18 @@
 
 #include <QDialog>
 #include "ui_userdialog.h"
-#include <glib.h>
-#include <oobs/oobs-usersconfig.h>
-#include <oobs/oobs-groupsconfig.h>
+#include "usermanager.h"
+
+class UserManager;
+class UserInfo;
 
 class UserDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    UserDialog(OobsUser* user = NULL, QWidget* parent = NULL);
+    UserDialog(UserManager* userManager, UserInfo* user, QWidget* parent = nullptr);
     ~UserDialog();
-
-    OobsUser* user()
-    {
-        return mUser;
-    }
 
     virtual void accept();
 
@@ -49,8 +45,9 @@ private Q_SLOTS:
 
 private:
     Ui::UserDialog ui;
-    OobsUser* mUser;
-    uid_t mOldUid;
+    UserManager* mUserManager;
+    UserInfo* mUser;
+
 #if 0
     QByteArray mOldLoginName;
     QByteArray mOldFullName;

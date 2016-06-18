@@ -3,7 +3,6 @@ project(lxqt-admin-user)
 # build static helper class first
 include_directories (
     ${CMAKE_CURRENT_BINARY_DIR}
-    ${OOBS_INCLUDE_DIRS}
 )
 
 set ( lxqt-admin-user_SRCS
@@ -11,12 +10,14 @@ set ( lxqt-admin-user_SRCS
     mainwindow.cpp
     userdialog.cpp
     groupdialog.cpp
+    usermanager.cpp
 )
 
 set ( lxqt-admin-user_MOCS
     mainwindow.h
     userdialog.h
     groupdialog.h
+    usermanager.h
 )
 
 set( lxqt-admin-user_UIS
@@ -69,7 +70,6 @@ target_link_libraries(lxqt-admin-user
     KF5::WindowSystem
     Qt5::Widgets
     lxqt
-    ${OOBS_LIBRARIES}
 )
 
 install(TARGETS lxqt-admin-user RUNTIME DESTINATION bin)

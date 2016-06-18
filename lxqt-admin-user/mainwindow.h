@@ -24,9 +24,9 @@
 #include <QMainWindow>
 #include "ui_mainwindow.h"
 
-#include <glib.h>
-#include <oobs/oobs-usersconfig.h>
-#include <oobs/oobs-groupsconfig.h>
+class UserInfo;
+class GroupInfo;
+class UserManager;
 
 class MainWindow : public QMainWindow
 {
@@ -44,34 +44,19 @@ public:
     virtual ~MainWindow();
 
 private:
-    void loadUsers();
-    void loadGroups();
-    OobsUser* userFromItem(QTreeWidgetItem* item);
-    OobsGroup* groupFromItem(QTreeWidgetItem *item);
-
-    template <class T>
-    bool authenticate(T* obj);
-
-    static void onUsersConfigChanged(OobsObject* obj, MainWindow* _this)
-    {
-        _this->loadUsers();
-    }
-
-    static void onGroupsConfigChanged(OobsObject* obj, MainWindow* _this)
-    {
-        _this->loadGroups();
-    }
+    UserInfo* userFromItem(QTreeWidgetItem* item);
+    GroupInfo* groupFromItem(QTreeWidgetItem *item);
 
 private Q_SLOTS:
+    void reloadUsers();
+    void reloadGroups();
     void onAdd();
     void onDelete();
     void onEditProperties();
-    void onRefresh();
 
 private:
     Ui::MainWindow ui;
-    OobsUsersConfig* mUsersConfig;
-    OobsGroupsConfig* mGroupsConfig;
+    UserManager* mUserManager;
 };
 
 #endif // MAINWINDOW_H
