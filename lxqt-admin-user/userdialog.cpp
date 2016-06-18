@@ -109,13 +109,13 @@ void UserDialog::onHomeDirChanged(const QString& text)
 void UserDialog::accept()
 {
     mUser->setUid(ui.uid->value());
-    bool createNew;
     QString loginName = ui.loginName->text();
     if(loginName.isEmpty())
     {
         QMessageBox::critical(this, tr("Error"), tr("The user name cannot be empty."));
         return;
     }
+    mUser->setName(loginName);
     mUser->setFullName(ui.fullName->text());
 
 #if 0

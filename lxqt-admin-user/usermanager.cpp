@@ -214,9 +214,14 @@ bool UserManager::addGroup(GroupInfo* group) {
 bool UserManager::modifyGroup(GroupInfo* group, GroupInfo* newSettings) {
     if(!group || group->name().isEmpty() || !newSettings)
         return false;
-
-    // TODO
-    return false;
+    QStringList command;
+    command << QStringLiteral("groupmod");
+    if(newSettings->gid() != group->gid())
+        command << QStringLiteral("-g") << QString::number(newSettings->gid());
+    if(newSettings->name() != group->name())
+        command << QStringLiteral("-n") << newSettings->name();
+    command << group->name();
+    return pkexec(command);
 }
 
 bool UserManager::deleteGroup(GroupInfo* group) {
