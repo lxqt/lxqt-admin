@@ -47,7 +47,7 @@ void UserManager::loadGroups()
         mGroups.append(group);
         // add members of this group
         for(char** member_name = grp->gr_mem; *member_name; ++member_name) {
-            group->addMember(*member_name);
+            group->addMember(QString::fromLatin1(*member_name));
         }
     }
     endgrent();

@@ -106,7 +106,7 @@ public:
         mName = name;
     }
 
-    QStringList members() const {
+    const QStringList& members() const {
         return mMembers;
     }
 

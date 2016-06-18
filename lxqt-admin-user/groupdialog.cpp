@@ -21,6 +21,7 @@
 #include "groupdialog.h"
 #include <QMessageBox>
 #include "usermanager.h"
+#include <QDebug>
 
 #define DEFAULT_GID_MIN 1000
 #define DEFAULT_GID_MAX 32768
@@ -34,33 +35,22 @@ GroupDialog::GroupDialog(UserManager* userManager, GroupInfo* group, QWidget *pa
     ui.groupName->setText(group->name());
     ui.gid->setValue(group->gid());
 
-#if 0
-    GList* groupUsers = oobs_group_get_users(mGroup); // all users in this group
+    const QStringList& members = group->members(); // all users in this group
+    qDebug() << members;
     // load all users
-    OobsUsersConfig* usersConfig = OOBS_USERS_CONFIG(oobs_users_config_get());
-    OobsList* users = oobs_users_config_get_users(usersConfig);
-    if(users)
+    for(const UserInfo* user: userManager->users())
     {
-        OobsListIter it;
-        gboolean valid = oobs_list_get_iter_first(users, &it);
-        while(valid)
-        {
-            OobsUser* user = OOBS_USER(oobs_list_get(users, &it));
-            QListWidgetItem* item = new QListWidgetItem();
-            item->setText(oobs_user_get_login_name(user));
-            item->setFlags(Qt::ItemIsEnabled|Qt::ItemIsUserCheckable|Qt::ItemIsSelectable);
-            if(g_list_find(groupUsers, user)) // the user is in this group
-                item->setCheckState(Qt::Checked);
-            else
-                item->setCheckState(Qt::Unchecked);
-            QVariant obj = QVariant::fromValue<void*>(user);
-            item->setData(Qt::UserRole, obj);
-            ui.userList->addItem(item);
-            valid = oobs_list_iter_next(users, &it);
-        }
+        QListWidgetItem* item = new QListWidgetItem();
+        item->setText(user->name());
+        item->setFlags(Qt::ItemIsEnabled|Qt::ItemIsUserCheckable|Qt::ItemIsSelectable);
+        if(members.indexOf(user->name()) != -1) // the user is in this group
+            item->setCheckState(Qt::Checked);
+        else
+            item->setCheckState(Qt::Unchecked);
+        QVariant obj = QVariant::fromValue<void*>((void*)user);
+        item->setData(Qt::UserRole, obj);
+        ui.userList->addItem(item);
     }
-    g_list_free(groupUsers);
-#endif
 }
 
 GroupDialog::~GroupDialog()
