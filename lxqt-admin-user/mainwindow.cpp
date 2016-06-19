@@ -38,15 +38,13 @@ MainWindow::MainWindow():
     connect(ui.actionDelete, SIGNAL(triggered(bool)), SLOT(onDelete()));
     connect(ui.actionProperties, SIGNAL(triggered(bool)), SLOT(onEditProperties()));
     connect(ui.actionChangePasswd, SIGNAL(triggered(bool)), SLOT(onChangePasswd()));
+    connect(ui.actionRefresh, SIGNAL(triggered(bool)), SLOT(reload()));
 
-    connect(ui.actionRefresh, SIGNAL(triggered(bool)), SLOT(reloadUsers()));
-    connect(ui.actionRefresh, SIGNAL(triggered(bool)), SLOT(reloadGroups()));
+    connect(ui.userList, &QListWidget::activated, this, &MainWindow::onRowActivated);
+    connect(ui.groupList, &QListWidget::activated, this, &MainWindow::onRowActivated);
 
-    connect(mUserManager, &UserManager::usersChanged, this, &MainWindow::reloadUsers);
-    connect(mUserManager, &UserManager::groupsChanged, this, &MainWindow::reloadGroups);
-
-    reloadUsers();
-    reloadGroups();
+    connect(mUserManager, &UserManager::changed, this, &MainWindow::reload);
+    reload();
 }
 
 MainWindow::~MainWindow()
@@ -90,8 +88,14 @@ void MainWindow::reloadGroups()
         QVariant obj = QVariant::fromValue<void*>((void*)group);
         item->setData(0, Qt::UserRole, obj);
         item->setData(1, Qt::DisplayRole, group->gid());
+        item->setData(2, Qt::DisplayRole, group->members().join(", "));
         ui.groupList->addTopLevelItem(item);
     }
+}
+
+void MainWindow::reload() {
+    reloadUsers();
+    reloadGroups();
 }
 
 UserInfo *MainWindow::userFromItem(QTreeWidgetItem *item)
@@ -215,6 +219,11 @@ void MainWindow::onChangePasswd() {
             mUserManager->changePassword(group, newPasswd);
         }
     }
+}
+
+void MainWindow::onRowActivated(const QModelIndex& index)
+{
+    onEditProperties();
 }
 
 void MainWindow::onEditProperties()

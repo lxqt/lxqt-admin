@@ -47,14 +47,16 @@ private:
     UserInfo* userFromItem(QTreeWidgetItem* item);
     GroupInfo* groupFromItem(QTreeWidgetItem *item);
     bool getNewPassword(const QString& name, QByteArray& passwd);
-
-private Q_SLOTS:
     void reloadUsers();
     void reloadGroups();
+
+private Q_SLOTS:
     void onAdd();
     void onDelete();
     void onEditProperties();
     void onChangePasswd();
+    void reload();
+    void onRowActivated(const QModelIndex& index);
 
 private:
     Ui::MainWindow ui;

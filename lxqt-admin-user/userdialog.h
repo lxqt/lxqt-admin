@@ -48,13 +48,6 @@ private:
     UserManager* mUserManager;
     UserInfo* mUser;
 
-#if 0
-    QByteArray mOldLoginName;
-    QByteArray mOldFullName;
-    QByteArray mOldGroupName;
-    QByteArray mOldHomeDir;
-#endif
-
     bool mFullNameChanged;
     bool mHomeDirChanged;
 };

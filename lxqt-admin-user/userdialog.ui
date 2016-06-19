@@ -56,6 +56,9 @@
        </item>
        <item row="3" column="1">
         <widget class="QSpinBox" name="uid">
+         <property name="specialValueText">
+          <string>Default</string>
+         </property>
          <property name="maximum">
           <number>32768</number>
          </property>
@@ -72,6 +75,30 @@
         <widget class="QComboBox" name="mainGroup">
          <property name="editable">
           <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>Groups</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>The user belongs to the following groups:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListWidget" name="groupList">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>1</verstretch>
+          </sizepolicy>
          </property>
         </widget>
        </item>

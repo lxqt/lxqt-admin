@@ -67,6 +67,26 @@ public:
         mHomeDir = homeDir;
     }
 
+    const QStringList& groups() const {
+        return mGroups;
+    }
+
+    void addGroup(const QString& group) {
+        mGroups.append(group);
+    }
+
+    void removeGroup(const QString& group) {
+        mGroups.removeOne(group);
+    }
+
+    void removeAllGroups() {
+        mGroups.clear();
+    }
+
+    bool hasGroup(const QString& group) {
+        return mGroups.contains(group);
+    }
+
 private:
     uid_t mUid;
     gid_t mGid;
@@ -74,6 +94,7 @@ private:
     QString mFullName;
     QString mShell;
     QString mHomeDir;
+    QStringList mGroups;
 };
 
 class GroupInfo
@@ -117,6 +138,14 @@ public:
         mMembers.removeOne(userName);
     }
 
+    void removeAllMemberss() {
+        mMembers.clear();
+    }
+
+    bool hasMember(const QString& userName) const {
+        return mMembers.contains(userName);
+    }
+
 private:
     gid_t mGid;
     QString mName;
@@ -150,7 +179,7 @@ public:
     bool deleteGroup(GroupInfo* group);
     bool changePassword(GroupInfo* group, QByteArray newPasswd);
 
-    // FIXME: add APIs to change group membership
+    // FIXME: add APIs to change group membership with "gpasswd"
 
     UserInfo* findUserInfo(const char* name);
     UserInfo* findUserInfo(QString name);
@@ -161,18 +190,16 @@ public:
     GroupInfo* findGroupInfo(gid_t gid);
 
 private:
-    void loadUsers();
-    void loadGroups();
+    void loadUsersAndGroups();
+    void loadLoginDefs();
     bool pkexec(const QStringList &command, const QByteArray &stdinData = QByteArray());
 
 Q_SIGNALS:
-    void usersChanged();
-    void groupsChanged();
+    void changed();
 
 protected Q_SLOTS:
     void onFileChanged(const QString &path);
-    void reloadUsers();
-    void reloadGroups();
+    void reload();
 
 private:
     QList<UserInfo*> mUsers;

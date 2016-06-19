@@ -20,6 +20,8 @@
 
 #include "userdialog.h"
 #include <QMessageBox>
+#include <QListWidgetItem>
+#include <QDebug>
 #include "usermanager.h"
 
 #define DEFAULT_UID_MIN 1000
@@ -33,16 +35,36 @@ UserDialog::UserDialog(UserManager* userManager, UserInfo* user, QWidget* parent
     mHomeDirChanged(false)
 {
     ui.setupUi(this);
-
+    bool isNewUser = (user->uid() == 0 && user->name().isEmpty());
     // load all groups
-    for(const GroupInfo* group: mUserManager->groups()) {
+    for(const GroupInfo* group: mUserManager->groups())
+    {
         ui.mainGroup->addItem(group->name());
+
+        QListWidgetItem* item = new QListWidgetItem();
+        item->setText(group->name());
+        item->setFlags(Qt::ItemIsEnabled|Qt::ItemIsUserCheckable|Qt::ItemIsSelectable);
+        if(!isNewUser)
+        {
+            if(group->hasMember(user->name()) || user->gid() == group->gid()) // the user is in this group
+                item->setCheckState(Qt::Checked);
+            else
+                item->setCheckState(Qt::Unchecked);
+        }
+        else
+            item->setCheckState(Qt::Unchecked);
+        ui.groupList->addItem(item);
     }
     connect(ui.loginName, SIGNAL(textChanged(QString)), SLOT(onLoginNameChanged(QString)));
 
     ui.loginShell->addItems(mUserManager->availableShells());
 
-    if(user) // edit an existing user
+    if(isNewUser) // new user
+    {
+        ui.mainGroup->setCurrentIndex(-1);
+        ui.loginShell->setCurrentIndex(-1);
+    }
+    else  // edit an existing user
     {
         ui.loginName->setText(user->name());
         ui.uid->setValue(user->uid());
@@ -106,6 +128,15 @@ void UserDialog::accept()
         GroupInfo* group = mUserManager->findGroupInfo(groupName);
         if(group)
             mUser->setGid(group->gid());
+    }
+
+    // other groups
+    mUser->removeAllGroups();
+    for(int row = 0; row < ui.groupList->count(); ++row) {
+        QListWidgetItem* item = ui.groupList->item(row);
+        if(item->checkState() == Qt::Checked) {
+            mUser->addGroup(item->text());
+        }
     }
     QDialog::accept();
 }

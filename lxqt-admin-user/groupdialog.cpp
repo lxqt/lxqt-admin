@@ -36,7 +36,6 @@ GroupDialog::GroupDialog(UserManager* userManager, GroupInfo* group, QWidget *pa
     ui.gid->setValue(group->gid());
 
     const QStringList& members = group->members(); // all users in this group
-    qDebug() << members;
     // load all users
     for(const UserInfo* user: userManager->users())
     {
@@ -69,26 +68,12 @@ void GroupDialog::accept()
     mGroup->setGid(ui.gid->value());
 
     // update users
-#if 0
-    GList* groupUsers = oobs_group_get_users(mGroup); // all users in this group
-    int rowCount = ui.userList->count();
-    for(int row = 0; row < rowCount; ++row)
-    {
+    mGroup->removeAllMemberss();
+    for(int row = 0; row < ui.userList->count(); ++row) {
         QListWidgetItem* item = ui.userList->item(row);
-        QVariant obj = item->data(Qt::UserRole);
-        OobsUser* user = OOBS_USER(obj.value<void*>());
-        if(g_list_find(groupUsers, user)) // the user belongs to this group previously
-        {
-            if(item->checkState() == Qt::Unchecked) // it's unchecked, remove it
-                oobs_group_remove_user(mGroup, user);
-        }
-        else // the user does not belong to this group previously
-        {
-            if(item->checkState() == Qt::Checked) // it's checked, we want it!
-                oobs_group_add_user(mGroup, user);
+        if(item->checkState() == Qt::Checked) {
+            mGroup->addMember(item->text());
         }
     }
-    g_list_free(groupUsers);
-#endif
     QDialog::accept();
 }

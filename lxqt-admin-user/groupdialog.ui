@@ -26,6 +26,9 @@
    </item>
    <item row="1" column="1">
     <widget class="QSpinBox" name="gid">
+     <property name="specialValueText">
+      <string>Default</string>
+     </property>
      <property name="maximum">
       <number>32768</number>
      </property>
