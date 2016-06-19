@@ -21,6 +21,10 @@
 #include "mainwindow.h"
 #include <QDebug>
 #include <QMessageBox>
+#include <QInputDialog>
+#include <QLineEdit>
+#include <QRegExpValidator>
+#include <QRegExp>
 #include "userdialog.h"
 #include "groupdialog.h"
 #include "usermanager.h"
@@ -33,6 +37,7 @@ MainWindow::MainWindow():
     connect(ui.actionAdd, SIGNAL(triggered(bool)), SLOT(onAdd()));
     connect(ui.actionDelete, SIGNAL(triggered(bool)), SLOT(onDelete()));
     connect(ui.actionProperties, SIGNAL(triggered(bool)), SLOT(onEditProperties()));
+    connect(ui.actionChangePasswd, SIGNAL(triggered(bool)), SLOT(onChangePasswd()));
 
     connect(ui.actionRefresh, SIGNAL(triggered(bool)), SLOT(reloadUsers()));
     connect(ui.actionRefresh, SIGNAL(triggered(bool)), SLOT(reloadGroups()));
@@ -118,6 +123,10 @@ void MainWindow::onAdd()
         if(dlg.exec() == QDialog::Accepted)
         {
             mUserManager->addUser(&newUser);
+            QByteArray newPasswd;
+            if(getNewPassword(newUser.name(), newPasswd)) {
+                mUserManager->changePassword(&newUser, newPasswd);
+            }
         }
     }
     else if (ui.tabWidget->currentIndex() == PageGroups)
@@ -155,6 +164,55 @@ void MainWindow::onDelete()
             {
                 mUserManager->deleteGroup(group);
             }
+        }
+    }
+}
+
+bool MainWindow::getNewPassword(const QString& name, QByteArray& passwd) {
+    QInputDialog dlg(this);
+    dlg.setTextEchoMode(QLineEdit::Password);
+    dlg.setLabelText(tr("Input the new password for %1:").arg(name));
+    QLineEdit* edit = dlg.findChild<QLineEdit*>(QString());
+    if(edit) {
+        // NOTE: do we need to add a validator to limit the input?
+        // QRegExpValidator* validator = new QRegExpValidator(QRegExp(QStringLiteral("\\w*")), edit);
+        // edit->setValidator(validator);
+    }
+    if(dlg.exec() == QDialog::Accepted) {
+        passwd = dlg.textValue().toUtf8();
+        if(passwd.isEmpty()) {
+            if(QMessageBox::question(this, tr("Confirm"), tr("Are you sure you want to set a empty password?"), QMessageBox::Ok|QMessageBox::Cancel) != QMessageBox::Ok)
+                return false;
+        }
+        return true;
+    }
+    return false;
+}
+
+void MainWindow::onChangePasswd() {
+    QString name;
+    UserInfo* user = nullptr;
+    GroupInfo* group = nullptr;
+    if(ui.tabWidget->currentIndex() == PageUsers)
+    {
+        QTreeWidgetItem* item = ui.userList->currentItem();
+        user = userFromItem(item);
+        name = user->name();
+    }
+    else if(ui.tabWidget->currentIndex() == PageGroups)
+    {
+        QTreeWidgetItem* item = ui.groupList->currentItem();
+        group = groupFromItem(item);
+        name = group->name();
+    }
+
+    QByteArray newPasswd;
+    if(getNewPassword(name, newPasswd)) {
+        if(user) {
+            mUserManager->changePassword(user, newPasswd);
+        }
+        if(group) {
+            mUserManager->changePassword(group, newPasswd);
         }
     }
 }

@@ -1,8 +1,9 @@
 #!/bin/sh
 case "$1" in
 # we only allow executing these commands
-useradd|usermod|userdel|groupadd|groupmod|groupdel)
-    # TODO: platforms using different commands can add workarounds here.
+useradd|usermod|userdel|groupadd|groupmod|groupdel|passwd|gpasswd)
+    # TODO: platforms using different commands can add wrapper scripts here.
+    export LC_ALL=C
     exec $*
     ;;
 *)

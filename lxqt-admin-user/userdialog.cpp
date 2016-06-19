@@ -45,7 +45,6 @@ UserDialog::UserDialog(UserManager* userManager, UserInfo* user, QWidget* parent
     if(user) // edit an existing user
     {
         ui.loginName->setText(user->name());
-        ui.changePasswd->setText(tr("Change password:"));
         ui.uid->setValue(user->uid());
         ui.fullName->setText(user->fullName());
         ui.loginShell->setEditText(user->shell());
@@ -98,21 +97,6 @@ void UserDialog::accept()
     }
     mUser->setName(loginName);
     mUser->setFullName(ui.fullName->text());
-
-#if 0
-    // change password
-    if(ui.changePasswd->isChecked())
-    {
-        QByteArray passwd = ui.passwd->text().toLatin1();
-        if(passwd.isEmpty()) // show warnings if the password is empty
-        {
-            if(QMessageBox::warning(this, tr("Confirm"), tr("Are you sure you want to use an \"empty password\" for the user?"), QMessageBox::Yes|QMessageBox::No) == QMessageBox::Yes)
-                oobs_user_set_password_empty(mUser, true);
-        }
-        else
-            oobs_user_set_password(mUser, passwd);
-    }
-#endif
 
     mUser->setHomeDir(ui.homeDir->text());
 

@@ -15,7 +15,16 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
-    <property name="margin">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
      <number>0</number>
     </property>
     <item>
@@ -42,9 +51,6 @@
           <property name="expandsOnDoubleClick">
            <bool>false</bool>
           </property>
-          <attribute name="headerStretchLastSection">
-           <bool>false</bool>
-          </attribute>
           <column>
            <property name="text">
             <string>Login Name</string>
@@ -107,6 +113,11 @@
             <string>Group ID</string>
            </property>
           </column>
+          <column>
+           <property name="text">
+            <string>Members</string>
+           </property>
+          </column>
          </widget>
         </item>
        </layout>
@@ -134,14 +145,14 @@
    <addaction name="actionAdd"/>
    <addaction name="actionDelete"/>
    <addaction name="actionProperties"/>
+   <addaction name="actionChangePasswd"/>
    <addaction name="actionRefresh"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionAdd">
    <property name="icon">
     <iconset theme="list-add">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Add</string>
@@ -153,8 +164,7 @@
   <action name="actionDelete">
    <property name="icon">
     <iconset theme="list-remove">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Delete</string>
@@ -166,8 +176,7 @@
   <action name="actionProperties">
    <property name="icon">
     <iconset theme="document-properties">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Properties</string>
@@ -179,14 +188,24 @@
   <action name="actionRefresh">
    <property name="icon">
     <iconset theme="view-refresh">
-     <normaloff/>
-    </iconset>
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Refresh</string>
    </property>
    <property name="toolTip">
     <string>Refresh the lists</string>
+   </property>
+  </action>
+  <action name="actionChangePasswd">
+   <property name="icon">
+    <iconset theme="dialog-password"/>
+   </property>
+   <property name="text">
+    <string>Change Password</string>
+   </property>
+   <property name="toolTip">
+    <string>Change password for the selected user or group</string>
    </property>
   </action>
  </widget>

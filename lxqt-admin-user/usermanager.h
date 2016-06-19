@@ -67,10 +67,6 @@ public:
         mHomeDir = homeDir;
     }
 
-    QByteArray passwd() const {
-        return mPasswd;
-    }
-
 private:
     uid_t mUid;
     gid_t mGid;
@@ -78,7 +74,6 @@ private:
     QString mFullName;
     QString mShell;
     QString mHomeDir;
-    QByteArray mPasswd;
 };
 
 class GroupInfo
@@ -148,10 +143,12 @@ public:
     bool addUser(UserInfo* user);
     bool modifyUser(UserInfo* user, UserInfo* newSettings);
     bool deleteUser(UserInfo* user);
+    bool changePassword(UserInfo* user, QByteArray newPasswd);
 
     bool addGroup(GroupInfo* group);
     bool modifyGroup(GroupInfo* group, GroupInfo* newSettings);
     bool deleteGroup(GroupInfo* group);
+    bool changePassword(GroupInfo* group, QByteArray newPasswd);
 
     // FIXME: add APIs to change group membership
 
@@ -166,7 +163,7 @@ public:
 private:
     void loadUsers();
     void loadGroups();
-    bool pkexec(const QStringList &command);
+    bool pkexec(const QStringList &command, const QByteArray &stdinData = QByteArray());
 
 Q_SIGNALS:
     void usersChanged();

@@ -46,6 +46,7 @@ public:
 private:
     UserInfo* userFromItem(QTreeWidgetItem* item);
     GroupInfo* groupFromItem(QTreeWidgetItem *item);
+    bool getNewPassword(const QString& name, QByteArray& passwd);
 
 private Q_SLOTS:
     void reloadUsers();
@@ -53,6 +54,7 @@ private Q_SLOTS:
     void onAdd();
     void onDelete();
     void onEditProperties();
+    void onChangePasswd();
 
 private:
     Ui::MainWindow ui;

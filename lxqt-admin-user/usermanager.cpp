@@ -5,6 +5,7 @@
 #include <QTimer>
 #include <QProcess>
 #include <QFile>
+#include <unistd.h>
 
 static const QString PASSWD_FILE = QStringLiteral("/etc/passwd");
 static const QString GROUP_FILE = QStringLiteral("/etc/group");
@@ -127,7 +128,7 @@ void UserManager::onFileChanged(const QString &path) {
     }
 }
 
-bool UserManager::pkexec(const QStringList& command) {
+bool UserManager::pkexec(const QStringList& command, const QByteArray& stdinData) {
     QProcess process;
     qDebug() << command;
     QStringList args;
@@ -135,7 +136,16 @@ bool UserManager::pkexec(const QStringList& command) {
         << QStringLiteral("lxqt-admin-user-helper")
         << command;
     process.start(QStringLiteral("pkexec"), args);
+    if(!stdinData.isEmpty()) {
+        qDebug() << stdinData;
+        process.waitForStarted();
+        process.write(stdinData);
+        process.waitForBytesWritten();
+        process.closeWriteChannel();
+    }
     process.waitForFinished(-1);
+    qDebug() << process.readAllStandardError();
+    qDebug() << process.readAllStandardOutput();
     return process.exitCode() == 0;
 }
 
@@ -205,6 +215,28 @@ bool UserManager::deleteUser(UserInfo* user) {
     return pkexec(command);
 }
 
+bool UserManager::changePassword(UserInfo* user, QByteArray newPasswd) {
+    // In theory, the current user should be able to use "passwd" to
+    // reset his/her own password without root permission, but...
+    // /usr/bin/passwd is a setuid program running as root and QProcess
+    // does not seem to capture its stdout... So... requires root for now.
+    if(geteuid() == user->uid()) {
+        // FIXME: there needs to be a way to let a user change his/her own password.
+        // Maybe we can use our pkexec helper script to achieve this.
+    }
+    QStringList command;
+    command << QStringLiteral("passwd");
+    command << user->name();
+
+    // we need to type the new password for two times.
+    QByteArray stdinData;
+    stdinData += newPasswd;
+    stdinData += "\n";
+    stdinData += newPasswd;
+    stdinData += "\n";
+    return pkexec(command, stdinData);
+}
+
 bool UserManager::addGroup(GroupInfo* group) {
     if(!group || group->name().isEmpty() || 0 == group->gid())
         return false;
@@ -237,6 +269,20 @@ bool UserManager::deleteGroup(GroupInfo* group) {
     command << group->name();
     return pkexec(command);
 }
+
+bool UserManager::changePassword(GroupInfo* group, QByteArray newPasswd) {
+    QStringList command;
+    command << QStringLiteral("gpasswd");
+    command << group->name();
+
+    // we need to type the new password for two times.
+    QByteArray stdinData = newPasswd;
+    stdinData += "\n";
+    stdinData += newPasswd;
+    stdinData += "\n";
+    return pkexec(command, stdinData);
+}
+
 
 const QStringList& UserManager::availableShells() {
     if(mAvailableShells.isEmpty()) {
