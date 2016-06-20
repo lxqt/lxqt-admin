@@ -1,44 +1,47 @@
 #include "timedatectl.h"
 #include <QProcess>
 #include <QDebug>
+#include <QDBusInterface>
+#include <QDBusConnection>
+#include <QMessageBox>
+
 
 TimeDateCtl::TimeDateCtl()
 {
-    QProcess timedatectl;
-    timedatectl.start(QStringLiteral("timedatectl"));
-    timedatectl.waitForFinished();
-    while(!timedatectl.atEnd()) {
-        QString line = timedatectl.readLine().trimmed();
-        int findTZ = line.indexOf(QLatin1String("Time zone:"));
-        if(findTZ != -1) {
-            findTZ += 10;
-            while(line[findTZ] == ' ')
-                ++findTZ;
-            int space = line.indexOf(' ', findTZ);
-            mTimeZone = line.mid(findTZ, space - findTZ);
-            break;
-        }
-    }
-    timedatectl.close();
+    mIface = new QDBusInterface(QStringLiteral("org.freedesktop.timedate1"),
+                                QStringLiteral("/org/freedesktop/timedate1"),
+                                QStringLiteral("org.freedesktop.timedate1"),
+                                QDBusConnection::systemBus());
+    mTimeZone = mIface->property("Timezone").toString();
+}
+
+TimeDateCtl::~TimeDateCtl()
+{
+    delete mIface;
 }
 
 bool TimeDateCtl::commit()
 {
     bool success = true;
-    QProcess timedatectl;
-    QStringList args;
-    if(mTimeZoneChanged) {
-        timedatectl.start(QStringLiteral("timedatectl"), QStringList() << "set-timezone" << mTimeZone);
-        timedatectl.waitForFinished();
-        success = timedatectl.exitCode() == 0;
+    if(mTimeZoneChanged)
+    {
+        mIface->call("SetTimezone", mTimeZone, true);
+        QDBusError err = mIface->lastError();
+        if(err.isValid())
+        {
+            QMessageBox::critical(nullptr, QObject::tr("Failed to set timezone"), err.message());
+        }
     }
-    if(!success)
-        return success;
 
-    if(mTimeChanged) {
-        timedatectl.start(QStringLiteral("timedatectl"), QStringList() << "set-time" << mDateTime.toString("yyyy-MM-dd hh:mm:ss"));
-        timedatectl.waitForFinished();
-        success = timedatectl.exitCode() == 0;
+    if(mTimeChanged)
+    {
+        mIface->call("SetTime", mDateTime.toMSecsSinceEpoch(), false, true);
+        qDebug() << mIface->lastError();
+        QDBusError err = mIface->lastError();
+        if(err.isValid())
+        {
+            QMessageBox::critical(nullptr, QObject::tr("Failed to set time"), err.message());
+        }
     }
     return success;
 }

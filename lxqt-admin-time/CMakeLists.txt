@@ -75,6 +75,7 @@ add_executable(lxqt-admin-time
 target_link_libraries(lxqt-admin-time
     KF5::WindowSystem
     Qt5::Widgets
+    Qt5::DBus
     lxqt
 )
 

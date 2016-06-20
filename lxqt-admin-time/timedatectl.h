@@ -4,10 +4,13 @@
 #include <QString>
 #include <QDateTime>
 
+class QDBusInterface;
+
 class TimeDateCtl
 {
 public:
     explicit TimeDateCtl();
+    ~TimeDateCtl();
 
     QString timeZone() const {
         return mTimeZone;
@@ -31,6 +34,7 @@ private:
     QString mTimeZone;
     bool mTimeChanged;
     QDateTime mDateTime;
+    QDBusInterface* mIface;
 };
 
 #endif // TIMEDATECTL_H
