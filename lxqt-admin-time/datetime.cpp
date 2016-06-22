@@ -31,14 +31,15 @@
 #include <QTimer>
 #include <QTextCharFormat>
 
-DateTime::DateTime(QWidget *parent) :
+DateTimePage::DateTimePage(bool useNtp, bool localRtc, QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::DateTime)
+    ui(new Ui::DateTime),
+    mUseNtp(useNtp),
+    mLocalRtc(localRtc)
 {
     ui->setupUi(this);
     mTimer = new QTimer(this);
     connect(mTimer,SIGNAL(timeout()),SLOT(timeout()));
-
 
     //highlight today
     QDate date = QDate::currentDate();
@@ -51,43 +52,56 @@ DateTime::DateTime(QWidget *parent) :
     reload();
 }
 
-DateTime::~DateTime()
+DateTimePage::~DateTimePage()
 {
     delete ui;
 }
 
-void DateTime::timeout()
+void DateTimePage::timeout()
 {
     ui->edit_time->blockSignals(true);
     ui->edit_time->setTime(QTime::currentTime());
     ui->edit_time->blockSignals(false);
 }
 
-void DateTime::reload()
+void DateTimePage::reload()
 {
     ui->calendar->setSelectedDate(QDate::currentDate());
     ui->edit_time->setTime(QTime::currentTime());
+
+    ui->localRTC->setChecked(mLocalRtc);
+    ui->ntp->setChecked(mUseNtp);
+
     mTimer->start(1000);
 
     mModified = 0;
-    emit changed(mModified);
+    emit changed();
 }
 
-void DateTime::on_edit_time_userTimeChanged(const QTime &time)
+void DateTimePage::on_edit_time_userTimeChanged(const QTime &time)
 {
     mModified |= M_TIME;
     mTimer->stop();
-
-    emit changed(mModified);
+    emit changed();
 }
 
-QDateTime DateTime::dateTime() const
+QDateTime DateTimePage::dateTime() const
 {
     QDateTime dt(ui->calendar->selectedDate(),ui->edit_time->time());
     return dt;
 }
 
-void DateTime::on_calendar_selectionChanged()
+bool DateTimePage::useNtp() const
+{
+    return ui->ntp->isChecked();
+}
+
+bool DateTimePage::localRtc() const
+{
+    return ui->localRTC->isChecked();
+}
+
+void DateTimePage::on_calendar_selectionChanged()
 {
     QDate date = ui->calendar->selectedDate();
     if (date != QDate::currentDate())
@@ -98,6 +112,32 @@ void DateTime::on_calendar_selectionChanged()
     {
         mModified &= ~M_DATE;
     }
-
-    emit changed(mModified);
+    emit changed();
 }
+
+void DateTimePage::on_ntp_toggled(bool toggled)
+{
+    if(toggled != mUseNtp)
+    {
+        mModified |= M_NTP;
+    }
+    else
+    {
+        mModified &= ~M_NTP;
+    }
+    emit changed();
+}
+
+void DateTimePage::on_localRTC_toggled(bool toggled)
+{
+    if(toggled != mLocalRtc)
+    {
+        mModified |= M_LOCAL_RTC;
+    }
+    else
+    {
+        mModified &= ~M_LOCAL_RTC;
+    }
+    emit changed();
+}
+

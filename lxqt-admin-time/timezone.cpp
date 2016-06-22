@@ -28,7 +28,7 @@
 #include "timezone.h"
 #include "ui_timezone.h"
 
-Timezone::Timezone(const QStringList & zones, const QString & currentimezone, QWidget *parent) :
+TimezonePage::TimezonePage(const QStringList & zones, const QString & currentimezone, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Timezone),
     mZoneChanged(false),
@@ -47,12 +47,12 @@ Timezone::Timezone(const QStringList & zones, const QString & currentimezone, QW
     reload();
 }
 
-Timezone::~Timezone()
+TimezonePage::~TimezonePage()
 {
     delete ui;
 }
 
-void Timezone::reload()
+void TimezonePage::reload()
 {
     ui->list_zones->setCurrentRow(-1);
     mZoneChanged = false;
@@ -60,10 +60,10 @@ void Timezone::reload()
     if (list.count())
         ui->list_zones->setCurrentItem(list.at(0));
 
-    emit changed(mZoneChanged);
+    emit changed();
 }
 
-QString Timezone::timezone() const
+QString TimezonePage::timezone() const
 {
     if (ui->list_zones->currentItem())
         return ui->list_zones->currentItem()->text();
@@ -71,16 +71,17 @@ QString Timezone::timezone() const
         return QString();
 }
 
-void Timezone::on_list_zones_itemActivated(QListWidgetItem * item)
+void TimezonePage::on_list_zones_itemSelectionChanged()
 {
-    bool old = mZoneChanged;
+    QList<QListWidgetItem*> selected = ui->list_zones->selectedItems();
+    if(selected.empty())
+        return;
+    QListWidgetItem *item = selected.first();
     mZoneChanged = item->text() != ui->label_timezone->text();
-
-    if (mZoneChanged != old)
-        emit changed(mZoneChanged);
+    emit changed();
 }
 
-void Timezone::on_edit_filter_textChanged(const QString &arg1)
+void TimezonePage::on_edit_filter_textChanged(const QString &arg1)
 {
     QRegExp reg(arg1, Qt::CaseInsensitive,QRegExp::Wildcard);
     ui->list_zones->clear();

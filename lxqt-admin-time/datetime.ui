@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>354</width>
-    <height>308</height>
+    <width>365</width>
+    <height>323</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -16,7 +16,7 @@
     <height>50</height>
    </size>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,1,0,0,0">
    <item>
     <widget class="QLabel" name="label_time">
      <property name="text">
@@ -65,6 +65,20 @@
     </widget>
    </item>
    <item>
+    <widget class="QCheckBox" name="ntp">
+     <property name="text">
+      <string>Enable network time synchronization (NTP)</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="localRTC">
+     <property name="text">
+      <string>RTC is in local time</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <spacer name="verticalSpacer">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -77,24 +91,41 @@
      </property>
     </spacer>
    </item>
-   <item>
-    <widget class="QLabel" name="label">
-     <property name="font">
-      <font>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-     <property name="wordWrap">
-      <bool>true</bool>
-     </property>
-    </widget>
-   </item>
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>ntp</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>calendar</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>221</x>
+     <y>269</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>228</x>
+     <y>162</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ntp</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>edit_time</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>105</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>173</x>
+     <y>55</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

@@ -12,9 +12,15 @@ public:
     explicit TimeDateCtl();
     ~TimeDateCtl();
 
-    QString timeZone() const;
+    bool useNtp() const;
+    bool setUseNtp(bool value, QString& errorMessage);
 
+    bool localRtc() const;
+    bool setLocalRtc(bool value, QString& errorMessage);
+
+    QString timeZone() const;
     bool setTimeZone(QString timeZone, QString& errorMessage);
+
     bool setDateTime(QDateTime dateTime, QString& errorMessage);
 
 private:

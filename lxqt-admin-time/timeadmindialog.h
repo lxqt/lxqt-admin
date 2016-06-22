@@ -28,8 +28,8 @@
 #include <LXQt/ConfigDialog>
 #include "timedatectl.h"
 
-class DateTime;
-class Timezone;
+class DateTimePage;
+class TimezonePage;
 
 class TimeAdminDialog: public LXQt::ConfigDialog
 {
@@ -39,15 +39,9 @@ public:
     TimeAdminDialog(QWidget * parent = NULL) ;
     ~TimeAdminDialog();
 
-
-    typedef enum  {M_TIMEDATE = 1 , M_TIMEZONE = 0x2} widgets_modified_enum;
-    Q_DECLARE_FLAGS(widgets_modified_t, widgets_modified_enum)
-
-protected:
-    virtual void closeEvent(QCloseEvent  * event);
-
 private Q_SLOTS:
-    void onChanged(bool);
+    void onChanged();
+    void onButtonClicked(QDialogButtonBox::StandardButton button);
 
 private:
     void saveChangesToSystem();
@@ -56,11 +50,7 @@ private:
 
 private:
     TimeDateCtl mTimeDateCtl;
-    DateTime * mDateTimeWidget;
-    Timezone * mTimezoneWidget;
+    DateTimePage * mDateTimeWidget;
+    TimezonePage * mTimezoneWidget;
     QString mWindowTitle;
-    widgets_modified_t mWidgetsModified;
 };
-
-Q_DECLARE_METATYPE(TimeAdminDialog::widgets_modified_enum)
-Q_DECLARE_OPERATORS_FOR_FLAGS(TimeAdminDialog::widgets_modified_t)

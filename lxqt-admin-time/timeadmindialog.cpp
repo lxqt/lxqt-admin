@@ -44,52 +44,39 @@ TimeAdminDialog::TimeAdminDialog(QWidget *parent):
     setMinimumSize(QSize(400,400));
     mWindowTitle = windowTitle();
 
-
-    mDateTimeWidget = new DateTime(this);
+    mDateTimeWidget = new DateTimePage(mTimeDateCtl.useNtp(), mTimeDateCtl.localRtc(), this);
     addPage(mDateTimeWidget,tr("Date and time"));
     connect(this,SIGNAL(reset()),mDateTimeWidget,SLOT(reload()));
-    connect(mDateTimeWidget,&DateTime::changed,this,&TimeAdminDialog::onChanged);
-    mDateTimeWidget->setProperty("pModified",M_TIMEDATE);
+    connect(mDateTimeWidget,&DateTimePage::changed,this,&TimeAdminDialog::onChanged);
 
     QStringList zones;
     QString currentZone;
     loadTimeZones(zones,currentZone);
-    mTimezoneWidget = new Timezone(zones,currentZone,this);
+    mTimezoneWidget = new TimezonePage(zones,currentZone,this);
     addPage(mTimezoneWidget,tr("Timezone"));
-    connect(this,&TimeAdminDialog::reset,mTimezoneWidget,&Timezone::reload);
-    connect(mTimezoneWidget,&Timezone::changed,this,&TimeAdminDialog::onChanged);
-    mTimezoneWidget->setProperty("pModified",M_TIMEZONE);
+    connect(this,&TimeAdminDialog::reset,mTimezoneWidget,&TimezonePage::reload);
+    connect(mTimezoneWidget,&TimezonePage::changed,this,&TimeAdminDialog::onChanged);
+
+    setButtons(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
+    connect(this, &LXQt::ConfigDialog::clicked, this, &TimeAdminDialog::onButtonClicked);
 }
 
 TimeAdminDialog::~TimeAdminDialog()
 {
 }
 
-void TimeAdminDialog::onChanged(bool ch)
+void TimeAdminDialog::onChanged()
 {
-    widgets_modified_enum flag = (widgets_modified_enum)
-            sender()->property("pModified").toUInt();
-    ch ? mWidgetsModified |= flag : mWidgetsModified &= ~flag;
     showChangedStar();
 }
 
 
 void TimeAdminDialog::showChangedStar()
 {
-    if (mWidgetsModified)
+    if(mTimezoneWidget->isChanged() || mDateTimeWidget->modified())
         setWindowTitle(mWindowTitle + "*");
     else
         setWindowTitle(mWindowTitle);
-}
-
-void TimeAdminDialog::closeEvent(QCloseEvent *event)
-{
-    //save changes to system
-    if (mWidgetsModified)
-    {
-        saveChangesToSystem();
-        event->accept();
-    }
 }
 
 void TimeAdminDialog::loadTimeZones(QStringList & timeZones, QString & currentTimezone)
@@ -120,18 +107,54 @@ void TimeAdminDialog::loadTimeZones(QStringList & timeZones, QString & currentTi
 void TimeAdminDialog::saveChangesToSystem()
 {
     QString errorMessage;
-    QString timeZone = mTimezoneWidget->timezone();
-    // FIXME: currently timezone settings does not work. is this a bug of system-tools-backend?
-    if(!timeZone.isEmpty() && mWidgetsModified.testFlag(M_TIMEZONE)) {
-        if(false == mTimeDateCtl.setTimeZone(timeZone, errorMessage)) {
+    if(mTimezoneWidget->isChanged())
+    {
+        QString timeZone = mTimezoneWidget->timezone();
+        if(!timeZone.isEmpty())
+        {
+            if(false == mTimeDateCtl.setTimeZone(timeZone, errorMessage)) {
+                QMessageBox::critical(this, tr("Error"), errorMessage);
+            }
+        }
+    }
+
+    auto modified = mDateTimeWidget->modified();
+    bool useNtp = mDateTimeWidget->useNtp();
+    if(modified.testFlag(DateTimePage::M_NTP))
+    {
+        if(false == mTimeDateCtl.setUseNtp(useNtp, errorMessage)) {
             QMessageBox::critical(this, tr("Error"), errorMessage);
         }
     }
 
-    if(mWidgetsModified.testFlag(M_TIMEDATE))
+    if(modified.testFlag(DateTimePage::M_LOCAL_RTC))
     {
-        if(false == mTimeDateCtl.setDateTime(mDateTimeWidget->dateTime(), errorMessage)) {
+        if(false == mTimeDateCtl.setLocalRtc(mDateTimeWidget->localRtc(), errorMessage)) {
             QMessageBox::critical(this, tr("Error"), errorMessage);
         }
+    }
+
+    // we can only change the date & time explicitly when NTP is disabled.
+    if(false == useNtp)
+    {
+        if(modified.testFlag(DateTimePage::M_DATE) || modified.testFlag(DateTimePage::M_TIME))
+        {
+            if(false == mTimeDateCtl.setDateTime(mDateTimeWidget->dateTime(), errorMessage)) {
+                QMessageBox::critical(this, tr("Error"), errorMessage);
+            }
+        }
+    }
+}
+
+void TimeAdminDialog::onButtonClicked(QDialogButtonBox::StandardButton button)
+{
+    if(button == QDialogButtonBox::Ok)
+    {
+        saveChangesToSystem();
+        accept();
+    }
+    else if(button == QDialogButtonBox::Cancel)
+    {
+        reject();
     }
 }

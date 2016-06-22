@@ -35,13 +35,13 @@ class Timezone;
 }
 
 class QListWidgetItem;
-class Timezone : public QWidget
+class TimezonePage : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit Timezone(const QStringList & zones, const QString & currentimezone, QWidget *parent = 0);
-    ~Timezone();
+    explicit TimezonePage(const QStringList & zones, const QString & currentimezone, QWidget *parent = 0);
+    ~TimezonePage();
     QString timezone() const;
     inline bool isChanged() const {return mZoneChanged;}
 
@@ -49,10 +49,10 @@ public slots:
     void reload();
 
 Q_SIGNALS:
-    void changed(bool);
+    void changed();
 
 private slots:
-    void on_list_zones_itemActivated(QListWidgetItem *item);
+    void on_list_zones_itemSelectionChanged();
     void on_edit_filter_textChanged(const QString &arg1);
 
 private:

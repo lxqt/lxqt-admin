@@ -34,38 +34,46 @@ namespace Ui {
 class DateTime;
 }
 
-class DateTime : public QWidget
+class DateTimePage : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit DateTime(QWidget *parent = 0);
-    ~DateTime();
+    explicit DateTimePage(bool useNtp, bool localRtc, QWidget *parent = 0);
+    ~DateTimePage();
 
-    enum modified_enum {M_DATE = 0x1, M_TIME = 0x2};
-    Q_DECLARE_FLAGS(modified_t, modified_enum)
+    enum ModifiedFlag {M_DATE = (1 << 0), M_TIME = (1 << 1), M_NTP = (1 << 2), M_LOCAL_RTC = (1 << 3)};
+    Q_DECLARE_FLAGS(ModifiedFlags,ModifiedFlag)
+
+    ModifiedFlags modified() const
+    {
+        return mModified;
+    }
 
     QDateTime dateTime() const;
-    inline modified_t modified() const {return mModified;}
+    bool useNtp() const;
+    bool localRtc() const;
 
 public Q_SLOTS:
     void reload();
-
 
 private Q_SLOTS:
     void on_edit_time_userTimeChanged(const QTime &time);
     void timeout();
     void on_calendar_selectionChanged();
+    void on_ntp_toggled(bool toggled);
+    void on_localRTC_toggled(bool toggled);
 
 Q_SIGNALS:
-    void changed(bool);
+    void changed();
 
 private:
     Ui::DateTime *ui;
     QTimer * mTimer;
-    modified_t  mModified;
+    bool mUseNtp;
+    bool mLocalRtc;
+    ModifiedFlags mModified;
 };
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(DateTime::modified_t)
 
 #endif // DATETIME_H
