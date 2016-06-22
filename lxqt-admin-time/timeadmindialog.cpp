@@ -119,15 +119,19 @@ void TimeAdminDialog::loadTimeZones(QStringList & timeZones, QString & currentTi
 
 void TimeAdminDialog::saveChangesToSystem()
 {
+    QString errorMessage;
     QString timeZone = mTimezoneWidget->timezone();
     // FIXME: currently timezone settings does not work. is this a bug of system-tools-backend?
     if(!timeZone.isEmpty() && mWidgetsModified.testFlag(M_TIMEZONE)) {
-        mTimeDateCtl.setTimeZone(timeZone);
+        if(false == mTimeDateCtl.setTimeZone(timeZone, errorMessage)) {
+            QMessageBox::critical(this, tr("Error"), errorMessage);
+        }
     }
 
     if(mWidgetsModified.testFlag(M_TIMEDATE))
     {
-        mTimeDateCtl.setDateTime(mDateTimeWidget->dateTime());
+        if(false == mTimeDateCtl.setDateTime(mDateTimeWidget->dateTime(), errorMessage)) {
+            QMessageBox::critical(this, tr("Error"), errorMessage);
+        }
     }
-    mTimeDateCtl.commit();
 }

@@ -12,7 +12,6 @@ TimeDateCtl::TimeDateCtl()
                                 QStringLiteral("/org/freedesktop/timedate1"),
                                 QStringLiteral("org.freedesktop.timedate1"),
                                 QDBusConnection::systemBus());
-    mTimeZone = mIface->property("Timezone").toString();
 }
 
 TimeDateCtl::~TimeDateCtl()
@@ -20,28 +19,33 @@ TimeDateCtl::~TimeDateCtl()
     delete mIface;
 }
 
-bool TimeDateCtl::commit()
+QString TimeDateCtl::timeZone() const
 {
-    bool success = true;
-    if(mTimeZoneChanged)
-    {
-        mIface->call("SetTimezone", mTimeZone, true);
-        QDBusError err = mIface->lastError();
-        if(err.isValid())
-        {
-            QMessageBox::critical(nullptr, QObject::tr("Failed to set timezone"), err.message());
-        }
-    }
+    return mIface->property("Timezone").toString();
+}
 
-    if(mTimeChanged)
+bool TimeDateCtl::setTimeZone(QString timeZone, QString& errorMessage)
+{
+    mIface->call("SetTimezone", timeZone, true);
+    QDBusError err = mIface->lastError();
+    if(err.isValid())
     {
-        mIface->call("SetTime", mDateTime.toMSecsSinceEpoch(), false, true);
-        qDebug() << mIface->lastError();
-        QDBusError err = mIface->lastError();
-        if(err.isValid())
-        {
-            QMessageBox::critical(nullptr, QObject::tr("Failed to set time"), err.message());
-        }
+        errorMessage = err.message();
+        return false;
     }
-    return success;
+    return true;
+}
+
+bool TimeDateCtl::setDateTime(QDateTime dateTime, QString& errorMessage)
+{
+    // the timedatectl dbus service accepts "usec" input.
+    // Qt can only get "msec"  => convert to usec here.
+    mIface->call("SetTime", dateTime.toMSecsSinceEpoch() * 1000, false, true);
+    QDBusError err = mIface->lastError();
+    if(err.isValid())
+    {
+        errorMessage = err.message();
+        return false;
+    }
+    return true;
 }

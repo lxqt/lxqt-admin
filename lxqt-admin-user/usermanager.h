@@ -2,6 +2,7 @@
 #define USERMANAGER_H
 
 #include <QObject>
+#include <QStringList>
 #include <sys/types.h>
 #include <pwd.h>
 #include <grp.h>

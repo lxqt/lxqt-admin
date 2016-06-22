@@ -12,28 +12,12 @@ public:
     explicit TimeDateCtl();
     ~TimeDateCtl();
 
-    QString timeZone() const {
-        return mTimeZone;
-    }
+    QString timeZone() const;
 
-    void setTimeZone(QString timeZone) {
-        mTimeZone = timeZone;
-        mTimeZoneChanged = true;
-    }
-
-    void setDateTime(QDateTime dateTime) {
-        mDateTime = dateTime;
-        mTimeChanged = true;
-    }
-
-    // really commit the changes to the system
-    bool commit();
+    bool setTimeZone(QString timeZone, QString& errorMessage);
+    bool setDateTime(QDateTime dateTime, QString& errorMessage);
 
 private:
-    bool mTimeZoneChanged;
-    QString mTimeZone;
-    bool mTimeChanged;
-    QDateTime mDateTime;
     QDBusInterface* mIface;
 };
 
