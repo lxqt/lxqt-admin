@@ -61,7 +61,8 @@ once release LXQt release 0.11 makes it into the Fedora repositories.
 
 #### openSUSE
 
-Same situation as Fedora.
+openSUSE does not ship with lxqt-admin in it's standard repositories since the functionality is covered by openSUSE's [YaST](http://yast.github.io/).
+However it is still possible to install it on openSUSE. The package and its dependencies, like the [above](#overview) mentioned, outdated liboobs are available through the [X11:LXQt](https://build.opensuse.org/project/show/X11:LXQt) repository.
 
 ## Usage
 
