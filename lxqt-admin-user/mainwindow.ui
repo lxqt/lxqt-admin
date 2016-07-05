@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>640</width>
-    <height>480</height>
+    <width>676</width>
+    <height>362</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -199,7 +199,8 @@
   </action>
   <action name="actionChangePasswd">
    <property name="icon">
-    <iconset theme="dialog-password"/>
+    <iconset theme="dialog-password">
+     <normaloff>.</normaloff>.</iconset>
    </property>
    <property name="text">
     <string>Change Password</string>
