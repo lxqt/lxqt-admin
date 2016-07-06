@@ -201,12 +201,18 @@ void MainWindow::onChangePasswd() {
     {
         QTreeWidgetItem* item = ui.userList->currentItem();
         user = userFromItem(item);
+        if (!user)
+            return;
+
         name = user->name();
     }
     else if(ui.tabWidget->currentIndex() == PageGroups)
     {
         QTreeWidgetItem* item = ui.groupList->currentItem();
         group = groupFromItem(item);
+        if (!group)
+            return;
+
         name = group->name();
     }
 
