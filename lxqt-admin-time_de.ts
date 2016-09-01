@@ -11,8 +11,8 @@
     <message>
         <location filename="../../../datetime.ui" line="39"/>
         <source>HH:mm:ss</source>
-        <translatorcomment>No need to translate.</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translatorcomment>No need to translate. → Agree. Copying the English string nevertheless in order to avoid superfluos tagging as unfinished.</translatorcomment>
+        <translation>HH:mm:ss</translation>
     </message>
     <message>
         <location filename="../../../datetime.ui" line="53"/>
