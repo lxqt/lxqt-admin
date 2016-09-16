@@ -32,6 +32,7 @@
 #include <QTimer>
 #include <QProcess>
 #include <QFile>
+#include <QMessageBox>
 #include <unistd.h>
 
 static const QString PASSWD_FILE = QStringLiteral("/etc/passwd");
@@ -193,6 +194,7 @@ void UserManager::onFileChanged(const QString &path) {
 }
 
 bool UserManager::pkexec(const QStringList& command, const QByteArray& stdinData) {
+    Q_ASSERT(!command.isEmpty());
     QProcess process;
     qDebug() << command;
     QStringList args;
@@ -207,8 +209,17 @@ bool UserManager::pkexec(const QStringList& command, const QByteArray& stdinData
         process.closeWriteChannel();
     }
     process.waitForFinished(-1);
-    qDebug() << process.readAllStandardError();
-    return process.exitCode() == 0;
+    QByteArray pkexec_error = process.readAllStandardError();
+    qDebug() << pkexec_error;
+    const bool succeeded = process.exitCode() == 0;
+    if (!succeeded)
+    {
+        QMessageBox * msg = new QMessageBox{QMessageBox::Critical, tr("lxqt-admin-user")
+            , tr("<strong>Action (%1) failed:</strong><br/><pre>%2</pre>").arg(command[0]).arg(pkexec_error.constData())};
+        msg->setAttribute(Qt::WA_DeleteOnClose, true);
+        msg->show();
+    }
+    return succeeded;
 }
 
 bool UserManager::addUser(UserInfo* user) {
