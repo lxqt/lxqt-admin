@@ -6,7 +6,7 @@
 
   <action id="org.lxqt.lxqt-admin-user">
     <message>Authentication is required for user administration</message>
-    <icon_name></icon_name>
+    <icon_name>preferences-system</icon_name>
     <defaults>
       <allow_any>auth_admin</allow_any>
       <allow_inactive>auth_admin</allow_inactive>
