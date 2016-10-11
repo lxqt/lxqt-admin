@@ -5,11 +5,11 @@
     <name>DateTime</name>
     <message>
         <source>Form</source>
-        <translation type="vanished">Formulário</translation>
+        <translation>Formulário</translation>
     </message>
     <message>
         <source>Time and date setup</source>
-        <translation type="vanished">Configuração de data e hora</translation>
+        <translation>Configuração de data e hora</translation>
     </message>
     <message>
         <location filename="../../../datetime.ui" line="23"/>
@@ -19,7 +19,7 @@
     <message>
         <location filename="../../../datetime.ui" line="39"/>
         <source>HH:mm:ss</source>
-        <translation>H:mm:ss</translation>
+        <translation>HH:mm:ss</translation>
     </message>
     <message>
         <location filename="../../../datetime.ui" line="53"/>
@@ -29,7 +29,7 @@
     <message>
         <location filename="../../../datetime.ui" line="89"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A gravação de alterações requer permissões de administrador.&lt;br&gt;A senha será solicitada ao clicar em Fechar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A gravação de alterações requer permissões de administrador.&lt;br&gt;A palavra-passe será solicitada ao clicar em Fechar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -59,11 +59,11 @@
     <name>Timezone</name>
     <message>
         <source>Form</source>
-        <translation type="vanished">Formulário</translation>
+        <translation>Formulário</translation>
     </message>
     <message>
         <source>Timezone setup</source>
-        <translation type="vanished">Configuração de fuso horário</translation>
+        <translation>Configuração de fuso horário</translation>
     </message>
     <message>
         <location filename="../../../timezone.ui" line="19"/>
@@ -83,7 +83,7 @@
     <message>
         <location filename="../../../timezone.ui" line="54"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A gravação de alterações requer permissões de administrador.&lt;br&gt;A senha será solicitada ao clicar em Fechar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A gravação de alterações requer permissões de administrador.&lt;br&gt;A palavra-passe será solicitada ao clicar em Fechar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../../../timezone.cpp" line="42"/>
