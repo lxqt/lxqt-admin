@@ -4,14 +4,6 @@
 <context>
     <name>DateTime</name>
     <message>
-        <source>Form</source>
-        <translation type="vanished">Modulo</translation>
-    </message>
-    <message>
-        <source>Time and date setup</source>
-        <translation type="vanished">Configurazione di data e ora</translation>
-    </message>
-    <message>
         <location filename="../../../datetime.ui" line="23"/>
         <source>Time:</source>
         <translation>Ora:</translation>
@@ -27,9 +19,14 @@
         <translation>Data:</translation>
     </message>
     <message>
-        <location filename="../../../datetime.ui" line="89"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Il salvataggio richiede privilegi di amministratore.&lt;br&gt;Saranno chiesti dopo aver fatto clic sul pulsante di chiusura&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../../../datetime.ui" line="70"/>
+        <source>Enable network time synchronization (NTP)</source>
+        <translation>Attiva sincronizzazione attraverso la rete (NTP)</translation>
+    </message>
+    <message>
+        <location filename="../../../datetime.ui" line="77"/>
+        <source>RTC is in local time</source>
+        <translation>RTC è in ora locale</translation>
     </message>
 </context>
 <context>
@@ -40,35 +37,30 @@
         <translation>Configura data e ora</translation>
     </message>
     <message>
-        <location filename="../../../timeadmindialog.cpp" line="53"/>
+        <location filename="../../../timeadmindialog.cpp" line="48"/>
         <source>Date and time</source>
         <translation>Data e ora</translation>
     </message>
     <message>
-        <location filename="../../../timeadmindialog.cpp" line="62"/>
+        <location filename="../../../timeadmindialog.cpp" line="56"/>
         <source>Timezone</source>
         <translation>Fuso orario</translation>
     </message>
     <message>
-        <location filename="../../../timeadmindialog.cpp" line="162"/>
-        <source>Authentication Error</source>
-        <translation>Errore di autenticazione</translation>
+        <location filename="../../../timeadmindialog.cpp" line="117"/>
+        <location filename="../../../timeadmindialog.cpp" line="127"/>
+        <location filename="../../../timeadmindialog.cpp" line="134"/>
+        <location filename="../../../timeadmindialog.cpp" line="144"/>
+        <source>Error</source>
+        <translation>Errore</translation>
     </message>
 </context>
 <context>
     <name>Timezone</name>
     <message>
-        <source>Form</source>
-        <translation type="vanished">Modulo</translation>
-    </message>
-    <message>
-        <source>Timezone setup</source>
-        <translation type="vanished">Configurazione fuso orario</translation>
-    </message>
-    <message>
         <location filename="../../../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
-        <translation>Il tuo fuso orario attuale:</translation>
+        <translation>Fuso orario attuale:</translation>
     </message>
     <message>
         <location filename="../../../timezone.ui" line="26"/>
@@ -80,15 +72,13 @@
         <source>Filter</source>
         <translation>Filtro</translation>
     </message>
-    <message>
-        <location filename="../../../timezone.ui" line="54"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Il salvataggio richiede privilegi di amministratore.&lt;br&gt;Saranno richiesti dopo aver fatto clic sul pulsante di chiusura&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
+</context>
+<context>
+    <name>TimezonePage</name>
     <message>
         <location filename="../../../timezone.cpp" line="42"/>
         <source>None</source>
-        <translation></translation>
+        <translation>Nessuno</translation>
     </message>
 </context>
 </TS>
