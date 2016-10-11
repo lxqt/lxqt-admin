@@ -6,7 +6,7 @@
     <message>
         <location filename="../../../groupdialog.ui" line="14"/>
         <source>Group Settings</source>
-        <translation>Definições de grupo</translation>
+        <translation>Definições do grupo</translation>
     </message>
     <message>
         <location filename="../../../groupdialog.ui" line="20"/>
@@ -86,7 +86,7 @@
     <message>
         <location filename="../../../mainwindow.ui" line="81"/>
         <source>Show system users (for advanced users only)</source>
-        <translation>Mostrar utilizadores de sistema</translation>
+        <translation>Mostrar utilizadores de sistema (utilizadores avançados)</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="89"/>
@@ -121,12 +121,12 @@
     <message>
         <location filename="../../../mainwindow.ui" line="160"/>
         <source>Delete</source>
-        <translation>Eliminar</translation>
+        <translation>Apagar</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="163"/>
         <source>Delete selected item</source>
-        <translation>Eliminar item selecionado</translation>
+        <translation>Apagar o item selecionado</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="173"/>
@@ -136,7 +136,7 @@
     <message>
         <location filename="../../../mainwindow.ui" line="176"/>
         <source>edit properties of the selected item</source>
-        <translation>Editar propriedades do item selecionado</translation>
+        <translation>Editar as propriedades do item selecionado</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="186"/>
@@ -162,12 +162,12 @@
     <message>
         <location filename="../../../mainwindow.cpp" line="191"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation>Tem a certeza que quer eliminar o utilizador selecionado?</translation>
+        <translation>Tem a certeza de que deseja apagar o utilizador selecionado?</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="204"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation>Tem a certeza que quer eliminar o grupo selecionado?</translation>
+        <translation>Tem a certeza de que deseja apagar o grupo selecionado?</translation>
     </message>
 </context>
 <context>
@@ -195,7 +195,7 @@
     <message>
         <location filename="../../../userdialog.ui" line="53"/>
         <source>Set password:</source>
-        <translation>Definir senha:</translation>
+        <translation>Definir palavra-passe:</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="77"/>
@@ -225,7 +225,7 @@
     <message>
         <location filename="../../../userdialog.cpp" line="67"/>
         <source>Change password:</source>
-        <translation>Mudar senha:</translation>
+        <translation>Alterar palavra-passe:</translation>
     </message>
     <message>
         <location filename="../../../userdialog.cpp" line="128"/>
@@ -257,7 +257,7 @@
     <message>
         <location filename="../../../userdialog.cpp" line="162"/>
         <source>Are you sure you want to use an &quot;empty password&quot; for the user?</source>
-        <translation>Tem a certeza que quer definir uma senha vazia para o utilizador?</translation>
+        <translation>Tem a certeza de que deseja utilizar uma palavra-passe vazia para o utilizador?</translation>
     </message>
 </context>
 </TS>
