@@ -25,6 +25,7 @@
 #include <QLineEdit>
 #include <QRegExpValidator>
 #include <QRegExp>
+#include <QtCore/QtGlobal>
 #include "userdialog.h"
 #include "groupdialog.h"
 #include "usermanager.h"
@@ -40,6 +41,7 @@ MainWindow::MainWindow():
     connect(ui.actionChangePasswd, SIGNAL(triggered(bool)), SLOT(onChangePasswd()));
     connect(ui.actionRefresh, SIGNAL(triggered(bool)), SLOT(reload()));
 
+    connect(ui.tabWidget,SIGNAL(currentChanged(int)),SLOT(onTabChange(int)));
     connect(ui.userList, &QListWidget::activated, this, &MainWindow::onRowActivated);
     connect(ui.groupList, &QListWidget::activated, this, &MainWindow::onRowActivated);
 
@@ -74,6 +76,17 @@ void MainWindow::reloadUsers()
             ui.userList->addTopLevelItem(item);
         }
     }
+}
+
+void MainWindow::onTabChange(int index)
+{
+    #if defined(Q_OS_FREEBSD) //Disable group passwords on FreeBSD
+    if(index==1) {
+        ui.actionChangePasswd->setEnabled(false);
+    } else {
+        ui.actionChangePasswd->setEnabled(true);
+    }
+    #endif
 }
 
 void MainWindow::reloadGroups()

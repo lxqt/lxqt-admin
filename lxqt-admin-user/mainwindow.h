@@ -20,7 +20,6 @@
 
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
 #include <QMainWindow>
 #include "ui_mainwindow.h"
 
@@ -57,6 +56,7 @@ private Q_SLOTS:
     void onChangePasswd();
     void reload();
     void onRowActivated(const QModelIndex& index);
+    void onTabChange(int index);
 
 private:
     Ui::MainWindow ui;
