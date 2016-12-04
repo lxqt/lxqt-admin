@@ -82,5 +82,10 @@ configure_file(
     "${CMAKE_CURRENT_BINARY_DIR}/org.lxqt.lxqt-admin-user.policy"
     @ONLY
 )
-install(PROGRAMS "lxqt-admin-user-helper" DESTINATION bin)
+
+if(${CMAKE_SYSTEM_NAME} MATCHES  "FreeBSD")
+    install(PROGRAMS "lxqt-admin-user-helper.freebsd" DESTINATION bin RENAME lxqt-admin-user-helper)
+else()
+    install(PROGRAMS "lxqt-admin-user-helper.default" DESTINATION bin RENAME lxqt-admin-user-helper)
+endif()
 install(FILES "${CMAKE_CURRENT_BINARY_DIR}/org.lxqt.lxqt-admin-user.policy" DESTINATION "share/polkit-1/actions")

@@ -246,6 +246,9 @@ bool UserManager::addUser(UserInfo* user) {
     if(!user->groups().isEmpty()) {  // set group membership
         command << QStringLiteral("-G") << user->groups().join(',');
     }
+#ifdef Q_OS_FREEBSD
+    command << QStringLiteral("-n");
+#endif
     command << user->name();
     return pkexec(command);
 }
@@ -254,33 +257,46 @@ bool UserManager::modifyUser(UserInfo* user, UserInfo* newSettings) {
     if(!user || user->name().isEmpty() || !newSettings)
         return false;
 
+    bool isDirty = false;
     QStringList command;
     command << QStringLiteral("usermod");
-    if(newSettings->uid() != user->uid())
+    if(newSettings->uid() != user->uid()) {
         command << QStringLiteral("-u") << QString::number(newSettings->uid());
-
+	isDirty=true;
+    }
     if(newSettings->homeDir() != user->homeDir()) {
         command << QStringLiteral("-d") << newSettings->homeDir();
-        // command << QStringLiteral("-m"); // create the user's home directory if it does not exist.
+	isDirty=true;
     }
     if(newSettings->shell() != user->shell()) {
         command << QStringLiteral("-s") << newSettings->shell();
+	isDirty=true;
     }
 
-    if(newSettings->fullName() != user->fullName())
+    if(newSettings->fullName() != user->fullName()) {
         command << QStringLiteral("-c") << newSettings->fullName();
-    if(newSettings->gid() != user->gid())
+	isDirty=true;
+    }
+    if(newSettings->gid() != user->gid()) {
         command << QStringLiteral("-g") << QString::number(newSettings->gid());
-
-    if(newSettings->name() != user->name())  // change login name
+	isDirty=true;
+    }
+    if(newSettings->name() != user->name()) {	  // change login name
         command << QStringLiteral("-l") << newSettings->name();
-
+	isDirty=true;
+    }
     if(newSettings->groups() != user->groups()) {  // change group membership
         command << QStringLiteral("-G") << newSettings->groups().join(',');
+	isDirty=true;
     }
-
+#ifdef Q_OS_FREEBSD
+    command << QStringLiteral("-n");
+#endif
     command << user->name();
-    return pkexec(command);
+    if(isDirty) {
+        return pkexec(command);
+    }
+    return true; //No changes
 }
 
 bool UserManager::deleteUser(UserInfo* user) {
@@ -332,24 +348,51 @@ bool UserManager::modifyGroup(GroupInfo* group, GroupInfo* newSettings) {
     if(!group || group->name().isEmpty() || !newSettings)
         return false;
     QStringList command;
+    bool isDirty = false;
     command << QStringLiteral("groupmod");
-    if(newSettings->gid() != group->gid())
+    if(newSettings->gid() != group->gid()) {
         command << QStringLiteral("-g") << QString::number(newSettings->gid());
-    if(newSettings->name() != group->name())
-        command << QStringLiteral("-n") << newSettings->name();
+        isDirty = true;
+       }
+    if(newSettings->name() != group->name()) {
+        isDirty = true;
+#ifdef Q_OS_FREEBSD
+        command << QStringLiteral("-l");
+#else
+        command << QStringLiteral("-n");
+#endif
+        command << newSettings->name();
+    }
+#ifdef Q_OS_FREEBSD
+    if(newSettings->members() != group->members()) {
+        isDirty = true;
+        command << QStringLiteral("-M");  // Set the list of group members.
+        command << newSettings->members().join(',');
+    }
+    command << QStringLiteral("-n");
+#endif
     command << group->name();
-    if(!pkexec(command))
+
+    if(isDirty && !pkexec(command))
         return false;
 
-    // if group members are changed, use gpasswd to reset members
+    // if group members are changed, use gpasswd to reset members on linux
+#ifndef Q_OS_FREEBSD //This is already done with pw groupmod -M earlier.
     if(newSettings->members() != group->members()) {
         command.clear();
         command << QStringLiteral("gpasswd");
         command << QStringLiteral("-M");  // Set the list of group members.
         command << newSettings->members().join(',');
-        command << group->name();
+        //if the group name changed the group->name() is still the old setting.
+        if(newSettings->name() != group->name()) {
+           command << newSettings->name();
+           } else {
+           command << group->name();
+        }
+
         return pkexec(command);
     }
+#endif
     return true;
 }
 

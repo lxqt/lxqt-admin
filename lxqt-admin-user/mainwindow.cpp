@@ -40,6 +40,15 @@ MainWindow::MainWindow():
     connect(ui.actionChangePasswd, SIGNAL(triggered(bool)), SLOT(onChangePasswd()));
     connect(ui.actionRefresh, SIGNAL(triggered(bool)), SLOT(reload()));
 
+#ifdef Q_OS_FREEBSD //Disable group gpasswd for FreeBSD
+    connect(ui.tabWidget, &QTabWidget::currentChanged, [this](int index) {
+        if(index==1) {
+            ui.actionChangePasswd->setEnabled(false);
+        } else {
+            ui.actionChangePasswd->setEnabled(true);
+        }
+    });
+#endif
     connect(ui.userList, &QListWidget::activated, this, &MainWindow::onRowActivated);
     connect(ui.groupList, &QListWidget::activated, this, &MainWindow::onRowActivated);
 
