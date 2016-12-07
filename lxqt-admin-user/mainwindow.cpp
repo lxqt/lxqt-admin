@@ -29,7 +29,6 @@
 #include "userdialog.h"
 #include "groupdialog.h"
 #include "usermanager.h"
-
 MainWindow::MainWindow():
     QMainWindow(),
     mUserManager(new UserManager(this))
@@ -40,8 +39,9 @@ MainWindow::MainWindow():
     connect(ui.actionProperties, SIGNAL(triggered(bool)), SLOT(onEditProperties()));
     connect(ui.actionChangePasswd, SIGNAL(triggered(bool)), SLOT(onChangePasswd()));
     connect(ui.actionRefresh, SIGNAL(triggered(bool)), SLOT(reload()));
-
+#ifdef Q_OS_FREEBSD
     connect(ui.tabWidget,SIGNAL(currentChanged(int)),SLOT(onTabChange(int)));
+#endif
     connect(ui.userList, &QListWidget::activated, this, &MainWindow::onRowActivated);
     connect(ui.groupList, &QListWidget::activated, this, &MainWindow::onRowActivated);
 
@@ -77,17 +77,18 @@ void MainWindow::reloadUsers()
         }
     }
 }
-
+#ifdef Q_OS_FREEBSD //Disable group passwords on FreeBSD
 void MainWindow::onTabChange(int index)
 {
-    #if defined(Q_OS_FREEBSD) //Disable group passwords on FreeBSD
+
     if(index==1) {
         ui.actionChangePasswd->setEnabled(false);
     } else {
         ui.actionChangePasswd->setEnabled(true);
     }
-    #endif
+
 }
+#endif
 
 void MainWindow::reloadGroups()
 {

@@ -202,7 +202,10 @@ bool UserManager::pkexec(const QStringList& command, const QByteArray& stdinData
     args << QStringLiteral("--disable-internal-agent")
         << QStringLiteral("lxqt-admin-user-helper")
         << command;
+
+    //process.setProcessChannelMode(QProcess::ForwardedChannels);
     process.start(QStringLiteral("pkexec"), args);
+
     if(!stdinData.isEmpty()) {
         process.waitForStarted();
         process.write(stdinData);
@@ -227,9 +230,9 @@ bool UserManager::addUser(UserInfo* user) {
     if(!user || user->name().isEmpty())
         return false;
     QStringList command;
-    #ifdef Q_OS_FREEBSD
+#ifdef Q_OS_FREEBSD
     command << QStringLiteral("pw");
-    #endif
+#endif
     command << QStringLiteral("useradd");
     if(user->uid() != 0) {
         command << QStringLiteral("-u") << QString::number(user->uid());
@@ -250,9 +253,9 @@ bool UserManager::addUser(UserInfo* user) {
     if(!user->groups().isEmpty()) {  // set group membership
         command << QStringLiteral("-G") << user->groups().join(',');
     }
-    #ifdef Q_OS_FREEBSD
+#ifdef Q_OS_FREEBSD
     command << QStringLiteral("-n");
-    #endif
+#endif
     command << user->name();
 
     return pkexec(command);
@@ -263,9 +266,9 @@ bool UserManager::modifyUser(UserInfo* user, UserInfo* newSettings) {
         return false;
     bool isDirty = false;
     QStringList command;
-    #ifdef Q_OS_FREEBSD
+#ifdef Q_OS_FREEBSD
     command << QStringLiteral("pw");
-    #endif
+#endif
     command << QStringLiteral("usermod");
     if(newSettings->uid() != user->uid()) {
         command << QStringLiteral("-u") << QString::number(newSettings->uid());
@@ -296,9 +299,9 @@ bool UserManager::modifyUser(UserInfo* user, UserInfo* newSettings) {
         command << QStringLiteral("-G") << newSettings->groups().join(',');
 	isDirty=true;
     }
-    #ifdef Q_OS_FREEBSD
+#ifdef Q_OS_FREEBSD
     command << QStringLiteral("-n");
-    #endif
+#endif
     command << user->name();
     if(isDirty) {
     return pkexec(command);
@@ -311,9 +314,9 @@ bool UserManager::deleteUser(UserInfo* user) {
         return false;
 
     QStringList command;
-    #ifdef Q_OS_FREEBSD
+#ifdef Q_OS_FREEBSD
     command << QStringLiteral("pw");
-    #endif
+#endif
     command << QStringLiteral("userdel");
     command << user->name();
     return pkexec(command);
@@ -346,9 +349,9 @@ bool UserManager::addGroup(GroupInfo* group) {
         return false;
 
     QStringList command;
-    #ifdef Q_OS_FREEBSD
+#ifdef Q_OS_FREEBSD
     command << QStringLiteral("pw");
-    #endif
+#endif
     command << QStringLiteral("groupadd");
     if(group->gid() != 0) {
         command << QStringLiteral("-g") << QString::number(group->gid());
@@ -362,9 +365,9 @@ bool UserManager::modifyGroup(GroupInfo* group, GroupInfo* newSettings) {
         return false;
     QStringList command;
     bool isDirty = false;
-    #ifdef Q_OS_FREEBSD
+#ifdef Q_OS_FREEBSD
     command << QStringLiteral("pw");
-    #endif
+#endif
     command << QStringLiteral("groupmod");
     if(newSettings->gid() != group->gid()) {
         command << QStringLiteral("-g") << QString::number(newSettings->gid());
@@ -372,15 +375,15 @@ bool UserManager::modifyGroup(GroupInfo* group, GroupInfo* newSettings) {
        }
     if(newSettings->name() != group->name()) {
         isDirty = true;
-        #ifdef Q_OS_FREEBSD
+#ifdef Q_OS_FREEBSD
         command << QStringLiteral("-l");
         command << newSettings->name();
-        #else
+#else
         command << QStringLiteral("-n");
         command << newSettings->name();
-        #endif
+#endif
     }
-    #ifdef Q_OS_FREEBSD
+#ifdef Q_OS_FREEBSD
 
     if(newSettings->members() != group->members()) {
         isDirty = true;
@@ -389,14 +392,14 @@ bool UserManager::modifyGroup(GroupInfo* group, GroupInfo* newSettings) {
     }
 
     command << QStringLiteral("-n");
-    #endif
+#endif
     command << group->name();
 
     if(isDirty && !pkexec(command))
         return false;
 
     // if group members are changed, use gpasswd to reset members on linux
-    #ifndef Q_OS_FREEBSD //This is already done with pw groupmod -M earlier.
+#ifndef Q_OS_FREEBSD //This is already done with pw groupmod -M earlier.
     if(newSettings->members() != group->members()) {
         command.clear();
         command << QStringLiteral("gpasswd");
@@ -411,7 +414,7 @@ bool UserManager::modifyGroup(GroupInfo* group, GroupInfo* newSettings) {
 
         return pkexec(command);
     }
-    #endif
+#endif
     return true;
 }
 
@@ -419,9 +422,9 @@ bool UserManager::deleteGroup(GroupInfo* group) {
     if(!group || group->name().isEmpty())
         return false;
     QStringList command;
-    #ifdef Q_OS_FREEBSD
+#ifdef Q_OS_FREEBSD
     command << QStringLiteral("pw");
-    #endif
+#endif
     command << QStringLiteral("groupdel");
     command << group->name();
     return pkexec(command);

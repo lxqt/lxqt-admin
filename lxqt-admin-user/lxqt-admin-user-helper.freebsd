@@ -1,0 +1,23 @@
+#!/bin/sh
+case "$1" in
+pw)
+    case "$2" in
+    useradd|usermod|userdel|groupadd|groupmod|groupdel)
+        export LC_ALL=C
+        exec "$@"
+        ;;
+        *)
+        echo "Command '$1' '$2' is not allowed"
+        exit 1
+        ;;
+    esac
+    ;;
+passwd)
+    export LC_ALL=C
+    exec "$@"
+    ;;
+*)
+    echo "Command '$1' is not allowed!"
+    exit 1
+    ;;
+esac

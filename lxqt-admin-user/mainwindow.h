@@ -22,7 +22,7 @@
 #define MAINWINDOW_H
 #include <QMainWindow>
 #include "ui_mainwindow.h"
-
+#include "system_detect.h"
 class UserInfo;
 class GroupInfo;
 class UserManager;
@@ -56,8 +56,9 @@ private Q_SLOTS:
     void onChangePasswd();
     void reload();
     void onRowActivated(const QModelIndex& index);
+#if OS_FREEBSD
     void onTabChange(int index);
-
+#endif
 private:
     Ui::MainWindow ui;
     UserManager* mUserManager;
