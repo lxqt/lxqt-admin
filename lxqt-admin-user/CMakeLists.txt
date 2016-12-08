@@ -4,12 +4,7 @@ project(lxqt-admin-user)
 include_directories (
     ${CMAKE_CURRENT_BINARY_DIR}
 )
-if(${CMAKE_SYSTEM_NAME} MATCHES  "FreeBSD")
-    set(OS_FREEBSD 1)
-else()
-    set(OS_FREEBSD 0)
-endif()
-configure_file("system_detect.h.in" "${PROJECT_SOURCE_DIR}/system_detect.h")
+
 set ( lxqt-admin-user_SRCS
     main.cpp
     mainwindow.cpp
@@ -88,7 +83,7 @@ configure_file(
     @ONLY
 )
 
-if(${CMAKE_SYSTEM_NAME} MATCHES  "FreeBSD")
+if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
     install(PROGRAMS "lxqt-admin-user-helper.freebsd" DESTINATION bin RENAME lxqt-admin-user-helper)
 else()
     install(PROGRAMS "lxqt-admin-user-helper.default" DESTINATION bin RENAME lxqt-admin-user-helper)

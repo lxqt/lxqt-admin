@@ -77,10 +77,10 @@ void MainWindow::reloadUsers()
         }
     }
 }
+
 #ifdef Q_OS_FREEBSD //Disable group passwords on FreeBSD
 void MainWindow::onTabChange(int index)
 {
-
     if(index==1) {
         ui.actionChangePasswd->setEnabled(false);
     } else {
