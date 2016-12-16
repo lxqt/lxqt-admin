@@ -23,7 +23,6 @@
 #include <QListWidgetItem>
 #include <QDebug>
 #include "usermanager.h"
-
 #define DEFAULT_UID_MIN 1000
 #define DEFAULT_UID_MAX 32768
 
@@ -46,7 +45,7 @@ UserDialog::UserDialog(UserManager* userManager, UserInfo* user, QWidget* parent
         item->setFlags(Qt::ItemIsEnabled|Qt::ItemIsUserCheckable|Qt::ItemIsSelectable);
         if(!isNewUser)
         {
-            if(group->hasMember(user->name()) || user->gid() == group->gid()) // the user is in this group
+            if(group->hasMember(user->name())) // the user is in this group
                 item->setCheckState(Qt::Checked);
             else
                 item->setCheckState(Qt::Unchecked);
