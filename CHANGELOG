@@ -1,7 +1,16 @@
 
-lxqt-admin-0.11.0 / 2016-09-24
+lxqt-admin-0.11.1 / 2017-01-01
 ==============================
 
+  * lxqt-admin-user: Add FreeBSD support
+  * Added *da.desktop
+  * Add French translation
+  * Remove cpack (#40)
+
+0.11.0 / 2016-09-24
+===================
+
+  * Release 0.11.0: Add changelog
   * user: Add failure message box
   * user: Provide icon name in polkit policy
   * Update README.md
