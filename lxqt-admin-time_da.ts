@@ -11,7 +11,8 @@
     <message>
         <location filename="../datetime.ui" line="39"/>
         <source>HH:mm:ss</source>
-        <translation>TT:mm:ss</translation>
+        <translatorcomment>No need to translate. Danish time format is also HH:mm:ss.</translatorcomment>
+        <translation>HH:mm:ss</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="53"/>
@@ -21,7 +22,7 @@
     <message>
         <location filename="../datetime.ui" line="89"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Geming af ændringer kræver administrator tilladelser.&lt;br&gt;Du vil blive spurgt efter klik på luk-knappen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Gemning af ændringer kræver administratortilladelser.&lt;br&gt;Du vil blive spurgt efter klik på luk-knappen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -67,7 +68,7 @@
     <message>
         <location filename="../timezone.ui" line="54"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Geming af ændringer kræver administrator tilladelser.&lt;br&gt;Du vil blive spurgt efter klik på luk-knappen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Geming af ændringer kræver administratortilladelser.&lt;br&gt;Du vil blive spurgt efter klik på luk-knappen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../timezone.cpp" line="42"/>
