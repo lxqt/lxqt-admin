@@ -121,7 +121,7 @@ void UserDialog::accept()
     mUser->setFullName(ui.fullName->text());
 
     mUser->setHomeDir(ui.homeDir->text());
-
+    mUser->setShell(ui.loginShell->currentText());
     // main group
     QString groupName = ui.mainGroup->currentText();
     if(!groupName.isEmpty()) {
