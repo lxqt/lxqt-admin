@@ -4,12 +4,30 @@ project(lxqt-admin-time)
 include_directories (
     ${CMAKE_CURRENT_BINARY_DIR}
 )
+if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
+    set(ITEMDATECTLIMPL "fbsdtimedatectl")
+    set(CMAKE_EXEC_BIN "lxqt-sudo lxqt-admin-time")
+elseif(${CMAKE_SYSTEM_NAME} MATCHES "Linux") 
+    set(ITEMDATECTLIMPL "dbustimedatectl")
+    set(CMAKE_EXEC_BIN "lxqt-admin-time")
+endif()
+
+configure_file (
+  "${PROJECT_SOURCE_DIR}/lxqt-admin-time.desktop.0.in"
+  "${PROJECT_SOURCE_DIR}/lxqt-admin-time.desktop.in"
+  )
+
+
 
 set ( lxqt-admin-time_HDRS
     timeadmindialog.h
     datetime.h
     timezone.h
-    timedatectl.h
+    itimedatectl.h
+    ${ITEMDATECTLIMPL}.h
+endif()
+
+endif()
 )
 
 set ( lxqt-admin-time_SRCS
@@ -17,7 +35,8 @@ set ( lxqt-admin-time_SRCS
     timeadmindialog.cpp
     datetime.cpp
     timezone.cpp
-    timedatectl.cpp
+    itimedatectl.cpp
+    ${ITEMDATECTLIMPL}.cpp
 )
 
 set ( lxqt-admin-time_MOCS
@@ -57,9 +76,8 @@ lxqt_translate_ts(lxqt-admin-time_QM_FILES
 
 lxqt_translate_desktop(DESKTOP_FILES
     SOURCES
-    lxqt-admin-time.desktop.in
+    lxqt-admin-time.desktop.in 
 )
-
 lxqt_app_translation_loader(lxqt-admin-time_QM_LOADER ${PROJECT_NAME})
 #************************************************
 
