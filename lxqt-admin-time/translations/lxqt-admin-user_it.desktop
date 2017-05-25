@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=Users and Groups
+GenericName=User and Group Settings
+Comment=Configure the users and groups of your system
+Exec=lxqt-admin-user
+Icon=preferences-system
+Categories=Settings;System;DesktopSettings;Qt;LXQt;
+OnlyShowIn=LXQt;
+
+Name[it]=Utenti e gruppi
+GenericName[it]=Impostazioni utenti e gruppi
+Comment[it]=Configura utenti e gruppi del sistema
