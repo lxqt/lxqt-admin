@@ -11,6 +11,14 @@ find_package(Qt5Widgets REQUIRED QUIET)
 find_package(lxqt REQUIRED QUIET)
 find_package(KF5WindowSystem REQUIRED QUIET)
 
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif()
+
+set(LXQT_ADMIN_PATCH_VERSION 2)
+set(LXQT_ADMIN_VERSION ${LXQT_MAJOR_VERSION}.${LXQT_MINOR_VERSION}.${LXQT_ADMIN_PATCH_VERSION})
+add_definitions("-DLXQT_ADMIN_VERSION=\"${LXQT_ADMIN_VERSION}\"")
+
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
 include(LXQtTranslate)
 
