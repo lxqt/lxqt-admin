@@ -54,10 +54,15 @@ UserManager::~UserManager() {
 
 void UserManager::loadUsersAndGroups()
 {
+    // Note: getpwent(), getgrent() makes no attempt to suppress duplicate information
+    // if multiple sources are specified in nsswitch.conf(5).
+
     // load groups
     setgrent();
     struct group * grp;
     while((grp = getgrent())) {
+        if (mGroups.cend() != std::find_if(mGroups.cbegin(), mGroups.cend(), [grp] (const GroupInfo * g) -> bool { return g->gid() == grp->gr_gid; }))
+            continue;
         GroupInfo* group = new GroupInfo(grp);
         mGroups.append(group);
         // add members of this group
@@ -74,6 +79,8 @@ void UserManager::loadUsersAndGroups()
     setpwent();
     struct passwd * pw;
     while((pw = getpwent())) {
+        if (mUsers.cend() != std::find_if(mUsers.cbegin(), mUsers.cend(), [pw] (const UserInfo * u) -> bool { return u->uid() == pw->pw_uid; }))
+            continue;
         UserInfo* user = new UserInfo(pw);
         mUsers.append(user);
         // add groups to this user
