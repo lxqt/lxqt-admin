@@ -260,12 +260,12 @@
 <context>
     <name>UserManager</name>
     <message>
-        <location filename="../../../usermanager.cpp" line="217"/>
+        <location filename="../../../usermanager.cpp" line="224"/>
         <source>lxqt-admin-user</source>
         <translation>lxqt-admin-user</translation>
     </message>
     <message>
-        <location filename="../../../usermanager.cpp" line="218"/>
+        <location filename="../../../usermanager.cpp" line="225"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
         <translation>&lt;strong&gt;L&apos;action (%1) a échoué:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
