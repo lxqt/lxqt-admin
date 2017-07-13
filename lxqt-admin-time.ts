@@ -4,73 +4,79 @@
 <context>
     <name>DateTime</name>
     <message>
-        <location filename="../datetime.ui" line="23"/>
+        <location filename="../../../datetime.ui" line="23"/>
         <source>Time:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../datetime.ui" line="39"/>
+        <location filename="../../../datetime.ui" line="39"/>
         <source>HH:mm:ss</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../datetime.ui" line="53"/>
+        <location filename="../../../datetime.ui" line="53"/>
         <source>Date:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../datetime.ui" line="89"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <location filename="../../../datetime.ui" line="70"/>
+        <source>Enable network time synchronization (NTP)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../datetime.ui" line="77"/>
+        <source>RTC is in local time</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>TimeAdminDialog</name>
     <message>
-        <location filename="../timeadmindialog.cpp" line="42"/>
+        <location filename="../../../timeadmindialog.cpp" line="42"/>
         <source>Time and date configuration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="53"/>
+        <location filename="../../../timeadmindialog.cpp" line="48"/>
         <source>Date and time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="62"/>
+        <location filename="../../../timeadmindialog.cpp" line="56"/>
         <source>Timezone</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="162"/>
-        <source>Authentication Error</source>
+        <location filename="../../../timeadmindialog.cpp" line="117"/>
+        <location filename="../../../timeadmindialog.cpp" line="127"/>
+        <location filename="../../../timeadmindialog.cpp" line="134"/>
+        <location filename="../../../timeadmindialog.cpp" line="144"/>
+        <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Timezone</name>
     <message>
-        <location filename="../timezone.ui" line="19"/>
+        <location filename="../../../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../timezone.ui" line="26"/>
+        <location filename="../../../timezone.ui" line="26"/>
         <source>TextLabel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../timezone.ui" line="35"/>
+        <location filename="../../../timezone.ui" line="35"/>
         <source>Filter</source>
         <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>TimezonePage</name>
     <message>
-        <location filename="../timezone.ui" line="54"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../timezone.cpp" line="42"/>
+        <location filename="../../../timezone.cpp" line="42"/>
         <source>None</source>
         <translation type="unfinished"></translation>
     </message>

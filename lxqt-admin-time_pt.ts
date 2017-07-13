@@ -5,11 +5,11 @@
     <name>DateTime</name>
     <message>
         <source>Form</source>
-        <translation>Formulário</translation>
+        <translation type="vanished">Formulário</translation>
     </message>
     <message>
         <source>Time and date setup</source>
-        <translation>Configuração de data e hora</translation>
+        <translation type="vanished">Configuração de data e hora</translation>
     </message>
     <message>
         <location filename="../../../datetime.ui" line="23"/>
@@ -27,9 +27,18 @@
         <translation>Data:</translation>
     </message>
     <message>
-        <location filename="../../../datetime.ui" line="89"/>
+        <location filename="../../../datetime.ui" line="70"/>
+        <source>Enable network time synchronization (NTP)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../../datetime.ui" line="77"/>
+        <source>RTC is in local time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A gravação de alterações requer permissões de administrador.&lt;br&gt;A palavra-passe será solicitada ao clicar em Fechar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A gravação de alterações requer permissões de administrador.&lt;br&gt;A palavra-passe será solicitada ao clicar em Fechar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -40,30 +49,37 @@
         <translation>Configuração de data e hora</translation>
     </message>
     <message>
-        <location filename="../../../timeadmindialog.cpp" line="53"/>
+        <location filename="../../../timeadmindialog.cpp" line="48"/>
         <source>Date and time</source>
         <translation>Data e hora</translation>
     </message>
     <message>
-        <location filename="../../../timeadmindialog.cpp" line="62"/>
+        <location filename="../../../timeadmindialog.cpp" line="56"/>
         <source>Timezone</source>
         <translation>Fuso horário</translation>
     </message>
     <message>
-        <location filename="../../../timeadmindialog.cpp" line="162"/>
+        <location filename="../../../timeadmindialog.cpp" line="117"/>
+        <location filename="../../../timeadmindialog.cpp" line="127"/>
+        <location filename="../../../timeadmindialog.cpp" line="134"/>
+        <location filename="../../../timeadmindialog.cpp" line="144"/>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Authentication Error</source>
-        <translation>Erro de autenticação</translation>
+        <translation type="vanished">Erro de autenticação</translation>
     </message>
 </context>
 <context>
     <name>Timezone</name>
     <message>
         <source>Form</source>
-        <translation>Formulário</translation>
+        <translation type="vanished">Formulário</translation>
     </message>
     <message>
         <source>Timezone setup</source>
-        <translation>Configuração de fuso horário</translation>
+        <translation type="vanished">Configuração de fuso horário</translation>
     </message>
     <message>
         <location filename="../../../timezone.ui" line="19"/>
@@ -81,14 +97,20 @@
         <translation>Filtrar</translation>
     </message>
     <message>
-        <location filename="../../../timezone.ui" line="54"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A gravação de alterações requer permissões de administrador.&lt;br&gt;A palavra-passe será solicitada ao clicar em Fechar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;A gravação de alterações requer permissões de administrador.&lt;br&gt;A palavra-passe será solicitada ao clicar em Fechar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
+    <message>
+        <source>None</source>
+        <translation type="vanished">Nenhum</translation>
+    </message>
+</context>
+<context>
+    <name>TimezonePage</name>
     <message>
         <location filename="../../../timezone.cpp" line="42"/>
         <source>None</source>
-        <translation>Nenhum</translation>
+        <translation type="unfinished">Nenhum</translation>
     </message>
 </context>
 </TS>
