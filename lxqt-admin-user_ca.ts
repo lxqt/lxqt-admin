@@ -16,7 +16,7 @@
     <message>
         <location filename="../../../groupdialog.ui" line="30"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Predeterminat</translation>
     </message>
     <message>
         <location filename="../../../groupdialog.ui" line="40"/>
@@ -35,7 +35,7 @@
     </message>
     <message>
         <source>The group ID is in use.</source>
-        <translation type="vanished">L&apos;id. del grup ja està en ús.</translation>
+        <translation>L&apos;id. del grup ja està en ús.</translation>
     </message>
     <message>
         <location filename="../../../groupdialog.cpp" line="64"/>
@@ -44,7 +44,7 @@
     </message>
     <message>
         <source>The group name is in use.</source>
-        <translation type="vanished">El nom del grup ja està en ús.</translation>
+        <translation>El nom del grup ja està en ús.</translation>
     </message>
 </context>
 <context>
@@ -107,7 +107,7 @@
     <message>
         <location filename="../../../mainwindow.ui" line="118"/>
         <source>Members</source>
-        <translation type="unfinished"></translation>
+        <translation>Membres</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="131"/>
@@ -157,16 +157,16 @@
     <message>
         <location filename="../../../mainwindow.ui" line="206"/>
         <source>Change Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Canvia la contrasenya</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="209"/>
         <source>Change password for the selected user or group</source>
-        <translation type="unfinished"></translation>
+        <translation>Canvia la contrasenya per als usuaris o grups seleccionats</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation type="vanished">Error</translation>
+        <translation>Error</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="164"/>
@@ -188,12 +188,12 @@
     <message>
         <location filename="../../../mainwindow.cpp" line="187"/>
         <source>Input the new password for %1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Introduïu la nova contrasenya per a %1:</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="197"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation type="unfinished"></translation>
+        <translation>Esteu segur que voleu establir una contrasenya buida?</translation>
     </message>
 </context>
 <context>
@@ -220,7 +220,7 @@
     </message>
     <message>
         <source>Set password:</source>
-        <translation type="vanished">Establiu la contrasenya:</translation>
+        <translation>Establiu la contrasenya:</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="53"/>
@@ -230,7 +230,7 @@
     <message>
         <location filename="../../../userdialog.ui" line="60"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Predeterminat</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="70"/>
@@ -240,12 +240,12 @@
     <message>
         <location filename="../../../userdialog.ui" line="85"/>
         <source>Groups</source>
-        <translation type="unfinished"></translation>
+        <translation>Grups</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="91"/>
         <source>The user belongs to the following groups:</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;usuari pertany als següents grups:</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="109"/>
@@ -264,7 +264,7 @@
     </message>
     <message>
         <source>Change password:</source>
-        <translation type="vanished">Canvieu la contrasenya:</translation>
+        <translation>Canvia la contrasenya:</translation>
     </message>
     <message>
         <location filename="../../../userdialog.cpp" line="117"/>
@@ -273,7 +273,7 @@
     </message>
     <message>
         <source>The user ID is in use.</source>
-        <translation type="vanished">L&apos;id. de l&apos;usuari ja està en ús.</translation>
+        <translation>L&apos;id. de l&apos;usuari ja està en ús.</translation>
     </message>
     <message>
         <location filename="../../../userdialog.cpp" line="117"/>
@@ -282,15 +282,15 @@
     </message>
     <message>
         <source>The user name is in use.</source>
-        <translation type="vanished">El nom de l&apos;usuari ja està en ús.</translation>
+        <translation>El nom de l&apos;usuari ja està en ús.</translation>
     </message>
     <message>
         <source>Confirm</source>
-        <translation type="vanished">Confirmació</translation>
+        <translation>Confirmació</translation>
     </message>
     <message>
         <source>Are you sure you want to use an &quot;empty password&quot; for the user?</source>
-        <translation type="vanished">Esteu segur que voleu utilitzar una «contrasenya en blanc» per a l&apos;usuari?</translation>
+        <translation>Esteu segur que voleu utilitzar una «contrasenya en blanc» per a l&apos;usuari?</translation>
     </message>
 </context>
 <context>
@@ -298,12 +298,12 @@
     <message>
         <location filename="../../../usermanager.cpp" line="224"/>
         <source>lxqt-admin-user</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../../usermanager.cpp" line="225"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Ha fallat l&apos;acció (%1):&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
