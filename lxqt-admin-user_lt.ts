@@ -16,7 +16,7 @@
     <message>
         <location filename="../../../groupdialog.ui" line="30"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Numatytoji</translation>
     </message>
     <message>
         <location filename="../../../groupdialog.ui" line="40"/>
@@ -107,7 +107,7 @@
     <message>
         <location filename="../../../mainwindow.ui" line="118"/>
         <source>Members</source>
-        <translation type="unfinished"></translation>
+        <translation>Nariai</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="131"/>
@@ -157,12 +157,12 @@
     <message>
         <location filename="../../../mainwindow.ui" line="206"/>
         <source>Change Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Keisti slaptažodį</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="209"/>
         <source>Change password for the selected user or group</source>
-        <translation type="unfinished"></translation>
+        <translation>Keisti pasirinkto naudotojo ar grupės slaptažodį</translation>
     </message>
     <message>
         <source>Error</source>
@@ -188,12 +188,12 @@
     <message>
         <location filename="../../../mainwindow.cpp" line="187"/>
         <source>Input the new password for %1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Įveskite naują slaptažodį, skirtą %1:</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="197"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ar tikrai norite nustatyti tuščią slaptažodį?</translation>
     </message>
 </context>
 <context>
@@ -230,7 +230,7 @@
     <message>
         <location filename="../../../userdialog.ui" line="60"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Numatytasis</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="70"/>
@@ -240,12 +240,12 @@
     <message>
         <location filename="../../../userdialog.ui" line="85"/>
         <source>Groups</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupės</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="91"/>
         <source>The user belongs to the following groups:</source>
-        <translation type="unfinished"></translation>
+        <translation>Naudotojas priklauso šioms grupėms:</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="109"/>
@@ -298,12 +298,12 @@
     <message>
         <location filename="../../../usermanager.cpp" line="224"/>
         <source>lxqt-admin-user</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-admin-user</translation>
     </message>
     <message>
         <location filename="../../../usermanager.cpp" line="225"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Veiksmas (%1) patyrė nesėkmę:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
