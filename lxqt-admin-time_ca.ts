@@ -21,7 +21,7 @@
     <message>
         <location filename="../../../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation>Habilita la sincronització de l'hora a través de NTP (Network Time Protocol)</translation>
+        <translation>Habilita la sincronització de l&apos;hora a través de NTP (Network Time Protocol)</translation>
     </message>
     <message>
         <location filename="../../../datetime.ui" line="77"/>
@@ -30,7 +30,7 @@
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;El desament dels canvis requereix permisos d&apos;administració.&lt;br&gt;Se us demanaran després que feu clic al botó tanca&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;El desament dels canvis requereix permisos d&apos;administració.&lt;br&gt;Se us demanaran després que feu clic al botó tanca&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -60,7 +60,7 @@
     </message>
     <message>
         <source>Authentication Error</source>
-        <translation>Error d&apos;autenticació</translation>
+        <translation type="vanished">Error d&apos;autenticació</translation>
     </message>
 </context>
 <context>
@@ -82,11 +82,11 @@
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;El desament dels canvis requereix permisos d&apos;administració.&lt;br&gt;Se us demanaran després que feu clic al botó tanca&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;El desament dels canvis requereix permisos d&apos;administració.&lt;br&gt;Se us demanaran després que feu clic al botó tanca&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>None</source>
-        <translation>Sense</translation>
+        <translation type="vanished">Sense</translation>
     </message>
 </context>
 <context>
