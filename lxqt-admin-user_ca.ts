@@ -35,7 +35,7 @@
     </message>
     <message>
         <source>The group ID is in use.</source>
-        <translation>L&apos;id. del grup ja està en ús.</translation>
+        <translation type="vanished">L&apos;id. del grup ja està en ús.</translation>
     </message>
     <message>
         <location filename="../../../groupdialog.cpp" line="64"/>
@@ -44,7 +44,7 @@
     </message>
     <message>
         <source>The group name is in use.</source>
-        <translation>El nom del grup ja està en ús.</translation>
+        <translation type="vanished">El nom del grup ja està en ús.</translation>
     </message>
 </context>
 <context>
@@ -166,7 +166,7 @@
     </message>
     <message>
         <source>Error</source>
-        <translation>Error</translation>
+        <translation type="vanished">Error</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="164"/>
@@ -220,7 +220,7 @@
     </message>
     <message>
         <source>Set password:</source>
-        <translation>Establiu la contrasenya:</translation>
+        <translation type="vanished">Establiu la contrasenya:</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="53"/>
@@ -264,7 +264,7 @@
     </message>
     <message>
         <source>Change password:</source>
-        <translation>Canvia la contrasenya:</translation>
+        <translation type="vanished">Canvia la contrasenya:</translation>
     </message>
     <message>
         <location filename="../../../userdialog.cpp" line="117"/>
@@ -273,7 +273,7 @@
     </message>
     <message>
         <source>The user ID is in use.</source>
-        <translation>L&apos;id. de l&apos;usuari ja està en ús.</translation>
+        <translation type="vanished">L&apos;id. de l&apos;usuari ja està en ús.</translation>
     </message>
     <message>
         <location filename="../../../userdialog.cpp" line="117"/>
@@ -282,15 +282,15 @@
     </message>
     <message>
         <source>The user name is in use.</source>
-        <translation>El nom de l&apos;usuari ja està en ús.</translation>
+        <translation type="vanished">El nom de l&apos;usuari ja està en ús.</translation>
     </message>
     <message>
         <source>Confirm</source>
-        <translation>Confirmació</translation>
+        <translation type="vanished">Confirmació</translation>
     </message>
     <message>
         <source>Are you sure you want to use an &quot;empty password&quot; for the user?</source>
-        <translation>Esteu segur que voleu utilitzar una «contrasenya en blanc» per a l&apos;usuari?</translation>
+        <translation type="vanished">Esteu segur que voleu utilitzar una «contrasenya en blanc» per a l&apos;usuari?</translation>
     </message>
 </context>
 <context>
