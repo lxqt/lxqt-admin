@@ -135,7 +135,7 @@
     <message>
         <location filename="../../../mainwindow.ui" line="185"/>
         <source>edit properties of the selected item</source>
-        <translation>modifica le proprietà dell&apos;elemento selezionato</translation>
+        <translation>Modifica le proprietà dell&apos;elemento selezionato</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="194"/>
@@ -155,7 +155,7 @@
     <message>
         <location filename="../../../mainwindow.ui" line="209"/>
         <source>Change password for the selected user or group</source>
-        <translation>Cambia password per l&apos;utente o il gruppo selezionato </translation>
+        <translation>Cambia password per l&apos;utente o il gruppo selezionato</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="164"/>
@@ -263,12 +263,12 @@
     <message>
         <location filename="../../../usermanager.cpp" line="224"/>
         <source>lxqt-admin-user</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestione utenti LXQt</translation>
     </message>
     <message>
         <location filename="../../../usermanager.cpp" line="225"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Azione (%1) fallita:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
