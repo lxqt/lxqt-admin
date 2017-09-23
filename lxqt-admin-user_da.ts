@@ -16,7 +16,7 @@
     <message>
         <location filename="../../../groupdialog.ui" line="30"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Standard</translation>
     </message>
     <message>
         <location filename="../../../groupdialog.ui" line="40"/>
@@ -34,17 +34,9 @@
         <translation>Fejl</translation>
     </message>
     <message>
-        <source>The group ID is in use.</source>
-        <translation type="vanished">Gruppe-ID&apos;et er i brug.</translation>
-    </message>
-    <message>
         <location filename="../../../groupdialog.cpp" line="64"/>
         <source>The group name cannot be empty.</source>
         <translation>Gruppenavnet må ikke være tomt.</translation>
-    </message>
-    <message>
-        <source>The group name is in use.</source>
-        <translation type="vanished">Gruppenavnet er i brug.</translation>
     </message>
 </context>
 <context>
@@ -107,7 +99,7 @@
     <message>
         <location filename="../../../mainwindow.ui" line="118"/>
         <source>Members</source>
-        <translation type="unfinished"></translation>
+        <translation>Medlemmer</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="131"/>
@@ -157,16 +149,12 @@
     <message>
         <location filename="../../../mainwindow.ui" line="206"/>
         <source>Change Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Skift adgangskode</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="209"/>
         <source>Change password for the selected user or group</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Error</source>
-        <translation type="vanished">Fejl</translation>
+        <translation>Skift adgangskode for den valgte bruger eller gruppe</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="164"/>
@@ -188,12 +176,12 @@
     <message>
         <location filename="../../../mainwindow.cpp" line="187"/>
         <source>Input the new password for %1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Input den nye adgangskode til %1:</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="197"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation type="unfinished"></translation>
+        <translation>Er du sikker på, at du vil sætte en tom adgangskode?</translation>
     </message>
 </context>
 <context>
@@ -219,10 +207,6 @@
         <translation>Login-navn:</translation>
     </message>
     <message>
-        <source>Set password:</source>
-        <translation type="vanished">Sæt adgangskode:</translation>
-    </message>
-    <message>
         <location filename="../../../userdialog.ui" line="53"/>
         <source>User ID:</source>
         <translation>Bruger-ID:</translation>
@@ -230,7 +214,7 @@
     <message>
         <location filename="../../../userdialog.ui" line="60"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Standard</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="70"/>
@@ -240,12 +224,12 @@
     <message>
         <location filename="../../../userdialog.ui" line="85"/>
         <source>Groups</source>
-        <translation type="unfinished"></translation>
+        <translation>Grupper</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="91"/>
         <source>The user belongs to the following groups:</source>
-        <translation type="unfinished"></translation>
+        <translation>Brugeren tilhører følgende grupper:</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="109"/>
@@ -263,34 +247,14 @@
         <translation>Hjemmemappe:</translation>
     </message>
     <message>
-        <source>Change password:</source>
-        <translation type="vanished">Skift adgangskode:</translation>
-    </message>
-    <message>
         <location filename="../../../userdialog.cpp" line="117"/>
         <source>Error</source>
         <translation>Fejl</translation>
     </message>
     <message>
-        <source>The user ID is in use.</source>
-        <translation type="vanished">Bruger-ID&apos;et er i brug.</translation>
-    </message>
-    <message>
         <location filename="../../../userdialog.cpp" line="117"/>
         <source>The user name cannot be empty.</source>
         <translation>Brugernavnet må ikke være tomt.</translation>
-    </message>
-    <message>
-        <source>The user name is in use.</source>
-        <translation type="vanished">Brugernavnet er i brug.</translation>
-    </message>
-    <message>
-        <source>Confirm</source>
-        <translation type="vanished">Bekræft</translation>
-    </message>
-    <message>
-        <source>Are you sure you want to use an &quot;empty password&quot; for the user?</source>
-        <translation type="vanished">Er du sikker på, at du vil bruge en &quot;tom adgangskode&quot; til brugeren?</translation>
     </message>
 </context>
 <context>
@@ -298,12 +262,12 @@
     <message>
         <location filename="../../../usermanager.cpp" line="224"/>
         <source>lxqt-admin-user</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-admin-user</translation>
     </message>
     <message>
         <location filename="../../../usermanager.cpp" line="225"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Handling (%1) fejlede:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
