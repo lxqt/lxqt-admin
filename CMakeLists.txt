@@ -7,15 +7,17 @@ option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" O
 # Set default installation paths
 set(LIB_INSTALL_DIR "lib${LIB_SUFFIX}" CACHE PATH "Installation path for libraries")
 
-find_package(Qt5Widgets REQUIRED QUIET)
-find_package(lxqt REQUIRED QUIET)
-find_package(KF5WindowSystem REQUIRED QUIET)
+find_package(Qt5Widgets REQUIRED)
+find_package(lxqt REQUIRED)
+find_package(KF5WindowSystem REQUIRED)
 
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
 endif()
 
-set(LXQT_ADMIN_PATCH_VERSION 2)
+# Patch Version
+set(LXQT_ADMIN_PATCH_VERSION 0)
+
 set(LXQT_ADMIN_VERSION ${LXQT_MAJOR_VERSION}.${LXQT_MINOR_VERSION}.${LXQT_ADMIN_PATCH_VERSION})
 add_definitions("-DLXQT_ADMIN_VERSION=\"${LXQT_ADMIN_VERSION}\"")
 
