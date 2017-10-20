@@ -4,7 +4,7 @@ Name=Users and Groups
 GenericName=User and Group Settings
 Comment=Configure the users and groups of your system
 Exec=lxqt-admin-user
-Icon=preferences-system
+Icon=system-users
 Categories=Settings;System;DesktopSettings;Qt;LXQt;
 OnlyShowIn=LXQt;
 

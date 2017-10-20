@@ -4,7 +4,7 @@ Name=Date and Time
 GenericName=Date and Time Settings
 Comment=Configure the date and time of your system
 Exec=lxqt-admin-time
-Icon=preferences-system
+Icon=preferences-system-time
 Categories=Settings;System;DesktopSettings;Qt;LXQt;
 OnlyShowIn=LXQt;
 
