@@ -30,15 +30,15 @@
 
 #include <QString>
 #include <QDateTime>
-
+#include <QtCore/QtGlobal>
+#include "itimedatectl.h"
 class QDBusInterface;
-
-class TimeDateCtl
+class DBusTimeDateCtl : public ITimeDateCtl
 {
-public:
-    explicit TimeDateCtl();
-    ~TimeDateCtl();
 
+public:
+    explicit DBusTimeDateCtl();
+    ~DBusTimeDateCtl();
     bool useNtp() const;
     bool setUseNtp(bool value, QString& errorMessage);
 
@@ -49,6 +49,7 @@ public:
     bool setTimeZone(QString timeZone, QString& errorMessage);
 
     bool setDateTime(QDateTime dateTime, QString& errorMessage);
+
 
 private:
     QDBusInterface* mIface;

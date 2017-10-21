@@ -32,7 +32,6 @@
 #include <QDateTime>
 #include <QMap>
 #include <QDebug>
-
 #include "datetime.h"
 #include "timezone.h"
 
@@ -41,10 +40,15 @@
 TimeAdminDialog::TimeAdminDialog(QWidget *parent):
     LXQt::ConfigDialog(tr("Time and date configuration"),new LXQt::Settings("TimeDate"), parent)
 {
+#ifdef Q_OS_FREEBSD
+    mTimeDateCtl = new FBSDTimeDateCtl();
+#elif defined(Q_OS_LINUX)
+    mTimeDateCtl = new DBusTimeDateCtl();
+#endif
     setMinimumSize(QSize(400,400));
     mWindowTitle = windowTitle();
 
-    mDateTimeWidget = new DateTimePage(mTimeDateCtl.useNtp(), mTimeDateCtl.localRtc(), this);
+    mDateTimeWidget = new DateTimePage(mTimeDateCtl->useNtp(), mTimeDateCtl->localRtc(), this);
     addPage(mDateTimeWidget,tr("Date and time"));
     connect(this,SIGNAL(reset()),mDateTimeWidget,SLOT(reload()));
     connect(mDateTimeWidget,&DateTimePage::changed,this,&TimeAdminDialog::onChanged);
@@ -64,6 +68,8 @@ TimeAdminDialog::TimeAdminDialog(QWidget *parent):
 
 TimeAdminDialog::~TimeAdminDialog()
 {
+ delete mTimeDateCtl;
+
 }
 
 void TimeAdminDialog::onChanged()
@@ -82,7 +88,7 @@ void TimeAdminDialog::showChangedStar()
 
 void TimeAdminDialog::loadTimeZones(QStringList & timeZones, QString & currentTimezone)
 {
-    currentTimezone = mTimeDateCtl.timeZone();
+    currentTimezone = mTimeDateCtl->timeZone();
 
     timeZones.clear();
     QFile file(ZONETAB_PATH);
@@ -113,7 +119,7 @@ void TimeAdminDialog::saveChangesToSystem()
         QString timeZone = mTimezoneWidget->timezone();
         if(!timeZone.isEmpty())
         {
-            if(false == mTimeDateCtl.setTimeZone(timeZone, errorMessage)) {
+            if(false == mTimeDateCtl->setTimeZone(timeZone, errorMessage)) {
                 QMessageBox::critical(this, tr("Error"), errorMessage);
             }
         }
@@ -123,16 +129,22 @@ void TimeAdminDialog::saveChangesToSystem()
     bool useNtp = mDateTimeWidget->useNtp();
     if(modified.testFlag(DateTimePage::M_NTP))
     {
-        if(false == mTimeDateCtl.setUseNtp(useNtp, errorMessage)) {
+        if(false == mTimeDateCtl->setUseNtp(useNtp, errorMessage)) {
             QMessageBox::critical(this, tr("Error"), errorMessage);
         }
     }
 
     if(modified.testFlag(DateTimePage::M_LOCAL_RTC))
     {
-        if(false == mTimeDateCtl.setLocalRtc(mDateTimeWidget->localRtc(), errorMessage)) {
+        if(false == mTimeDateCtl->setLocalRtc(mDateTimeWidget->localRtc(), errorMessage)) {
             QMessageBox::critical(this, tr("Error"), errorMessage);
         }
+#ifdef Q_OS_FREEBSD
+        else {
+            const QString infoMsg = mDateTimeWidget->localRtc() ?  tr("Change RTC to be in localtime requires a reboot") : tr("Change RTC to be in UTC requires a reboot");
+            QMessageBox::information(this,tr("Reboot required"),infoMsg);
+        }
+#endif
     }
 
     // we can only change the date & time explicitly when NTP is disabled.
@@ -140,7 +152,7 @@ void TimeAdminDialog::saveChangesToSystem()
     {
         if(modified.testFlag(DateTimePage::M_DATE) || modified.testFlag(DateTimePage::M_TIME))
         {
-            if(false == mTimeDateCtl.setDateTime(mDateTimeWidget->dateTime(), errorMessage)) {
+            if(false == mTimeDateCtl->setDateTime(mDateTimeWidget->dateTime(), errorMessage)) {
                 QMessageBox::critical(this, tr("Error"), errorMessage);
             }
         }
