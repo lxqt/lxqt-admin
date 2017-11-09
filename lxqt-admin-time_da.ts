@@ -69,7 +69,7 @@
     <message>
         <location filename="../../../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
-        <translation>Din aktuelle tidszone:</translation>
+        <translation>Din nuværende tidszone:</translation>
     </message>
     <message>
         <location filename="../../../timezone.ui" line="26"/>
