@@ -267,7 +267,7 @@
     <message>
         <location filename="../../../usermanager.cpp" line="225"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation>&lt;strong&gt;Handling (%1) fejlede:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
+        <translation>&lt;strong&gt;Handling (%1) mislykkedes:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
