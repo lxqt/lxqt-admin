@@ -16,7 +16,7 @@
     <message>
         <location filename="../../../groupdialog.ui" line="30"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>既定</translation>
     </message>
     <message>
         <location filename="../../../groupdialog.ui" line="40"/>
@@ -40,7 +40,7 @@
     <message>
         <location filename="../../../groupdialog.cpp" line="64"/>
         <source>The group name cannot be empty.</source>
-        <translation>グループ名を入力する必要があります</translation>
+        <translation>グループ名を入力する必要があります。</translation>
     </message>
     <message>
         <source>The group name is in use.</source>
@@ -107,7 +107,7 @@
     <message>
         <location filename="../../../mainwindow.ui" line="118"/>
         <source>Members</source>
-        <translation type="unfinished"></translation>
+        <translation>メンバー</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="131"/>
@@ -157,12 +157,12 @@
     <message>
         <location filename="../../../mainwindow.ui" line="206"/>
         <source>Change Password</source>
-        <translation type="unfinished"></translation>
+        <translation>パスワードの変更</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="209"/>
         <source>Change password for the selected user or group</source>
-        <translation type="unfinished"></translation>
+        <translation>選択したユーザーグループのパスワード変更</translation>
     </message>
     <message>
         <source>Error</source>
@@ -188,12 +188,12 @@
     <message>
         <location filename="../../../mainwindow.cpp" line="187"/>
         <source>Input the new password for %1:</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 の新しいパスワードを入力:</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="197"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation type="unfinished"></translation>
+        <translation>空白のパスワードを設定しますか?</translation>
     </message>
 </context>
 <context>
@@ -230,7 +230,7 @@
     <message>
         <location filename="../../../userdialog.ui" line="60"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>既定</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="70"/>
@@ -240,12 +240,12 @@
     <message>
         <location filename="../../../userdialog.ui" line="85"/>
         <source>Groups</source>
-        <translation type="unfinished"></translation>
+        <translation>グループ</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="91"/>
         <source>The user belongs to the following groups:</source>
-        <translation type="unfinished"></translation>
+        <translation>ユーザーは次のグループに属します:</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="109"/>
@@ -278,7 +278,7 @@
     <message>
         <location filename="../../../userdialog.cpp" line="117"/>
         <source>The user name cannot be empty.</source>
-        <translation>ユーザー名を入力する必要があります</translation>
+        <translation>ユーザー名を入力する必要があります。</translation>
     </message>
     <message>
         <source>The user name is in use.</source>
