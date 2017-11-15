@@ -24,17 +24,17 @@
     <message>
         <location filename="../../../datetime.ui" line="53"/>
         <source>Date:</source>
-        <translation>日付</translation>
+        <translation>日付:</translation>
     </message>
     <message>
         <location filename="../../../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation type="unfinished"></translation>
+        <translation>ネットワークによる時刻の同期を可能にする(NTP)</translation>
     </message>
     <message>
         <location filename="../../../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation type="unfinished"></translation>
+        <translation>RTCはローカル時刻です</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -64,7 +64,7 @@
         <location filename="../../../timeadmindialog.cpp" line="134"/>
         <location filename="../../../timeadmindialog.cpp" line="144"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>エラー</translation>
     </message>
     <message>
         <source>Authentication Error</source>
@@ -84,7 +84,7 @@
     <message>
         <location filename="../../../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
-        <translation>現在のタイムゾーン</translation>
+        <translation>現在のタイムゾーン:</translation>
     </message>
     <message>
         <location filename="../../../timezone.ui" line="26"/>
@@ -110,7 +110,7 @@
     <message>
         <location filename="../../../timezone.cpp" line="42"/>
         <source>None</source>
-        <translation type="unfinished">なし</translation>
+        <translation>なし</translation>
     </message>
 </context>
 </TS>
