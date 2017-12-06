@@ -16,7 +16,7 @@
     <message>
         <location filename="../../../groupdialog.ui" line="30"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Alapértelmezett</translation>
     </message>
     <message>
         <location filename="../../../groupdialog.ui" line="40"/>
@@ -107,7 +107,7 @@
     <message>
         <location filename="../../../mainwindow.ui" line="118"/>
         <source>Members</source>
-        <translation type="unfinished"></translation>
+        <translation>Tagok</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="131"/>
@@ -157,12 +157,12 @@
     <message>
         <location filename="../../../mainwindow.ui" line="206"/>
         <source>Change Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Jelszó váltás</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="209"/>
         <source>Change password for the selected user or group</source>
-        <translation type="unfinished"></translation>
+        <translation>Felhasználó, vagy csoport jelszavának megváltoztatása</translation>
     </message>
     <message>
         <source>Error</source>
@@ -188,12 +188,12 @@
     <message>
         <location filename="../../../mainwindow.cpp" line="187"/>
         <source>Input the new password for %1:</source>
-        <translation type="unfinished"></translation>
+        <translation>A %1 új jelszava:</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.cpp" line="197"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation type="unfinished"></translation>
+        <translation>Biztos, hogy üres a jelszó?</translation>
     </message>
 </context>
 <context>
@@ -230,7 +230,7 @@
     <message>
         <location filename="../../../userdialog.ui" line="60"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Alapértelmezett</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="70"/>
@@ -240,12 +240,12 @@
     <message>
         <location filename="../../../userdialog.ui" line="85"/>
         <source>Groups</source>
-        <translation type="unfinished"></translation>
+        <translation>Csoportok</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="91"/>
         <source>The user belongs to the following groups:</source>
-        <translation type="unfinished"></translation>
+        <translation>A felhasználó ezen csoportok tagja:</translation>
     </message>
     <message>
         <location filename="../../../userdialog.ui" line="109"/>
@@ -303,7 +303,7 @@
     <message>
         <location filename="../../../usermanager.cpp" line="225"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;A (%1) akció sikertelen:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
