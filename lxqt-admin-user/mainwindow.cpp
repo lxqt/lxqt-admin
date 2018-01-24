@@ -54,6 +54,7 @@ MainWindow::MainWindow():
 #endif
     connect(ui.userList, &QListWidget::activated, this, &MainWindow::onRowActivated);
     connect(ui.groupList, &QListWidget::activated, this, &MainWindow::onRowActivated);
+    connect(ui.showSystemUsers, &QCheckBox::stateChanged, this, &MainWindow::reload);
 
     connect(mUserManager, &UserManager::changed, this, &MainWindow::reload);
     reload();
@@ -71,7 +72,7 @@ void MainWindow::reloadUsers()
     for(const UserInfo* user: users)
     {
         uid_t uid = user->uid();
-        if(uid > 499 && !user->shell().isEmpty()) // exclude system users
+        if(ui.showSystemUsers->isChecked() || (uid > 499 && !user->shell().isEmpty())) // exclude system users
         {
             QTreeWidgetItem* item = new QTreeWidgetItem();
             item->setData(0, Qt::DisplayRole, user->name());

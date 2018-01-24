@@ -83,9 +83,6 @@
         </item>
         <item>
          <widget class="QCheckBox" name="showSystemUsers">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
           <property name="text">
            <string>Show system users (for advanced users only)</string>
           </property>
