@@ -37,11 +37,11 @@ MainWindow::MainWindow():
     ui.userList->sortByColumn(0, Qt::AscendingOrder);
     ui.groupList->sortByColumn(0, Qt::AscendingOrder);
 
-    connect(ui.actionAdd, SIGNAL(triggered(bool)), SLOT(onAdd()));
-    connect(ui.actionDelete, SIGNAL(triggered(bool)), SLOT(onDelete()));
-    connect(ui.actionProperties, SIGNAL(triggered(bool)), SLOT(onEditProperties()));
-    connect(ui.actionChangePasswd, SIGNAL(triggered(bool)), SLOT(onChangePasswd()));
-    connect(ui.actionRefresh, SIGNAL(triggered(bool)), SLOT(reload()));
+    connect(ui.actionAdd, &QAction::triggered, this, &MainWindow::onAdd);
+    connect(ui.actionDelete, &QAction::triggered, this, &MainWindow::onDelete);
+    connect(ui.actionProperties, &QAction::triggered, this, &MainWindow::onEditProperties);
+    connect(ui.actionChangePasswd, &QAction::triggered, this, &MainWindow::onChangePasswd);
+    connect(ui.actionRefresh, &QAction::triggered, this, &MainWindow::reload);
 
 #ifdef Q_OS_FREEBSD //Disable group gpasswd for FreeBSD
     connect(ui.tabWidget, &QTabWidget::currentChanged, [this](int index) {

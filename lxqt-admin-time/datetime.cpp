@@ -39,7 +39,7 @@ DateTimePage::DateTimePage(bool useNtp, bool localRtc, QWidget *parent) :
 {
     ui->setupUi(this);
     mTimer = new QTimer(this);
-    connect(mTimer,SIGNAL(timeout()),SLOT(timeout()));
+    connect(mTimer, &QTimer::timeout, this, &DateTimePage::timeout);
 
     //highlight today
     QDate date = QDate::currentDate();
