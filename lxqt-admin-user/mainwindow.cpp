@@ -34,6 +34,9 @@ MainWindow::MainWindow():
     mUserManager(new UserManager(this))
 {
     ui.setupUi(this);
+    ui.userList->sortByColumn(0, Qt::AscendingOrder);
+    ui.groupList->sortByColumn(0, Qt::AscendingOrder);
+
     connect(ui.actionAdd, SIGNAL(triggered(bool)), SLOT(onAdd()));
     connect(ui.actionDelete, SIGNAL(triggered(bool)), SLOT(onDelete()));
     connect(ui.actionProperties, SIGNAL(triggered(bool)), SLOT(onEditProperties()));
@@ -62,8 +65,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::reloadUsers()
 {
-    ui.userList->clear();
+    QList<QTreeWidgetItem *> items;
     const auto& users = mUserManager->users();
+    items.reserve(users.size());
     for(const UserInfo* user: users)
     {
         uid_t uid = user->uid();
@@ -80,16 +84,19 @@ void MainWindow::reloadUsers()
                 item->setData(3, Qt::DisplayRole, group->name());
             }
             item->setData(4, Qt::DisplayRole, user->homeDir());
-            ui.userList->addTopLevelItem(item);
+            items.append(item);
         }
     }
+    ui.userList->clear();
+    ui.userList->addTopLevelItems(items);
 }
 
 void MainWindow::reloadGroups()
 {
-    ui.groupList->clear();
     // load groups
+    QList<QTreeWidgetItem *> items;
     const auto& groups = mUserManager->groups();
+    items.reserve(groups.size());
     for(const GroupInfo* group: groups)
     {
         QTreeWidgetItem* item = new QTreeWidgetItem();
@@ -98,8 +105,10 @@ void MainWindow::reloadGroups()
         item->setData(0, Qt::UserRole, obj);
         item->setData(1, Qt::DisplayRole, group->gid());
         item->setData(2, Qt::DisplayRole, group->members().join(", "));
-        ui.groupList->addTopLevelItem(item);
+        items.append(item);
     }
+    ui.groupList->clear();
+    ui.groupList->addTopLevelItems(items);
 }
 
 void MainWindow::reload() {
