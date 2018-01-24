@@ -46,7 +46,7 @@ TimeAdminDialog::TimeAdminDialog(QWidget *parent):
 
     mDateTimeWidget = new DateTimePage(mTimeDateCtl.useNtp(), mTimeDateCtl.localRtc(), this);
     addPage(mDateTimeWidget,tr("Date and time"));
-    connect(this,SIGNAL(reset()),mDateTimeWidget,SLOT(reload()));
+    connect(this, &LXQt::ConfigDialog::reset, mDateTimeWidget,&DateTimePage::reload);
     connect(mDateTimeWidget,&DateTimePage::changed,this,&TimeAdminDialog::onChanged);
 
     QStringList zones;
