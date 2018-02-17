@@ -52,27 +52,27 @@
         <translation>用户(&amp;U)</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="56"/>
+        <location filename="../../../mainwindow.ui" line="59"/>
         <source>Login Name</source>
         <translation>登录名</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="61"/>
+        <location filename="../../../mainwindow.ui" line="64"/>
         <source>User ID</source>
         <translation>用户 ID</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="66"/>
+        <location filename="../../../mainwindow.ui" line="69"/>
         <source>Full Name</source>
         <translation>全名</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="71"/>
+        <location filename="../../../mainwindow.ui" line="74"/>
         <source>Group</source>
         <translation>组</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="76"/>
+        <location filename="../../../mainwindow.ui" line="79"/>
         <source>Home Directory</source>
         <translation>主目录</translation>
     </message>
@@ -87,99 +87,99 @@
         <translation>组(&amp;G)</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="108"/>
+        <location filename="../../../mainwindow.ui" line="111"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="113"/>
+        <location filename="../../../mainwindow.ui" line="116"/>
         <source>Group ID</source>
         <translation>组 ID</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="118"/>
+        <location filename="../../../mainwindow.ui" line="121"/>
         <source>Members</source>
         <translation>成员</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="131"/>
+        <location filename="../../../mainwindow.ui" line="134"/>
         <source>toolBar</source>
         <translation>工具栏</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="158"/>
+        <location filename="../../../mainwindow.ui" line="161"/>
         <source>Add</source>
         <translation>新增</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="161"/>
+        <location filename="../../../mainwindow.ui" line="164"/>
         <source>Add new users or groups</source>
         <translation>新增用户或组</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="170"/>
+        <location filename="../../../mainwindow.ui" line="173"/>
         <source>Delete</source>
         <translation>删除</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="173"/>
+        <location filename="../../../mainwindow.ui" line="176"/>
         <source>Delete selected item</source>
         <translation>删除所选项</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="182"/>
+        <location filename="../../../mainwindow.ui" line="185"/>
         <source>Properties</source>
         <translation>属性</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="185"/>
+        <location filename="../../../mainwindow.ui" line="188"/>
         <source>edit properties of the selected item</source>
         <translation>编辑所选项的属性</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="194"/>
+        <location filename="../../../mainwindow.ui" line="197"/>
         <source>Refresh</source>
         <translation>刷新</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="197"/>
+        <location filename="../../../mainwindow.ui" line="200"/>
         <source>Refresh the lists</source>
         <translation>刷新列表</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="206"/>
+        <location filename="../../../mainwindow.ui" line="209"/>
         <source>Change Password</source>
         <translation>更改密码</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="209"/>
+        <location filename="../../../mainwindow.ui" line="212"/>
         <source>Change password for the selected user or group</source>
         <translation>更改所选用户或组的密码</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="164"/>
-        <location filename="../../../mainwindow.cpp" line="176"/>
-        <location filename="../../../mainwindow.cpp" line="197"/>
+        <location filename="../../../mainwindow.cpp" line="174"/>
+        <location filename="../../../mainwindow.cpp" line="186"/>
+        <location filename="../../../mainwindow.cpp" line="207"/>
         <source>Confirm</source>
         <translation>确认</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="164"/>
+        <location filename="../../../mainwindow.cpp" line="174"/>
         <source>Are you sure you want to delete the selected user?</source>
         <translation>是否确认删除所选的用户？</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="176"/>
+        <location filename="../../../mainwindow.cpp" line="186"/>
         <source>Are you sure you want to delete the selected group?</source>
         <translation>是否确认删除所选的组？</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="187"/>
+        <location filename="../../../mainwindow.cpp" line="197"/>
         <source>Input the new password for %1:</source>
         <translation>输入 %1 的新密码:</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="197"/>
+        <location filename="../../../mainwindow.cpp" line="207"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation>是否确认设置空密码？</translation>
     </message>

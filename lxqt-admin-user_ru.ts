@@ -60,27 +60,27 @@
         <translation>&amp;Пользователи</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="56"/>
+        <location filename="../../../mainwindow.ui" line="59"/>
         <source>Login Name</source>
         <translation>Логин пользователя</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="61"/>
+        <location filename="../../../mainwindow.ui" line="64"/>
         <source>User ID</source>
         <translation>ID пользователя</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="66"/>
+        <location filename="../../../mainwindow.ui" line="69"/>
         <source>Full Name</source>
         <translation>Полное имя</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="71"/>
+        <location filename="../../../mainwindow.ui" line="74"/>
         <source>Group</source>
         <translation>Группа</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="76"/>
+        <location filename="../../../mainwindow.ui" line="79"/>
         <source>Home Directory</source>
         <translation>Домашний каталог</translation>
     </message>
@@ -95,72 +95,72 @@
         <translation>&amp;Группы</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="108"/>
+        <location filename="../../../mainwindow.ui" line="111"/>
         <source>Name</source>
         <translation>Имя</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="113"/>
+        <location filename="../../../mainwindow.ui" line="116"/>
         <source>Group ID</source>
         <translation>ID группы</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="118"/>
+        <location filename="../../../mainwindow.ui" line="121"/>
         <source>Members</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="131"/>
+        <location filename="../../../mainwindow.ui" line="134"/>
         <source>toolBar</source>
         <translation>Панель</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="158"/>
+        <location filename="../../../mainwindow.ui" line="161"/>
         <source>Add</source>
         <translation>Добавить</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="161"/>
+        <location filename="../../../mainwindow.ui" line="164"/>
         <source>Add new users or groups</source>
         <translation>Добавить новых пользователей или группы</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="170"/>
+        <location filename="../../../mainwindow.ui" line="173"/>
         <source>Delete</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="173"/>
+        <location filename="../../../mainwindow.ui" line="176"/>
         <source>Delete selected item</source>
         <translation>Удалить выбранный элемент</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="182"/>
+        <location filename="../../../mainwindow.ui" line="185"/>
         <source>Properties</source>
         <translation>Свойства</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="185"/>
+        <location filename="../../../mainwindow.ui" line="188"/>
         <source>edit properties of the selected item</source>
         <translation>Редактировать свойства выделенного элемента</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="194"/>
+        <location filename="../../../mainwindow.ui" line="197"/>
         <source>Refresh</source>
         <translation>Обновить</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="197"/>
+        <location filename="../../../mainwindow.ui" line="200"/>
         <source>Refresh the lists</source>
         <translation>Обновить списки</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="206"/>
+        <location filename="../../../mainwindow.ui" line="209"/>
         <source>Change Password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="209"/>
+        <location filename="../../../mainwindow.ui" line="212"/>
         <source>Change password for the selected user or group</source>
         <translation type="unfinished"></translation>
     </message>
@@ -169,29 +169,29 @@
         <translation type="vanished">Ошибка</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="164"/>
-        <location filename="../../../mainwindow.cpp" line="176"/>
-        <location filename="../../../mainwindow.cpp" line="197"/>
+        <location filename="../../../mainwindow.cpp" line="174"/>
+        <location filename="../../../mainwindow.cpp" line="186"/>
+        <location filename="../../../mainwindow.cpp" line="207"/>
         <source>Confirm</source>
         <translation>Подтвердить</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="164"/>
+        <location filename="../../../mainwindow.cpp" line="174"/>
         <source>Are you sure you want to delete the selected user?</source>
         <translation>Вы действительно хотите удалить выбранного пользователя?</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="176"/>
+        <location filename="../../../mainwindow.cpp" line="186"/>
         <source>Are you sure you want to delete the selected group?</source>
         <translation>Вы действительно хотите удалить выбранную группу?</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="187"/>
+        <location filename="../../../mainwindow.cpp" line="197"/>
         <source>Input the new password for %1:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="197"/>
+        <location filename="../../../mainwindow.cpp" line="207"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation type="unfinished"></translation>
     </message>

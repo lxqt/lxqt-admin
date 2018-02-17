@@ -60,27 +60,27 @@
         <translation>&amp;Gebruikers</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="56"/>
+        <location filename="../../../mainwindow.ui" line="59"/>
         <source>Login Name</source>
         <translation>Aanmeldnaam</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="61"/>
+        <location filename="../../../mainwindow.ui" line="64"/>
         <source>User ID</source>
         <translation>Gebruikers-ID</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="66"/>
+        <location filename="../../../mainwindow.ui" line="69"/>
         <source>Full Name</source>
         <translation>Volledige naam</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="71"/>
+        <location filename="../../../mainwindow.ui" line="74"/>
         <source>Group</source>
         <translation>Groep</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="76"/>
+        <location filename="../../../mainwindow.ui" line="79"/>
         <source>Home Directory</source>
         <translation>Thuismap</translation>
     </message>
@@ -95,72 +95,72 @@
         <translation>&amp;Groepen</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="108"/>
+        <location filename="../../../mainwindow.ui" line="111"/>
         <source>Name</source>
         <translation>Naam</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="113"/>
+        <location filename="../../../mainwindow.ui" line="116"/>
         <source>Group ID</source>
         <translation>Groeps-ID</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="118"/>
+        <location filename="../../../mainwindow.ui" line="121"/>
         <source>Members</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="131"/>
+        <location filename="../../../mainwindow.ui" line="134"/>
         <source>toolBar</source>
         <translation>Werkbalk</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="158"/>
+        <location filename="../../../mainwindow.ui" line="161"/>
         <source>Add</source>
         <translation>Toevoegen</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="161"/>
+        <location filename="../../../mainwindow.ui" line="164"/>
         <source>Add new users or groups</source>
         <translation>Nieuwe gebruikers of groepen toevoegen</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="170"/>
+        <location filename="../../../mainwindow.ui" line="173"/>
         <source>Delete</source>
         <translation>Verwijderen</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="173"/>
+        <location filename="../../../mainwindow.ui" line="176"/>
         <source>Delete selected item</source>
         <translation>Verwijder gekozen element</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="182"/>
+        <location filename="../../../mainwindow.ui" line="185"/>
         <source>Properties</source>
         <translation>Eigenschappen</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="185"/>
+        <location filename="../../../mainwindow.ui" line="188"/>
         <source>edit properties of the selected item</source>
         <translation>bewerk eigenschappen van het gekozen element</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="194"/>
+        <location filename="../../../mainwindow.ui" line="197"/>
         <source>Refresh</source>
         <translation>Verversen</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="197"/>
+        <location filename="../../../mainwindow.ui" line="200"/>
         <source>Refresh the lists</source>
         <translation>Ververs de lijsten</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="206"/>
+        <location filename="../../../mainwindow.ui" line="209"/>
         <source>Change Password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.ui" line="209"/>
+        <location filename="../../../mainwindow.ui" line="212"/>
         <source>Change password for the selected user or group</source>
         <translation type="unfinished"></translation>
     </message>
@@ -169,29 +169,29 @@
         <translation type="vanished">Fout</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="164"/>
-        <location filename="../../../mainwindow.cpp" line="176"/>
-        <location filename="../../../mainwindow.cpp" line="197"/>
+        <location filename="../../../mainwindow.cpp" line="174"/>
+        <location filename="../../../mainwindow.cpp" line="186"/>
+        <location filename="../../../mainwindow.cpp" line="207"/>
         <source>Confirm</source>
         <translation>Bevestigen</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="164"/>
+        <location filename="../../../mainwindow.cpp" line="174"/>
         <source>Are you sure you want to delete the selected user?</source>
         <translation>Wilt u de gekozen gebruiker werkelijk verwijderen?</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="176"/>
+        <location filename="../../../mainwindow.cpp" line="186"/>
         <source>Are you sure you want to delete the selected group?</source>
         <translation>Wilt u de gekozen groep werkelijk verwijderen?</translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="187"/>
+        <location filename="../../../mainwindow.cpp" line="197"/>
         <source>Input the new password for %1:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../../mainwindow.cpp" line="197"/>
+        <location filename="../../../mainwindow.cpp" line="207"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation type="unfinished"></translation>
     </message>
