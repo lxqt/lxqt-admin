@@ -22,12 +22,12 @@
     <message>
         <location filename="../../../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktivér netværkssynkronisering (NTP)</translation>
     </message>
     <message>
         <location filename="../../../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation type="unfinished"></translation>
+        <translation>RTC er i lokal tid</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Saving changes requires admin permissions.&lt;br&gt;You will be requested after clicking close button&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -57,7 +57,7 @@
         <location filename="../../../timeadmindialog.cpp" line="134"/>
         <location filename="../../../timeadmindialog.cpp" line="144"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fejl</translation>
     </message>
     <message>
         <source>Authentication Error</source>
@@ -95,7 +95,7 @@
     <message>
         <location filename="../../../timezone.cpp" line="42"/>
         <source>None</source>
-        <translation type="unfinished">Ingen</translation>
+        <translation>Ingen</translation>
     </message>
 </context>
 </TS>
