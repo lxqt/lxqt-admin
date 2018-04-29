@@ -33,6 +33,8 @@
 #include <QMap>
 #include <QDebug>
 
+#include <LXQt/Settings>
+
 #include "datetime.h"
 #include "timezone.h"
 
