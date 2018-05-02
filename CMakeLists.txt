@@ -21,6 +21,7 @@ set(LXQT_ADMIN_PATCH_VERSION 0)
 set(LXQT_ADMIN_VERSION ${LXQT_MAJOR_VERSION}.${LXQT_MINOR_VERSION}.${LXQT_ADMIN_PATCH_VERSION})
 add_definitions("-DLXQT_ADMIN_VERSION=\"${LXQT_ADMIN_VERSION}\"")
 
+include(LXQtPreventInSourceBuilds)
 include(LXQtCompilerSettings NO_POLICY_SCOPE)
 include(LXQtTranslate)
 
