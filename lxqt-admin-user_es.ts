@@ -104,7 +104,7 @@
     <message>
         <location filename="../../../mainwindow.ui" line="134"/>
         <source>toolBar</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="161"/>
@@ -139,12 +139,12 @@
     <message>
         <location filename="../../../mainwindow.ui" line="197"/>
         <source>Refresh</source>
-        <translation>Refrescar</translation>
+        <translation>Actualizar</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="200"/>
         <source>Refresh the lists</source>
-        <translation>Refrescar la lista</translation>
+        <translation>Actualizar la lista</translation>
     </message>
     <message>
         <location filename="../../../mainwindow.ui" line="209"/>
