@@ -10,6 +10,7 @@ set(LIB_INSTALL_DIR "lib${LIB_SUFFIX}" CACHE PATH "Installation path for librari
 find_package(Qt5Widgets REQUIRED)
 find_package(lxqt REQUIRED)
 find_package(KF5WindowSystem REQUIRED)
+find_package(PolkitQt5-1 REQUIRED)
 
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
