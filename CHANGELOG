@@ -1,7 +1,25 @@
 
-lxqt-admin-0.12.0 / 2017-10-21
+lxqt-admin-0.13.0 / 2018-05-21
 ==============================
 
+  * Spanish translation update
+  * Use PolkitQt5-1 policy files install directory
+  * CMake: Prevent in-source builds
+  * Include LXQt::Settings in order to compile.
+  * http -> https
+  * Fixed lxde mentions
+  * Add Simplified Chinese Translation
+  * Use new Qt5 signal/slot notation
+  * lxqt-admin-user: Enable "show system users" checkbox
+  * lxqt-admin-user: Support sorting of user/group views
+  * Add Chinese desktop entries (#54)
+  * Change icons of lxqt-admin-apps
+  * Add Spanish desktop entries
+
+0.12.0 / 2017-10-21
+===================
+
+  * Release 0.12.0: Update changelog
   * Set patch version
   * Don't export github templates
   * Added *lt.desktop
