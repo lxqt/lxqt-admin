@@ -43,16 +43,6 @@ lxqt_translate_ts(lxqt-admin-time_QM_FILES
     ${lxqt-admin-time_UIS}
     INSTALL_DIR
     "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
-    PULL_TRANSLATIONS
-        ${PULL_TRANSLATIONS}
-    CLEAN_TRANSLATIONS
-        ${CLEAN_TRANSLATIONS}
-    TRANSLATIONS_REPO
-        ${TRANSLATIONS_REPO}
-    TRANSLATIONS_REFSPEC
-        ${TRANSLATIONS_REFSPEC}
-    REPO_SUBDIR
-        "lxqt-admin/${PROJECT_NAME}"
 )
 
 lxqt_translate_desktop(DESKTOP_FILES
