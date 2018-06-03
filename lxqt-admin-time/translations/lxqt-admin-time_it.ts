@@ -4,27 +4,27 @@
 <context>
     <name>DateTime</name>
     <message>
-        <location filename="../../../datetime.ui" line="23"/>
+        <location filename="../datetime.ui" line="23"/>
         <source>Time:</source>
         <translation>Ora:</translation>
     </message>
     <message>
-        <location filename="../../../datetime.ui" line="39"/>
+        <location filename="../datetime.ui" line="39"/>
         <source>HH:mm:ss</source>
         <translation>HH:mm:ss</translation>
     </message>
     <message>
-        <location filename="../../../datetime.ui" line="53"/>
+        <location filename="../datetime.ui" line="53"/>
         <source>Date:</source>
         <translation>Data:</translation>
     </message>
     <message>
-        <location filename="../../../datetime.ui" line="70"/>
+        <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
         <translation>Attiva sincronizzazione attraverso la rete (NTP)</translation>
     </message>
     <message>
-        <location filename="../../../datetime.ui" line="77"/>
+        <location filename="../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
         <translation>RTC è in ora locale</translation>
     </message>
@@ -32,25 +32,25 @@
 <context>
     <name>TimeAdminDialog</name>
     <message>
-        <location filename="../../../timeadmindialog.cpp" line="42"/>
+        <location filename="../timeadmindialog.cpp" line="44"/>
         <source>Time and date configuration</source>
         <translation>Configura data e ora</translation>
     </message>
     <message>
-        <location filename="../../../timeadmindialog.cpp" line="48"/>
+        <location filename="../timeadmindialog.cpp" line="50"/>
         <source>Date and time</source>
         <translation>Data e ora</translation>
     </message>
     <message>
-        <location filename="../../../timeadmindialog.cpp" line="56"/>
+        <location filename="../timeadmindialog.cpp" line="58"/>
         <source>Timezone</source>
         <translation>Fuso orario</translation>
     </message>
     <message>
-        <location filename="../../../timeadmindialog.cpp" line="117"/>
-        <location filename="../../../timeadmindialog.cpp" line="127"/>
-        <location filename="../../../timeadmindialog.cpp" line="134"/>
-        <location filename="../../../timeadmindialog.cpp" line="144"/>
+        <location filename="../timeadmindialog.cpp" line="119"/>
+        <location filename="../timeadmindialog.cpp" line="129"/>
+        <location filename="../timeadmindialog.cpp" line="136"/>
+        <location filename="../timeadmindialog.cpp" line="146"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
@@ -58,17 +58,17 @@
 <context>
     <name>Timezone</name>
     <message>
-        <location filename="../../../timezone.ui" line="19"/>
+        <location filename="../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
         <translation>Fuso orario attuale:</translation>
     </message>
     <message>
-        <location filename="../../../timezone.ui" line="26"/>
+        <location filename="../timezone.ui" line="26"/>
         <source>TextLabel</source>
         <translation>EtichettaTesto</translation>
     </message>
     <message>
-        <location filename="../../../timezone.ui" line="35"/>
+        <location filename="../timezone.ui" line="35"/>
         <source>Filter</source>
         <translation>Filtro</translation>
     </message>
@@ -76,7 +76,7 @@
 <context>
     <name>TimezonePage</name>
     <message>
-        <location filename="../../../timezone.cpp" line="42"/>
+        <location filename="../timezone.cpp" line="42"/>
         <source>None</source>
         <translation>Nessuno</translation>
     </message>
