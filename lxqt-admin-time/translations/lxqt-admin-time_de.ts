@@ -22,7 +22,7 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktiviere  Netzwerk-Zeitsynchronisation (NTP)</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
