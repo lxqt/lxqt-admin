@@ -224,7 +224,7 @@
     <message>
         <location filename="../userdialog.ui" line="85"/>
         <source>Groups</source>
-        <translation type="unfinished"></translation>
+        <translation>Gruppen</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="91"/>
