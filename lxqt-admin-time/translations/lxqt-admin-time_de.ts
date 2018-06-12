@@ -53,7 +53,7 @@
         <location filename="../timeadmindialog.cpp" line="136"/>
         <location filename="../timeadmindialog.cpp" line="146"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler</translation>
     </message>
 </context>
 <context>
