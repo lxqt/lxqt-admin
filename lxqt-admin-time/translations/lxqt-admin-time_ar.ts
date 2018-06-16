@@ -6,7 +6,7 @@
     <message>
         <location filename="../datetime.ui" line="23"/>
         <source>Time:</source>
-        <translation>الوقت:</translation>
+        <translation>الوقت :</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="39"/>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../datetime.ui" line="53"/>
         <source>Date:</source>
-        <translation>التّاريخ:</translation>
+        <translation>التّاريخ :</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="70"/>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="44"/>
         <source>Time and date configuration</source>
-        <translation>ضبط الوقت والتّاريخ</translation>
+        <translation>ضبط الوقت و التّاريخ</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="50"/>
         <source>Date and time</source>
-        <translation>الوقت والتّاريخ</translation>
+        <translation>الوقت و التّاريخ</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="58"/>
@@ -52,7 +52,7 @@
         <location filename="../timeadmindialog.cpp" line="136"/>
         <location filename="../timeadmindialog.cpp" line="146"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>خطأ</translation>
     </message>
 </context>
 <context>
@@ -60,7 +60,7 @@
     <message>
         <location filename="../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
-        <translation>المنطقة الزّمنيّة الحاليّة:</translation>
+        <translation>المنطقة الزّمنيّة الحاليّة :</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="26"/>
@@ -78,7 +78,7 @@
     <message>
         <location filename="../timezone.cpp" line="42"/>
         <source>None</source>
-        <translation type="unfinished">بلا</translation>
+        <translation>لا شيء</translation>
     </message>
 </context>
 </TS>
