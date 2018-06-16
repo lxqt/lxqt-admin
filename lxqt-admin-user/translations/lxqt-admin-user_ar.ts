@@ -6,37 +6,37 @@
     <message>
         <location filename="../groupdialog.ui" line="14"/>
         <source>Group Settings</source>
-        <translation>إعدادات المجموعة</translation>
+        <translation>إعدادات الفريق</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="20"/>
         <source>Group name:</source>
-        <translation>اسم المجموعة:</translation>
+        <translation>اسم الفريق :</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="30"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>الإفتراضي</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="40"/>
         <source>Group ID:</source>
-        <translation>معرّف المجموعة:</translation>
+        <translation>معرّف الفريق :</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="47"/>
         <source>Users belong to this group:</source>
-        <translation>المستخدمون في هذه المجموعة:</translation>
+        <translation>المستخدمون المنتمون إلى هذا الفريق :</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
         <source>Error</source>
-        <translation>الخطأ</translation>
+        <translation>خطأ</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
         <source>The group name cannot be empty.</source>
-        <translation>لا يمكن أن يكون اسم المجموعة فارغًا.</translation>
+        <translation>لا يمكن أن يُترَك إسم الفريق فارغًا.</translation>
     </message>
 </context>
 <context>
@@ -44,17 +44,17 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>User and Group Settings</source>
-        <translation>إعدادات المستخدمين والمجموعات</translation>
+        <translation>إعدادات المستخدمين والفِرَق</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="40"/>
         <source>&amp;Users</source>
-        <translation>المست&amp;خدمون</translation>
+        <translation>المستخدمون</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="59"/>
         <source>Login Name</source>
-        <translation>اسم الولوج</translation>
+        <translation>معرّف الدخول</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="64"/>
@@ -64,17 +64,17 @@
     <message>
         <location filename="../mainwindow.ui" line="69"/>
         <source>Full Name</source>
-        <translation>الاسم الكامل</translation>
+        <translation>الإسم الكامل</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="74"/>
         <source>Group</source>
-        <translation>المجموعة</translation>
+        <translation>الفريق</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="79"/>
         <source>Home Directory</source>
-        <translation>دليل المنزل</translation>
+        <translation>المجلد الجذري</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
@@ -84,22 +84,22 @@
     <message>
         <location filename="../mainwindow.ui" line="95"/>
         <source>&amp;Groups</source>
-        <translation>الم&amp;جموعات</translation>
+        <translation>الفِرَق</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="111"/>
         <source>Name</source>
-        <translation>الاسم</translation>
+        <translation>الإسم</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="116"/>
         <source>Group ID</source>
-        <translation>معرّف المجموعة</translation>
+        <translation>معرّف الفريق</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>Members</source>
-        <translation type="unfinished"></translation>
+        <translation>الأعضاء</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="134"/>
@@ -114,7 +114,7 @@
     <message>
         <location filename="../mainwindow.ui" line="164"/>
         <source>Add new users or groups</source>
-        <translation>أضف مستخدمين أو مجموعات جديدة</translation>
+        <translation>أضف مستخدمين أو فِرَق جديدة</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="173"/>
@@ -129,7 +129,7 @@
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>Properties</source>
-        <translation>خصائص</translation>
+        <translation>الخصائص</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="188"/>
@@ -149,12 +149,12 @@
     <message>
         <location filename="../mainwindow.ui" line="209"/>
         <source>Change Password</source>
-        <translation type="unfinished"></translation>
+        <translation>إعادة تعيين كلمة السر</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="212"/>
         <source>Change password for the selected user or group</source>
-        <translation type="unfinished"></translation>
+        <translation>تعديل كلمة السر الخاصة بالمستخدِم أو المجموعة</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="174"/>
@@ -166,17 +166,17 @@
     <message>
         <location filename="../mainwindow.cpp" line="174"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation>أمتأكّد من حذف المستخدم المحدّد؟</translation>
+        <translation>أمتأكّد من حذف المستخدم المحدّد ؟</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="186"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation>أمتأكّد من حذف المجموعة المحدّدة؟</translation>
+        <translation>أمتأكّد من حذف الفريق المحدّد ؟</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="197"/>
         <source>Input the new password for %1:</source>
-        <translation type="unfinished"></translation>
+        <translation>إدخال الكلمة السرية الجديدة لـ %1 :</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="207"/>
@@ -199,37 +199,37 @@
     <message>
         <location filename="../userdialog.ui" line="43"/>
         <source>Full name:</source>
-        <translation>الاسم الكامل:</translation>
+        <translation>الإسم الكامل :</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="33"/>
         <source>Login name:</source>
-        <translation>اسم الولوج:</translation>
+        <translation>اسم الولوج :</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="53"/>
         <source>User ID:</source>
-        <translation>معرّف المستخدم:</translation>
+        <translation>معرّف المستخدم :</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="60"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>الإفتراضي</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="70"/>
         <source>Main group:</source>
-        <translation>المجموعة الرّئيسيّة:</translation>
+        <translation>الفريق الرّئيسيّ :</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="85"/>
         <source>Groups</source>
-        <translation type="unfinished"></translation>
+        <translation>الفِرَق</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="91"/>
         <source>The user belongs to the following groups:</source>
-        <translation type="unfinished"></translation>
+        <translation>ينتمي هذا المستخدم إلى الفِرق التالية :</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="109"/>
@@ -244,7 +244,7 @@
     <message>
         <location filename="../userdialog.ui" line="132"/>
         <source>Home directory:</source>
-        <translation>دليل المنزل:</translation>
+        <translation>المجلد الجذري :</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="117"/>
@@ -254,7 +254,7 @@
     <message>
         <location filename="../userdialog.cpp" line="117"/>
         <source>The user name cannot be empty.</source>
-        <translation>لا يمكن أن يكون اسم المستخدم فارغًا.</translation>
+        <translation>لا يمكن أن يُترَك إسم المستخدم فارغًا.</translation>
     </message>
 </context>
 <context>
@@ -262,7 +262,7 @@
     <message>
         <location filename="../usermanager.cpp" line="224"/>
         <source>lxqt-admin-user</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-admin-user</translation>
     </message>
     <message>
         <location filename="../usermanager.cpp" line="225"/>
