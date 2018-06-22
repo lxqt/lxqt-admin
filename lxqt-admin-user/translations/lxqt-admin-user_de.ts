@@ -16,7 +16,7 @@
     <message>
         <location filename="../groupdialog.ui" line="30"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Grundeinstellung</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="40"/>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>Members</source>
-        <translation type="unfinished"></translation>
+        <translation>Mitglieder</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="134"/>
@@ -149,12 +149,12 @@
     <message>
         <location filename="../mainwindow.ui" line="209"/>
         <source>Change Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Verändere Passwort</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="212"/>
         <source>Change password for the selected user or group</source>
-        <translation type="unfinished"></translation>
+        <translation>Verändere Passwort für den ausgewählten Benutzer oder die ausgewählte Gruppe</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="174"/>
@@ -176,12 +176,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="197"/>
         <source>Input the new password for %1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Gebe das neue Passwort ein für %1:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="207"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ohne ein Passwort fortfahren?</translation>
     </message>
 </context>
 <context>
@@ -214,7 +214,7 @@
     <message>
         <location filename="../userdialog.ui" line="60"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Grundeinstellung</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="70"/>
@@ -229,7 +229,7 @@
     <message>
         <location filename="../userdialog.ui" line="91"/>
         <source>The user belongs to the following groups:</source>
-        <translation type="unfinished"></translation>
+        <translation>Der Benutzer gehört folgenden Gruppen an:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="109"/>
@@ -262,12 +262,12 @@
     <message>
         <location filename="../usermanager.cpp" line="224"/>
         <source>lxqt-admin-user</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-admin-benutzer</translation>
     </message>
     <message>
         <location filename="../usermanager.cpp" line="225"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Aktion (%1) fehlgeschlagen:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
