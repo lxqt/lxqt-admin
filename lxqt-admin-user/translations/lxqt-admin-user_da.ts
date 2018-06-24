@@ -54,7 +54,7 @@
     <message>
         <location filename="../mainwindow.ui" line="59"/>
         <source>Login Name</source>
-        <translation>Login-navn</translation>
+        <translation>Loginnavn</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="64"/>
@@ -204,7 +204,7 @@
     <message>
         <location filename="../userdialog.ui" line="33"/>
         <source>Login name:</source>
-        <translation>Login-navn:</translation>
+        <translation>Loginnavn:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="53"/>
