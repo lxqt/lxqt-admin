@@ -22,12 +22,12 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation>Aktiviere  Netzwerk-Zeitsynchronisation (NTP)</translation>
+        <translation>Aktiviere Netzwerk-Zeitsynchronisation (NTP)</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation>RTC entspricht Ortszeit</translation>
+        <translation>RTC entspricht der Ortszeit</translation>
     </message>
 </context>
 <context>
@@ -66,7 +66,7 @@
     <message>
         <location filename="../timezone.ui" line="26"/>
         <source>TextLabel</source>
-        <translation>Textfeld</translation>
+        <translation>Textetikett</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="35"/>
