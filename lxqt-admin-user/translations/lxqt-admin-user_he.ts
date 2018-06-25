@@ -6,37 +6,37 @@
     <message>
         <location filename="../groupdialog.ui" line="14"/>
         <source>Group Settings</source>
-        <translation></translation>
+        <translation>הגדרות קבוצה</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="20"/>
         <source>Group name:</source>
-        <translation></translation>
+        <translation>שם קבוצה:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="30"/>
         <source>Default</source>
-        <translation></translation>
+        <translation>בררת מחדל</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="40"/>
         <source>Group ID:</source>
-        <translation></translation>
+        <translation>מזהה קבוצה:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="47"/>
         <source>Users belong to this group:</source>
-        <translation></translation>
+        <translation>משתמשים ששייכים לקבוצה הזו:</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
         <source>Error</source>
-        <translation></translation>
+        <translation>שגיאה</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
         <source>The group name cannot be empty.</source>
-        <translation></translation>
+        <translation>שם הקבוצה לא יכול להישאר ריק.</translation>
     </message>
 </context>
 <context>
@@ -44,144 +44,144 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>User and Group Settings</source>
-        <translation></translation>
+        <translation>הגדרות משתמשים וקבוצות</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="40"/>
         <source>&amp;Users</source>
-        <translation></translation>
+        <translation>מ&amp;שתמשים</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="59"/>
         <source>Login Name</source>
-        <translation></translation>
+        <translation>שם כניסה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="64"/>
         <source>User ID</source>
-        <translation></translation>
+        <translation>מזהה משתמש</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="69"/>
         <source>Full Name</source>
-        <translation></translation>
+        <translation>שם מלא</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="74"/>
         <source>Group</source>
-        <translation></translation>
+        <translation>קבוצה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="79"/>
         <source>Home Directory</source>
-        <translation></translation>
+        <translation>תיקיית בית</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>Show system users (for advanced users only)</source>
-        <translation></translation>
+        <translation>הצגת משתמשי מערכת (למשתמשים מתקדמים בלבד)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
         <source>&amp;Groups</source>
-        <translation></translation>
+        <translation>&amp;קבוצות</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="111"/>
         <source>Name</source>
-        <translation></translation>
+        <translation>שם</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="116"/>
         <source>Group ID</source>
-        <translation></translation>
+        <translation>מזהה קבוצה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>Members</source>
-        <translation></translation>
+        <translation>חברים</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="134"/>
         <source>toolBar</source>
-        <translation></translation>
+        <translation>סרגל כלים</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="161"/>
         <source>Add</source>
-        <translation></translation>
+        <translation>הוספה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="164"/>
         <source>Add new users or groups</source>
-        <translation></translation>
+        <translation>הוספת משתמשים או קבוצות חדשים</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="173"/>
         <source>Delete</source>
-        <translation></translation>
+        <translation>מחיקה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="176"/>
         <source>Delete selected item</source>
-        <translation></translation>
+        <translation>מחיקת הפריט הנבחר</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>Properties</source>
-        <translation></translation>
+        <translation>מאפיינים</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="188"/>
         <source>edit properties of the selected item</source>
-        <translation></translation>
+        <translation>עריכת מאפיינים של הפריט הנבחר</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>Refresh</source>
-        <translation></translation>
+        <translation>רענון</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="200"/>
         <source>Refresh the lists</source>
-        <translation></translation>
+        <translation>רענון הרשימות</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
         <source>Change Password</source>
-        <translation></translation>
+        <translation>החלפת ססמה</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="212"/>
         <source>Change password for the selected user or group</source>
-        <translation></translation>
+        <translation>החלפת הססמה למשתמש או לקבוצה הנבחרים</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="174"/>
         <location filename="../mainwindow.cpp" line="186"/>
         <location filename="../mainwindow.cpp" line="207"/>
         <source>Confirm</source>
-        <translation></translation>
+        <translation>אישור</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="174"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation></translation>
+        <translation>למחוק את המשתמש הנבחר?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="186"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation></translation>
+        <translation>למחוק את הקבוצה הנבחרת?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="197"/>
         <source>Input the new password for %1:</source>
-        <translation></translation>
+        <translation>הקלדת הססמה החדשה עבור %1:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="207"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation></translation>
+        <translation>להגדיר ססמה ריקה?</translation>
     </message>
 </context>
 <context>
@@ -189,72 +189,72 @@
     <message>
         <location filename="../userdialog.ui" line="14"/>
         <source>User Settings</source>
-        <translation></translation>
+        <translation>הגדרות משתמשים</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="24"/>
         <source>General</source>
-        <translation></translation>
+        <translation>כללי</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="43"/>
         <source>Full name:</source>
-        <translation></translation>
+        <translation>שם מלא:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="33"/>
         <source>Login name:</source>
-        <translation></translation>
+        <translation>שם כניסה:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="53"/>
         <source>User ID:</source>
-        <translation></translation>
+        <translation>מזהה משתמש:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="60"/>
         <source>Default</source>
-        <translation></translation>
+        <translation>בררת מחדל</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="70"/>
         <source>Main group:</source>
-        <translation></translation>
+        <translation>קבוצה ראשית:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="85"/>
         <source>Groups</source>
-        <translation></translation>
+        <translation>קבוצות</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="91"/>
         <source>The user belongs to the following groups:</source>
-        <translation></translation>
+        <translation>המשתמש שייך לקבוצות הבאות:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="109"/>
         <source>Advanced</source>
-        <translation></translation>
+        <translation>מתקדם</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="115"/>
         <source>Login shell:</source>
-        <translation></translation>
+        <translation>מעטפת כניסה:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="132"/>
         <source>Home directory:</source>
-        <translation></translation>
+        <translation>תיקיית בית:</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="117"/>
         <source>Error</source>
-        <translation></translation>
+        <translation>שגיאה</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="117"/>
         <source>The user name cannot be empty.</source>
-        <translation></translation>
+        <translation>שם המשתמש לא יכול להישאר ריק.</translation>
     </message>
 </context>
 <context>
@@ -267,7 +267,7 @@
     <message>
         <location filename="../usermanager.cpp" line="225"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation></translation>
+        <translation>&lt;strong&gt;הפעולה (%1) נכשלה:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
