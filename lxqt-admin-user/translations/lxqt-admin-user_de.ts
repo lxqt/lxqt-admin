@@ -194,7 +194,7 @@
     <message>
         <location filename="../userdialog.ui" line="24"/>
         <source>General</source>
-        <translation>Allgemein</translation>
+        <translation>Allgemeines</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="43"/>
