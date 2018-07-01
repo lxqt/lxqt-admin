@@ -104,7 +104,7 @@
     <message>
         <location filename="../mainwindow.ui" line="134"/>
         <source>toolBar</source>
-        <translation>Pasek narzędzi</translation>
+        <translation>toolBar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="161"/>
@@ -161,7 +161,7 @@
         <location filename="../mainwindow.cpp" line="186"/>
         <location filename="../mainwindow.cpp" line="207"/>
         <source>Confirm</source>
-        <translation>Potwierdzenie</translation>
+        <translation>Potwierdź</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="174"/>
