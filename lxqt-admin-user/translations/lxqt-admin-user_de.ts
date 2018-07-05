@@ -161,7 +161,7 @@
         <location filename="../mainwindow.cpp" line="186"/>
         <location filename="../mainwindow.cpp" line="207"/>
         <source>Confirm</source>
-        <translation>Bestätigung</translation>
+        <translation>Bestätigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="174"/>
