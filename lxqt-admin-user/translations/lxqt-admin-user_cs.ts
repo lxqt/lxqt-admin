@@ -16,7 +16,7 @@
     <message>
         <location filename="../groupdialog.ui" line="30"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Výchozí</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="40"/>
@@ -54,12 +54,12 @@
     <message>
         <location filename="../mainwindow.ui" line="59"/>
         <source>Login Name</source>
-        <translation>Název přihlášení</translation>
+        <translation>Přihlašovací jméno</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="64"/>
         <source>User ID</source>
-        <translation>Identifikátor uživatele</translation>
+        <translation>Identif. uživatele</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="69"/>
@@ -74,7 +74,7 @@
     <message>
         <location filename="../mainwindow.ui" line="79"/>
         <source>Home Directory</source>
-        <translation>Domovský adresář</translation>
+        <translation>Domovská složka</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
@@ -99,7 +99,7 @@
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>Members</source>
-        <translation type="unfinished"></translation>
+        <translation>Členové</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="134"/>
@@ -149,12 +149,12 @@
     <message>
         <location filename="../mainwindow.ui" line="209"/>
         <source>Change Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Změnit heslo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="212"/>
         <source>Change password for the selected user or group</source>
-        <translation type="unfinished"></translation>
+        <translation>Změnit heslo pro vybraného uživatele nebo skupinu</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="174"/>
@@ -166,22 +166,22 @@
     <message>
         <location filename="../mainwindow.cpp" line="174"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation>Jste si jistý, že chcete smazat vybraného uživatele?</translation>
+        <translation>Opravdu chcete smazat vybraného uživatele?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="186"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation>Jste si jistý, že chcete smazat vybranou skupinu?</translation>
+        <translation>Opravdu chcete smazat vybranou skupinu?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="197"/>
         <source>Input the new password for %1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zadejte nové heslo pro %1:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="207"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation type="unfinished"></translation>
+        <translation>Opravdu chcete nastavit bez hesla?</translation>
     </message>
 </context>
 <context>
@@ -204,7 +204,7 @@
     <message>
         <location filename="../userdialog.ui" line="33"/>
         <source>Login name:</source>
-        <translation>Název přihlášení:</translation>
+        <translation>Přihlašovací jméno:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="53"/>
@@ -214,7 +214,7 @@
     <message>
         <location filename="../userdialog.ui" line="60"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Výchozí</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="70"/>
@@ -224,12 +224,12 @@
     <message>
         <location filename="../userdialog.ui" line="85"/>
         <source>Groups</source>
-        <translation type="unfinished"></translation>
+        <translation>Skupiny</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="91"/>
         <source>The user belongs to the following groups:</source>
-        <translation type="unfinished"></translation>
+        <translation>Uživatel je členem následujících skupin:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="109"/>
@@ -244,7 +244,7 @@
     <message>
         <location filename="../userdialog.ui" line="132"/>
         <source>Home directory:</source>
-        <translation>Domovský adresář:</translation>
+        <translation>Domovská složka:</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="117"/>
@@ -254,7 +254,7 @@
     <message>
         <location filename="../userdialog.cpp" line="117"/>
         <source>The user name cannot be empty.</source>
-        <translation>Jméno uživatele nemůže být prázdný.</translation>
+        <translation>Uživatelské jméno nemůže zůstat nevyplněné.</translation>
     </message>
 </context>
 <context>
@@ -267,7 +267,7 @@
     <message>
         <location filename="../usermanager.cpp" line="225"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Akce (%1) se nezdařila:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
