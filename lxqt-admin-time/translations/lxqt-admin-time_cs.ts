@@ -21,12 +21,12 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation type="unfinished"></translation>
+        <translation>Synchronizovat čas ze sítě (NTP)</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation type="unfinished"></translation>
+        <translation>Hodiny počítače jsou v místním čase</translation>
     </message>
 </context>
 <context>
@@ -52,7 +52,7 @@
         <location filename="../timeadmindialog.cpp" line="136"/>
         <location filename="../timeadmindialog.cpp" line="146"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Chyba</translation>
     </message>
 </context>
 <context>
@@ -60,7 +60,7 @@
     <message>
         <location filename="../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
-        <translation>Nynější časové pásmo:</translation>
+        <translation>Stávající časové pásmo:</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="26"/>
