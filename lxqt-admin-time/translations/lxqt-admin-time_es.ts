@@ -65,7 +65,7 @@
     <message>
         <location filename="../timezone.ui" line="26"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Etiqueta de texto</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="35"/>
