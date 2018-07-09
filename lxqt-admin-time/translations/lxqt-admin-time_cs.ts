@@ -78,7 +78,7 @@
     <message>
         <location filename="../timezone.cpp" line="42"/>
         <source>None</source>
-        <translation type="unfinished">Žádný</translation>
+        <translation>Žádný</translation>
     </message>
 </context>
 </TS>
