@@ -21,12 +21,12 @@
     <message>
         <location filename="../groupdialog.ui" line="40"/>
         <source>Group ID:</source>
-        <translation>Identifikátor skupiny:</translation>
+        <translation>Identif. skupiny:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="47"/>
         <source>Users belong to this group:</source>
-        <translation>Uživatelé patřící do této skupiny:</translation>
+        <translation>Uživatelé spadající do této skupiny:</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
@@ -94,7 +94,7 @@
     <message>
         <location filename="../mainwindow.ui" line="116"/>
         <source>Group ID</source>
-        <translation>Identifikátor skupiny</translation>
+        <translation>Identif. skupiny</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
@@ -209,7 +209,7 @@
     <message>
         <location filename="../userdialog.ui" line="53"/>
         <source>User ID:</source>
-        <translation>Identifikátor uživatele:</translation>
+        <translation>Identif. uživatele:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="60"/>
