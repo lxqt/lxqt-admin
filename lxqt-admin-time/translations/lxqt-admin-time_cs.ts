@@ -60,7 +60,7 @@
     <message>
         <location filename="../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
-        <translation>Stávající časové pásmo:</translation>
+        <translation>Časové pásmo, ve kterém se nacházíte:</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="26"/>
