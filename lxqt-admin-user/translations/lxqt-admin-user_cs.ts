@@ -26,7 +26,7 @@
     <message>
         <location filename="../groupdialog.ui" line="47"/>
         <source>Users belong to this group:</source>
-        <translation>Uživatelé spadající do této skupiny:</translation>
+        <translation>Uživatelé náležející do této skupiny:</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>User and Group Settings</source>
-        <translation>Nastavení uživatele a skupiny</translation>
+        <translation>Nastavení uživatelů a skupin</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="40"/>
@@ -139,12 +139,12 @@
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>Refresh</source>
-        <translation>Obnovit</translation>
+        <translation>Načíst znovu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="200"/>
         <source>Refresh the lists</source>
-        <translation>Obnovit seznam</translation>
+        <translation>Znovunačíst seznam</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
@@ -262,7 +262,7 @@
     <message>
         <location filename="../usermanager.cpp" line="224"/>
         <source>lxqt-admin-user</source>
-        <translation>lxqt-admin-user</translation>
+        <translation>lxqt – správa uživatelů</translation>
     </message>
     <message>
         <location filename="../usermanager.cpp" line="225"/>
