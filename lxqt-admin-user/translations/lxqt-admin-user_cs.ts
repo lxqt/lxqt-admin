@@ -36,7 +36,7 @@
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
         <source>The group name cannot be empty.</source>
-        <translation>Název skupiny nemůže být prázdný.</translation>
+        <translation>Název skupiny nemůže zůstat nevyplněný.</translation>
     </message>
 </context>
 <context>
