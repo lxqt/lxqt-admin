@@ -1,0 +1,43 @@
+#!/bin/sh
+usage() {
+echo "usage: ${0} -l islocaltime -n use-ntp -t timezone -d date"
+exit 0;
+}
+[ $# -eq 0 ] && usage
+while getopts "n:l:t:d:" arg; do
+  case $arg in
+    n)
+
+      if [ ${OPTARG} == "true" ]; then
+	sysrc ntpd_enable=YES
+	service ntpd stop
+	ntpd -g -q
+	service ntpd start
+      fi;
+      if [ ${OPTARG} == "false" ]; then
+	sysrc ntpd_enable=false
+	service ntpd onestop
+      fi;
+      ;;
+    l)
+      if [ ${OPTARG} == "true" ]; then
+	touch /etc/wall_cmos_clock
+      fi;
+      if [ ${OPTARG} == "false" ]; then
+	rm -f /etc/wall_cmos_clock;
+      fi;
+      ;;
+    t)
+	/usr/sbin/tzsetup ${OPTARG}
+	/sbin/adjkerntz -a
+      ;;
+    d)
+	date -f %s ${OPTARG}
+      ;;
+    h | *) # Display help.
+      usage
+      exit 0;
+      ;;
+  esac
+done
+exit $?
