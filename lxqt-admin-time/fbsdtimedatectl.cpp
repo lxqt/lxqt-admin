@@ -62,6 +62,7 @@ bool FBSDTimeDateCtl::setDateTime(QDateTime dateTime, QString& errorMessage)
 {
     qint64 epochsec = dateTime.toSecsSinceEpoch();
     mHelperArgs << "-d" << QString::number(epochsec);
+    mHelperArgs << QString::number(QDateTime::currentDateTime().toSecsSinceEpoch());
     return true;
 }
 
@@ -106,7 +107,6 @@ bool FBSDTimeDateCtl::pkexec()
         return true;
     }
     QProcess process;
-    qDebug() << mHelperArgs;
     QStringList args;
     args << QStringLiteral("--disable-internal-agent")
         << QStringLiteral("/usr/local/bin/lxqt-admin-time-helper")
