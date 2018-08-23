@@ -132,7 +132,7 @@ public:
     }
     explicit GroupInfo(struct group* grp):
         mGid(grp->gr_gid),
-        mName(grp->gr_name)
+        mName(QString::fromUtf8(grp->gr_name))
     {
     }
 

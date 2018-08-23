@@ -19,6 +19,9 @@
  */
 
 #include "mainwindow.h"
+
+#include <LXQt/Globals>
+
 #include <QDebug>
 #include <QMessageBox>
 #include <QInputDialog>
@@ -105,7 +108,7 @@ void MainWindow::reloadGroups()
         QVariant obj = QVariant::fromValue<void*>((void*)group);
         item->setData(0, Qt::UserRole, obj);
         item->setData(1, Qt::DisplayRole, group->gid());
-        item->setData(2, Qt::DisplayRole, group->members().join(", "));
+        item->setData(2, Qt::DisplayRole, group->members().join(QL1S(", ")));
         items.append(item);
     }
     ui.groupList->clear();

@@ -26,6 +26,9 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include "timedatectl.h"
+
+#include <LXQt/Globals>
+
 #include <QProcess>
 #include <QDebug>
 #include <QDBusInterface>
@@ -53,7 +56,7 @@ QString TimeDateCtl::timeZone() const
 
 bool TimeDateCtl::setTimeZone(QString timeZone, QString& errorMessage)
 {
-    mIface->call("SetTimezone", timeZone, true);
+    mIface->call(QSL("SetTimezone"), timeZone, true);
     QDBusError err = mIface->lastError();
     if(err.isValid())
     {
@@ -67,7 +70,7 @@ bool TimeDateCtl::setDateTime(QDateTime dateTime, QString& errorMessage)
 {
     // the timedatectl dbus service accepts "usec" input.
     // Qt can only get "msec"  => convert to usec here.
-    mIface->call("SetTime", dateTime.toMSecsSinceEpoch() * 1000, false, true);
+    mIface->call(QSL("SetTime"), dateTime.toMSecsSinceEpoch() * 1000, false, true);
     QDBusError err = mIface->lastError();
     if(err.isValid())
     {
@@ -84,7 +87,7 @@ bool TimeDateCtl::useNtp() const
 
 bool TimeDateCtl::setUseNtp(bool value, QString& errorMessage)
 {
-    mIface->call("SetNTP", value, true);
+    mIface->call(QSL("SetNTP"), value, true);
     QDBusError err = mIface->lastError();
     if(err.isValid())
     {
@@ -101,7 +104,7 @@ bool TimeDateCtl::localRtc() const
 
 bool TimeDateCtl::setLocalRtc(bool value, QString& errorMessage)
 {
-    mIface->call("SetLocalRTC", value, false, true);
+    mIface->call(QSL("SetLocalRTC"), value, false, true);
     QDBusError err = mIface->lastError();
     if(err.isValid())
     {

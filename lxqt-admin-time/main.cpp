@@ -25,6 +25,7 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
+#include <LXQt/Globals>
 #include <LXQt/SingleApplication>
 #include <QCommandLineParser>
 #include "timeadmindialog.h"
@@ -45,7 +46,7 @@ int main(int argc, char **argv)
     parser.process(app);
 
     TimeAdminDialog dlg;
-    dlg.setWindowIcon(QIcon::fromTheme("preferences-system"));
+    dlg.setWindowIcon(QIcon::fromTheme(QSL("preferences-system")));
     app.setActivationWindow(&dlg);
     dlg.show();
     return app.exec();
