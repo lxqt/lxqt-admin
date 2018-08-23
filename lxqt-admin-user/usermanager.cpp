@@ -26,6 +26,9 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include "usermanager.h"
+
+#include <LXQt/Globals>
+
 #include <QDebug>
 #include <algorithm>
 #include <QFileSystemWatcher>
@@ -105,7 +108,7 @@ void UserManager::loadLoginDefs() {
             QByteArray line = file.readLine().trimmed();
             if(line.isEmpty() || line.startsWith('#'))
                 continue;
-            QStringList parts = QString::fromUtf8(line).split(QRegExp("\\s"), QString::SkipEmptyParts);
+            QStringList parts = QString::fromUtf8(line).split(QRegExp(QSL("\\s")), QString::SkipEmptyParts);
             if(parts.length() >= 2) {
                 QString& key = parts[0];
                 QString& val = parts[1];
@@ -134,7 +137,7 @@ void UserManager::loadLoginDefs() {
 
 UserInfo* UserManager::findUserInfo(const char* name) {
     auto it = std::find_if(mUsers.begin(), mUsers.end(), [name](const UserInfo* user) {
-        return user->name() == name;
+        return user->name() == QString::fromUtf8(name);
     });
     return it != mUsers.end() ? *it : nullptr;
 }
@@ -155,7 +158,7 @@ UserInfo* UserManager::findUserInfo(uid_t uid) {
 
 GroupInfo* UserManager::findGroupInfo(const char* name) {
     auto it = std::find_if(mGroups.begin(), mGroups.end(), [name](const GroupInfo* group) {
-        return group->name() == name;
+        return group->name() == QString::fromUtf8(name);
     });
     return it != mGroups.end() ? *it : nullptr;
 }
@@ -222,7 +225,7 @@ bool UserManager::pkexec(const QStringList& command, const QByteArray& stdinData
     if (!succeeded)
     {
         QMessageBox * msg = new QMessageBox{QMessageBox::Critical, tr("lxqt-admin-user")
-            , tr("<strong>Action (%1) failed:</strong><br/><pre>%2</pre>").arg(command[0]).arg(pkexec_error.constData())};
+            , tr("<strong>Action (%1) failed:</strong><br/><pre>%2</pre>").arg(command[0]).arg(QString::fromUtf8(pkexec_error))};
         msg->setAttribute(Qt::WA_DeleteOnClose, true);
         msg->show();
     }
@@ -251,7 +254,7 @@ bool UserManager::addUser(UserInfo* user) {
         command << QStringLiteral("-g") << QString::number(user->gid());
     }
     if(!user->groups().isEmpty()) {  // set group membership
-        command << QStringLiteral("-G") << user->groups().join(',');
+        command << QStringLiteral("-G") << user->groups().join(QL1C(','));
     }
 #ifdef Q_OS_FREEBSD
     command << QStringLiteral("-n");
@@ -293,7 +296,7 @@ bool UserManager::modifyUser(UserInfo* user, UserInfo* newSettings) {
 	isDirty=true;
     }
     if(newSettings->groups() != user->groups()) {  // change group membership
-        command << QStringLiteral("-G") << newSettings->groups().join(',');
+        command << QStringLiteral("-G") << newSettings->groups().join(QL1C(','));
 	isDirty=true;
     }
 #ifdef Q_OS_FREEBSD
@@ -389,7 +392,7 @@ bool UserManager::modifyGroup(GroupInfo* group, GroupInfo* newSettings) {
         command.clear();
         command << QStringLiteral("gpasswd");
         command << QStringLiteral("-M");  // Set the list of group members.
-        command << newSettings->members().join(',');
+        command << newSettings->members().join(QL1C(','));
         //if the group name changed the group->name() is still the old setting.
         if(newSettings->name() != group->name()) {
            command << newSettings->name();
@@ -427,7 +430,7 @@ bool UserManager::changePassword(GroupInfo* group, QByteArray newPasswd) {
 
 const QStringList& UserManager::availableShells() {
     if(mAvailableShells.isEmpty()) {
-        QFile file("/etc/shells");
+        QFile file(QSL("/etc/shells"));
         if(file.open(QIODevice::ReadOnly)) {
             while(!file.atEnd()) {
                 QByteArray line = file.readLine().trimmed();
