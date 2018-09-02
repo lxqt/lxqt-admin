@@ -32,25 +32,25 @@
 <context>
     <name>TimeAdminDialog</name>
     <message>
-        <location filename="../timeadmindialog.cpp" line="44"/>
+        <location filename="../timeadmindialog.cpp" line="45"/>
         <source>Time and date configuration</source>
         <translation>Nastavení data a času</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="50"/>
+        <location filename="../timeadmindialog.cpp" line="51"/>
         <source>Date and time</source>
         <translation>Datum a čas</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="58"/>
+        <location filename="../timeadmindialog.cpp" line="59"/>
         <source>Timezone</source>
         <translation>Časové pásmo</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="119"/>
-        <location filename="../timeadmindialog.cpp" line="129"/>
-        <location filename="../timeadmindialog.cpp" line="136"/>
-        <location filename="../timeadmindialog.cpp" line="146"/>
+        <location filename="../timeadmindialog.cpp" line="120"/>
+        <location filename="../timeadmindialog.cpp" line="130"/>
+        <location filename="../timeadmindialog.cpp" line="137"/>
+        <location filename="../timeadmindialog.cpp" line="147"/>
         <source>Error</source>
         <translation>Chyba</translation>
     </message>
