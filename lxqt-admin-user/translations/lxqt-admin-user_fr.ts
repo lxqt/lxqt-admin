@@ -157,29 +157,29 @@
         <translation>Changer le mot de passe pour l&apos;utilisateur ou le groupe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="174"/>
-        <location filename="../mainwindow.cpp" line="186"/>
-        <location filename="../mainwindow.cpp" line="207"/>
+        <location filename="../mainwindow.cpp" line="177"/>
+        <location filename="../mainwindow.cpp" line="189"/>
+        <location filename="../mainwindow.cpp" line="210"/>
         <source>Confirm</source>
         <translation>Confirmer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="174"/>
+        <location filename="../mainwindow.cpp" line="177"/>
         <source>Are you sure you want to delete the selected user?</source>
         <translation>Voulez-vous réellement supprimer l&apos;utilisateur sélectionné ?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="186"/>
+        <location filename="../mainwindow.cpp" line="189"/>
         <source>Are you sure you want to delete the selected group?</source>
         <translation>Voulez-vous réellement supprimer le groupe sélectionné ?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="197"/>
+        <location filename="../mainwindow.cpp" line="200"/>
         <source>Input the new password for %1:</source>
         <translation>Saisir le nouveau mot de passe pour %1 :</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="207"/>
+        <location filename="../mainwindow.cpp" line="210"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation>Voulez-vous réellement avoir un mot de passe vide ?</translation>
     </message>
@@ -247,12 +247,12 @@
         <translation>Répertoire racine :</translation>
     </message>
     <message>
-        <location filename="../userdialog.cpp" line="117"/>
+        <location filename="../userdialog.cpp" line="120"/>
         <source>Error</source>
         <translation>Erreur</translation>
     </message>
     <message>
-        <location filename="../userdialog.cpp" line="117"/>
+        <location filename="../userdialog.cpp" line="120"/>
         <source>The user name cannot be empty.</source>
         <translation>Le nom d&apos;utilisateur ne doit pas être vide.</translation>
     </message>
@@ -260,12 +260,12 @@
 <context>
     <name>UserManager</name>
     <message>
-        <location filename="../usermanager.cpp" line="224"/>
+        <location filename="../usermanager.cpp" line="227"/>
         <source>lxqt-admin-user</source>
         <translation>lxqt-admin-user</translation>
     </message>
     <message>
-        <location filename="../usermanager.cpp" line="225"/>
+        <location filename="../usermanager.cpp" line="228"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
         <translation>&lt;strong&gt;L&apos;action (%1) a échoué:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
