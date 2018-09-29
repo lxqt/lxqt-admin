@@ -148,13 +148,6 @@ void TimeAdminDialog::saveChangesToSystem()
             }
         }
     }
-#ifdef Q_OS_FREEBSD
-    mTimeDateCtl.pkexec();
-    if(modified.testFlag(DateTimePage::M_LOCAL_RTC)) {
-    const QString infoMsg = mDateTimeWidget->localRtc() ?  tr("Change RTC to be in localtime requires a reboot") : tr("Change RTC to be in UTC requires a reboot");
-    QMessageBox::information(this,tr("Reboot required"),infoMsg);
-    }
-#endif
 }
 
 void TimeAdminDialog::onButtonClicked(QDialogButtonBox::StandardButton button)
