@@ -33,6 +33,7 @@
 #include <QMap>
 #include <QDebug>
 
+#include <LXQt/Globals>
 #include <LXQt/Settings>
 
 #include "datetime.h"
@@ -41,7 +42,7 @@
 #define ZONETAB_PATH "/usr/share/zoneinfo/zone.tab"
 
 TimeAdminDialog::TimeAdminDialog(QWidget *parent):
-    LXQt::ConfigDialog(tr("Time and date configuration"),new LXQt::Settings("TimeDate"), parent)
+    LXQt::ConfigDialog(tr("Time and date configuration"),new LXQt::Settings(QSL("TimeDate")), parent)
 {
     setMinimumSize(QSize(400,400));
     mWindowTitle = windowTitle();
@@ -77,7 +78,7 @@ void TimeAdminDialog::onChanged()
 void TimeAdminDialog::showChangedStar()
 {
     if(mTimezoneWidget->isChanged() || mDateTimeWidget->modified())
-        setWindowTitle(mWindowTitle + "*");
+        setWindowTitle(mWindowTitle + QL1C('*'));
     else
         setWindowTitle(mWindowTitle);
 }
@@ -87,7 +88,7 @@ void TimeAdminDialog::loadTimeZones(QStringList & timeZones, QString & currentTi
     currentTimezone = mTimeDateCtl.timeZone();
 
     timeZones.clear();
-    QFile file(ZONETAB_PATH);
+    QFile file(QSL(ZONETAB_PATH));
     if(file.open(QIODevice::ReadOnly))
     {
         QByteArray line;

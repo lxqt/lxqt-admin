@@ -19,6 +19,9 @@
  */
 
 #include "userdialog.h"
+
+#include <LXQt/Globals>
+
 #include <QMessageBox>
 #include <QListWidgetItem>
 #include <QDebug>
@@ -93,7 +96,7 @@ void UserDialog::onLoginNameChanged(const QString& text)
     if(!mHomeDirChanged)
     {
         ui.homeDir->blockSignals(true);
-        ui.homeDir->setText("/home/" + text);
+        ui.homeDir->setText(QSL("/home/") + text);
         ui.homeDir->blockSignals(false);
     }
 }

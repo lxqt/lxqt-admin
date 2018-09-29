@@ -157,29 +157,29 @@
         <translation>選択したユーザーグループのパスワード変更</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="174"/>
-        <location filename="../mainwindow.cpp" line="186"/>
-        <location filename="../mainwindow.cpp" line="207"/>
+        <location filename="../mainwindow.cpp" line="177"/>
+        <location filename="../mainwindow.cpp" line="189"/>
+        <location filename="../mainwindow.cpp" line="210"/>
         <source>Confirm</source>
         <translation>確認</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="174"/>
+        <location filename="../mainwindow.cpp" line="177"/>
         <source>Are you sure you want to delete the selected user?</source>
         <translation>本当に、選択したユーザーを削除してよいですか？</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="186"/>
+        <location filename="../mainwindow.cpp" line="189"/>
         <source>Are you sure you want to delete the selected group?</source>
         <translation>本当に、選択したグループを削除してよいですか？</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="197"/>
+        <location filename="../mainwindow.cpp" line="200"/>
         <source>Input the new password for %1:</source>
         <translation>%1 の新しいパスワードを入力:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="207"/>
+        <location filename="../mainwindow.cpp" line="210"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation>空白のパスワードを設定しますか?</translation>
     </message>
@@ -247,12 +247,12 @@
         <translation>ホームディレクトリー:</translation>
     </message>
     <message>
-        <location filename="../userdialog.cpp" line="117"/>
+        <location filename="../userdialog.cpp" line="120"/>
         <source>Error</source>
         <translation>エラー</translation>
     </message>
     <message>
-        <location filename="../userdialog.cpp" line="117"/>
+        <location filename="../userdialog.cpp" line="120"/>
         <source>The user name cannot be empty.</source>
         <translation>ユーザー名を入力する必要があります。</translation>
     </message>
@@ -260,12 +260,12 @@
 <context>
     <name>UserManager</name>
     <message>
-        <location filename="../usermanager.cpp" line="224"/>
+        <location filename="../usermanager.cpp" line="227"/>
         <source>lxqt-admin-user</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../usermanager.cpp" line="225"/>
+        <location filename="../usermanager.cpp" line="228"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
         <translation type="unfinished"></translation>
     </message>

@@ -25,6 +25,7 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
+#include <LXQt/Globals>
 #include <LXQt/SingleApplication>
 #include <QCommandLineParser>
 #include "mainwindow.h"
@@ -45,7 +46,7 @@ int main(int argc, char **argv)
     parser.process(app);
 
     MainWindow window;
-    window.setWindowIcon(QIcon::fromTheme("preferences-system"));
+    window.setWindowIcon(QIcon::fromTheme(QSL("preferences-system")));
     app.setActivationWindow(&window);
     window.show();
     return app.exec();

@@ -157,29 +157,29 @@
         <translation>Canvia la contrasenya per als usuaris o grups seleccionats</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="174"/>
-        <location filename="../mainwindow.cpp" line="186"/>
-        <location filename="../mainwindow.cpp" line="207"/>
+        <location filename="../mainwindow.cpp" line="177"/>
+        <location filename="../mainwindow.cpp" line="189"/>
+        <location filename="../mainwindow.cpp" line="210"/>
         <source>Confirm</source>
         <translation>Confirma</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="174"/>
+        <location filename="../mainwindow.cpp" line="177"/>
         <source>Are you sure you want to delete the selected user?</source>
         <translation>Esteu segur que voleu suprimir l&apos;usuari seleccionat?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="186"/>
+        <location filename="../mainwindow.cpp" line="189"/>
         <source>Are you sure you want to delete the selected group?</source>
         <translation>Esteu segur que voleu suprimir el grup seleccionat?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="197"/>
+        <location filename="../mainwindow.cpp" line="200"/>
         <source>Input the new password for %1:</source>
         <translation>Introduïu la nova contrasenya per a %1:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="207"/>
+        <location filename="../mainwindow.cpp" line="210"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation>Esteu segur que voleu establir una contrasenya buida?</translation>
     </message>
@@ -247,12 +247,12 @@
         <translation>Directori d&apos;inici:</translation>
     </message>
     <message>
-        <location filename="../userdialog.cpp" line="117"/>
+        <location filename="../userdialog.cpp" line="120"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="../userdialog.cpp" line="117"/>
+        <location filename="../userdialog.cpp" line="120"/>
         <source>The user name cannot be empty.</source>
         <translation>El nom de l&apos;usuari no pot estar en blanc.</translation>
     </message>
@@ -260,12 +260,12 @@
 <context>
     <name>UserManager</name>
     <message>
-        <location filename="../usermanager.cpp" line="224"/>
+        <location filename="../usermanager.cpp" line="227"/>
         <source>lxqt-admin-user</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../usermanager.cpp" line="225"/>
+        <location filename="../usermanager.cpp" line="228"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
         <translation>&lt;strong&gt;Ha fallat l&apos;acció (%1):&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
