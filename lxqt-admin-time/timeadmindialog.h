@@ -26,12 +26,8 @@
  * END_COMMON_COPYRIGHT_HEADER */
 
 #include <LXQt/ConfigDialog>
-#ifdef Q_OS_LINUX
-#include "dbustimedatectl.h"
-#endif
-#ifdef Q_OS_FREEBSD
-#include "fbsdtimedatectl.h"
-#endif
+#include "timedatectl.h"
+
 class DateTimePage;
 class TimezonePage;
 
@@ -53,12 +49,7 @@ private:
     void showChangedStar();
 
 private:
-#ifdef Q_OS_LINUX
-    DbusTimeDateCtl mTimeDateCtl;
-#endif
-#ifdef Q_OS_FREEBSD
-    FBSDTimeDateCtl mTimeDateCtl;
-#endif
+    TimeDateCtl mTimeDateCtl;
     DateTimePage * mDateTimeWidget;
     TimezonePage * mTimezoneWidget;
     QString mWindowTitle;

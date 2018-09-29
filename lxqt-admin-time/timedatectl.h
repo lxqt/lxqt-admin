@@ -25,20 +25,19 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#ifndef FBSDTIMEDATECTL_H
-#define FBSDTIMEDATECTL_H
+#ifndef TIMEDATECTL_H
+#define TIMEDATECTL_H
+
 #include <QString>
 #include <QDateTime>
-#include <QFile>
-#include <QFileInfo>
-#include "itimedatectl.h"
+
 class QDBusInterface;
 
-class FBSDTimeDateCtl: public ITimeDateCtl
+class TimeDateCtl
 {
 public:
-    explicit FBSDTimeDateCtl();
-    ~FBSDTimeDateCtl();
+    explicit TimeDateCtl();
+    ~TimeDateCtl();
 
     bool useNtp() const;
     bool setUseNtp(bool value, QString& errorMessage);
@@ -50,9 +49,9 @@ public:
     bool setTimeZone(QString timeZone, QString& errorMessage);
 
     bool setDateTime(QDateTime dateTime, QString& errorMessage);
-    bool pkexec();
-private:
-    QStringList mHelperArgs;
 
+private:
+    QDBusInterface* mIface;
 };
-#endif // FSBDITEMDATECTL
+
+#endif // TIMEDATECTL_H

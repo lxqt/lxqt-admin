@@ -25,8 +25,10 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include "dbustimedatectl.h"
+#include "timedatectl.h"
+
 #include <LXQt/Globals>
+
 #include <QProcess>
 #include <QDebug>
 #include <QDBusInterface>
@@ -34,7 +36,7 @@
 #include <QMessageBox>
 
 
-DbusTimeDateCtl::DbusTimeDateCtl()
+TimeDateCtl::TimeDateCtl()
 {
     mIface = new QDBusInterface(QStringLiteral("org.freedesktop.timedate1"),
                                 QStringLiteral("/org/freedesktop/timedate1"),
@@ -42,17 +44,17 @@ DbusTimeDateCtl::DbusTimeDateCtl()
                                 QDBusConnection::systemBus());
 }
 
-DbusTimeDateCtl::~DbusTimeDateCtl()
+TimeDateCtl::~TimeDateCtl()
 {
     delete mIface;
 }
 
-QString DbusTimeDateCtl::timeZone() const
+QString TimeDateCtl::timeZone() const
 {
     return mIface->property("Timezone").toString();
 }
 
-bool DbusTimeDateCtl::setTimeZone(QString timeZone, QString& errorMessage)
+bool TimeDateCtl::setTimeZone(QString timeZone, QString& errorMessage)
 {
     mIface->call(QSL("SetTimezone"), timeZone, true);
     QDBusError err = mIface->lastError();
@@ -64,7 +66,7 @@ bool DbusTimeDateCtl::setTimeZone(QString timeZone, QString& errorMessage)
     return true;
 }
 
-bool DbusTimeDateCtl::setDateTime(QDateTime dateTime, QString& errorMessage)
+bool TimeDateCtl::setDateTime(QDateTime dateTime, QString& errorMessage)
 {
     // the timedatectl dbus service accepts "usec" input.
     // Qt can only get "msec"  => convert to usec here.
@@ -78,12 +80,12 @@ bool DbusTimeDateCtl::setDateTime(QDateTime dateTime, QString& errorMessage)
     return true;
 }
 
-bool DbusTimeDateCtl::useNtp() const
+bool TimeDateCtl::useNtp() const
 {
     return mIface->property("NTP").toBool();
 }
 
-bool DbusTimeDateCtl::setUseNtp(bool value, QString& errorMessage)
+bool TimeDateCtl::setUseNtp(bool value, QString& errorMessage)
 {
     mIface->call(QSL("SetNTP"), value, true);
     QDBusError err = mIface->lastError();
@@ -95,12 +97,12 @@ bool DbusTimeDateCtl::setUseNtp(bool value, QString& errorMessage)
     return true;
 }
 
-bool DbusTimeDateCtl::localRtc() const
+bool TimeDateCtl::localRtc() const
 {
     return mIface->property("LocalRTC").toBool();
 }
 
-bool DbusTimeDateCtl::setLocalRtc(bool value, QString& errorMessage)
+bool TimeDateCtl::setLocalRtc(bool value, QString& errorMessage)
 {
     mIface->call(QSL("SetLocalRTC"), value, false, true);
     QDBusError err = mIface->lastError();
