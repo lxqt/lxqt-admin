@@ -377,7 +377,7 @@ bool UserManager::modifyGroup(GroupInfo* group, GroupInfo* newSettings) {
     if(newSettings->members() != group->members()) {
         isDirty = true;
         command << QStringLiteral("-M");  // Set the list of group members.
-        command << newSettings->members().join(',');
+        command << newSettings->members().join(Q1LC(','));
     }
     command << QStringLiteral("-n");
 #endif
