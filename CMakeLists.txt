@@ -1,6 +1,9 @@
-cmake_minimum_required(VERSION 3.0.2 FATAL_ERROR)
-
 project(lxqt-admin)
+# CMP0000 - A minimum required CMake version must be specified.
+# Note that the command invocation must appear in the CMakeLists.txt
+# file itself; a call in an included file is not sufficient.
+cmake_minimum_required(VERSION 3.6.2 FATAL_ERROR)
+
 
 option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" OFF)
 
@@ -12,10 +15,6 @@ find_package(lxqt REQUIRED)
 find_package(KF5WindowSystem REQUIRED)
 find_package(PolkitQt5-1 REQUIRED)
 
-if(NOT CMAKE_BUILD_TYPE)
-    set(CMAKE_BUILD_TYPE Release)
-endif()
-
 # Patch Version
 set(LXQT_ADMIN_PATCH_VERSION 0)
 
@@ -26,7 +25,6 @@ add_definitions(
     "-DQT_NO_CAST_TO_ASCII"
     "-DQT_NO_URL_CAST_FROM_STRING"
     "-DQT_NO_CAST_FROM_BYTEARRAY"
-    "-DQT_NO_FOREACH"
 )
 
 include(LXQtPreventInSourceBuilds)
