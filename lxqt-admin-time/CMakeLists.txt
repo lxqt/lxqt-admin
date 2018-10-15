@@ -9,7 +9,10 @@ set ( lxqt-admin-time_HDRS
     timeadmindialog.h
     datetime.h
     timezone.h
-    timedatectl.h
+    itimedatectl.h
+    dbustimedatectl.h
+    fbsdtimedatectl.h
+
 )
 
 set ( lxqt-admin-time_SRCS
@@ -17,7 +20,9 @@ set ( lxqt-admin-time_SRCS
     timeadmindialog.cpp
     datetime.cpp
     timezone.cpp
-    timedatectl.cpp
+    fbsdtimedatectl.cpp
+    dbustimedatectl.cpp
+
 )
 
 set ( lxqt-admin-time_MOCS
@@ -68,6 +73,9 @@ target_link_libraries(lxqt-admin-time
     Qt5::DBus
     lxqt
 )
-
 install(TARGETS lxqt-admin-time RUNTIME DESTINATION bin)
 install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
+if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
+install(PROGRAMS "lxqt-admin-time-helper.freebsd" DESTINATION bin RENAME lxqt-admin-time-helper)
+install(FILES "org.lxqt.lxqt-admin-time.policy" DESTINATION "${POLKITQT-1_POLICY_FILES_INSTALL_DIR}")
+endif()

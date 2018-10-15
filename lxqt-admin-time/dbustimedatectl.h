@@ -4,7 +4,7 @@
  * LXQt - a lightweight, Qt based, desktop toolset
  * https://lxqt.org
  *
- * Copyright: 2014 LXQt team
+ * Copyright: 2016 LXQt team
  * Authors:
  *   Hong Jen Yee (PCMan) <pcman.tw@gmail.com>
  *
@@ -25,41 +25,33 @@
  *
  * END_COMMON_COPYRIGHT_HEADER */
 
-#include <LXQt/ConfigDialog>
-#ifdef Q_OS_LINUX
-#include "dbustimedatectl.h"
-#endif
-#ifdef Q_OS_FREEBSD
-#include "fbsdtimedatectl.h"
-#endif
-class DateTimePage;
-class TimezonePage;
+#ifndef DBUSTIMEDATECTL_H
+#define DBUSTIMEDATECTL_H
 
-class TimeAdminDialog: public LXQt::ConfigDialog
+#include <QString>
+#include <QDateTime>
+#include "itimedatectl.h"
+class QDBusInterface;
+
+class DbusTimeDateCtl : public ITimeDateCtl
 {
-    Q_OBJECT
-
 public:
-    TimeAdminDialog(QWidget * parent = NULL) ;
-    ~TimeAdminDialog();
+    explicit DbusTimeDateCtl();
+    ~DbusTimeDateCtl();
 
-private Q_SLOTS:
-    void onChanged();
-    void onButtonClicked(QDialogButtonBox::StandardButton button);
+    bool useNtp() const;
+    bool setUseNtp(bool value, QString& errorMessage);
+
+    bool localRtc() const;
+    bool setLocalRtc(bool value, QString& errorMessage);
+
+    QString timeZone() const;
+    bool setTimeZone(QString timeZone, QString& errorMessage);
+
+    bool setDateTime(QDateTime dateTime, QString& errorMessage);
 
 private:
-    void saveChangesToSystem();
-    void loadTimeZones(QStringList & timeZones, QString & currentTimezone);
-    void showChangedStar();
-
-private:
-#ifdef Q_OS_LINUX
-    DbusTimeDateCtl mTimeDateCtl;
-#endif
-#ifdef Q_OS_FREEBSD
-    FBSDTimeDateCtl mTimeDateCtl;
-#endif
-    DateTimePage * mDateTimeWidget;
-    TimezonePage * mTimezoneWidget;
-    QString mWindowTitle;
+    QDBusInterface* mIface;
 };
+
+#endif // DBUSTIMEDATECTL_H
