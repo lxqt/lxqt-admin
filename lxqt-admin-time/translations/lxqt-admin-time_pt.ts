@@ -21,7 +21,7 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation>Ativar sincronização de hora (NTP)</translation>
+        <translation>Ativar sincronização de hora com a rede (NTP)</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
@@ -60,7 +60,7 @@
     <message>
         <location filename="../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
-        <translation>O seu fuso horário:</translation>
+        <translation>Seu fuso horário atual:</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="26"/>
