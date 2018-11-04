@@ -6,12 +6,12 @@
     <message>
         <location filename="../groupdialog.ui" line="14"/>
         <source>Group Settings</source>
-        <translation>Definições do grupo</translation>
+        <translation>Configurações do Grupo</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="20"/>
         <source>Group name:</source>
-        <translation>Nome do grupo:</translation>
+        <translation>Nome do Grupo:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="30"/>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../groupdialog.ui" line="40"/>
         <source>Group ID:</source>
-        <translation>ID do grupo:</translation>
+        <translation>ID do Grupo:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="47"/>
         <source>Users belong to this group:</source>
-        <translation>Utilizadores pertencentes a este grupo:</translation>
+        <translation>Usuários pertencentes a este grupo:</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
@@ -44,27 +44,27 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>User and Group Settings</source>
-        <translation>Definições de grupo e utilizador</translation>
+        <translation>Configurações de Grupo e Usuário</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="40"/>
         <source>&amp;Users</source>
-        <translation>&amp;Utilizadores</translation>
+        <translation>&amp;Usuários</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="59"/>
         <source>Login Name</source>
-        <translation>Nome de acesso</translation>
+        <translation>Nome de Acesso</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="64"/>
         <source>User ID</source>
-        <translation>ID de utilizador</translation>
+        <translation>ID de Usuário</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="69"/>
         <source>Full Name</source>
-        <translation>Nome completo</translation>
+        <translation>Nome Completo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="74"/>
@@ -74,12 +74,12 @@
     <message>
         <location filename="../mainwindow.ui" line="79"/>
         <source>Home Directory</source>
-        <translation>Pasta pessoal</translation>
+        <translation>Diretório Pessoal</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>Show system users (for advanced users only)</source>
-        <translation>Mostrar utilizadores de sistema (utilizadores avançados)</translation>
+        <translation>Exibir usuários do sistema (apenas para usuários avançados)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
@@ -94,7 +94,7 @@
     <message>
         <location filename="../mainwindow.ui" line="116"/>
         <source>Group ID</source>
-        <translation>ID do grupo</translation>
+        <translation>ID do Grupo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
@@ -104,7 +104,7 @@
     <message>
         <location filename="../mainwindow.ui" line="134"/>
         <source>toolBar</source>
-        <translation>Barra de ferramentas</translation>
+        <translation>Barra de ferramenta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="161"/>
@@ -114,17 +114,17 @@
     <message>
         <location filename="../mainwindow.ui" line="164"/>
         <source>Add new users or groups</source>
-        <translation>Adicionar utilizadores ou grupos</translation>
+        <translation>Adicionar novos usuários ou grupos</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="173"/>
         <source>Delete</source>
-        <translation>Apagar</translation>
+        <translation>Excluir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="176"/>
         <source>Delete selected item</source>
-        <translation>Apagar o item selecionado</translation>
+        <translation>Excluir o item selecionado</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../mainwindow.ui" line="188"/>
         <source>edit properties of the selected item</source>
-        <translation>Editar as propriedades do item selecionado</translation>
+        <translation>editar as propriedades do item selecionado</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
@@ -149,39 +149,39 @@
     <message>
         <location filename="../mainwindow.ui" line="209"/>
         <source>Change Password</source>
-        <translation>Alterar palavra-passe</translation>
+        <translation>Alterar Senha</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="212"/>
         <source>Change password for the selected user or group</source>
-        <translation>Alterar palavra-passe para o utilizador ou grupo selecionado</translation>
+        <translation>Alterar senha para o usuário ou grupo selecionado</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
         <location filename="../mainwindow.cpp" line="189"/>
         <location filename="../mainwindow.cpp" line="210"/>
         <source>Confirm</source>
-        <translation>Confirmação</translation>
+        <translation>Confirmar</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation>Tem a certeza de que deseja apagar o utilizador selecionado?</translation>
+        <translation>Tem a certeza de que deseja excluir o usuário selecionado?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="189"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation>Tem a certeza de que deseja apagar o grupo selecionado?</translation>
+        <translation>Tem a certeza de que deseja excluir o grupo selecionado?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="200"/>
         <source>Input the new password for %1:</source>
-        <translation>Digite a nova palavra-passe para %1:</translation>
+        <translation>Digite a nova senha para %1:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="210"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation>Tem a certeza de que desaja definir uma palavra-passe vazia?</translation>
+        <translation>Tem a certeza de que deseja definir uma senha vazia?</translation>
     </message>
 </context>
 <context>
@@ -189,7 +189,7 @@
     <message>
         <location filename="../userdialog.ui" line="14"/>
         <source>User Settings</source>
-        <translation>Definições de utilizador</translation>
+        <translation>Configurações do Usuário</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="24"/>
@@ -209,7 +209,7 @@
     <message>
         <location filename="../userdialog.ui" line="53"/>
         <source>User ID:</source>
-        <translation>ID de utilizador:</translation>
+        <translation>ID do usuário:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="60"/>
@@ -229,7 +229,7 @@
     <message>
         <location filename="../userdialog.ui" line="91"/>
         <source>The user belongs to the following groups:</source>
-        <translation>Este utilizador pertence aos seguintes grupos:</translation>
+        <translation>O usuário pertence aos seguintes grupos:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="109"/>
@@ -239,12 +239,12 @@
     <message>
         <location filename="../userdialog.ui" line="115"/>
         <source>Login shell:</source>
-        <translation>Consola de acesso:</translation>
+        <translation>Console de acesso:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="132"/>
         <source>Home directory:</source>
-        <translation>Pasta pessoal:</translation>
+        <translation>Diretório pessoal:</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="120"/>
@@ -254,7 +254,7 @@
     <message>
         <location filename="../userdialog.cpp" line="120"/>
         <source>The user name cannot be empty.</source>
-        <translation>O nome de utilizador não pode estar vazio.</translation>
+        <translation>O nome do usuário não pode estar vazio.</translation>
     </message>
 </context>
 <context>
@@ -267,7 +267,7 @@
     <message>
         <location filename="../usermanager.cpp" line="228"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation>&lt;strong&gt;Falha na ação (%1):&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
+        <translation>&lt;strong&gt;Ação (%1) falhou:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
