@@ -262,7 +262,7 @@
     <message>
         <location filename="../usermanager.cpp" line="227"/>
         <source>lxqt-admin-user</source>
-        <translation></translation>
+        <translation>lxqt administratorbruker</translation>
     </message>
     <message>
         <location filename="../usermanager.cpp" line="228"/>
