@@ -93,3 +93,14 @@ as well as from the panel's main menu - Preferences - LXQt settings.
 
 The actual usage should be self-explanatory. To apply settings the GUI of the
 polkit authentication agent that's in use is launched to acquire the root password.
+
+
+## Translation (Weblate)
+
+<a href="https://weblate.lxqt.org/projects/lxqt/lxqt-admin-time">
+<img src="https://weblate.lxqt.org/widgets/lxqt/-/lxqt-admin-time/287x66-white.png" alt="Translation status" />
+</a>
+
+<a href="https://weblate.lxqt.org/projects/lxqt/lxqt-admin-user">
+<img src="https://weblate.lxqt.org/widgets/lxqt/-/lxqt-admin-user/287x66-white.png" alt="Translation status" />
+</a>
