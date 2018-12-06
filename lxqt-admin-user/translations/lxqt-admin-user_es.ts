@@ -209,7 +209,7 @@
     <message>
         <location filename="../userdialog.ui" line="53"/>
         <source>User ID:</source>
-        <translation>ID de usuario</translation>
+        <translation>ID de usuario:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="60"/>
@@ -262,7 +262,7 @@
     <message>
         <location filename="../usermanager.cpp" line="227"/>
         <source>lxqt-admin-user</source>
-        <translation>lxqt-admin-user</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../usermanager.cpp" line="228"/>
