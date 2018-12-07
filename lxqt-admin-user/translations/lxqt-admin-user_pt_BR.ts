@@ -79,7 +79,7 @@
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>Show system users (for advanced users only)</source>
-        <translation>Mostrar Usuários do sistema (Apenas para usuários avançados)</translation>
+        <translation>Mostrar Usuários do sistema (apenas para usuários avançados)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
@@ -204,7 +204,7 @@
     <message>
         <location filename="../userdialog.ui" line="33"/>
         <source>Login name:</source>
-        <translation>Nome de usuário:</translation>
+        <translation>Nome do usuário:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="53"/>
