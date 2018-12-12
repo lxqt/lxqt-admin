@@ -104,7 +104,7 @@
     <message>
         <location filename="../mainwindow.ui" line="134"/>
         <source>toolBar</source>
-        <translation>Barra de ferramentas</translation>
+        <translation>BarraDeFerramentas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="161"/>
