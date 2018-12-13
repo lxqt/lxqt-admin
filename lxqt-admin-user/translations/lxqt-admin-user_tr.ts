@@ -84,7 +84,7 @@
     <message>
         <location filename="../mainwindow.ui" line="95"/>
         <source>&amp;Groups</source>
-        <translation>&amp;Grup</translation>
+        <translation>&amp;Gruplar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="111"/>
