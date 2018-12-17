@@ -70,12 +70,12 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Tikrojo laiko daviklio (RTC) pakeitimas į vietinį laiką reikalauja paleidimo iš naujo</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Tikrojo laiko daviklio (RTC) pakeitimas į suderintąjį pasaulinį laiką (UTC) reikalauja paleidimo iš naujo</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
