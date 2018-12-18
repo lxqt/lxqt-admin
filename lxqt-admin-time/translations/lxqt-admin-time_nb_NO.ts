@@ -34,12 +34,12 @@
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="122"/>
         <source>lxqt-admin-time-helper</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-admin-tidshjelper</translation>
     </message>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;1Handlingen (%1) feilet:&lt;/strong&gt;2&lt;br/&gt;3&lt;pre&gt;4%2&lt;/pre&gt;5</translation>
     </message>
 </context>
 <context>
@@ -70,17 +70,17 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Å forandre så datamaskinens klokke er i lokal tid krever omstart</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Å forandre så datamaskinens klokke er i UTC krever omstart</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
         <source>Reboot required</source>
-        <translation type="unfinished"></translation>
+        <translation>Omstart kreves</translation>
     </message>
 </context>
 <context>
