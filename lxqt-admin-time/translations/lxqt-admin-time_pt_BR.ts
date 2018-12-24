@@ -21,7 +21,7 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation>Habilitar sincronização com o horário na rede (NTP)</translation>
+        <translation>Habilitar sincronização com o horário da rede (NTP)</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
