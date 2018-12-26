@@ -34,7 +34,7 @@
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="122"/>
         <source>lxqt-admin-time-helper</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-admin-time-helper</translation>
     </message>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
@@ -93,7 +93,7 @@
     <message>
         <location filename="../timezone.ui" line="26"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ТекстМетка</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="35"/>
