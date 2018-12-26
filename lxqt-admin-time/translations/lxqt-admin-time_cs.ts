@@ -80,7 +80,7 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
         <source>Reboot required</source>
-        <translation>Vyžadován restart</translation>
+        <translation>Vyžaduje se restart počítače</translation>
     </message>
 </context>
 <context>
