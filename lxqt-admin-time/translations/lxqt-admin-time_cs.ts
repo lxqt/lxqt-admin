@@ -70,7 +70,7 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation>Změna hardvérového času na místní vyžaduje restart</translation>
+        <translation>Změna hodin reálného času na místní čas vyžadují restart</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
