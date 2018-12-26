@@ -75,7 +75,7 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation>Změna hardvérového času na UTC vyžaduje restart</translation>
+        <translation>Změna hodin reálného času na univerzální koordinovaný čas vyžadují restart</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
