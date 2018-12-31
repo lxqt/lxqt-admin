@@ -22,7 +22,7 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation>Aktiviere Netzwerk-Zeitsynchronisation (NTP)</translation>
+        <translation>Netzwerk-Zeitsynchronisation (NTP) aktivieren</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
@@ -40,7 +40,7 @@
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Aktion (%1) fehlgeschlagen:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 <context>
@@ -48,7 +48,7 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="45"/>
         <source>Time and date configuration</source>
-        <translation>Zeit und Datum einstellen</translation>
+        <translation>Zeit- und Datumskonfiguration</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="51"/>
@@ -71,17 +71,17 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Änderung der RTC in Lokalzeit erfordert einen Neustart</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Änderung der RTC in UTC erfordert einen Neustart</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
         <source>Reboot required</source>
-        <translation type="unfinished"></translation>
+        <translation>Neustart erforderlich</translation>
     </message>
 </context>
 <context>
@@ -89,7 +89,7 @@
     <message>
         <location filename="../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
-        <translation>Derzeitige Zeitzone:</translation>
+        <translation>Ihre derzeitige Zeitzone:</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="26"/>
