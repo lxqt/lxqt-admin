@@ -88,7 +88,7 @@
     <message>
         <location filename="../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
-        <translation>Seu fuso horário atual:</translation>
+        <translation>O fuso horário atual:</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="26"/>
