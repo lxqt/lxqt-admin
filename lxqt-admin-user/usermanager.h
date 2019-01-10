@@ -200,12 +200,11 @@ public:
     bool addUser(UserInfo* user);
     bool modifyUser(UserInfo* user, UserInfo* newSettings);
     bool deleteUser(UserInfo* user);
-    bool changePassword(UserInfo* user, QByteArray newPasswd);
+    void changePassword(UserInfo* user);
 
     bool addGroup(GroupInfo* group);
     bool modifyGroup(GroupInfo* group, GroupInfo* newSettings);
     bool deleteGroup(GroupInfo* group);
-    bool changePassword(GroupInfo* group, QByteArray newPasswd);
 
     // FIXME: add APIs to change group membership with "gpasswd"
 
@@ -220,7 +219,6 @@ public:
 private:
     void loadUsersAndGroups();
     void loadLoginDefs();
-    bool pkexec(const QStringList &command, const QByteArray &stdinData = QByteArray());
 
 Q_SIGNALS:
     void changed();

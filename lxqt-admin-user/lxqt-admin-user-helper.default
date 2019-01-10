@@ -6,6 +6,12 @@ useradd|usermod|userdel|groupadd|groupmod|groupdel|passwd|gpasswd)
     export LC_ALL=C
     exec "$@"
     ;;
+lxqt-admin-user-password)
+	export LD_LIBRARY_PATH=/usr/local/lib64
+	export PATH=$PATH:/usr/local/bin:
+	export QT_QPA_PLATFORMTHEME=lxqt
+	exec "$@"
+	;;
 *)
     echo "Command '$1' is not allowed!"
     exit 1

@@ -42,5 +42,6 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD" OR ${CMAKE_SYSTEM_NAME} MATCHES "NetBS
     message(WARNING "${CMAKE_SYSTEM_NAME} is not supported by lxqt-admin-time")
 else()
     add_subdirectory(lxqt-admin-user)
+    add_subdirectory(lxqt-admin-user-password)
     add_subdirectory(lxqt-admin-time)
 endif()

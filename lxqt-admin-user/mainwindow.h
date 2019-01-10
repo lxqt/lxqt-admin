@@ -23,6 +23,7 @@
 
 #include <QMainWindow>
 #include "ui_mainwindow.h"
+#include "taskmanager.h"
 
 class UserInfo;
 class GroupInfo;
@@ -46,9 +47,9 @@ public:
 private:
     UserInfo* userFromItem(QTreeWidgetItem* item);
     GroupInfo* groupFromItem(QTreeWidgetItem *item);
-    bool getNewPassword(const QString& name, QByteArray& passwd);
     void reloadUsers();
     void reloadGroups();
+    void lockWidget(bool lock);
 
 private Q_SLOTS:
     void onAdd();
@@ -57,6 +58,8 @@ private Q_SLOTS:
     void onChangePasswd();
     void reload();
     void onRowActivated(const QModelIndex& index);
+    void onCurrentTabChanged(int pos);
+    void onProcessing(TaskManager::State);
 
 private:
     Ui::MainWindow ui;
