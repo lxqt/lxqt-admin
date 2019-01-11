@@ -54,7 +54,7 @@
     <message>
         <location filename="../mainwindow.ui" line="59"/>
         <source>Login Name</source>
-        <translation>Логин пользователя</translation>
+        <translation>Логин</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="64"/>
@@ -124,7 +124,7 @@
     <message>
         <location filename="../mainwindow.ui" line="176"/>
         <source>Delete selected item</source>
-        <translation>Удалить выбранный элемент</translation>
+        <translation>Удалить выбранную запись</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../mainwindow.ui" line="188"/>
         <source>edit properties of the selected item</source>
-        <translation>Редактировать свойства выделенного элемента</translation>
+        <translation>Редактировать свойства выбранной записи</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
@@ -181,7 +181,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="210"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation>Вы уверены в том, что хотите установить пароль, не содержащий символов?</translation>
+        <translation>Вы уверены в том, что хотите установить пустой пароль?</translation>
     </message>
 </context>
 <context>
@@ -204,7 +204,7 @@
     <message>
         <location filename="../userdialog.ui" line="33"/>
         <source>Login name:</source>
-        <translation>Логин пользователя:</translation>
+        <translation>Логин:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="53"/>
@@ -267,7 +267,7 @@
     <message>
         <location filename="../usermanager.cpp" line="228"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation>&lt;strong&gt;(%1) не удалось&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
+        <translation>&lt;strong&gt;Не удалось выполнить запрошенное действие (%1)&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
