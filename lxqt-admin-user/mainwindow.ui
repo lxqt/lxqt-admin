@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <widget class="QMainWindow" name="UserGroupSettingsWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -130,9 +130,6 @@
    </layout>
   </widget>
   <widget class="QToolBar" name="toolBar">
-   <property name="windowTitle">
-    <string>toolBar</string>
-   </property>
    <property name="movable">
     <bool>false</bool>
    </property>
@@ -185,7 +182,7 @@
     <string>Properties</string>
    </property>
    <property name="toolTip">
-    <string>edit properties of the selected item</string>
+    <string>Edit properties of the selected item</string>
    </property>
   </action>
   <action name="actionRefresh">
