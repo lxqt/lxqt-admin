@@ -59,7 +59,7 @@
     <message>
         <location filename="../mainwindow.ui" line="64"/>
         <source>User ID</source>
-        <translation>Nutzer-ID</translation>
+        <translation>Benutzer-ID</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="69"/>
@@ -209,7 +209,7 @@
     <message>
         <location filename="../userdialog.ui" line="53"/>
         <source>User ID:</source>
-        <translation>Nutzer-ID:</translation>
+        <translation>Benutzer-ID:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="60"/>
@@ -239,7 +239,7 @@
     <message>
         <location filename="../userdialog.ui" line="115"/>
         <source>Login shell:</source>
-        <translation>Befehlsinterpreter (shell):</translation>
+        <translation>Anmelde-Shell:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="132"/>
