@@ -91,12 +91,7 @@
         <translation>Časové pásmo, ve kterém se nacházíte:</translation>
     </message>
     <message>
-        <location filename="../timezone.ui" line="26"/>
-        <source>TextLabel</source>
-        <translation>Textový štítek</translation>
-    </message>
-    <message>
-        <location filename="../timezone.ui" line="35"/>
+        <location filename="../timezone.ui" line="32"/>
         <source>Filter</source>
         <translation>Filtr</translation>
     </message>

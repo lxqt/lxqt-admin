@@ -92,12 +92,7 @@
         <translation>Din nuværende tidszone:</translation>
     </message>
     <message>
-        <location filename="../timezone.ui" line="26"/>
-        <source>TextLabel</source>
-        <translation>Tekstetiket</translation>
-    </message>
-    <message>
-        <location filename="../timezone.ui" line="35"/>
+        <location filename="../timezone.ui" line="32"/>
         <source>Filter</source>
         <translation>Filtrer</translation>
     </message>

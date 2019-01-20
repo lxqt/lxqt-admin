@@ -91,12 +91,7 @@
         <translation>你的當前時區:</translation>
     </message>
     <message>
-        <location filename="../timezone.ui" line="26"/>
-        <source>TextLabel</source>
-        <translation>文字標籤</translation>
-    </message>
-    <message>
-        <location filename="../timezone.ui" line="35"/>
+        <location filename="../timezone.ui" line="32"/>
         <source>Filter</source>
         <translation>過濾器</translation>
     </message>

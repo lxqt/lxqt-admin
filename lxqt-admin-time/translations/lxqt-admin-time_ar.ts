@@ -91,12 +91,7 @@
         <translation>المنطقة الزمنية الحالية:</translation>
     </message>
     <message>
-        <location filename="../timezone.ui" line="26"/>
-        <source>TextLabel</source>
-        <translation>لصيقة نصية</translation>
-    </message>
-    <message>
-        <location filename="../timezone.ui" line="35"/>
+        <location filename="../timezone.ui" line="32"/>
         <source>Filter</source>
         <translation>رشّح</translation>
     </message>
