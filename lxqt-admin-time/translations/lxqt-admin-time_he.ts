@@ -91,12 +91,7 @@
         <translation>אזור הזמן הנוכחי שלך:</translation>
     </message>
     <message>
-        <location filename="../timezone.ui" line="26"/>
-        <source>TextLabel</source>
-        <translation>תווית טקסט</translation>
-    </message>
-    <message>
-        <location filename="../timezone.ui" line="35"/>
+        <location filename="../timezone.ui" line="32"/>
         <source>Filter</source>
         <translation>מסנן</translation>
     </message>

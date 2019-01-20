@@ -91,12 +91,7 @@
         <translation>Jūsų esama laiko juosta:</translation>
     </message>
     <message>
-        <location filename="../timezone.ui" line="26"/>
-        <source>TextLabel</source>
-        <translation>Teksto etiketė</translation>
-    </message>
-    <message>
-        <location filename="../timezone.ui" line="35"/>
+        <location filename="../timezone.ui" line="32"/>
         <source>Filter</source>
         <translation>Filtruoti</translation>
     </message>

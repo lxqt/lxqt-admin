@@ -91,12 +91,7 @@
         <translation>Η τρέχουσα ζώνη ώρας:</translation>
     </message>
     <message>
-        <location filename="../timezone.ui" line="26"/>
-        <source>TextLabel</source>
-        <translation>Ετικέτα κειμένου</translation>
-    </message>
-    <message>
-        <location filename="../timezone.ui" line="35"/>
+        <location filename="../timezone.ui" line="32"/>
         <source>Filter</source>
         <translation>Φίλτρο</translation>
     </message>

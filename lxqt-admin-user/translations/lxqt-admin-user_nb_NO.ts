@@ -102,57 +102,52 @@
         <translation>Medlemmer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="134"/>
-        <source>toolBar</source>
-        <translation>Verktøylinje</translation>
+        <location filename="../mainwindow.ui" line="185"/>
+        <source>Edit properties of the selected item</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="161"/>
+        <location filename="../mainwindow.ui" line="158"/>
         <source>Add</source>
         <translation>Legg til</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="164"/>
+        <location filename="../mainwindow.ui" line="161"/>
         <source>Add new users or groups</source>
         <translation>Legg til nye brukere eller grupper</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="173"/>
+        <location filename="../mainwindow.ui" line="170"/>
         <source>Delete</source>
         <translation>Slett</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="176"/>
+        <location filename="../mainwindow.ui" line="173"/>
         <source>Delete selected item</source>
         <translation>Slett valgte</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="185"/>
+        <location filename="../mainwindow.ui" line="182"/>
         <source>Properties</source>
         <translation>Egenskaper</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="188"/>
-        <source>edit properties of the selected item</source>
-        <translation>Forandr egenskaper ved utvalg</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="197"/>
+        <location filename="../mainwindow.ui" line="194"/>
         <source>Refresh</source>
         <translation>Frisk opp</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="200"/>
+        <location filename="../mainwindow.ui" line="197"/>
         <source>Refresh the lists</source>
         <translation>Frisk opp listen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="209"/>
+        <location filename="../mainwindow.ui" line="206"/>
         <source>Change Password</source>
         <translation>Forandr passord</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="212"/>
+        <location filename="../mainwindow.ui" line="209"/>
         <source>Change password for the selected user or group</source>
         <translation>Forandr passord for valgt bruker eller gruppe</translation>
     </message>
