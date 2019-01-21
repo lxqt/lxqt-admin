@@ -104,7 +104,7 @@
     <message>
         <location filename="../mainwindow.ui" line="134"/>
         <source>toolBar</source>
-        <translation type="unfinished"></translation>
+        <translation>Įrankių juosta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="161"/>
@@ -134,7 +134,7 @@
     <message>
         <location filename="../mainwindow.ui" line="188"/>
         <source>edit properties of the selected item</source>
-        <translation type="unfinished"></translation>
+        <translation>taisyti pasirinkto elemento savybes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
