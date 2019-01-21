@@ -102,57 +102,52 @@
         <translation>Nariai</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="134"/>
-        <source>toolBar</source>
-        <translation>Įrankių juosta</translation>
+        <location filename="../mainwindow.ui" line="185"/>
+        <source>Edit properties of the selected item</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="161"/>
+        <location filename="../mainwindow.ui" line="158"/>
         <source>Add</source>
         <translation>Pridėti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="164"/>
+        <location filename="../mainwindow.ui" line="161"/>
         <source>Add new users or groups</source>
         <translation>Pridėti naujus naudotojus ar grupes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="173"/>
+        <location filename="../mainwindow.ui" line="170"/>
         <source>Delete</source>
         <translation>Ištrinti</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="176"/>
+        <location filename="../mainwindow.ui" line="173"/>
         <source>Delete selected item</source>
         <translation>Ištrinti pasirinktą elementą</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="185"/>
+        <location filename="../mainwindow.ui" line="182"/>
         <source>Properties</source>
         <translation>Savybės</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="188"/>
-        <source>edit properties of the selected item</source>
-        <translation>taisyti pasirinkto elemento savybes</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="197"/>
+        <location filename="../mainwindow.ui" line="194"/>
         <source>Refresh</source>
         <translation>Įkelti iš naujo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="200"/>
+        <location filename="../mainwindow.ui" line="197"/>
         <source>Refresh the lists</source>
         <translation>Įkelti sąrašus iš naujo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="209"/>
+        <location filename="../mainwindow.ui" line="206"/>
         <source>Change Password</source>
         <translation>Keisti slaptažodį</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="212"/>
+        <location filename="../mainwindow.ui" line="209"/>
         <source>Change password for the selected user or group</source>
         <translation>Keisti pasirinkto naudotojo ar grupės slaptažodį</translation>
     </message>

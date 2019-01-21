@@ -102,57 +102,52 @@
         <translation>メンバー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="134"/>
-        <source>toolBar</source>
+        <location filename="../mainwindow.ui" line="185"/>
+        <source>Edit properties of the selected item</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="161"/>
+        <location filename="../mainwindow.ui" line="158"/>
         <source>Add</source>
         <translation>追加</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="164"/>
+        <location filename="../mainwindow.ui" line="161"/>
         <source>Add new users or groups</source>
         <translation>新しいユーザーまたはグループを追加</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="173"/>
+        <location filename="../mainwindow.ui" line="170"/>
         <source>Delete</source>
         <translation>削除</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="176"/>
+        <location filename="../mainwindow.ui" line="173"/>
         <source>Delete selected item</source>
         <translation>選択した項目を削除</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="185"/>
+        <location filename="../mainwindow.ui" line="182"/>
         <source>Properties</source>
         <translation>プロパティー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="188"/>
-        <source>edit properties of the selected item</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="197"/>
+        <location filename="../mainwindow.ui" line="194"/>
         <source>Refresh</source>
         <translation>再読込み</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="200"/>
+        <location filename="../mainwindow.ui" line="197"/>
         <source>Refresh the lists</source>
         <translation>リストを再読込み</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="209"/>
+        <location filename="../mainwindow.ui" line="206"/>
         <source>Change Password</source>
         <translation>パスワードの変更</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="212"/>
+        <location filename="../mainwindow.ui" line="209"/>
         <source>Change password for the selected user or group</source>
         <translation>選択したユーザーグループのパスワード変更</translation>
     </message>
