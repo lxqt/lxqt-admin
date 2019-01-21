@@ -102,57 +102,52 @@
         <translation>Membros</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="134"/>
-        <source>toolBar</source>
-        <translation>BarraDeFerramentas</translation>
+        <location filename="../mainwindow.ui" line="185"/>
+        <source>Edit properties of the selected item</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="161"/>
+        <location filename="../mainwindow.ui" line="158"/>
         <source>Add</source>
         <translation>Engadir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="164"/>
+        <location filename="../mainwindow.ui" line="161"/>
         <source>Add new users or groups</source>
         <translation>Engadir novos usuarios ou grupos</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="173"/>
+        <location filename="../mainwindow.ui" line="170"/>
         <source>Delete</source>
         <translation>Eliminar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="176"/>
+        <location filename="../mainwindow.ui" line="173"/>
         <source>Delete selected item</source>
         <translation>Eliminar o elemento seleccionado</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="185"/>
+        <location filename="../mainwindow.ui" line="182"/>
         <source>Properties</source>
         <translation>Propiedades</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="188"/>
-        <source>edit properties of the selected item</source>
-        <translation>editar as propiedades do elemento seleccionado</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="197"/>
+        <location filename="../mainwindow.ui" line="194"/>
         <source>Refresh</source>
         <translation>Actualizar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="200"/>
+        <location filename="../mainwindow.ui" line="197"/>
         <source>Refresh the lists</source>
         <translation>Actualizar as listas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="209"/>
+        <location filename="../mainwindow.ui" line="206"/>
         <source>Change Password</source>
         <translation>Cambiar o contrasinal</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="212"/>
+        <location filename="../mainwindow.ui" line="209"/>
         <source>Change password for the selected user or group</source>
         <translation>Cambiar o contrasinal do usuario ou grupo seleccionado</translation>
     </message>

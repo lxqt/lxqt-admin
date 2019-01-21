@@ -102,57 +102,52 @@
         <translation>Medlemmer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="134"/>
-        <source>toolBar</source>
+        <location filename="../mainwindow.ui" line="185"/>
+        <source>Edit properties of the selected item</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="161"/>
+        <location filename="../mainwindow.ui" line="158"/>
         <source>Add</source>
         <translation>Tilføj</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="164"/>
+        <location filename="../mainwindow.ui" line="161"/>
         <source>Add new users or groups</source>
         <translation>Tilføj nye brugere eller grupper</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="173"/>
+        <location filename="../mainwindow.ui" line="170"/>
         <source>Delete</source>
         <translation>Slet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="176"/>
+        <location filename="../mainwindow.ui" line="173"/>
         <source>Delete selected item</source>
         <translation>Slet valgte post</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="185"/>
+        <location filename="../mainwindow.ui" line="182"/>
         <source>Properties</source>
         <translation>Egenskaber</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="188"/>
-        <source>edit properties of the selected item</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="197"/>
+        <location filename="../mainwindow.ui" line="194"/>
         <source>Refresh</source>
         <translation>Opdater</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="200"/>
+        <location filename="../mainwindow.ui" line="197"/>
         <source>Refresh the lists</source>
         <translation>Opdater listerne</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="209"/>
+        <location filename="../mainwindow.ui" line="206"/>
         <source>Change Password</source>
         <translation>Skift adgangskode</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="212"/>
+        <location filename="../mainwindow.ui" line="209"/>
         <source>Change password for the selected user or group</source>
         <translation>Skift adgangskode for den valgte bruger eller gruppe</translation>
     </message>
