@@ -1,5 +1,5 @@
 
-lxqt-admin-0.14.0 / 2018-12-01
+lxqt-admin-0.14.0 / 2019
 ==============================
 
   * Bumped version to 0.14.0
@@ -30,8 +30,8 @@ lxqt-admin-0.13.0 / 2018-05-21
   * Change icons of lxqt-admin-apps
   * Add Spanish desktop entries
 
-0.12.0 / 2017-10-21
-===================
+lxqt-admin-0.12.0 / 2017-10-21
+==============================
 
   * Release 0.12.0: Update changelog
   * Set patch version
@@ -44,8 +44,8 @@ lxqt-admin-0.13.0 / 2018-05-21
   * Fix lxqt-admin-user does not save shell change #1199 (#45)
   * Bump year
 
-0.11.1 / 2017-01-01
-===================
+lxqt-admin-0.11.1 / 2017-01-01
+==============================
 
   * Release 0.11.1: Update changelog
   * lxqt-admin-user: Add FreeBSD support
@@ -53,8 +53,8 @@ lxqt-admin-0.13.0 / 2018-05-21
   * Add French translation
   * Remove cpack (#40)
 
-0.11.0 / 2016-09-24
-===================
+lxqt-admin-0.11.0 / 2016-09-24
+==============================
 
   * Release 0.11.0: Add changelog
   * user: Add failure message box
@@ -88,8 +88,8 @@ lxqt-admin-0.13.0 / 2018-05-21
   * Russian translations update Remove duplicated ru_RU translations
   * updated: *_hu.ts
 
-0.10.0 / 2015-10-31
-===================
+lxqt-admin-0.10.0 / 2015-10-31
+==============================
 
   * Fix license file
   * Add Greek (el) translation
@@ -110,8 +110,8 @@ lxqt-admin-0.13.0 / 2018-05-21
   * lxqt-admin-user: set minimum default GID value for new group to 1000
   * Initial Polish translation
 
-0.9.0 / 2015-01-25
-==================
+lxqt-admin-0.9.0 / 2015-01-25
+=============================
 
   * Create lxqt-admin-user_it.desktop
   * Create lxqt-admin-user_it.ts
@@ -135,8 +135,8 @@ lxqt-admin-0.13.0 / 2018-05-21
   * Drop Qt4 support in code
   * Clean up CMakeLists.txt and drop Qt 4
 
-0.8.0 / 2014-06-21
-==================
+lxqt-admin-0.8.0 / 2014-06-21
+=============================
 
   * simplify Qt version switching
   * Support build with Qt5.
