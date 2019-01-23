@@ -10,6 +10,9 @@
     <height>362</height>
    </rect>
   </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+  </property>
   <property name="windowTitle">
    <string>User and Group Settings</string>
   </property>
