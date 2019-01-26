@@ -104,7 +104,7 @@
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>Edit properties of the selected item</source>
-        <translation type="unfinished"></translation>
+        <translation>Edita les propietats de l&apos;element seleccionat</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="158"/>
