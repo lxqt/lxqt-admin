@@ -21,7 +21,7 @@
     <message>
         <location filename="../groupdialog.ui" line="40"/>
         <source>Group ID:</source>
-        <translation>Id. del grup:</translation>
+        <translation>Id. de grup:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="47"/>
@@ -74,7 +74,7 @@
     <message>
         <location filename="../mainwindow.ui" line="79"/>
         <source>Home Directory</source>
-        <translation>Directori d&apos;inici</translation>
+        <translation>Directori de l&apos;usuari</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
@@ -94,7 +94,7 @@
     <message>
         <location filename="../mainwindow.ui" line="116"/>
         <source>Group ID</source>
-        <translation>Id. del grup</translation>
+        <translation>Id. de grup</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
@@ -239,7 +239,7 @@
     <message>
         <location filename="../userdialog.ui" line="132"/>
         <source>Home directory:</source>
-        <translation>Directori d&apos;inici:</translation>
+        <translation>Directori de l&apos;usuari:</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="120"/>
