@@ -11,7 +11,7 @@
     <message>
         <location filename="../datetime.ui" line="39"/>
         <source>HH:mm:ss</source>
-        <translation></translation>
+        <translation>SS:dd:ss</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="53"/>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ağ zaman senkronizasyonunu (NTP) etkinleştir</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation type="unfinished"></translation>
+        <translation>Yerel saatte RTC</translation>
     </message>
 </context>
 <context>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="122"/>
         <source>lxqt-admin-time-helper</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-yönetici-zaman-yardımcısı</translation>
     </message>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Eylem (%1) başarısız:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 <context>
@@ -65,22 +65,22 @@
         <location filename="../timeadmindialog.cpp" line="137"/>
         <location filename="../timeadmindialog.cpp" line="147"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Hata</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>RTC&apos;nin yerel ayarları değiştirebilmesi için bilgisayarı yeniden başlatın</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>RTC&apos;nin UTC ayarlarını değiştirebilmesi için bilgisayarı yeniden başlatın</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
         <source>Reboot required</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeniden başlatma gerekiyor</translation>
     </message>
 </context>
 <context>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../timezone.cpp" line="42"/>
         <source>None</source>
-        <translation type="unfinished">Hiçbiri</translation>
+        <translation>Hiçbiri</translation>
     </message>
 </context>
 </TS>
