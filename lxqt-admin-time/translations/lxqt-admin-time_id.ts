@@ -34,7 +34,7 @@
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="122"/>
         <source>lxqt-admin-time-helper</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-admin-time-helper</translation>
     </message>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
@@ -70,17 +70,17 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Ubah RTC menjadi di waktu lokal membutuhkan reboot</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>Ubah RTC menjadi dalam UTC membutuhkan reboot</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
         <source>Reboot required</source>
-        <translation type="unfinished"></translation>
+        <translation>Diperlukan reboot</translation>
     </message>
 </context>
 <context>
