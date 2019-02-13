@@ -21,7 +21,7 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation></translation>
+        <translation>Enable network time synchronisation (NTP)</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
@@ -70,7 +70,7 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation></translation>
+        <translation>Change RTC to be in local-time requires a reboot</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
