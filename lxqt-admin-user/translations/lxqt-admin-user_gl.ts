@@ -257,7 +257,7 @@
     <message>
         <location filename="../usermanager.cpp" line="227"/>
         <source>lxqt-admin-user</source>
-        <translation></translation>
+        <translation>Administrar o usuario do LXQt</translation>
     </message>
     <message>
         <location filename="../usermanager.cpp" line="228"/>
