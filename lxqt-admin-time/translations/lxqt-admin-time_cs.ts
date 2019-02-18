@@ -34,7 +34,7 @@
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="122"/>
         <source>lxqt-admin-time-helper</source>
-        <translation>lxqt-správce-čas-pomocník</translation>
+        <translation>lxqt-čas-správcův-pomocník</translation>
     </message>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
