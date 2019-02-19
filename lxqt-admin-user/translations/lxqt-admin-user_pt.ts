@@ -6,12 +6,12 @@
     <message>
         <location filename="../groupdialog.ui" line="14"/>
         <source>Group Settings</source>
-        <translation>Configurações do Grupo</translation>
+        <translation>Definições do grupo</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="20"/>
         <source>Group name:</source>
-        <translation>Nome do Grupo:</translation>
+        <translation>Nome do grupo:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="30"/>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../groupdialog.ui" line="40"/>
         <source>Group ID:</source>
-        <translation>ID do Grupo:</translation>
+        <translation>ID do grupo:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="47"/>
         <source>Users belong to this group:</source>
-        <translation>Usuários pertencentes a este grupo:</translation>
+        <translation>Utilizadores pertencentes a este grupo:</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>User and Group Settings</source>
-        <translation>Configurações de Grupo e Usuário</translation>
+        <translation>Definições de grupos e de utilizadores</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="40"/>
