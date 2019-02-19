@@ -104,7 +104,7 @@
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>Edit properties of the selected item</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier les propriétés de l&apos;élément sélectionné</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="158"/>
@@ -257,7 +257,7 @@
     <message>
         <location filename="../usermanager.cpp" line="227"/>
         <source>lxqt-admin-user</source>
-        <translation>lxqt-admin-user</translation>
+        <translation>lxqt-utilisateur-admin</translation>
     </message>
     <message>
         <location filename="../usermanager.cpp" line="228"/>
