@@ -11,7 +11,7 @@
     <message>
         <location filename="../datetime.ui" line="39"/>
         <source>HH:mm:ss</source>
-        <translation>JJ:mm:dd</translation>
+        <translation>HH:mm:ss</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="53"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation>RTC adalah waktu lokal</translation>
+        <translation>RTC dalam waktu lokal</translation>
     </message>
 </context>
 <context>
@@ -39,7 +39,7 @@
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Aksi (%1) gagal:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 <context>
@@ -75,12 +75,12 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation>Ubah RTC menjadi dalam UTC membutuhkan reboot</translation>
+        <translation>Perubahan RTC menjadi dalam UTC membutuhkan mulai ulang sistem</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
         <source>Reboot required</source>
-        <translation>Diperlukan reboot</translation>
+        <translation>Diperlukan mulai ulang sistem</translation>
     </message>
 </context>
 <context>
