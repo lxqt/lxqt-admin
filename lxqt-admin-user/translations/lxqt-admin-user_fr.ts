@@ -36,7 +36,7 @@
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
         <source>The group name cannot be empty.</source>
-        <translation>Le nom du groupe ne doit pas être vide.</translation>
+        <translation>Le nom du groupe ne peut pas être vide.</translation>
     </message>
 </context>
 <context>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>User and Group Settings</source>
-        <translation>Paramétrage des utilisateurs et des groupes</translation>
+        <translation>Paramétrage utilisateur et groupe</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="40"/>
@@ -74,12 +74,12 @@
     <message>
         <location filename="../mainwindow.ui" line="79"/>
         <source>Home Directory</source>
-        <translation>Répertoire racine</translation>
+        <translation>Répertoire de base</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>Show system users (for advanced users only)</source>
-        <translation>Afficher les utilisateurs système (pour utilisateurs avertis)</translation>
+        <translation>Afficher les utilisateurs du système (pour les utilisateurs avancés uniquement)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
@@ -124,7 +124,7 @@
     <message>
         <location filename="../mainwindow.ui" line="173"/>
         <source>Delete selected item</source>
-        <translation>Supprimer l&apos;item sélectionné</translation>
+        <translation>Supprimer l&apos;élément sélectionné</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="182"/>
@@ -134,12 +134,12 @@
     <message>
         <location filename="../mainwindow.ui" line="194"/>
         <source>Refresh</source>
-        <translation>Rafraichir</translation>
+        <translation>Rafraîchir</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>Refresh the lists</source>
-        <translation>Rafraichir la liste</translation>
+        <translation>Actualiser les listes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
@@ -149,7 +149,7 @@
     <message>
         <location filename="../mainwindow.ui" line="209"/>
         <source>Change password for the selected user or group</source>
-        <translation>Changer le mot de passe pour l&apos;utilisateur ou le groupe</translation>
+        <translation>Changer le mot de passe pour l&apos;utilisateur ou le groupe sélectionné</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
@@ -161,12 +161,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation>Voulez-vous réellement supprimer l&apos;utilisateur sélectionné ?</translation>
+        <translation>Êtes-vous sûr de vouloir supprimer l&apos;utilisateur sélectionné ?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="189"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation>Voulez-vous réellement supprimer le groupe sélectionné ?</translation>
+        <translation>Êtes-vous sûr de vouloir supprimer le groupe sélectionné ?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="200"/>
@@ -176,7 +176,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="210"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation>Voulez-vous réellement avoir un mot de passe vide ?</translation>
+        <translation>Êtes-vous sûr de vouloir définir un mot de passe vide ?</translation>
     </message>
 </context>
 <context>
@@ -234,12 +234,12 @@
     <message>
         <location filename="../userdialog.ui" line="115"/>
         <source>Login shell:</source>
-        <translation>Shell de démarrage :</translation>
+        <translation>Identifiant shell :</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="132"/>
         <source>Home directory:</source>
-        <translation>Répertoire racine :</translation>
+        <translation>Répertoire de base :</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="120"/>
@@ -249,7 +249,7 @@
     <message>
         <location filename="../userdialog.cpp" line="120"/>
         <source>The user name cannot be empty.</source>
-        <translation>Le nom d&apos;utilisateur ne doit pas être vide.</translation>
+        <translation>Le nom d&apos;utilisateur ne peut pas être vide.</translation>
     </message>
 </context>
 <context>
