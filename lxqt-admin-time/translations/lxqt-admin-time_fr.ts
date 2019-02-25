@@ -11,7 +11,7 @@
     <message>
         <location filename="../datetime.ui" line="39"/>
         <source>HH:mm:ss</source>
-        <translation>HH:mm:ss</translation>
+        <translation>hh:mm:ss</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="53"/>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation>Valider la synchronisation par le réseau (NTP)</translation>
+        <translation>Activer la synchronisation de l&apos;heure par le réseau (NTP)</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
@@ -57,7 +57,7 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="59"/>
         <source>Timezone</source>
-        <translation>Zone horaire</translation>
+        <translation>Fuseau horaire</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="120"/>
@@ -88,7 +88,7 @@
     <message>
         <location filename="../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
-        <translation>Votre zone horaire actuelle :</translation>
+        <translation>Votre fuseau horaire actuel :</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="32"/>
@@ -101,7 +101,7 @@
     <message>
         <location filename="../timezone.cpp" line="42"/>
         <source>None</source>
-        <translation>Aucune</translation>
+        <translation>Aucun</translation>
     </message>
 </context>
 </TS>
