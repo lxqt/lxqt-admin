@@ -39,7 +39,7 @@
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation>&lt;strong&gt;Action (%1) échouée:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
+        <translation>&lt;strong&gt;L&apos;action (%1) a échoué:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 <context>
