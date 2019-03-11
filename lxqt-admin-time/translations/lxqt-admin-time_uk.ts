@@ -21,12 +21,12 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation type="unfinished"></translation>
+        <translation>Увімкнути синхронізацію часу мережі (NTP)</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Годинник реального часу знаходиться в місцевому часі</translation>
     </message>
 </context>
 <context>
@@ -34,12 +34,12 @@
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="122"/>
         <source>lxqt-admin-time-helper</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">lxqt-admin-time-helper</translation>
     </message>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;strong&gt;Не вдалося виконати дію (%1):&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 <context>
@@ -65,22 +65,22 @@
         <location filename="../timeadmindialog.cpp" line="137"/>
         <location filename="../timeadmindialog.cpp" line="147"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Помилка</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Зміна годин реального часу на місцевий час вимагає перезавантаження</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Зміна годин реального часу на уніфікований універсальний час вимагає перезавантаження</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
         <source>Reboot required</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Перезавантаження обов&apos;язкове</translation>
     </message>
 </context>
 <context>
