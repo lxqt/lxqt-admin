@@ -27,7 +27,7 @@
     <message>
         <location filename="../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation>RTC is in plaatselijke tijd</translation>
+        <translation>RTC is in lokale tijd</translation>
     </message>
 </context>
 <context>
@@ -40,7 +40,7 @@
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Actie (%1) mislukt:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 <context>
@@ -71,17 +71,17 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>De RTC wijzigen naar lokale tijd vereist een herstart</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>De RTC wijzigen naar UTC vereist een herstart</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
         <source>Reboot required</source>
-        <translation type="unfinished"></translation>
+        <translation>Herstart vereist</translation>
     </message>
 </context>
 <context>
