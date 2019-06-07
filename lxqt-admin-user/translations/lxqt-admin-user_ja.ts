@@ -104,7 +104,7 @@
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>Edit properties of the selected item</source>
-        <translation type="unfinished"></translation>
+        <translation>選択したアイテムのプロパティを編集する</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="158"/>
@@ -257,12 +257,12 @@
     <message>
         <location filename="../usermanager.cpp" line="227"/>
         <source>lxqt-admin-user</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-admin-user</translation>
     </message>
     <message>
         <location filename="../usermanager.cpp" line="228"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;アクション(%1)が失敗:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
