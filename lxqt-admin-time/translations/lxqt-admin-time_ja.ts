@@ -26,7 +26,7 @@
     <message>
         <location filename="../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation>RTCはローカル時刻です</translation>
+        <translation>RTC をローカル時間に設定する</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="122"/>
         <source>lxqt-admin-time-helper</source>
-        <translation>lxqt-admin-time-helper</translation>
+        <translation>LXQt 設定アシスタント</translation>
     </message>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
