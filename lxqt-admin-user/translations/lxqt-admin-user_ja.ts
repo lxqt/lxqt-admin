@@ -176,7 +176,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="210"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation>空白のパスワードを設定しますか?</translation>
+        <translation>パスワードを空にしますか?</translation>
     </message>
 </context>
 <context>
@@ -257,7 +257,7 @@
     <message>
         <location filename="../usermanager.cpp" line="227"/>
         <source>lxqt-admin-user</source>
-        <translation>lxqt-admin-user</translation>
+        <translation>LXQt ユーザー管理</translation>
     </message>
     <message>
         <location filename="../usermanager.cpp" line="228"/>
