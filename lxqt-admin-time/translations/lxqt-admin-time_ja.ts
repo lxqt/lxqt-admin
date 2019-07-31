@@ -21,7 +21,7 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation>ネットワークによる時刻の同期を可能にする(NTP)</translation>
+        <translation>時計をネットワーク時刻に同期させる(NTP)</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
@@ -47,12 +47,12 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="45"/>
         <source>Time and date configuration</source>
-        <translation>日時設定</translation>
+        <translation>日付と時刻の設定</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="51"/>
         <source>Date and time</source>
-        <translation>日時</translation>
+        <translation>日付と時刻</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="59"/>
@@ -70,12 +70,12 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation>RTCをローカル時間に変更するには再起動が必要です</translation>
+        <translation>RTC をローカル時間に変更するには再起動が必要です</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation>RTCをUTCに変更するには再起動が必要です</translation>
+        <translation>RTC を UTC に変更するには再起動が必要です</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
