@@ -75,7 +75,7 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation>變更RTC為本地時間需要重新啓動</translation>
+        <translation>變更RTC為UTC時間需要重新啓動</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
