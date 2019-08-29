@@ -26,7 +26,7 @@
     <message>
         <location filename="../groupdialog.ui" line="47"/>
         <source>Users belong to this group:</source>
-        <translation>Pengguna anggota grup ini:</translation>
+        <translation>Pengguna termasuk dalam grup ini:</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../mainwindow.ui" line="40"/>
         <source>&amp;Users</source>
-        <translation>Pengguna</translation>
+        <translation>Pengg&amp;una</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="59"/>
@@ -104,7 +104,7 @@
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>Edit properties of the selected item</source>
-        <translation type="unfinished"></translation>
+        <translation>Edit properti dari item yang dipilih</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="158"/>
