@@ -74,7 +74,7 @@
     <message>
         <location filename="../mainwindow.ui" line="79"/>
         <source>Home Directory</source>
-        <translation>ホームディレクトリー</translation>
+        <translation>ホームディレクトリ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
@@ -129,7 +129,7 @@
     <message>
         <location filename="../mainwindow.ui" line="182"/>
         <source>Properties</source>
-        <translation>プロパティー</translation>
+        <translation>プロパティ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="194"/>
@@ -239,7 +239,7 @@
     <message>
         <location filename="../userdialog.ui" line="132"/>
         <source>Home directory:</source>
-        <translation>ホームディレクトリー:</translation>
+        <translation>ホームディレクトリ:</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="120"/>
