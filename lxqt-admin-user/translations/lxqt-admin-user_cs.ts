@@ -257,7 +257,7 @@
     <message>
         <location filename="../usermanager.cpp" line="227"/>
         <source>lxqt-admin-user</source>
-        <translation>lxqt – správa uživatelů</translation>
+        <translation>správa uživatelů</translation>
     </message>
     <message>
         <location filename="../usermanager.cpp" line="228"/>
