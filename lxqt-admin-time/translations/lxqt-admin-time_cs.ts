@@ -26,7 +26,7 @@
     <message>
         <location filename="../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation>Hodiny počítače jsou v místním čase</translation>
+        <translation>Hardwarové hodiny počítače jsou v místním čase</translation>
     </message>
 </context>
 <context>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="122"/>
         <source>lxqt-admin-time-helper</source>
-        <translation>lxqt-čas-správcův-pomocník</translation>
+        <translation>pomocné pro správu lxqt – čas</translation>
     </message>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
@@ -70,12 +70,12 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation>Změna hodin reálného času na místní čas vyžadují restart</translation>
+        <translation>Změna hodin reálného času na místní čas vyžaduje restart</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation>Změna hodin reálného času na univerzální koordinovaný čas vyžadují restart</translation>
+        <translation>Změna hodin reálného času na univerzální koordinovaný čas vyžaduje restart</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
