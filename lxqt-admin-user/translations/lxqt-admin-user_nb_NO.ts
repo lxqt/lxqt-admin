@@ -16,7 +16,7 @@
     <message>
         <location filename="../groupdialog.ui" line="30"/>
         <source>Default</source>
-        <translation>Forvalgt</translation>
+        <translation>Standard</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="40"/>
@@ -139,17 +139,17 @@
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>Refresh the lists</source>
-        <translation>Frisk opp listen</translation>
+        <translation>Frisk opp listene</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>Change Password</source>
-        <translation>Forandr passord</translation>
+        <translation>Forandre passord</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
         <source>Change password for the selected user or group</source>
-        <translation>Forandr passord for valgt bruker eller gruppe</translation>
+        <translation>Forandre passord for valgt bruker eller gruppe</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
@@ -262,7 +262,7 @@
     <message>
         <location filename="../usermanager.cpp" line="228"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation>&lt;strong&gt;Handlingen (%1) feilet:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
+        <translation>&lt;strong&gt;Handlingen (%1) mislyktes:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
