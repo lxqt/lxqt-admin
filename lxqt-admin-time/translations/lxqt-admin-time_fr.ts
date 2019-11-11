@@ -39,7 +39,7 @@
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation>&lt;strong&gt;L&apos;action (%1) a échoué:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
+        <translation>&lt;strong&gt;Action (%1) échouée:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%&lt;/pre&gt;</translation>
     </message>
 </context>
 <context>
@@ -70,12 +70,12 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation>Changer RTC pour prendre en compte le temps local requiert un redémarrage</translation>
+        <translation>Changer la RTC pour prendre en compte le temps local requiert un redémarrage de la machine</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation>Changer RTC pour être en UTC requiert un redémarrage</translation>
+        <translation>Changer la RTC pour être en UTC requiert un redémarrage</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
