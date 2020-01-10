@@ -104,12 +104,12 @@
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>Edit properties of the selected item</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">A kiválasztott elem tulajdonságainak szerkesztése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="158"/>
         <source>Add</source>
-        <translation>Hozzáad</translation>
+        <translation>Hozzáadás</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="161"/>
@@ -144,7 +144,7 @@
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>Change Password</source>
-        <translation>Jelszó váltás</translation>
+        <translation type="unfinished">Jelszó megváltoztatása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
@@ -156,17 +156,17 @@
         <location filename="../mainwindow.cpp" line="189"/>
         <location filename="../mainwindow.cpp" line="210"/>
         <source>Confirm</source>
-        <translation>Megerősítés</translation>
+        <translation type="unfinished">Megerősítés</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation>Tényleg töröljük az illető felhasználót?</translation>
+        <translation type="unfinished">Tényleg töröljük az illető felhasználót?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="189"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation>Tényleg töröljük az illető csoportot?</translation>
+        <translation type="unfinished">Tényleg töröljük az illető csoportot?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="200"/>
@@ -176,7 +176,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="210"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation>Biztos, hogy üres a jelszó?</translation>
+        <translation>Biztos, hogy üres legyen a jelszó?</translation>
     </message>
 </context>
 <context>
@@ -249,7 +249,7 @@
     <message>
         <location filename="../userdialog.cpp" line="120"/>
         <source>The user name cannot be empty.</source>
-        <translation>Felhasználónév nem lehet üres.</translation>
+        <translation>A felhasználónév nem lehet üres.</translation>
     </message>
 </context>
 <context>
