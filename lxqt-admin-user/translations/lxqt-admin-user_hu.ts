@@ -156,7 +156,7 @@
         <location filename="../mainwindow.cpp" line="189"/>
         <location filename="../mainwindow.cpp" line="210"/>
         <source>Confirm</source>
-        <translation type="unfinished">Megerősítés</translation>
+        <translation>Megerősítés</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
