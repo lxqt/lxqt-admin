@@ -161,12 +161,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation type="unfinished">Tényleg töröljük az illető felhasználót?</translation>
+        <translation type="unfinished">Tényleg töröljük a kiválasztott felhasználót?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="189"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation type="unfinished">Tényleg töröljük az illető csoportot?</translation>
+        <translation type="unfinished">Tényleg töröljük a kiválasztott csoportot?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="200"/>
