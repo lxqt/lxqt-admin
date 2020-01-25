@@ -21,12 +21,12 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation>Hálózati időszinkron engedélyezése (NTP)</translation>
+        <translation>Hálózati időszinkronizáció engedélyezése (NTP)</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation>Az RTC a helyi idő szerinti</translation>
+        <translation>Hardveres óra a helyi idő szerinti</translation>
     </message>
 </context>
 <context>
