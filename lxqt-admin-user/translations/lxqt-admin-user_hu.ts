@@ -6,7 +6,7 @@
     <message>
         <location filename="../groupdialog.ui" line="14"/>
         <source>Group Settings</source>
-        <translation>Csoportbeállítás</translation>
+        <translation>Csoportbeállítások</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="20"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>Show system users (for advanced users only)</source>
-        <translation>Rendszer felhasználók is látszanak (csak haladóknak)</translation>
+        <translation>Rendszerfelhasználók is látszanak (csak haladóknak)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
@@ -124,7 +124,7 @@
     <message>
         <location filename="../mainwindow.ui" line="173"/>
         <source>Delete selected item</source>
-        <translation>Kiválasztott törlése</translation>
+        <translation>Kiválasztott elem törlése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="182"/>
@@ -161,12 +161,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation type="unfinished">Tényleg töröljük a kiválasztott felhasználót?</translation>
+        <translation type="unfinished">Tényleg törli a kiválasztott felhasználót?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="189"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation type="unfinished">Tényleg töröljük a kiválasztott csoportot?</translation>
+        <translation type="unfinished">Tényleg törli a kiválasztott csoportot?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="200"/>
@@ -262,7 +262,7 @@
     <message>
         <location filename="../usermanager.cpp" line="228"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation>&lt;strong&gt;A (%1) akció sikertelen:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
+        <translation>&lt;strong&gt;A (%1) művelet sikertelen:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
