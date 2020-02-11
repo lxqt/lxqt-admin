@@ -34,7 +34,7 @@ include(LXQtCompilerSettings NO_POLICY_SCOPE)
 include(LXQtTranslate)
 
 if(${CMAKE_SYSTEM_NAME} MATCHES "OpenBSD" OR ${CMAKE_SYSTEM_NAME} MATCHES "NetBSD")
-    message(WARNING "${CMAKE_SYSTEM_NAME} is not supported by lxqt-admin-user")
+    add_subdirectory(lxqt-admin-user)
     message(WARNING "${CMAKE_SYSTEM_NAME} is not supported by lxqt-admin-time")
 else()
     add_subdirectory(lxqt-admin-user)
