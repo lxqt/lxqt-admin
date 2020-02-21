@@ -34,7 +34,7 @@
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="122"/>
         <source>lxqt-admin-time-helper</source>
-        <translation type="unfinished">lxqt-admin-time-helper</translation>
+        <translation>lxqt-admin-time-helper</translation>
     </message>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
@@ -70,12 +70,12 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation type="unfinished">Hardveres óra helyi időre való beállítása újraindítást igényel</translation>
+        <translation>Hardveres óra helyi időre való beállítása újraindítást igényel</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation type="unfinished">Hardveres óra UTC időre való beállítása újraindítást igényel</translation>
+        <translation>Hardveres óra UTC időre való beállítása újraindítást igényel</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
