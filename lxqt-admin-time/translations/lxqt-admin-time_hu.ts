@@ -21,12 +21,12 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation>Hálózati időszinkronizáció engedélyezése (NTP)</translation>
+        <translation>Idő szinkronizálása a hálózaton keresztül (NTP)</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation>Hardveres óra a helyi idő szerinti</translation>
+        <translation>Hardveres óra a helyi idő szerint</translation>
     </message>
 </context>
 <context>
@@ -88,7 +88,7 @@
     <message>
         <location filename="../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
-        <translation>Mostani időzóna:</translation>
+        <translation>Jelenlegi időzóna:</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="32"/>
