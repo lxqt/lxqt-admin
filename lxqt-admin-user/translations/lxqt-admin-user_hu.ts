@@ -144,7 +144,7 @@
     <message>
         <location filename="../mainwindow.ui" line="206"/>
         <source>Change Password</source>
-        <translation type="unfinished">Jelszó megváltoztatása</translation>
+        <translation>Jelszó módosítása</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
@@ -161,12 +161,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation type="unfinished">Tényleg törli a kiválasztott felhasználót?</translation>
+        <translation>Biztosan törli a kiválasztott felhasználót?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="189"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation type="unfinished">Tényleg törli a kiválasztott csoportot?</translation>
+        <translation>Biztosan törli a kiválasztott csoportot?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="200"/>
