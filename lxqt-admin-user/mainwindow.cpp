@@ -40,11 +40,15 @@ MainWindow::MainWindow():
     ui.userList->sortByColumn(0, Qt::AscendingOrder);
     ui.groupList->sortByColumn(0, Qt::AscendingOrder);
 
+    TaskManager::instance()->setWidget(this);
+
     connect(ui.actionAdd, &QAction::triggered, this, &MainWindow::onAdd);
     connect(ui.actionDelete, &QAction::triggered, this, &MainWindow::onDelete);
     connect(ui.actionProperties, &QAction::triggered, this, &MainWindow::onEditProperties);
     connect(ui.actionChangePasswd, &QAction::triggered, this, &MainWindow::onChangePasswd);
     connect(ui.actionRefresh, &QAction::triggered, this, &MainWindow::reload);
+    connect(ui.tabWidget, &QTabWidget::currentChanged, this, &MainWindow::onCurrentTabChanged);
+    connect(TaskManager::instance(), &TaskManager::stateChanged, this, &MainWindow::onProcessing);
 
 #ifdef Q_OS_FREEBSD //Disable group gpasswd for FreeBSD
     connect(ui.tabWidget, &QTabWidget::currentChanged, [this](int index) {
@@ -115,6 +119,17 @@ void MainWindow::reloadGroups()
     ui.groupList->addTopLevelItems(items);
 }
 
+void MainWindow::lockWidget(bool lock)
+{
+    ui.actionAdd->setDisabled(lock);
+    ui.actionDelete->setDisabled(lock);
+    ui.actionProperties->setDisabled(lock);
+    ui.actionChangePasswd->setDisabled(lock);
+    ui.actionRefresh->setDisabled(lock);
+    ui.showSystemUsers->setDisabled(lock);
+    ui.tabWidget->setDisabled(lock);
+}
+
 void MainWindow::reload() {
     reloadUsers();
     reloadGroups();
@@ -148,11 +163,8 @@ void MainWindow::onAdd()
         UserDialog dlg(mUserManager, &newUser, this);
         if(dlg.exec() == QDialog::Accepted)
         {
-            mUserManager->addUser(&newUser);
-            QByteArray newPasswd;
-            if(getNewPassword(newUser.name(), newPasswd)) {
-                mUserManager->changePassword(&newUser, newPasswd);
-            }
+            if(mUserManager->addUser(&newUser))
+                mUserManager->changePassword(&newUser);
         }
     }
     else if (ui.tabWidget->currentIndex() == PageGroups)
@@ -194,31 +206,8 @@ void MainWindow::onDelete()
     }
 }
 
-bool MainWindow::getNewPassword(const QString& name, QByteArray& passwd) {
-    QInputDialog dlg(this);
-    dlg.setTextEchoMode(QLineEdit::Password);
-    dlg.setLabelText(tr("Input the new password for %1:").arg(name));
-    QLineEdit* edit = dlg.findChild<QLineEdit*>(QString());
-    if(edit) {
-        // NOTE: do we need to add a validator to limit the input?
-        // QRegExpValidator* validator = new QRegExpValidator(QRegExp(QStringLiteral("\\w*")), edit);
-        // edit->setValidator(validator);
-    }
-    if(dlg.exec() == QDialog::Accepted) {
-        passwd = dlg.textValue().toUtf8();
-        if(passwd.isEmpty()) {
-            if(QMessageBox::question(this, tr("Confirm"), tr("Are you sure you want to set a empty password?"), QMessageBox::Ok|QMessageBox::Cancel) != QMessageBox::Ok)
-                return false;
-        }
-        return true;
-    }
-    return false;
-}
-
 void MainWindow::onChangePasswd() {
-    QString name;
     UserInfo* user = nullptr;
-    GroupInfo* group = nullptr;
     if(ui.tabWidget->currentIndex() == PageUsers)
     {
         QTreeWidgetItem* item = ui.userList->currentItem();
@@ -226,26 +215,7 @@ void MainWindow::onChangePasswd() {
         if (!user)
             return;
 
-        name = user->name();
-    }
-    else if(ui.tabWidget->currentIndex() == PageGroups)
-    {
-        QTreeWidgetItem* item = ui.groupList->currentItem();
-        group = groupFromItem(item);
-        if (!group)
-            return;
-
-        name = group->name();
-    }
-
-    QByteArray newPasswd;
-    if(getNewPassword(name, newPasswd)) {
-        if(user) {
-            mUserManager->changePassword(user, newPasswd);
-        }
-        if(group) {
-            mUserManager->changePassword(group, newPasswd);
-        }
+        mUserManager->changePassword(user);
     }
 }
 
@@ -284,3 +254,33 @@ void MainWindow::onEditProperties()
     }
 }
 
+void MainWindow::onCurrentTabChanged(int pos)
+{
+    bool passwordDisabled = false;
+
+    switch (pos)
+    {
+        case PageUsers:
+            break;
+
+        default:
+            passwordDisabled = true;
+            break;
+    }
+    ui.actionChangePasswd->setDisabled(passwordDisabled);
+}
+
+void MainWindow::onProcessing(TaskManager::State state)
+{
+    switch (state)
+    {
+        case TaskManager::Processing:
+            lockWidget(true);
+            break;
+
+        case TaskManager::Finished:
+            lockWidget(false);
+            reload();
+            break;
+    }
+}

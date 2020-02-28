@@ -11,6 +11,9 @@ set ( lxqt-admin-user_SRCS
     userdialog.cpp
     groupdialog.cpp
     usermanager.cpp
+    misc.cpp
+    taskmanager.cpp
+    processworker.cpp
 )
 
 set ( lxqt-admin-user_MOCS
@@ -18,6 +21,8 @@ set ( lxqt-admin-user_MOCS
     userdialog.h
     groupdialog.h
     usermanager.h
+    taskmanager.h
+    processworker.h
 )
 
 set( lxqt-admin-user_UIS

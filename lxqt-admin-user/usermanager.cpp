@@ -37,6 +37,8 @@
 #include <QFile>
 #include <QMessageBox>
 #include <unistd.h>
+#include "misc.h"
+#include "taskmanager.h"
 
 static const QString PASSWD_FILE = QStringLiteral("/etc/passwd");
 static const QString GROUP_FILE = QStringLiteral("/etc/group");
@@ -203,35 +205,6 @@ void UserManager::onFileChanged(const QString &path) {
     QTimer::singleShot(500, this, &UserManager::reload);
 }
 
-bool UserManager::pkexec(const QStringList& command, const QByteArray& stdinData) {
-    Q_ASSERT(!command.isEmpty());
-    QProcess process;
-    qDebug() << command;
-    QStringList args;
-    args << QStringLiteral("--disable-internal-agent")
-        << QStringLiteral("lxqt-admin-user-helper")
-        << command;
-    process.start(QStringLiteral("pkexec"), args);
-    if(!stdinData.isEmpty()) {
-        process.waitForStarted();
-        process.write(stdinData);
-        process.waitForBytesWritten();
-        process.closeWriteChannel();
-    }
-    process.waitForFinished(-1);
-    QByteArray pkexec_error = process.readAllStandardError();
-    qDebug() << pkexec_error;
-    const bool succeeded = process.exitCode() == 0;
-    if (!succeeded)
-    {
-        QMessageBox * msg = new QMessageBox{QMessageBox::Critical, tr("lxqt-admin-user")
-            , tr("<strong>Action (%1) failed:</strong><br/><pre>%2</pre>").arg(command[0]).arg(QString::fromUtf8(pkexec_error))};
-        msg->setAttribute(Qt::WA_DeleteOnClose, true);
-        msg->show();
-    }
-    return succeeded;
-}
-
 bool UserManager::addUser(UserInfo* user) {
     if(!user || user->name().isEmpty())
         return false;
@@ -319,7 +292,7 @@ bool UserManager::deleteUser(UserInfo* user) {
     return pkexec(command);
 }
 
-bool UserManager::changePassword(UserInfo* user, QByteArray newPasswd) {
+void UserManager::changePassword(UserInfo* user) {
     // In theory, the current user should be able to use "passwd" to
     // reset his/her own password without root permission, but...
     // /usr/bin/passwd is a setuid program running as root and QProcess
@@ -329,16 +302,12 @@ bool UserManager::changePassword(UserInfo* user, QByteArray newPasswd) {
         // Maybe we can use our pkexec helper script to achieve this.
     }
     QStringList command;
-    command << QStringLiteral("passwd");
-    command << user->name();
+    command << QSL("--disable-internal-agent") << QSL("lxqt-admin-user-helper");
+    command << QSL("lxqt-admin-user-password");
+    command << QSL("-u") << user->name();
 
-    // we need to type the new password for two times.
-    QByteArray stdinData;
-    stdinData += newPasswd;
-    stdinData += "\n";
-    stdinData += newPasswd;
-    stdinData += "\n";
-    return pkexec(command, stdinData);
+    TaskManager::instance()->append(new ProcessWorker(QSL("pkexec"), command));
+    TaskManager::instance()->run();
 }
 
 bool UserManager::addGroup(GroupInfo* group) {
@@ -413,19 +382,6 @@ bool UserManager::deleteGroup(GroupInfo* group) {
     command << QStringLiteral("groupdel");
     command << group->name();
     return pkexec(command);
-}
-
-bool UserManager::changePassword(GroupInfo* group, QByteArray newPasswd) {
-    QStringList command;
-    command << QStringLiteral("gpasswd");
-    command << group->name();
-
-    // we need to type the new password for two times.
-    QByteArray stdinData = newPasswd;
-    stdinData += "\n";
-    stdinData += newPasswd;
-    stdinData += "\n";
-    return pkexec(command, stdinData);
 }
 
 const QStringList& UserManager::availableShells() {
