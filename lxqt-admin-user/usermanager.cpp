@@ -36,6 +36,7 @@
 #include <QProcess>
 #include <QFile>
 #include <QMessageBox>
+#include <QLatin1String>
 #include <unistd.h>
 
 static const QString PASSWD_FILE = QStringLiteral("/etc/passwd");
@@ -112,21 +113,21 @@ void UserManager::loadLoginDefs() {
             if(parts.length() >= 2) {
                 QString& key = parts[0];
                 QString& val = parts[1];
-                if(key == QLatin1Literal("SYS_UID_MIN")) {
+                if(key == QLatin1String("SYS_UID_MIN")) {
                 }
-                else if(key == QLatin1Literal("SYS_UID_MAX")) {
+                else if(key == QLatin1String("SYS_UID_MAX")) {
                 }
-                else if(key == QLatin1Literal("UID_MIN")) {
+                else if(key == QLatin1String("UID_MIN")) {
                 }
-                else if(key == QLatin1Literal("UID_MAX")) {
+                else if(key == QLatin1String("UID_MAX")) {
                 }
-                else if(key == QLatin1Literal("SYS_GID_MIN")) {
+                else if(key == QLatin1String("SYS_GID_MIN")) {
                 }
-                else if(key == QLatin1Literal("SYS_GID_MAX")) {
+                else if(key == QLatin1String("SYS_GID_MAX")) {
                 }
-                else if(key == QLatin1Literal("GID_MIN")) {
+                else if(key == QLatin1String("GID_MIN")) {
                 }
-                else if(key == QLatin1Literal("GID_MAX")) {
+                else if(key == QLatin1String("GID_MAX")) {
                 }
             }
         }
