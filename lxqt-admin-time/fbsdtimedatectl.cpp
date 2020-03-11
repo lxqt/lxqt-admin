@@ -94,7 +94,7 @@ bool FBSDTimeDateCtl::setUseNtp(bool value, QString& errorMessage)
 
 bool FBSDTimeDateCtl::localRtc() const
 {
-    return QFileInfo(QSL("/etc/wall_cmos_clock")).exists();
+    return QFileInfo::exists(QSL("/etc/wall_cmos_clock"));
 }
 
 bool FBSDTimeDateCtl::setLocalRtc(bool value, QString& errorMessage)
