@@ -87,7 +87,7 @@ void UserManager::loadUsersAndGroups()
         UserInfo* user = new UserInfo(pw);
         mUsers.append(user);
         // add groups to this user
-        for(const GroupInfo* group: mGroups) {
+        for(const GroupInfo* group: qAsConst(mGroups)) {
             if(group->hasMember(user->name())) {
                 user->addGroup(group->name());
             }
