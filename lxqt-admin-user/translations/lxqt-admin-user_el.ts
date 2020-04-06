@@ -16,7 +16,7 @@
     <message>
         <location filename="../groupdialog.ui" line="30"/>
         <source>Default</source>
-        <translation>Εξ ορισμού</translation>
+        <translation>Προεπιλογή</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="40"/>
@@ -26,7 +26,7 @@
     <message>
         <location filename="../groupdialog.ui" line="47"/>
         <source>Users belong to this group:</source>
-        <translation>Χρήστες που ανήκουν στην ομάδα: </translation>
+        <translation>Χρήστες που ανήκουν στην ομάδα:</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>User and Group Settings</source>
-        <translation>Ρυθμίσεις χρηστών και ομάδων</translation>
+        <translation>Ρυθμίσεις Χρηστών και Ομάδων</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="40"/>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../mainwindow.ui" line="59"/>
         <source>Login Name</source>
-        <translation>Όνομα χρήστη</translation>
+        <translation>Όνομα Χρήστη</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="64"/>
@@ -64,7 +64,7 @@
     <message>
         <location filename="../mainwindow.ui" line="69"/>
         <source>Full Name</source>
-        <translation>Πλήρες όνομα</translation>
+        <translation>Πλήρες Όνομα</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="74"/>
