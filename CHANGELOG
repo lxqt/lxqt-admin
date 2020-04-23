@@ -1,3 +1,14 @@
+lxqt-admin-0.15.0 / 2020-04-23
+==============================
+  * Bumped version to 0.15.0.
+  * Removed (duplicated) string casts definitions.
+  * Avoid `==` shell test usage.
+  * Allow build admin-user on NBSD.
+  * Use QString Use multi-arg.
+  * Replace deprecated QLatin1Literal.
+  * Use the static QFileInfo method `exists()`.
+  * Avoided C++11 possible range-loop Qt container detach.
+
 lxqt-admin-0.14.1 / 2019-02-25
 ==============================
 
