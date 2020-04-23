@@ -13,8 +13,8 @@ set(LIB_INSTALL_DIR "lib${LIB_SUFFIX}" CACHE PATH "Installation path for librari
 
 # Minimum Versions
 set(KF5_MINIMUM_VERSION "5.36.0")
-set(LXQT_MINIMUM_VERSION "0.14.1")
-set(QT_MINIMUM_VERSION "5.7.1")
+set(LXQT_MINIMUM_VERSION "0.15.0")
+set(QT_MINIMUM_VERSION "5.10.0")
 
 find_package(Qt5Widgets ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(lxqt ${LXQT_MINIMUM_VERSION} REQUIRED)
@@ -22,7 +22,7 @@ find_package(KF5WindowSystem ${KF5_MINIMUM_VERSION} REQUIRED)
 find_package(PolkitQt5-1 REQUIRED)
 
 # Patch Version
-set(LXQT_ADMIN_PATCH_VERSION 1)
+set(LXQT_ADMIN_PATCH_VERSION 0)
 
 set(LXQT_ADMIN_VERSION ${LXQT_MAJOR_VERSION}.${LXQT_MINOR_VERSION}.${LXQT_ADMIN_PATCH_VERSION})
 add_definitions(
