@@ -249,7 +249,7 @@
     <message>
         <location filename="../userdialog.cpp" line="120"/>
         <source>The user name cannot be empty.</source>
-        <translation>O nome do usuário não pode estar vazio.</translation>
+        <translation>O nome do usuário não pode ser vazio.</translation>
     </message>
 </context>
 <context>
