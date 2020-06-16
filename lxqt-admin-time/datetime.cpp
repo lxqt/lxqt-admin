@@ -74,7 +74,7 @@ void DateTimePage::reload()
 
     mTimer->start(1000);
 
-    mModified = 0;
+    mModified = DateTimePage::ModifiedFlags();
     emit changed();
 }
 
