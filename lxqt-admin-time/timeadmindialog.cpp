@@ -67,6 +67,8 @@ TimeAdminDialog::TimeAdminDialog(QWidget *parent):
 
 TimeAdminDialog::~TimeAdminDialog()
 {
+    delete mSettings;
+    mSettings = nullptr;
 }
 
 void TimeAdminDialog::onChanged()
