@@ -95,7 +95,7 @@ The actual usage should be self-explanatory. To apply settings the GUI of the
 polkit authentication agent that's in use is launched to acquire the root password.
 
 
-###Translations
+### Translations
 
 Translations can be done in 
 [LXQt-Weblate/admin-user](https://translate.lxqt-project.org/projects/lxqt-configuration/lxqt-admin-user/)
