@@ -88,7 +88,7 @@
     <message>
         <location filename="../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
-        <translation>Trenutačna vremenska zona</translation>
+        <translation>Tvoj trenutačna vremenska zona:</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="32"/>
