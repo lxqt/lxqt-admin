@@ -1,3 +1,9 @@
+lxqt-admin-0.16.0 / 2020-11-01
+==============================
+  * Use QFlags default constructor.
+  * Fixed a settings memory leak.
+  * Rigenerated all desktop files, completed italian translation, fixed title in README.
+
 lxqt-admin-0.15.0 / 2020-04-23
 ==============================
   * Bumped version to 0.15.0.
