@@ -1,0 +1,76 @@
+#!/bin/sh
+
+usage() {
+  echo "usage: ${0} -l islocaltime -n usentp -t timezone -d newdate [timewhenset]"
+}
+
+usentp=""
+islocaltime=""
+timezone=""
+newdate=""
+
+if test $# -eq 0; then
+    usage 1>&2
+    exit 1
+fi
+while getopts "n:l:t:d:" arg; do
+  case $arg in
+    n)
+	usentp=${OPTARG}
+	;;
+    l)
+	islocaltime=${OPTARG}
+      ;;
+    t)
+	timezone=${OPTARG}
+      ;;
+    d)
+	newdate=${OPTARG}
+      ;;
+    h | *) # Display help.
+      usage 1>&2
+      ;;
+  esac
+done
+shift $(( OPTIND - 1 ))
+
+if [ "${newdate}" != "" ]; then
+    if [ "$1" != "" ]; then
+	timewhenset=$1;
+	timenow=`date +%s`;
+	timediff=$((${timenow} - ${timewhenset}));
+	settime=$((${newdate} + ${timediff}))
+    else
+            settime=${newdate};
+    fi;
+    date -s "@${settime}"
+    rv=$?
+    test ${rv} -eq 0 || exit ${rv}
+fi;
+
+if [ "${usentp}" != "" ];  then
+    echo "ntpd is not currently is not handled" 1>&2
+    exit 1
+fi;
+
+if [ "${islocaltime}" != "" ]; then
+    if  [ "${islocaltime}" = "false" ]; then
+	# set UTC in /etc/sysconfig/clock to true or 1;
+	sed -i -e 's/^\(UTC=\).*/\11/' /etc/sysconfig/clock
+	rv=$?
+    	test ${rv} -eq 0 || exit ${rv}
+    fi;
+    if [ "${islocaltime}" = "true" ]; then
+	# set UTC in /etc/sysconfig/clock to false or 0;
+	sed -i -e 's/^\(UTC=\).*/\10/' /etc/sysconfig/clock
+	rv=$?
+    	test ${rv} -eq 0 || exit ${rv}
+    fi
+fi;
+
+if [ "${timezone}" != ""  ]; then
+    ln -sf /usr/share/zoneinfo/${timezone} /etc/localtime \
+      && echo ${timezone} > /etc/timezone 
+    rv=$?
+    test ${rv} -eq 0 || exit ${rv}
+fi;

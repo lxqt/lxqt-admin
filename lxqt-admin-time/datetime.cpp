@@ -70,7 +70,12 @@ void DateTimePage::reload()
     ui->edit_time->setTime(QTime::currentTime());
 
     ui->localRTC->setChecked(mLocalRtc);
+#ifndef NO_SYSTEMD
     ui->ntp->setChecked(mUseNtp);
+#else
+    ui->ntp->setChecked(false);
+    ui->ntp->setVisible(false);
+#endif
 
     mTimer->start(1000);
 
