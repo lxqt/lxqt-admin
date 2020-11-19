@@ -53,6 +53,7 @@ lxqt_translate_ts(lxqt-admin-time_QM_FILES
 lxqt_translate_desktop(DESKTOP_FILES
     SOURCES
     lxqt-admin-time.desktop.in
+    USE_YAML
 )
 
 lxqt_app_translation_loader(lxqt-admin-time_QM_LOADER ${PROJECT_NAME})

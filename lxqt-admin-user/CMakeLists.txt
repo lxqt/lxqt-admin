@@ -43,6 +43,7 @@ lxqt_translate_ts(lxqt-admin-user_QM_FILES
 lxqt_translate_desktop(DESKTOP_FILES
     SOURCES
     lxqt-admin-user.desktop.in
+    USE_YAML
 )
 lxqt_app_translation_loader(lxqt-admin-user_QM_LOADER ${PROJECT_NAME})
 #************************************************
