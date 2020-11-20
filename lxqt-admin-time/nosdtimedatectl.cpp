@@ -52,13 +52,13 @@ QString NOSDTimeDateCtl::timeZone() const
                  return lastTZone;
 }
 
-bool NOSDTimeDateCtl::setTimeZone(QString timeZone, QString& errorMessage)
+bool NOSDTimeDateCtl::setTimeZone(QString timeZone, QString& /*errorMessage*/)
 {
     mHelperArgs << QSL("-t") << timeZone;
     return true;
 }
 
-bool NOSDTimeDateCtl::setDateTime(QDateTime dateTime, QString& errorMessage)
+bool NOSDTimeDateCtl::setDateTime(QDateTime dateTime, QString& /*errorMessage*/)
 {
     qint64 epochsec = dateTime.toSecsSinceEpoch();
     mHelperArgs << QSL("-d") << QString::number(epochsec);
@@ -87,7 +87,7 @@ bool NOSDTimeDateCtl::useNtp() const
     return false;
 }
 
-bool NOSDTimeDateCtl::setUseNtp(bool value, QString& errorMessage)
+bool NOSDTimeDateCtl::setUseNtp(bool /*value*/, QString& /*errorMessage*/)
 {
     /*
     mHelperArgs << QSL("-n") << (value ? QSL("true") : QSL("false"));
@@ -115,7 +115,7 @@ bool NOSDTimeDateCtl::localRtc() const
     return false;
 }
 
-bool NOSDTimeDateCtl::setLocalRtc(bool value, QString& errorMessage)
+bool NOSDTimeDateCtl::setLocalRtc(bool value, QString& /*errorMessage*/)
 {
     mHelperArgs << QSL("-l") << (value ? QSL("true") : QSL("false"));
     return true;
