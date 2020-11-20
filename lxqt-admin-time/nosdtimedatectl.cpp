@@ -139,7 +139,7 @@ bool NOSDTimeDateCtl::pkexec()
     if (!succeeded)
     {
         QMessageBox * msg = new QMessageBox{QMessageBox::Critical, QObject::tr("lxqt-admin-time-helper")
-            , QObject::tr("<strong>Action (%1) failed:</strong><br/><pre>%2</pre>").arg(args[0]).arg(QString::fromLatin1(pkexec_error))};
+            , QObject::tr("<strong>Action (%1) failed:</strong><br/><pre>%2</pre>").arg(args[0], QString::fromLatin1(pkexec_error))};
         msg->setAttribute(Qt::WA_DeleteOnClose, true);
         msg->show();
     }
