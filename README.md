@@ -43,10 +43,7 @@ Runtime dependencies are polkit and [liblxqt](https://github.com/lxqt/liblxqt).
 A polkit agent should be available with
 [lxqt-policykit](https://github.com/lxqt/lxqt-policykit/) representing the first
 choice in LXQt. Additional build dependencies are CMake and optionally Git to pull
-latest VCS checkouts. The localization files were outsourced to repository
-[lxqt-l10n](https://github.com/lxqt/lxqt-l10n) so the corresponding dependencies
-are needed, too. Please refer to this repository's `README.md` for further
-information.
+latest VCS checkouts. 
 
 Code configuration is handled by CMake. CMake variable `CMAKE_INSTALL_PREFIX`
 will normally have to be set to `/usr`.
@@ -56,33 +53,13 @@ as usual.
 
 ### Binary packages
 
-#### Arch Linux
-
-[AUR](https://aur.archlinux.org) packages `lxqt-admin` and `lxqt-admin-git` are
-providing the current stable release and the actual master checkout at compile
-time as usual.
-Note that package `lxqt-admin` had to be kept in the AUR due to lack of the
-dependency liboobs as depicted [above](#overview). So it will be transferred to
-community as of release 0.11.
-
-#### Debian
-
-Package `lxqt-admin` is available in the official repositories as of Debian stretch.
-
-#### Fedora
-
-Fedora doesn't provide lxqt-admin so far due to lack of the dependency liboobs
-as depicted [above](#overview). This will hopefully change once release LXQt
-release 0.11 makes it into the Fedora repositories.
+Package `lxqt-admin` is available in the official repositories of all major distributions.
 
 #### openSUSE
 
 openSUSE does not ship with lxqt-admin in it's standard repositories since the
 functionality is covered by openSUSE's [YaST](http://yast.github.io/).
-However it is still possible to install it on openSUSE. The package and its
-dependencies, like the [above](#overview) mentioned, outdated liboobs are
-available through the [X11:LXQt](https://build.opensuse.org/project/show/X11:LXQt)
-repository.
+However it is still possible to install it on openSUSE. 
 
 ## Usage
 
