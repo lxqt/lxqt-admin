@@ -36,7 +36,7 @@
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
         <source>The group name cannot be empty.</source>
-        <translation>Csoportnév nem lehet üres.</translation>
+        <translation>A csoport neve nem lehet üres.</translation>
     </message>
 </context>
 <context>
@@ -54,7 +54,7 @@
     <message>
         <location filename="../mainwindow.ui" line="59"/>
         <source>Login Name</source>
-        <translation>Bejelenkezési név</translation>
+        <translation>Bejelentkezési név</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="64"/>
@@ -79,7 +79,7 @@
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>Show system users (for advanced users only)</source>
-        <translation>Rendszerfelhasználók is látszanak (csak haladóknak)</translation>
+        <translation>Rendszerfelhasználók megjelenítése (csak haladóknak)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
@@ -104,7 +104,7 @@
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>Edit properties of the selected item</source>
-        <translation type="unfinished">A kiválasztott elem tulajdonságainak szerkesztése</translation>
+        <translation>Kiválasztott elem tulajdonságainak szerkesztése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="158"/>
@@ -139,7 +139,7 @@
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>Refresh the lists</source>
-        <translation>Lista frissítése</translation>
+        <translation>Listák frissítése</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
@@ -171,12 +171,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="200"/>
         <source>Input the new password for %1:</source>
-        <translation>%1 új jelszava:</translation>
+        <translation>Adja meg %1 új jelszavát:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="210"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation>Biztos, hogy üres legyen a jelszó?</translation>
+        <translation>Biztos benne, hogy üres legyen a jelszó?</translation>
     </message>
 </context>
 <context>
@@ -184,12 +184,12 @@
     <message>
         <location filename="../userdialog.ui" line="14"/>
         <source>User Settings</source>
-        <translation>Felhasználó beállítása</translation>
+        <translation>Felhasználó beállítások</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="24"/>
         <source>General</source>
-        <translation>Alap</translation>
+        <translation>Általános</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="43"/>
@@ -199,7 +199,7 @@
     <message>
         <location filename="../userdialog.ui" line="33"/>
         <source>Login name:</source>
-        <translation>Bejelenkezési név:</translation>
+        <translation>Bejelentkezési név:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="53"/>
