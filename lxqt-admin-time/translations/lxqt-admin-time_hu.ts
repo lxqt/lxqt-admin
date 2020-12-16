@@ -70,12 +70,12 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation>Hardveres óra helyi időre való beállítása újraindítást igényel</translation>
+        <translation>A hardveres óra helyi időre való beállítása újraindítást igényel</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation>Hardveres óra UTC időre való beállítása újraindítást igényel</translation>
+        <translation>A hardveres óra UTC időre való beállítása újraindítást igényel</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
@@ -93,7 +93,7 @@
     <message>
         <location filename="../timezone.ui" line="32"/>
         <source>Filter</source>
-        <translation>Keresés</translation>
+        <translation>Szűrés</translation>
     </message>
 </context>
 <context>
