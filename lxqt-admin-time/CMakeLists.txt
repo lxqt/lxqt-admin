@@ -12,7 +12,7 @@ set ( lxqt-admin-time_HDRS
     itimedatectl.h
     dbustimedatectl.h
     fbsdtimedatectl.h
-
+    nosdtimedatectl.h
 )
 
 set ( lxqt-admin-time_SRCS
@@ -22,7 +22,7 @@ set ( lxqt-admin-time_SRCS
     timezone.cpp
     fbsdtimedatectl.cpp
     dbustimedatectl.cpp
-
+    nosdtimedatectl.cpp
 )
 
 set ( lxqt-admin-time_MOCS
@@ -59,6 +59,12 @@ lxqt_translate_desktop(DESKTOP_FILES
 lxqt_app_translation_loader(lxqt-admin-time_QM_LOADER ${PROJECT_NAME})
 #************************************************
 
+find_package(PkgConfig QUIET)
+pkg_check_modules(LIBSYSTEMD QUIET libsystemd)
+if(NOT LIBSYSTEMD_FOUND)
+    add_definitions(-DNO_SYSTEMD)
+endif()
+
 add_executable(lxqt-admin-time
     ${lxqt-admin-time_SRCS}
     ${UIS}
@@ -79,4 +85,10 @@ install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applica
 if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
 install(PROGRAMS "lxqt-admin-time-helper.freebsd" DESTINATION bin RENAME lxqt-admin-time-helper)
 install(FILES "org.lxqt.lxqt-admin-time.policy" DESTINATION "${POLKITQT-1_POLICY_FILES_INSTALL_DIR}")
+else()
+if(NOT LIBSYSTEMD_FOUND)
+configure_file(org.lxqt.lxqt-admin-time.policy.nosd.in "${CMAKE_CURRENT_BINARY_DIR}/org.lxqt.lxqt-admin-time.policy.nosd")
+install (PROGRAMS "lxqt-admin-time-helper.nosystemd" DESTINATION bin RENAME lxqt-admin-time-helper)
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/org.lxqt.lxqt-admin-time.policy.nosd" DESTINATION "${POLKITQT-1_POLICY_FILES_INSTALL_DIR}" RENAME org.lxqt.lxqt-admin-time.policy)
+endif()
 endif()
