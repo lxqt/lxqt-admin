@@ -116,7 +116,6 @@ void UserManager::loadLoginDefs() {
 #endif
             if(parts.length() >= 2) {
                 QString& key = parts[0];
-                QString& val = parts[1];
                 if(key == QLatin1String("SYS_UID_MIN")) {
                 }
                 else if(key == QLatin1String("SYS_UID_MAX")) {
