@@ -83,7 +83,7 @@ void DateTimePage::reload()
     emit changed();
 }
 
-void DateTimePage::on_edit_time_userTimeChanged(const QTime &time)
+void DateTimePage::on_edit_time_userTimeChanged(const QTime & /*time*/)
 {
     mModified |= M_TIME;
     mTimer->stop();
