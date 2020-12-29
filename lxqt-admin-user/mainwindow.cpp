@@ -249,7 +249,7 @@ void MainWindow::onChangePasswd() {
     }
 }
 
-void MainWindow::onRowActivated(const QModelIndex& index)
+void MainWindow::onRowActivated(const QModelIndex& /*index*/)
 {
     onEditProperties();
 }

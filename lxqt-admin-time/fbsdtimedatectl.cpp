@@ -53,13 +53,13 @@ QString FBSDTimeDateCtl::timeZone() const
 
 }
 
-bool FBSDTimeDateCtl::setTimeZone(QString timeZone, QString& errorMessage)
+bool FBSDTimeDateCtl::setTimeZone(QString timeZone, QString& /*errorMessage*/)
 {
     mHelperArgs << QSL("-t") << timeZone;
     return true;
 }
 
-bool FBSDTimeDateCtl::setDateTime(QDateTime dateTime, QString& errorMessage)
+bool FBSDTimeDateCtl::setDateTime(QDateTime dateTime, QString& /*errorMessage*/)
 {
     qint64 epochsec = dateTime.toSecsSinceEpoch();
     mHelperArgs << QSL("-d") << QString::number(epochsec);
@@ -86,7 +86,7 @@ bool FBSDTimeDateCtl::useNtp() const
     return false;
 }
 
-bool FBSDTimeDateCtl::setUseNtp(bool value, QString& errorMessage)
+bool FBSDTimeDateCtl::setUseNtp(bool value, QString& /*errorMessage*/)
 {
     mHelperArgs << QSL("-n") << (value ? QSL("true") : QSL("false"));
     return true;
@@ -97,7 +97,7 @@ bool FBSDTimeDateCtl::localRtc() const
     return QFileInfo::exists(QSL("/etc/wall_cmos_clock"));
 }
 
-bool FBSDTimeDateCtl::setLocalRtc(bool value, QString& errorMessage)
+bool FBSDTimeDateCtl::setLocalRtc(bool value, QString& /*errorMessage*/)
 {
     mHelperArgs << QSL("-l") << (value ? QSL("true") : QSL("false"));
     return true;

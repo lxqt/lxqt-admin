@@ -101,12 +101,12 @@ void UserDialog::onLoginNameChanged(const QString& text)
     }
 }
 
-void UserDialog::onFullNameChanged(const QString& text)
+void UserDialog::onFullNameChanged(const QString& /*text*/)
 {
    mFullNameChanged = true;
 }
 
-void UserDialog::onHomeDirChanged(const QString& text)
+void UserDialog::onHomeDirChanged(const QString& /*text*/)
 {
     mHomeDirChanged = true;
 }

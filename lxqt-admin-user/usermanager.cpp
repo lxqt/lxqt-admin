@@ -116,7 +116,6 @@ void UserManager::loadLoginDefs() {
 #endif
             if(parts.length() >= 2) {
                 QString& key = parts[0];
-                QString& val = parts[1];
                 if(key == QLatin1String("SYS_UID_MIN")) {
                 }
                 else if(key == QLatin1String("SYS_UID_MAX")) {
@@ -196,7 +195,7 @@ void UserManager::reload() {
     Q_EMIT changed();
 }
 
-void UserManager::onFileChanged(const QString &path) {
+void UserManager::onFileChanged(const QString & /*path*/) {
     // QFileSystemWatcher is very broken and has a ridiculous design.
     // we get "fileChanged()" when the file is deleted or modified,
     // but there is no way to distinguish them. If the file is deleted,
