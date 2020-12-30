@@ -59,7 +59,7 @@
     <message>
         <location filename="../mainwindow.ui" line="64"/>
         <source>User ID</source>
-        <translation>ユーザーID</translation>
+        <translation>ユーザー ID</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="69"/>
