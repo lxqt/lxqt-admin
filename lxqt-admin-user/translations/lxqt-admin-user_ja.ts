@@ -21,7 +21,7 @@
     <message>
         <location filename="../groupdialog.ui" line="40"/>
         <source>Group ID:</source>
-        <translation>グループID:</translation>
+        <translation>グループ ID:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="47"/>
@@ -94,7 +94,7 @@
     <message>
         <location filename="../mainwindow.ui" line="116"/>
         <source>Group ID</source>
-        <translation>グループID</translation>
+        <translation>グループ ID</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
@@ -104,7 +104,7 @@
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>Edit properties of the selected item</source>
-        <translation>選択したアイテムのプロパティを編集する</translation>
+        <translation>選択した項目のプロパティを編集します</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="158"/>
@@ -114,7 +114,7 @@
     <message>
         <location filename="../mainwindow.ui" line="161"/>
         <source>Add new users or groups</source>
-        <translation>新しいユーザーまたはグループを追加</translation>
+        <translation>新しいユーザーやグループを追加します</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="170"/>
@@ -124,7 +124,7 @@
     <message>
         <location filename="../mainwindow.ui" line="173"/>
         <source>Delete selected item</source>
-        <translation>選択した項目を削除</translation>
+        <translation>選択した項目を削除します</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="182"/>
@@ -139,7 +139,7 @@
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>Refresh the lists</source>
-        <translation>リストを再読込み</translation>
+        <translation>リストを再読込みします</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="206"/>
@@ -149,7 +149,7 @@
     <message>
         <location filename="../mainwindow.ui" line="209"/>
         <source>Change password for the selected user or group</source>
-        <translation>選択したユーザーグループのパスワード変更</translation>
+        <translation>選択したユーザーやグループのパスワードを変更します</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
@@ -171,12 +171,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="200"/>
         <source>Input the new password for %1:</source>
-        <translation>%1 の新しいパスワードを入力:</translation>
+        <translation>%1 の新しいパスワードを入力して下さい:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="210"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation>パスワードを空にしますか?</translation>
+        <translation>パスワードを空にしますか？</translation>
     </message>
 </context>
 <context>
