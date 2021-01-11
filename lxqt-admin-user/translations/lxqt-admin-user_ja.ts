@@ -161,12 +161,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation>本当に、選択したユーザーを削除してよいですか？</translation>
+        <translation>本当に選択したユーザーを削除しますか？</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="189"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation>本当に、選択したグループを削除してよいですか？</translation>
+        <translation>本当に選択したグループを削除しますか？</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="200"/>
@@ -204,7 +204,7 @@
     <message>
         <location filename="../userdialog.ui" line="53"/>
         <source>User ID:</source>
-        <translation>ユーザーID:</translation>
+        <translation>ユーザー ID:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="60"/>
@@ -249,7 +249,7 @@
     <message>
         <location filename="../userdialog.cpp" line="120"/>
         <source>The user name cannot be empty.</source>
-        <translation>ユーザー名を入力する必要があります。</translation>
+        <translation>ユーザー名を空にすることは出来ません。</translation>
     </message>
 </context>
 <context>
