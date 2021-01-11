@@ -161,12 +161,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation>Ви дійсно бажаєте вилучити наступного користувача?</translation>
+        <translation>Ви дійсно бажаєте видалити позначеного користувача?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="189"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation>Ви дійсно бажаєте вилучити наступну групу?</translation>
+        <translation>Ви дійсно бажаєте видалити позначену групу?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="200"/>
