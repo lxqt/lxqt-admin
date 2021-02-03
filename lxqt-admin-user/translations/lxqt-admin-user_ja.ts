@@ -104,7 +104,7 @@
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>Edit properties of the selected item</source>
-        <translation>選択した項目のプロパティを編集します</translation>
+        <translation>選択したアイテムのプロパティを編集します</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="158"/>
@@ -124,7 +124,7 @@
     <message>
         <location filename="../mainwindow.ui" line="173"/>
         <source>Delete selected item</source>
-        <translation>選択した項目を削除します</translation>
+        <translation>選択したアイテムを削除します</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="182"/>
