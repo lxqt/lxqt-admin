@@ -229,7 +229,7 @@
     <message>
         <location filename="../userdialog.ui" line="109"/>
         <source>Advanced</source>
-        <translation>高度</translation>
+        <translation>詳細</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="115"/>
