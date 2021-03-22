@@ -189,7 +189,7 @@
     <message>
         <location filename="../userdialog.ui" line="24"/>
         <source>General</source>
-        <translation>一般</translation>
+        <translation>全般</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="43"/>
