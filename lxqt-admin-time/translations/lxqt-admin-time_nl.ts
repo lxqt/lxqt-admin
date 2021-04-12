@@ -48,7 +48,7 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="45"/>
         <source>Time and date configuration</source>
-        <translation>Tijd en datum instellen</translation>
+        <translation>Datum en tijd instellen</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="51"/>
@@ -71,12 +71,12 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation>De RTC wijzigen naar lokale tijd vereist een herstart</translation>
+        <translation>Herstart de computer om de RTC-wijziging toe te passen</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="154"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation>De RTC wijzigen naar UTC vereist een herstart</translation>
+        <translation>Herstart de computer om de RTC-wijziging toe te passen</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="155"/>
@@ -89,7 +89,7 @@
     <message>
         <location filename="../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
-        <translation>Uw huidige tijdzone:</translation>
+        <translation>Huidige tijdzone:</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="32"/>

@@ -74,7 +74,7 @@
     <message>
         <location filename="../mainwindow.ui" line="79"/>
         <source>Home Directory</source>
-        <translation>Répertoire de base</translation>
+        <translation>Répertoire home</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
@@ -234,12 +234,12 @@
     <message>
         <location filename="../userdialog.ui" line="115"/>
         <source>Login shell:</source>
-        <translation>Identifiant shell :</translation>
+        <translation>Shell de connexion :</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="132"/>
         <source>Home directory:</source>
-        <translation>Répertoire de base :</translation>
+        <translation>Répertoire home :</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="120"/>
@@ -257,7 +257,7 @@
     <message>
         <location filename="../usermanager.cpp" line="227"/>
         <source>lxqt-admin-user</source>
-        <translation>lxqt-utilisateur-admin</translation>
+        <translation>lxqt-admin-user</translation>
     </message>
     <message>
         <location filename="../usermanager.cpp" line="228"/>
