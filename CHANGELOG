@@ -1,3 +1,11 @@
+lxqt-admin-0.17.0 / 2021-04-15
+==============================
+  * Made lxqt-admin-time work on non-systemd GNU/Linux systems.
+  * Silenced compiler warnings about unused parameters.
+  * Avoided extra QString allocations.
+  * Don't use hard-coded install locations.
+  * Moded to Qt5 signal/slot syntax.
+
 lxqt-admin-0.16.0 / 2020-11-01
 ==============================
   * Use QFlags default constructor.
