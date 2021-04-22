@@ -35,7 +35,7 @@
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="122"/>
         <source>lxqt-admin-time-helper</source>
-        <translation type="unfinished">lxqt-admin-time-helper</translation>
+        <translation>LXQt-Zeiteinstellung</translation>
     </message>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
