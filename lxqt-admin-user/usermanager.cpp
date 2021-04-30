@@ -109,11 +109,7 @@ void UserManager::loadLoginDefs() {
             QByteArray line = file.readLine().trimmed();
             if(line.isEmpty() || line.startsWith('#'))
                 continue;
-#if (QT_VERSION >= QT_VERSION_CHECK(5,15,0))
             QStringList parts = QString::fromUtf8(line).split(QRegExp(QSL("\\s")), Qt::SkipEmptyParts);
-#else
-            QStringList parts = QString::fromUtf8(line).split(QRegExp(QSL("\\s")), QString::SkipEmptyParts);
-#endif
             if(parts.length() >= 2) {
                 QString& key = parts[0];
                 if(key == QLatin1String("SYS_UID_MIN")) {
