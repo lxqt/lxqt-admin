@@ -93,7 +93,7 @@
     <message>
         <location filename="../timezone.ui" line="32"/>
         <source>Filter</source>
-        <translation>Filtr</translation>
+        <translation>Filtrujte</translation>
     </message>
 </context>
 <context>

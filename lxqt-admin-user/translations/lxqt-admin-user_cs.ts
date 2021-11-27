@@ -26,7 +26,7 @@
     <message>
         <location filename="../groupdialog.ui" line="47"/>
         <source>Users belong to this group:</source>
-        <translation>Uživatelé náležející do této skupiny:</translation>
+        <translation>Uživatelé, kteří jsou členy této skupiny:</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
