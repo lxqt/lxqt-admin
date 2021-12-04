@@ -129,7 +129,7 @@ bool NOSDTimeDateCtl::pkexec()
     QProcess process;
     QStringList args;
     args << QSL("--disable-internal-agent")
-        << QSL("/usr/bin/lxqt-admin-time-helper")
+        << QSL("lxqt-admin-time-helper")
         << mHelperArgs;
     process.start(QSL("pkexec"), args);
     process.waitForFinished(-1);
