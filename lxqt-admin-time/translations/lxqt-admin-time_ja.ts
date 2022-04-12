@@ -33,11 +33,13 @@
     <name>QObject</name>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="122"/>
+        <location filename="../nosdtimedatectl.cpp" line="141"/>
         <source>lxqt-admin-time-helper</source>
         <translation>LXQt 設定アシスタント</translation>
     </message>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
+        <location filename="../nosdtimedatectl.cpp" line="142"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
         <translation>&lt;strong&gt;アクション (%1) に失敗しました:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
@@ -60,25 +62,25 @@
         <translation>タイムゾーン</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="120"/>
-        <location filename="../timeadmindialog.cpp" line="130"/>
-        <location filename="../timeadmindialog.cpp" line="137"/>
-        <location filename="../timeadmindialog.cpp" line="147"/>
+        <location filename="../timeadmindialog.cpp" line="122"/>
+        <location filename="../timeadmindialog.cpp" line="132"/>
+        <location filename="../timeadmindialog.cpp" line="139"/>
+        <location filename="../timeadmindialog.cpp" line="149"/>
         <source>Error</source>
         <translation>エラー</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="154"/>
+        <location filename="../timeadmindialog.cpp" line="156"/>
         <source>Change RTC to be in localtime requires a reboot</source>
         <translation>RTC をローカル時間に変更するには再起動が必要です</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="154"/>
+        <location filename="../timeadmindialog.cpp" line="156"/>
         <source>Change RTC to be in UTC requires a reboot</source>
         <translation>RTC を UTC に変更するには再起動が必要です</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="155"/>
+        <location filename="../timeadmindialog.cpp" line="157"/>
         <source>Reboot required</source>
         <translation>再起動が必要です</translation>
     </message>

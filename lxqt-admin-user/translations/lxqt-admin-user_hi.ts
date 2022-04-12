@@ -209,7 +209,7 @@
     <message>
         <location filename="../userdialog.ui" line="60"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">आरंभिक</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="70"/>
@@ -244,7 +244,7 @@
     <message>
         <location filename="../userdialog.cpp" line="120"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">त्रुटि</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="120"/>

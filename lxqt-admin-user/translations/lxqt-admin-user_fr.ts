@@ -234,7 +234,7 @@
     <message>
         <location filename="../userdialog.ui" line="115"/>
         <source>Login shell:</source>
-        <translation>Shell de connexion :</translation>
+        <translation>Shell de connexion&#xa0;:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="132"/>
