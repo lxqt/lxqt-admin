@@ -33,11 +33,13 @@
     <name>QObject</name>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="122"/>
+        <location filename="../nosdtimedatectl.cpp" line="141"/>
         <source>lxqt-admin-time-helper</source>
         <translation>LXQT时间管理助手</translation>
     </message>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
+        <location filename="../nosdtimedatectl.cpp" line="142"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
         <translation>&lt;strong&gt;处理(%1)失败：&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
@@ -60,25 +62,25 @@
         <translation>时区</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="120"/>
-        <location filename="../timeadmindialog.cpp" line="130"/>
-        <location filename="../timeadmindialog.cpp" line="137"/>
-        <location filename="../timeadmindialog.cpp" line="147"/>
+        <location filename="../timeadmindialog.cpp" line="122"/>
+        <location filename="../timeadmindialog.cpp" line="132"/>
+        <location filename="../timeadmindialog.cpp" line="139"/>
+        <location filename="../timeadmindialog.cpp" line="149"/>
         <source>Error</source>
         <translation>错误</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="154"/>
+        <location filename="../timeadmindialog.cpp" line="156"/>
         <source>Change RTC to be in localtime requires a reboot</source>
         <translation>将RTC更改为本地时间需要重新启动</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="154"/>
+        <location filename="../timeadmindialog.cpp" line="156"/>
         <source>Change RTC to be in UTC requires a reboot</source>
         <translation>将RTC更改为UTC需要重新启动</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="155"/>
+        <location filename="../timeadmindialog.cpp" line="157"/>
         <source>Reboot required</source>
         <translation>需要重新启动</translation>
     </message>

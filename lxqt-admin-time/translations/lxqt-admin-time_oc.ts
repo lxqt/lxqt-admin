@@ -6,7 +6,7 @@
     <message>
         <location filename="../datetime.ui" line="23"/>
         <source>Time:</source>
-        <translation>Ora :</translation>
+        <translation>Ora&#x202f;:</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="39"/>
@@ -16,7 +16,7 @@
     <message>
         <location filename="../datetime.ui" line="53"/>
         <source>Date:</source>
-        <translation>Data :</translation>
+        <translation>Data&#x202f;:</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="70"/>
@@ -33,13 +33,15 @@
     <name>QObject</name>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="122"/>
+        <location filename="../nosdtimedatectl.cpp" line="141"/>
         <source>lxqt-admin-time-helper</source>
         <translation>lxqt-admin-time-helper</translation>
     </message>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
+        <location filename="../nosdtimedatectl.cpp" line="142"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation>&lt;strong&gt;Accion (%1) pas reüssida :&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
+        <translation>&lt;strong&gt;Accion (%1) pas reüssida&#x202f;:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 <context>
@@ -60,25 +62,25 @@
         <translation>Fus orari</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="120"/>
-        <location filename="../timeadmindialog.cpp" line="130"/>
-        <location filename="../timeadmindialog.cpp" line="137"/>
-        <location filename="../timeadmindialog.cpp" line="147"/>
+        <location filename="../timeadmindialog.cpp" line="122"/>
+        <location filename="../timeadmindialog.cpp" line="132"/>
+        <location filename="../timeadmindialog.cpp" line="139"/>
+        <location filename="../timeadmindialog.cpp" line="149"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="154"/>
+        <location filename="../timeadmindialog.cpp" line="156"/>
         <source>Change RTC to be in localtime requires a reboot</source>
         <translation>Modificar la RTC per prendre en compte lo temps local requerís una reaviada</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="154"/>
+        <location filename="../timeadmindialog.cpp" line="156"/>
         <source>Change RTC to be in UTC requires a reboot</source>
         <translation>Modificar la RTC per prendre en compte lo temps UTC requerís una reaviada</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="155"/>
+        <location filename="../timeadmindialog.cpp" line="157"/>
         <source>Reboot required</source>
         <translation>Reaviada necessària</translation>
     </message>
@@ -88,7 +90,7 @@
     <message>
         <location filename="../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
-        <translation>Lo fus orari actual :</translation>
+        <translation>Lo fus orari actual&#x202f;:</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="32"/>
