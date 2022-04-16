@@ -13,7 +13,7 @@ set(LIB_INSTALL_DIR "lib${LIB_SUFFIX}" CACHE PATH "Installation path for librari
 
 # Minimum Versions
 set(KF5_MINIMUM_VERSION "5.36.0")
-set(LXQT_MINIMUM_VERSION "1.0.0")
+set(LXQT_MINIMUM_VERSION "1.1.0")
 set(QT_MINIMUM_VERSION "5.15.0")
 
 find_package(Qt5Widgets ${QT_MINIMUM_VERSION} REQUIRED)
