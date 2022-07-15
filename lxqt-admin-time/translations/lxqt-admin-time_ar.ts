@@ -72,12 +72,12 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="156"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>يتطلب تغيير RTC ليكون بالتوقيت المحلي إعادة التشغيل</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="156"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>يتطلب تغيير RTC ليكون في UTC إعادة التشغيل</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="157"/>
