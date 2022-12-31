@@ -79,104 +79,104 @@
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>Show system users (for advanced users only)</source>
-        <translation type="unfinished"></translation>
+        <translation>सिस्टम उपयोगकर्ता दिखाएं (केवल उन्नत उपयोगकर्ताओं के लिए)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
         <source>&amp;Groups</source>
-        <translation type="unfinished"></translation>
+        <translation>समूह(&amp;G)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="111"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>नाम</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="116"/>
         <source>Group ID</source>
-        <translation type="unfinished"></translation>
+        <translation>समूह आईडी</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>Members</source>
-        <translation type="unfinished"></translation>
+        <translation>सदस्यगण</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="188"/>
         <source>Edit properties of the selected item</source>
-        <translation type="unfinished"></translation>
+        <translation>चयनित आइटम के गुण संपादित करें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="161"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>जोड़ें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="164"/>
         <source>Add new users or groups</source>
-        <translation type="unfinished"></translation>
+        <translation>नए उपयोगकर्ता या समूह जोड़ें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="173"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>हटाएँ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="176"/>
         <source>Delete selected item</source>
-        <translation type="unfinished"></translation>
+        <translation>चयनित आइटम हटाएं</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>गुण</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>रीफ़्रेश करें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="200"/>
         <source>Refresh the lists</source>
-        <translation type="unfinished"></translation>
+        <translation>सूचियों को रीफ़्रेश करें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
         <source>Change Password</source>
-        <translation type="unfinished"></translation>
+        <translation>पासवर्ड बदलें</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="212"/>
         <source>Change password for the selected user or group</source>
-        <translation type="unfinished"></translation>
+        <translation>चयनित उपयोगकर्ता या समूह के लिए पासवर्ड बदलें</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
         <location filename="../mainwindow.cpp" line="189"/>
         <location filename="../mainwindow.cpp" line="210"/>
         <source>Confirm</source>
-        <translation type="unfinished"></translation>
+        <translation>पुष्टि करें</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation type="unfinished"></translation>
+        <translation>क्या आप चुने गए उपयोगकर्ता को हटाना चाहते हैं?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="189"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation type="unfinished"></translation>
+        <translation>क्या आप चयनित समूह को हटाना चाहते हैं?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="200"/>
         <source>Input the new password for %1:</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 के लिए नया पासवर्ड डालें :</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="210"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation type="unfinished"></translation>
+        <translation>क्या आप एक रिक्त पासवर्ड सेट करना चाहते हैं?</translation>
     </message>
 </context>
 <context>
@@ -184,72 +184,72 @@
     <message>
         <location filename="../userdialog.ui" line="14"/>
         <source>User Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>उपयोगकर्ता सेटिंग</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>सामान्य</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="43"/>
         <source>Full name:</source>
-        <translation type="unfinished"></translation>
+        <translation>पूरा नाम :</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="33"/>
         <source>Login name:</source>
-        <translation type="unfinished"></translation>
+        <translation>लॉगिन नाम :</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="53"/>
         <source>User ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>उपयोगकर्ता ID :</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="60"/>
         <source>Default</source>
-        <translation type="unfinished">आरंभिक</translation>
+        <translation>आरंभिक</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="70"/>
         <source>Main group:</source>
-        <translation type="unfinished"></translation>
+        <translation>मुख्य समूह :</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="85"/>
         <source>Groups</source>
-        <translation type="unfinished"></translation>
+        <translation>समूह</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="91"/>
         <source>The user belongs to the following groups:</source>
-        <translation type="unfinished"></translation>
+        <translation>उपयोगकर्ता निम्नलिखित समूहों से संबंधित है :</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="109"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>उन्नत</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="115"/>
         <source>Login shell:</source>
-        <translation type="unfinished"></translation>
+        <translation>लॉग इन शेल :</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="132"/>
         <source>Home directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>होम डायरेक्टरी :</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="120"/>
         <source>Error</source>
-        <translation type="unfinished">त्रुटि</translation>
+        <translation>त्रुटि</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="120"/>
         <source>The user name cannot be empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>उपयोगकर्ता नाम रिक्त नहीं हो सकता.</translation>
     </message>
 </context>
 <context>
@@ -257,12 +257,12 @@
     <message>
         <location filename="../usermanager.cpp" line="227"/>
         <source>lxqt-admin-user</source>
-        <translation type="unfinished"></translation>
+        <translation>lxqt-व्यवस्थापक-उपयोगकर्ता</translation>
     </message>
     <message>
         <location filename="../usermanager.cpp" line="228"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;एक्शन (%1) विफल :&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
