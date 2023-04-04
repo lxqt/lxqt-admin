@@ -11,7 +11,7 @@
     <message>
         <location filename="../groupdialog.ui" line="20"/>
         <source>Group name:</source>
-        <translation>Nom del grop :</translation>
+        <translation>Nom del grop&#xa0;:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="30"/>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../groupdialog.ui" line="40"/>
         <source>Group ID:</source>
-        <translation>Identificant del grop :</translation>
+        <translation>Identificant del grop&#xa0;:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="47"/>
         <source>Users belong to this group:</source>
-        <translation>Utilizaires d’aqueste grop :</translation>
+        <translation>Utilizaires d’aqueste grop&#xa0;:</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
@@ -161,22 +161,22 @@
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation>Volètz vertadièrament suprimir l’utilizaire seleccionat ?</translation>
+        <translation>Volètz vertadièrament suprimir l’utilizaire seleccionat&#xa0;?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="189"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation>Volètz vertadièrament suprimir lo grop seleccionat ?</translation>
+        <translation>Volètz vertadièrament suprimir lo grop seleccionat&#xa0;?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="200"/>
         <source>Input the new password for %1:</source>
-        <translation>Picar lo senhal novèl per %1 :</translation>
+        <translation>Picar lo senhal novèl per %1&#xa0;:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="210"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation>Volètz vertadièrament definir un senhal void ?</translation>
+        <translation>Volètz vertadièrament definir un senhal void&#xa0;?</translation>
     </message>
 </context>
 <context>
@@ -194,17 +194,17 @@
     <message>
         <location filename="../userdialog.ui" line="43"/>
         <source>Full name:</source>
-        <translation>Nom complèt :</translation>
+        <translation>Nom complèt&#xa0;:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="33"/>
         <source>Login name:</source>
-        <translation>Identificant :</translation>
+        <translation>Identificant&#xa0;:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="53"/>
         <source>User ID:</source>
-        <translation>ID de l’utilizaire :</translation>
+        <translation>ID de l’utilizaire&#xa0;:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="60"/>
@@ -214,7 +214,7 @@
     <message>
         <location filename="../userdialog.ui" line="70"/>
         <source>Main group:</source>
-        <translation>Grop principal :</translation>
+        <translation>Grop principal&#xa0;:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="85"/>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../userdialog.ui" line="91"/>
         <source>The user belongs to the following groups:</source>
-        <translation>L’utilizaire aparten als grops seguents :</translation>
+        <translation>L’utilizaire aparten als grops seguents&#xa0;:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="109"/>
@@ -234,12 +234,12 @@
     <message>
         <location filename="../userdialog.ui" line="115"/>
         <source>Login shell:</source>
-        <translation>Shell de connexion :</translation>
+        <translation>Shell de connexion&#xa0;:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="132"/>
         <source>Home directory:</source>
-        <translation>Repertòri personal :</translation>
+        <translation>Repertòri personal&#xa0;:</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="120"/>
@@ -262,7 +262,7 @@
     <message>
         <location filename="../usermanager.cpp" line="228"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation>&lt;strong&gt;L’action (%1) a fracassat :&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
+        <translation>&lt;strong&gt;L’action (%1) a fracassat&#xa0;:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
