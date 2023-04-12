@@ -46,7 +46,7 @@ int main(int argc, char **argv)
     parser.process(app);
 
     TimeAdminDialog dlg;
-    dlg.setWindowIcon(QIcon::fromTheme(QSL("preferences-system")));
+    dlg.setWindowIcon(QIcon::fromTheme(QSL("preferences-system-time")));
     app.setActivationWindow(&dlg);
     dlg.show();
     return app.exec();

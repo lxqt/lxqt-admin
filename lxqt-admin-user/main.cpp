@@ -46,7 +46,7 @@ int main(int argc, char **argv)
     parser.process(app);
 
     MainWindow window;
-    window.setWindowIcon(QIcon::fromTheme(QSL("preferences-system")));
+    window.setWindowIcon(QIcon::fromTheme(QSL("system-users")));
     app.setActivationWindow(&window);
     window.show();
     return app.exec();
