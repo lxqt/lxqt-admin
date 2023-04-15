@@ -59,7 +59,7 @@
     <message>
         <location filename="../mainwindow.ui" line="64"/>
         <source>User ID</source>
-        <translation>ID de l&apos;utilisateur</translation>
+        <translation>ID de l’utilisateur</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="69"/>
@@ -104,7 +104,7 @@
     <message>
         <location filename="../mainwindow.ui" line="188"/>
         <source>Edit properties of the selected item</source>
-        <translation>Modifier les propriétés de l&apos;élément sélectionné</translation>
+        <translation>Modifier les propriétés de l’élément sélectionné</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="161"/>
@@ -124,7 +124,7 @@
     <message>
         <location filename="../mainwindow.ui" line="176"/>
         <source>Delete selected item</source>
-        <translation>Supprimer l&apos;élément sélectionné</translation>
+        <translation>Supprimer l’élément sélectionné</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
@@ -149,7 +149,7 @@
     <message>
         <location filename="../mainwindow.ui" line="212"/>
         <source>Change password for the selected user or group</source>
-        <translation>Changer le mot de passe pour l&apos;utilisateur ou le groupe sélectionné</translation>
+        <translation>Changer le mot de passe pour l’utilisateur ou le groupe sélectionné</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
@@ -161,7 +161,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation>Êtes-vous sûr de vouloir supprimer l&apos;utilisateur sélectionné ?</translation>
+        <translation>Êtes-vous sûr de vouloir supprimer l’utilisateur sélectionné ?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="189"/>
@@ -184,7 +184,7 @@
     <message>
         <location filename="../userdialog.ui" line="14"/>
         <source>User Settings</source>
-        <translation>Paramètres de l&apos;utilisateur</translation>
+        <translation>Paramètres de l’utilisateur</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="24"/>
@@ -204,7 +204,7 @@
     <message>
         <location filename="../userdialog.ui" line="53"/>
         <source>User ID:</source>
-        <translation>ID de l&apos;utilisateur :</translation>
+        <translation>ID de l’utilisateur :</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="60"/>
@@ -224,7 +224,7 @@
     <message>
         <location filename="../userdialog.ui" line="91"/>
         <source>The user belongs to the following groups:</source>
-        <translation>L&apos;utilisateur appartient aux groupes suivants :</translation>
+        <translation>L’utilisateur appartient aux groupes suivants :</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="109"/>
@@ -234,7 +234,7 @@
     <message>
         <location filename="../userdialog.ui" line="115"/>
         <source>Login shell:</source>
-        <translation>Shell de connexion&#xa0;:</translation>
+        <translation>Shell de connexion :</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="132"/>
@@ -249,7 +249,7 @@
     <message>
         <location filename="../userdialog.cpp" line="120"/>
         <source>The user name cannot be empty.</source>
-        <translation>Le nom d&apos;utilisateur ne peut pas être vide.</translation>
+        <translation>Le nom d’utilisateur ne peut pas être vide.</translation>
     </message>
 </context>
 <context>
@@ -262,7 +262,7 @@
     <message>
         <location filename="../usermanager.cpp" line="228"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation>&lt;strong&gt;L&apos;action (%1) a échoué:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
+        <translation>&lt;strong&gt;L’action (%1) a échoué:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>

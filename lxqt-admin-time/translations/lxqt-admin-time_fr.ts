@@ -21,7 +21,7 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation>Activer la synchronisation de l&apos;heure par le réseau (NTP)</translation>
+        <translation>Activer la synchronisation de l’heure par le réseau (NTP)</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
@@ -49,7 +49,7 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="45"/>
         <source>Time and date configuration</source>
-        <translation>Configuration de la date et de l&apos;heure</translation>
+        <translation>Configuration de la date et de l’heure</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="51"/>
