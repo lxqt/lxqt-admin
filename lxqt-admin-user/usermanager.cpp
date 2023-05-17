@@ -436,11 +436,17 @@ const QStringList& UserManager::availableShells() {
                 QByteArray line = file.readLine().trimmed();
                 if(line.isEmpty() || line.startsWith('#'))
                     continue;
-                mAvailableShells.append(QString::fromLocal8Bit(line));
+                QString shell = QString::fromLocal8Bit(line);
+                 if (shell.endsWith(QLatin1String("/bash")) ) {
+                    mAvailableShells.prepend(shell);
+                } else {
+                    mAvailableShells.append(shell);
+                }
             }
             file.close();
         }
     }
     return mAvailableShells;
 }
+
 
