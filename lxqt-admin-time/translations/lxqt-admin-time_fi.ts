@@ -6,17 +6,17 @@
     <message>
         <location filename="../datetime.ui" line="23"/>
         <source>Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kello:</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="39"/>
         <source>HH:mm:ss</source>
-        <translation type="unfinished"></translation>
+        <translation>HH:mm:ss</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="53"/>
         <source>Date:</source>
-        <translation type="unfinished"></translation>
+        <translation>Päiväys:</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="70"/>
