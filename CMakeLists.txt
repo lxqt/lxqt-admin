@@ -12,13 +12,11 @@ option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" O
 set(LIB_INSTALL_DIR "lib${LIB_SUFFIX}" CACHE PATH "Installation path for libraries")
 
 # Minimum Versions
-set(KF5_MINIMUM_VERSION "5.36.0")
 set(LXQT_MINIMUM_VERSION "1.3.0")
 set(QT_MINIMUM_VERSION "5.15.0")
 
 find_package(Qt5Widgets ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(lxqt ${LXQT_MINIMUM_VERSION} REQUIRED)
-find_package(KF5WindowSystem ${KF5_MINIMUM_VERSION} REQUIRED)
 find_package(PolkitQt5-1 REQUIRED)
 
 # Patch Version
