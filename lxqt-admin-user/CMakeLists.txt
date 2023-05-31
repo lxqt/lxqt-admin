@@ -58,7 +58,6 @@ add_executable(lxqt-admin-user
 )
 
 target_link_libraries(lxqt-admin-user
-    KF5::WindowSystem
     Qt5::Widgets
     lxqt
 )
