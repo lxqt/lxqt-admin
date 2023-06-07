@@ -103,7 +103,7 @@ bool NOSDTimeDateCtl::localRtc() const
     QTextStream in(&tzFile);
     QString all = in.readAll();
     QStringList sl = all.split(QSL("\n"));
-    for (QStringList::iterator it = sl.begin(); it != sl.end(); it++) {
+    for (QStringList::iterator it = sl.begin(); it != sl.end(); ++it) {
 	QString current = *it;
 	if(current.startsWith(QSL("#")))
 	    continue;
