@@ -46,11 +46,12 @@ FBSDTimeDateCtl::~FBSDTimeDateCtl()
 QString FBSDTimeDateCtl::timeZone() const
 {
     QFile tzFile(QSL("/var/db/zoneinfo"));
-         if (!tzFile.open(QFile::ReadOnly | QFile::Text)) return QSL("Unknown");
-         QTextStream in(&tzFile);
-             QString lastTZone = in.readLine();
-                 return lastTZone;
+    if (!tzFile.open(QFile::ReadOnly | QFile::Text))
+        return QSL("Unknown");
 
+    QTextStream in(&tzFile);
+    QString lastTZone = in.readLine();
+    return lastTZone;
 }
 
 bool FBSDTimeDateCtl::setTimeZone(QString timeZone, QString& /*errorMessage*/)
@@ -76,8 +77,7 @@ bool FBSDTimeDateCtl::useNtp() const
     process.waitForFinished(-1);
     QString t = QString::fromLatin1(process.readAllStandardOutput());
     QStringList o = t.split(QSL("\n"));
-    for (QStringList::iterator it = o.begin();
-         it != o.end(); ++it) {
+    for (QStringList::iterator it = o.begin(); it != o.end(); ++it) {
         QString current = *it;
         if(!current.startsWith(QSL("#")) && current.contains(QSL("ntpd_enable"),Qt::CaseInsensitive) && current.contains(QSL("yes"),Qt::CaseInsensitive)) {
             return true;
