@@ -12,7 +12,7 @@ option(UPDATE_TRANSLATIONS "Update source translation translations/*.ts files" O
 set(LIB_INSTALL_DIR "lib${LIB_SUFFIX}" CACHE PATH "Installation path for libraries")
 
 # Minimum Versions
-set(LXQT_MINIMUM_VERSION "1.3.0")
+set(LXQT_MINIMUM_VERSION "1.4.0")
 set(QT_MINIMUM_VERSION "5.15.0")
 
 find_package(Qt5Widgets ${QT_MINIMUM_VERSION} REQUIRED)
