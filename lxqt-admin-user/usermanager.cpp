@@ -62,9 +62,15 @@ void UserManager::loadUsersAndGroups()
     // if multiple sources are specified in nsswitch.conf(5).
 
     // load groups
-    setgrent();
+    FILE *fp = NULL;
+
+    if (!(fp = fopen(qPrintable(GROUP_FILE), "r")))
+    {
+        qWarning() << "Failed to open file " << GROUP_FILE << endl;
+        return;
+    }
     struct group * grp;
-    while((grp = getgrent())) {
+    while((grp = fgetgrent(fp))) {
         if (mGroups.cend() != std::find_if(mGroups.cbegin(), mGroups.cend(), [grp] (const GroupInfo * g) -> bool { return g->gid() == grp->gr_gid; }))
             continue;
         GroupInfo* group = new GroupInfo(grp);
@@ -74,15 +80,19 @@ void UserManager::loadUsersAndGroups()
             group->addMember(QString::fromLatin1(*member_name));
         }
     }
-    endgrent();
+    fclose(fp);
     std::sort(mGroups.begin(), mGroups.end(), [](GroupInfo* g1, GroupInfo* g2) {
         return g1->name() < g2->name();
     });
 
     // load users
-    setpwent();
+    if (!(fp = fopen(qPrintable(PASSWD_FILE), "r")))
+    {
+        qWarning() << "Failed to open file " << PASSWD_FILE << endl;
+        return;
+    }
     struct passwd * pw;
-    while((pw = getpwent())) {
+    while((pw = fgetpwent(fp))) {
         if (mUsers.cend() != std::find_if(mUsers.cbegin(), mUsers.cend(), [pw] (const UserInfo * u) -> bool { return u->uid() == pw->pw_uid; }))
             continue;
         UserInfo* user = new UserInfo(pw);
@@ -94,7 +104,7 @@ void UserManager::loadUsersAndGroups()
             }
         }
     }
-    endpwent();
+    fclose(fp);
     std::sort(mUsers.begin(), mUsers.end(), [](UserInfo*& u1, UserInfo*& u2) {
         return u1->name() < u2->name();
     });
