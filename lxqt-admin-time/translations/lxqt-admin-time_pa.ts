@@ -26,7 +26,7 @@
     <message>
         <location filename="../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation type="unfinished"></translation>
+        <translation>RTC ਲੋਕਲ ਸਮੇਂ ਵਿੱਚ ਹੈ</translation>
     </message>
 </context>
 <context>
@@ -72,12 +72,12 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="156"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>RTC ਨੂੰ ਲੋਕਲ-ਸਮੇਂ ਵਿੱਚ ਬਦਲਣ ਲਈ ਮੁੜ-ਚਾਲੂ ਕਰਨ ਦੀ ਲੋੜ ਹੈ</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="156"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation type="unfinished"></translation>
+        <translation>RTC ਨੂੰ UTC ਵਿੱਚ ਬਦਲਣ ਲਈ ਮੁੜ-ਚਾਲੂ ਕਰਨ ਦੀ ਲੋੜ ਹੈ</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="157"/>
