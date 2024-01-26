@@ -26,13 +26,13 @@
     <message xml:lang="nl">Authenticatie is vereist voor gebruikersbeheer</message>
     <message xml:lang="nb_NO">Autentisering er påkrevd for brukeradministrasjon</message>
     <message xml:lang="pl">Autoryzacja jest wymagana do administracji użytkownikami</message>
-    <message xml:lang="pt">Autenticação é necessária para administração de usuários</message
+    <message xml:lang="pt">Autenticação é necessária para administração de usuários</message>
     <message xml:lang="ro">Autentificarea este necesară pentru administrarea utilizatorilor</message>
     <message xml:lang="sk">Autentifikácia je potrebná pre správu používateľov</message>
     <message xml:lang="tr">Kullanıcı yönetimi için kimlik doğrulama gereklidir</message>
     <message xml:lang="uk"> Аутентифікація необхідна для адміністрування користувачів</message>
     <message xml:lang="ru">Для изменения настроек пользователей и групп требуется аутентификация</message>
-    <message xml:lang="vt">Xác thực là bắt buộc cho quản lý người dùng</message>
+    <message xml:lang="vi">Xác thực là bắt buộc cho quản lý người dùng</message>
     <message xml:lang="zn_CN">用户管理需要进行身份验证</message>
     <message xml:lang="zn_TW">使用者管理需要進行身分驗證</message>
 
