@@ -6,7 +6,7 @@
     <message>
         <location filename="../groupdialog.ui" line="14"/>
         <source>Group Settings</source>
-        <translation>Ustawienia Grup</translation>
+        <translation>Ustawienia grup</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="20"/>
