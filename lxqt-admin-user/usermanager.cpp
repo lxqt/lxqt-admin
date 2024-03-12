@@ -36,6 +36,7 @@
 #include <QProcess>
 #include <QFile>
 #include <QMessageBox>
+#include <QRegularExpression>
 #include <QLatin1String>
 #include <unistd.h>
 
@@ -88,7 +89,7 @@ void UserManager::loadUsersAndGroups()
         UserInfo* user = new UserInfo(pw);
         mUsers.append(user);
         // add groups to this user
-        for(const GroupInfo* group: qAsConst(mGroups)) {
+        for(const GroupInfo* group: std::as_const(mGroups)) {
             if(group->hasMember(user->name())) {
                 user->addGroup(group->name());
             }
@@ -109,7 +110,7 @@ void UserManager::loadLoginDefs() {
             QByteArray line = file.readLine().trimmed();
             if(line.isEmpty() || line.startsWith('#'))
                 continue;
-            QStringList parts = QString::fromUtf8(line).split(QRegExp(QSL("\\s")), Qt::SkipEmptyParts);
+            QStringList parts = QString::fromUtf8(line).split(QRegularExpression(QSL("\\s")), Qt::SkipEmptyParts);
             if(parts.length() >= 2) {
                 QString& key = parts[0];
                 if(key == QLatin1String("SYS_UID_MIN")) {

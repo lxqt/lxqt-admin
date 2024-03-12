@@ -26,8 +26,6 @@
 #include <QMessageBox>
 #include <QInputDialog>
 #include <QLineEdit>
-#include <QRegExpValidator>
-#include <QRegExp>
 #include "userdialog.h"
 #include "groupdialog.h"
 #include "usermanager.h"
