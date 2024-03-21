@@ -83,7 +83,7 @@ void TimezonePage::on_list_zones_itemSelectionChanged()
 
 void TimezonePage::on_edit_filter_textChanged(const QString &arg1)
 {
-    QRegExp reg(arg1, Qt::CaseInsensitive,QRegExp::Wildcard);
+    QRegularExpression reg = QRegularExpression::fromWildcard(arg1, Qt::CaseInsensitive, QRegularExpression::UnanchoredWildcardConversion);
     ui->list_zones->clear();
     ui->list_zones->addItems(mZonesList.filter(reg));
 }

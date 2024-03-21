@@ -26,8 +26,8 @@ set( lxqt-admin-user_UIS
     groupdialog.ui
 )
 
-qt5_wrap_cpp(MOCS ${lxqt-admin-user_MOCS})
-qt5_wrap_ui(UIS ${lxqt-admin-user_UIS})
+qt6_wrap_cpp(MOCS ${lxqt-admin-user_MOCS})
+qt6_wrap_ui(UIS ${lxqt-admin-user_UIS})
 
 # Translations **********************************
 lxqt_translate_ts(lxqt-admin-user_QM_FILES
@@ -58,7 +58,7 @@ add_executable(lxqt-admin-user
 )
 
 target_link_libraries(lxqt-admin-user
-    Qt5::Widgets
+    Qt6::Widgets
     lxqt
 )
 

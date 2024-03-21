@@ -31,6 +31,7 @@
 #include <QMessageBox>
 #include <QDateTime>
 #include <QMap>
+#include <QFile>
 #include <QDebug>
 
 #include <LXQt/Globals>

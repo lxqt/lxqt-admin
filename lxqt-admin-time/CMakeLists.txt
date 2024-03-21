@@ -36,8 +36,8 @@ set( lxqt-admin-time_UIS
     timezone.ui
 )
 
-qt5_wrap_cpp(MOCS ${lxqt-admin-time_MOCS})
-qt5_wrap_ui(UIS ${lxqt-admin-time_UIS})
+qt6_wrap_cpp(MOCS ${lxqt-admin-time_MOCS})
+qt6_wrap_ui(UIS ${lxqt-admin-time_UIS})
 
 # Translations **********************************
 lxqt_translate_ts(lxqt-admin-time_QM_FILES
@@ -75,8 +75,8 @@ add_executable(lxqt-admin-time
 )
 
 target_link_libraries(lxqt-admin-time
-    Qt5::Widgets
-    Qt5::DBus
+    Qt6::Widgets
+    Qt6::DBus
     lxqt
 )
 install(TARGETS lxqt-admin-time RUNTIME DESTINATION bin)
