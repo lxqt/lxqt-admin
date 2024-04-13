@@ -176,7 +176,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="210"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation>Вы уверены в том, что хотите установить пустой пароль?</translation>
+        <translation>Уверены, что хотите установить пустой пароль?</translation>
     </message>
 </context>
 <context>
