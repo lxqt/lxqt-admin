@@ -1,3 +1,7 @@
+lxqt-admin-2.0.0 / 2024-04-17
+==============================
+ * Ported to Qt6.
+
 lxqt-admin-1.4.0 / 2023-11-05
 ==============================
  * Set the default shell to bash if available.
