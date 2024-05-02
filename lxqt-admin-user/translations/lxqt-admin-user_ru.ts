@@ -21,7 +21,7 @@
     <message>
         <location filename="../groupdialog.ui" line="40"/>
         <source>Group ID:</source>
-        <translation>ID группы:</translation>
+        <translation>ИД группы:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="47"/>
@@ -59,7 +59,7 @@
     <message>
         <location filename="../mainwindow.ui" line="64"/>
         <source>User ID</source>
-        <translation>ID пользователя</translation>
+        <translation>ИД пользователя</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="69"/>
@@ -94,7 +94,7 @@
     <message>
         <location filename="../mainwindow.ui" line="116"/>
         <source>Group ID</source>
-        <translation>ID группы</translation>
+        <translation>ИД группы</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
@@ -204,7 +204,7 @@
     <message>
         <location filename="../userdialog.ui" line="53"/>
         <source>User ID:</source>
-        <translation>ID пользователя:</translation>
+        <translation>ИД пользователя:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="60"/>

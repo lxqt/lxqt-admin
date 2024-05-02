@@ -26,7 +26,7 @@
     <message>
         <location filename="../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation>RTC установлено на местное время</translation>
+        <translation>Часы реального времени используют местное время</translation>
     </message>
 </context>
 <context>
