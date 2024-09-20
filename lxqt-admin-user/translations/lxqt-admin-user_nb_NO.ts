@@ -104,7 +104,7 @@
     <message>
         <location filename="../mainwindow.ui" line="188"/>
         <source>Edit properties of the selected item</source>
-        <translation>Rediger egenskaper for valg</translation>
+        <translation>Rediger egenskaper for valgt element</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="161"/>
@@ -124,7 +124,7 @@
     <message>
         <location filename="../mainwindow.ui" line="176"/>
         <source>Delete selected item</source>
-        <translation>Slett valgte</translation>
+        <translation>Slett valgte element</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
@@ -134,12 +134,12 @@
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>Refresh</source>
-        <translation>Frisk opp</translation>
+        <translation>Gjenoppfrisk</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="200"/>
         <source>Refresh the lists</source>
-        <translation>Frisk opp listene</translation>
+        <translation>Gjenoppfrisk listene</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>

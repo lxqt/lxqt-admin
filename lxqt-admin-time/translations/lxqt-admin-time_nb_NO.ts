@@ -41,7 +41,7 @@
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
         <location filename="../nosdtimedatectl.cpp" line="142"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation>&lt;strong&gt;1Handlingen (%1) mislyktes:&lt;/strong&gt;2&lt;br/&gt;3&lt;pre&gt;4%2&lt;/pre&gt;5</translation>
+        <translation>&lt;strong&gt;Handling (%1) mislyktes:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 <context>
