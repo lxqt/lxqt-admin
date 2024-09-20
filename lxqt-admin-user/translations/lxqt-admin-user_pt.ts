@@ -119,12 +119,12 @@
     <message>
         <location filename="../mainwindow.ui" line="173"/>
         <source>Delete</source>
-        <translation>Apagar</translation>
+        <translation>Eliminar</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="176"/>
         <source>Delete selected item</source>
-        <translation>Apagar o item selecionado</translation>
+        <translation>Eliminar o item selecionado</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
@@ -161,12 +161,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="177"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation>Tem a certeza de que deseja apagar o utilizador selecionado?</translation>
+        <translation>Tem a certeza de que deseja eliminar o utilizador selecionado?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="189"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation>Tem a certeza de que deseja apagar o grupo selecionado?</translation>
+        <translation>Tem a certeza de que deseja eliminar o grupo selecionado?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="200"/>
