@@ -225,8 +225,8 @@ bool UserManager::pkexec(const QStringList& command, const QByteArray& stdinData
     const bool succeeded = process.exitCode() == 0;
     if (!succeeded)
     {
-        QMessageBox * msg = new QMessageBox{QMessageBox::Critical, tr("lxqt-admin-user")
-            , tr("<strong>Action (%1) failed:</strong><br/><pre>%2</pre>").arg(command[0], QString::fromUtf8(pkexec_error))};
+        QMessageBox * msg = new QMessageBox{QMessageBox::Critical, QStringLiteral("lxqt-admin-user"),
+            tr("<strong>Action (%1) failed:</strong><br/><pre>%2</pre>").arg(command[0], QString::fromUtf8(pkexec_error))};
         msg->setAttribute(Qt::WA_DeleteOnClose, true);
         msg->show();
     }
