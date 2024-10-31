@@ -55,7 +55,11 @@ MainWindow::MainWindow():
 #endif
     connect(ui.userList, &QListWidget::activated, this, &MainWindow::onRowActivated);
     connect(ui.groupList, &QListWidget::activated, this, &MainWindow::onRowActivated);
+#if (QT_VERSION >= QT_VERSION_CHECK(6,7,0))
+    connect(ui.showSystemUsers, &QCheckBox::checkStateChanged, this, &MainWindow::reload);
+#else
     connect(ui.showSystemUsers, &QCheckBox::stateChanged, this, &MainWindow::reload);
+#endif
 
     connect(mUserManager, &UserManager::changed, this, &MainWindow::reload);
     reload();
