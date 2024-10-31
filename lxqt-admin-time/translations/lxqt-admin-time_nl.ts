@@ -22,12 +22,12 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation>Netwerktijdsynchronisatie (NTP) inschakelen</translation>
+        <translation>Datum en tijd automatisch instellen (NTP)</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation>RTC is in lokale tijd</translation>
+        <translation>RTC in lokale tijd</translation>
     </message>
 </context>
 <context>
@@ -68,7 +68,7 @@
         <location filename="../timeadmindialog.cpp" line="139"/>
         <location filename="../timeadmindialog.cpp" line="149"/>
         <source>Error</source>
-        <translation>Fout</translation>
+        <translation>Foutmelding</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="156"/>
@@ -96,7 +96,7 @@
     <message>
         <location filename="../timezone.ui" line="32"/>
         <source>Filter</source>
-        <translation>Filter</translation>
+        <translation>Zoeken</translation>
     </message>
 </context>
 <context>
