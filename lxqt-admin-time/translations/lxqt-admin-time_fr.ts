@@ -32,14 +32,13 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../fbsdtimedatectl.cpp" line="122"/>
-        <location filename="../nosdtimedatectl.cpp" line="141"/>
+        <location filename="../nosdtimedatectl.cpp" line="144"/>
         <source>lxqt-admin-time-helper</source>
         <translation>lxqt-admin-aide-temps</translation>
     </message>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
-        <location filename="../nosdtimedatectl.cpp" line="142"/>
+        <location filename="../nosdtimedatectl.cpp" line="145"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
         <translation>&lt;strong&gt;Action (%1) échouée:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%&lt;/pre&gt;</translation>
     </message>
@@ -47,40 +46,40 @@
 <context>
     <name>TimeAdminDialog</name>
     <message>
-        <location filename="../timeadmindialog.cpp" line="45"/>
+        <location filename="../timeadmindialog.cpp" line="46"/>
         <source>Time and date configuration</source>
         <translation>Configuration de la date et de l&apos;heure</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="51"/>
+        <location filename="../timeadmindialog.cpp" line="52"/>
         <source>Date and time</source>
         <translation>Date et heure</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="59"/>
+        <location filename="../timeadmindialog.cpp" line="60"/>
         <source>Timezone</source>
         <translation>Fuseau horaire</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="122"/>
-        <location filename="../timeadmindialog.cpp" line="132"/>
-        <location filename="../timeadmindialog.cpp" line="139"/>
-        <location filename="../timeadmindialog.cpp" line="149"/>
+        <location filename="../timeadmindialog.cpp" line="123"/>
+        <location filename="../timeadmindialog.cpp" line="133"/>
+        <location filename="../timeadmindialog.cpp" line="140"/>
+        <location filename="../timeadmindialog.cpp" line="150"/>
         <source>Error</source>
         <translation>Erreur</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="156"/>
+        <location filename="../timeadmindialog.cpp" line="157"/>
         <source>Change RTC to be in localtime requires a reboot</source>
         <translation>Changer la RTC pour prendre en compte le temps local requiert un redémarrage de la machine</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="156"/>
+        <location filename="../timeadmindialog.cpp" line="157"/>
         <source>Change RTC to be in UTC requires a reboot</source>
         <translation>Changer la RTC pour être en UTC requiert un redémarrage</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="157"/>
+        <location filename="../timeadmindialog.cpp" line="158"/>
         <source>Reboot required</source>
         <translation>Redémarrage requis</translation>
     </message>

@@ -32,14 +32,13 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../fbsdtimedatectl.cpp" line="122"/>
-        <location filename="../nosdtimedatectl.cpp" line="141"/>
+        <location filename="../nosdtimedatectl.cpp" line="144"/>
         <source>lxqt-admin-time-helper</source>
         <translation>lxqt-관리자-시간-도우미</translation>
     </message>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="123"/>
-        <location filename="../nosdtimedatectl.cpp" line="142"/>
+        <location filename="../nosdtimedatectl.cpp" line="145"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
         <translation>&lt;strong&gt;작업(%1) 실패:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
@@ -47,40 +46,40 @@
 <context>
     <name>TimeAdminDialog</name>
     <message>
-        <location filename="../timeadmindialog.cpp" line="45"/>
+        <location filename="../timeadmindialog.cpp" line="46"/>
         <source>Time and date configuration</source>
         <translation>시간 및 날짜 구성</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="51"/>
+        <location filename="../timeadmindialog.cpp" line="52"/>
         <source>Date and time</source>
         <translation>날짜 및 시간</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="59"/>
+        <location filename="../timeadmindialog.cpp" line="60"/>
         <source>Timezone</source>
         <translation>시간대</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="122"/>
-        <location filename="../timeadmindialog.cpp" line="132"/>
-        <location filename="../timeadmindialog.cpp" line="139"/>
-        <location filename="../timeadmindialog.cpp" line="149"/>
+        <location filename="../timeadmindialog.cpp" line="123"/>
+        <location filename="../timeadmindialog.cpp" line="133"/>
+        <location filename="../timeadmindialog.cpp" line="140"/>
+        <location filename="../timeadmindialog.cpp" line="150"/>
         <source>Error</source>
         <translation>오류</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="156"/>
+        <location filename="../timeadmindialog.cpp" line="157"/>
         <source>Change RTC to be in localtime requires a reboot</source>
         <translation>RTC를 현지 시간으로 변경하려면 재부팅해야 합니다</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="156"/>
+        <location filename="../timeadmindialog.cpp" line="157"/>
         <source>Change RTC to be in UTC requires a reboot</source>
         <translation>RTC를 UTC로 변경하려면 재부팅해야 합니다</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="157"/>
+        <location filename="../timeadmindialog.cpp" line="158"/>
         <source>Reboot required</source>
         <translation>재부팅 필요</translation>
     </message>
