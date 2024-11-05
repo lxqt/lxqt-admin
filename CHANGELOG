@@ -1,3 +1,8 @@
+lxqt-admin-2.1.0 / 2024-11-05
+==============================
+ * Don't translate app names.
+ * Silenced a compilation warning about `QCheckBox::stateChanged`.
+
 lxqt-admin-2.0.0 / 2024-04-17
 ==============================
  * Ported to Qt6.
