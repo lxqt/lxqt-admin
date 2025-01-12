@@ -49,8 +49,7 @@ TimeAdminDialog::TimeAdminDialog(QWidget *parent):
     mWindowTitle = windowTitle();
 
     mDateTimeWidget = new DateTimePage(mTimeDateCtl.useNtp(), mTimeDateCtl.localRtc(), this);
-    addPage(mDateTimeWidget, tr("Date and time"), QStringList() << QStringLiteral("preferences-system-time")
-        << QStringLiteral("preferences-desktop"));
+    addPage(mDateTimeWidget, tr("Date and time"), QStringLiteral("preferences-system-time"));
     connect(this, &LXQt::ConfigDialog::reset, mDateTimeWidget, &DateTimePage::reload);
     connect(mDateTimeWidget, &DateTimePage::changed, this, &TimeAdminDialog::onChanged);
 
@@ -58,7 +57,7 @@ TimeAdminDialog::TimeAdminDialog(QWidget *parent):
     QString currentZone;
     loadTimeZones(zones, currentZone);
     mTimezoneWidget = new TimezonePage(zones, currentZone, this);
-    addPage(mTimezoneWidget, tr("Timezone"), QStringLiteral("preferences-desktop"));
+    addPage(mTimezoneWidget, tr("Timezone"), QStringLiteral("preferences-system-time"));
     connect(this,&TimeAdminDialog::reset, mTimezoneWidget, &TimezonePage::reload);
     connect(mTimezoneWidget, &TimezonePage::changed, this, &TimeAdminDialog::onChanged);
 
