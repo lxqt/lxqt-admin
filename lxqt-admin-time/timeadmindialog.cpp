@@ -43,23 +43,23 @@
 #define ZONETAB_PATH "/usr/share/zoneinfo/zone.tab"
 
 TimeAdminDialog::TimeAdminDialog(QWidget *parent):
-    LXQt::ConfigDialog(tr("Time and date configuration"),new LXQt::Settings(QSL("TimeDate")), parent)
+    LXQt::ConfigDialog(tr("Time and date configuration"), new LXQt::Settings(QSL("TimeDate")), parent)
 {
-    setMinimumSize(QSize(400,400));
+    setMinimumSize(QSize(400, 400));
     mWindowTitle = windowTitle();
 
     mDateTimeWidget = new DateTimePage(mTimeDateCtl.useNtp(), mTimeDateCtl.localRtc(), this);
-    addPage(mDateTimeWidget,tr("Date and time"));
-    connect(this, &LXQt::ConfigDialog::reset, mDateTimeWidget,&DateTimePage::reload);
-    connect(mDateTimeWidget,&DateTimePage::changed,this,&TimeAdminDialog::onChanged);
+    addPage(mDateTimeWidget, tr("Date and time"), QStringLiteral("preferences-system-time"));
+    connect(this, &LXQt::ConfigDialog::reset, mDateTimeWidget, &DateTimePage::reload);
+    connect(mDateTimeWidget, &DateTimePage::changed, this, &TimeAdminDialog::onChanged);
 
     QStringList zones;
     QString currentZone;
-    loadTimeZones(zones,currentZone);
-    mTimezoneWidget = new TimezonePage(zones,currentZone,this);
-    addPage(mTimezoneWidget,tr("Timezone"));
-    connect(this,&TimeAdminDialog::reset,mTimezoneWidget,&TimezonePage::reload);
-    connect(mTimezoneWidget,&TimezonePage::changed,this,&TimeAdminDialog::onChanged);
+    loadTimeZones(zones, currentZone);
+    mTimezoneWidget = new TimezonePage(zones, currentZone, this);
+    addPage(mTimezoneWidget, tr("Timezone"), QStringLiteral("preferences-system-time"));
+    connect(this,&TimeAdminDialog::reset, mTimezoneWidget, &TimezonePage::reload);
+    connect(mTimezoneWidget, &TimezonePage::changed, this, &TimeAdminDialog::onChanged);
 
     setButtons(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
     connect(this, &LXQt::ConfigDialog::clicked, this, &TimeAdminDialog::onButtonClicked);
