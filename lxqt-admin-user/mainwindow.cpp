@@ -148,6 +148,7 @@ void MainWindow::onAdd()
     {
         UserInfo newUser;
         UserDialog dlg(mUserManager, &newUser, this);
+        dlg.setWindowTitle(tr("Add User"));
         if(dlg.exec() == QDialog::Accepted)
         {
             mUserManager->addUser(&newUser);
@@ -161,6 +162,7 @@ void MainWindow::onAdd()
     {
         GroupInfo newGroup;
         GroupDialog dlg(mUserManager, &newGroup, this);
+        dlg.setWindowTitle(tr("Add Group"));
         if(dlg.exec() == QDialog::Accepted)
         {
             mUserManager->addGroup(&newGroup);
@@ -198,6 +200,7 @@ void MainWindow::onDelete()
 
 bool MainWindow::getNewPassword(const QString& name, QByteArray& passwd) {
     QInputDialog dlg(this);
+    dlg.setWindowTitle(tr("Change Password"));
     dlg.setTextEchoMode(QLineEdit::Password);
     dlg.setLabelText(tr("Input the new password for %1:").arg(name));
     QLineEdit* edit = dlg.findChild<QLineEdit*>(QString());
