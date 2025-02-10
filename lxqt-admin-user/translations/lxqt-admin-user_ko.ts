@@ -143,6 +143,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
+        <location filename="../mainwindow.cpp" line="201"/>
         <source>Change Password</source>
         <translation>비밀번호 변경</translation>
     </message>
@@ -154,7 +155,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="179"/>
         <location filename="../mainwindow.cpp" line="191"/>
-        <location filename="../mainwindow.cpp" line="212"/>
+        <location filename="../mainwindow.cpp" line="213"/>
         <source>Confirm</source>
         <translation>확인하기</translation>
     </message>
@@ -169,12 +170,12 @@
         <translation>선택한 그룹을 삭제하시겠습니까?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="202"/>
+        <location filename="../mainwindow.cpp" line="203"/>
         <source>Input the new password for %1:</source>
         <translation>%1의 새 비밀번호 입력:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="212"/>
+        <location filename="../mainwindow.cpp" line="213"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation>빈 비밀번호를 설정하시겠습니까?</translation>
     </message>

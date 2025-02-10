@@ -143,6 +143,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
+        <location filename="../mainwindow.cpp" line="201"/>
         <source>Change Password</source>
         <translation>Zmień hasło</translation>
     </message>
@@ -154,7 +155,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="179"/>
         <location filename="../mainwindow.cpp" line="191"/>
-        <location filename="../mainwindow.cpp" line="212"/>
+        <location filename="../mainwindow.cpp" line="213"/>
         <source>Confirm</source>
         <translation>Potwierdź</translation>
     </message>
@@ -169,12 +170,12 @@
         <translation>Czy na pewno chcesz usunąć wybraną grupę?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="202"/>
+        <location filename="../mainwindow.cpp" line="203"/>
         <source>Input the new password for %1:</source>
         <translation>Wprowadź nowe hasło dla %1:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="212"/>
+        <location filename="../mainwindow.cpp" line="213"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation>Czy na pewno chcesz ustawić puste hasło?</translation>
     </message>
