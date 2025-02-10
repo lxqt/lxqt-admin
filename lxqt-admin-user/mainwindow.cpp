@@ -198,6 +198,7 @@ void MainWindow::onDelete()
 
 bool MainWindow::getNewPassword(const QString& name, QByteArray& passwd) {
     QInputDialog dlg(this);
+    dlg.setWindowTitle(tr("Change Password"));
     dlg.setTextEchoMode(QLineEdit::Password);
     dlg.setLabelText(tr("Input the new password for %1:").arg(name));
     QLineEdit* edit = dlg.findChild<QLineEdit*>(QString());
