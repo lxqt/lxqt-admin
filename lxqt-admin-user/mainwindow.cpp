@@ -148,7 +148,6 @@ void MainWindow::onAdd()
     {
         UserInfo newUser;
         UserDialog dlg(mUserManager, &newUser, this);
-        dlg.setWindowTitle(tr("Add User"));
         if(dlg.exec() == QDialog::Accepted)
         {
             mUserManager->addUser(&newUser);
@@ -162,7 +161,6 @@ void MainWindow::onAdd()
     {
         GroupInfo newGroup;
         GroupDialog dlg(mUserManager, &newGroup, this);
-        dlg.setWindowTitle(tr("Add Group"));
         if(dlg.exec() == QDialog::Accepted)
         {
             mUserManager->addGroup(&newGroup);
