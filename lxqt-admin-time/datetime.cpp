@@ -47,7 +47,7 @@ DateTimePage::DateTimePage(bool useNtp, bool localRtc, QWidget *parent) :
     QBrush brush;
     brush.setColor(Qt::green);
     format.setBackground(brush);
-    ui->calendar->setDateTextFormat(date,format);
+    ui->calendar->setDateTextFormat(date, format);
 
     reload();
 }
@@ -92,7 +92,7 @@ void DateTimePage::on_edit_time_userTimeChanged(const QTime & /*time*/)
 
 QDateTime DateTimePage::dateTime() const
 {
-    QDateTime dt(ui->calendar->selectedDate(),ui->edit_time->time());
+    QDateTime dt(ui->calendar->selectedDate(), ui->edit_time->time());
     return dt;
 }
 

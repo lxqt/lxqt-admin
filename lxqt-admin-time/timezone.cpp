@@ -56,7 +56,7 @@ void TimezonePage::reload()
 {
     ui->list_zones->setCurrentRow(-1);
     mZoneChanged = false;
-    QList<QListWidgetItem *> list = ui->list_zones->findItems(ui->label_timezone->text(),Qt::MatchExactly);
+    QList<QListWidgetItem *> list = ui->list_zones->findItems(ui->label_timezone->text(), Qt::MatchExactly);
     if (list.count())
         ui->list_zones->setCurrentItem(list.at(0));
 
