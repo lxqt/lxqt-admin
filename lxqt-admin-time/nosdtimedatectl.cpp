@@ -73,15 +73,17 @@ bool NOSDTimeDateCtl::useNtp() const
     /*
     QProcess process;
     QStringList args = QStringList();
-    args  << QSL("/etc/rc.d/ntpd") << QSL("rcvar");
-    process.start(QSL("/bin/sh"),args);
+    args << QSL("/etc/rc.d/ntpd") << QSL("rcvar");
+    process.start(QSL("/bin/sh"), args);
     process.waitForFinished(-1);
     QString t = QString::fromLatin1(process.readAllStandardOutput());
     QStringList o = t.split(QSL("\n"));
     for (QStringList::iterator it = o.begin();
          it != o.end(); ++it) {
         QString current = *it;
-        if(!current.startsWith(QSL("#")) && current.contains(QSL("ntpd_enable"),Qt::CaseInsensitive) && current.contains(QSL("yes"),Qt::CaseInsensitive)) {
+        if(!current.startsWith(QSL("#")) && current.contains(QSL("ntpd_enable"), Qt::CaseInsensitive)
+           && current.contains(QSL("yes"), Qt::CaseInsensitive))
+        {
             return true;
         }
     }
@@ -141,8 +143,8 @@ bool NOSDTimeDateCtl::pkexec()
     const bool succeeded = process.exitCode() == 0;
     if (!succeeded)
     {
-        QMessageBox * msg = new QMessageBox{QMessageBox::Critical, QObject::tr("lxqt-admin-time-helper")
-            , QObject::tr("<strong>Action (%1) failed:</strong><br/><pre>%2</pre>").arg(args[0], QString::fromLatin1(pkexec_error))};
+        QMessageBox * msg = new QMessageBox{QMessageBox::Critical, QObject::tr("lxqt-admin-time-helper"),
+            QObject::tr("<strong>Action (%1) failed:</strong><br/><pre>%2</pre>").arg(args[0], QString::fromLatin1(pkexec_error))};
         msg->setAttribute(Qt::WA_DeleteOnClose, true);
         msg->show();
     }

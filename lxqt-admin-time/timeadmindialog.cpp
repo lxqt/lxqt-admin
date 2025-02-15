@@ -58,7 +58,7 @@ TimeAdminDialog::TimeAdminDialog(QWidget *parent):
     loadTimeZones(zones, currentZone);
     mTimezoneWidget = new TimezonePage(zones, currentZone, this);
     addPage(mTimezoneWidget, tr("Timezone"), QStringLiteral("preferences-system-time"));
-    connect(this,&TimeAdminDialog::reset, mTimezoneWidget, &TimezonePage::reload);
+    connect(this, &TimeAdminDialog::reset, mTimezoneWidget, &TimezonePage::reload);
     connect(mTimezoneWidget, &TimezonePage::changed, this, &TimeAdminDialog::onChanged);
 
     setButtons(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
@@ -153,9 +153,12 @@ void TimeAdminDialog::saveChangesToSystem()
     }
 #if defined  Q_OS_FREEBSD || defined NO_SYSTEMD
     mTimeDateCtl.pkexec();
-    if(modified.testFlag(DateTimePage::M_LOCAL_RTC)) {
-    const QString infoMsg = mDateTimeWidget->localRtc() ?  tr("Change RTC to be in localtime requires a reboot") : tr("Change RTC to be in UTC requires a reboot");
-    QMessageBox::information(this,tr("Reboot required"),infoMsg);
+    if(modified.testFlag(DateTimePage::M_LOCAL_RTC))
+    {
+        const QString infoMsg = mDateTimeWidget->localRtc()
+            ? tr("Change RTC to be in localtime requires a reboot")
+            : tr("Change RTC to be in UTC requires a reboot");
+        QMessageBox::information(this, tr("Reboot required"), infoMsg);
     }
 #endif
 }
