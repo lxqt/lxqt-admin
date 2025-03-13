@@ -9,32 +9,37 @@
         <translation>Impostazioni gruppi</translation>
     </message>
     <message>
-        <location filename="../groupdialog.ui" line="20"/>
+        <location filename="../groupdialog.ui" line="29"/>
         <source>Group name:</source>
         <translation>Nome del gruppo:</translation>
     </message>
     <message>
-        <location filename="../groupdialog.ui" line="30"/>
+        <location filename="../groupdialog.ui" line="36"/>
         <source>Default</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../groupdialog.ui" line="40"/>
+        <location filename="../groupdialog.ui" line="22"/>
         <source>Group ID:</source>
         <translation>ID gruppo:</translation>
     </message>
     <message>
-        <location filename="../groupdialog.ui" line="47"/>
+        <location filename="../groupdialog.ui" line="63"/>
         <source>Users belong to this group:</source>
         <translation>Utenti appartenenti al gruppo:</translation>
     </message>
     <message>
-        <location filename="../groupdialog.cpp" line="64"/>
+        <location filename="../groupdialog.ui" line="70"/>
+        <source>Main members:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../groupdialog.cpp" line="81"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
     <message>
-        <location filename="../groupdialog.cpp" line="64"/>
+        <location filename="../groupdialog.cpp" line="81"/>
         <source>The group name cannot be empty.</source>
         <translation>Il nome del gruppo non può essere vuoto.</translation>
     </message>
@@ -98,85 +103,90 @@
         <translation>ID gruppo</translation>
     </message>
     <message>
+        <source>Main Members</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="126"/>
         <location filename="../mainwindow.ui" line="121"/>
         <source>Members</source>
         <translation>Membri</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="188"/>
+        <location filename="../mainwindow.ui" line="193"/>
         <source>Edit properties of the selected item</source>
         <translation>Modifica le proprietà dell&apos;oggetto selezionato</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="161"/>
+        <location filename="../mainwindow.ui" line="166"/>
         <source>Add</source>
         <translation>Aggiungi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="164"/>
+        <location filename="../mainwindow.ui" line="169"/>
         <source>Add new users or groups</source>
         <translation>Aggiungi nuovi utenti o gruppi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="173"/>
+        <location filename="../mainwindow.ui" line="178"/>
         <source>Delete</source>
         <translation>Elimina</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="176"/>
+        <location filename="../mainwindow.ui" line="181"/>
         <source>Delete selected item</source>
         <translation>Elimina l&apos;elemento selezionato</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="185"/>
+        <location filename="../mainwindow.ui" line="190"/>
         <source>Properties</source>
         <translation>Proprietà</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="197"/>
+        <location filename="../mainwindow.ui" line="202"/>
         <source>Refresh</source>
         <translation>Aggiorna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="200"/>
+        <location filename="../mainwindow.ui" line="205"/>
         <source>Refresh the lists</source>
         <translation>Aggiorna l&apos;elenco</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="209"/>
-        <location filename="../mainwindow.cpp" line="201"/>
+        <location filename="../mainwindow.ui" line="214"/>
+        <location filename="../mainwindow.cpp" line="202"/>
         <source>Change Password</source>
         <translation>Cambia password</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="212"/>
+        <location filename="../mainwindow.ui" line="217"/>
         <source>Change password for the selected user or group</source>
         <translation>Cambia password per l&apos;utente o il gruppo selezionato</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="179"/>
-        <location filename="../mainwindow.cpp" line="191"/>
-        <location filename="../mainwindow.cpp" line="213"/>
+        <location filename="../mainwindow.cpp" line="180"/>
+        <location filename="../mainwindow.cpp" line="192"/>
+        <location filename="../mainwindow.cpp" line="214"/>
         <source>Confirm</source>
         <translation>Conferma</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="179"/>
+        <location filename="../mainwindow.cpp" line="180"/>
         <source>Are you sure you want to delete the selected user?</source>
         <translation>Si è sicuro di voler eliminare l&apos;utente selezionato?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="191"/>
+        <location filename="../mainwindow.cpp" line="192"/>
         <source>Are you sure you want to delete the selected group?</source>
         <translation>Si è sicuro di voler eliminare il gruppo selezionato?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="203"/>
+        <location filename="../mainwindow.cpp" line="204"/>
         <source>Input the new password for %1:</source>
         <translation>Immetti il nuovo password per %1:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="213"/>
+        <location filename="../mainwindow.cpp" line="214"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation>Si è sicuro ti impostare un password vuoto?</translation>
     </message>
@@ -257,7 +267,7 @@
 <context>
     <name>UserManager</name>
     <message>
-        <location filename="../usermanager.cpp" line="229"/>
+        <location filename="../usermanager.cpp" line="230"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
         <translation>&lt;strong&gt;Azione (%1) fallita:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>

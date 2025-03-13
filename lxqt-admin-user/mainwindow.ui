@@ -118,6 +118,11 @@
           </column>
           <column>
            <property name="text">
+            <string>Main Members</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
             <string>Members</string>
            </property>
           </column>

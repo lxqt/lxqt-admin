@@ -9,32 +9,37 @@
         <translation>Gruppeinnstillinger</translation>
     </message>
     <message>
-        <location filename="../groupdialog.ui" line="20"/>
+        <location filename="../groupdialog.ui" line="29"/>
         <source>Group name:</source>
         <translation>Gruppenavn:</translation>
     </message>
     <message>
-        <location filename="../groupdialog.ui" line="30"/>
+        <location filename="../groupdialog.ui" line="36"/>
         <source>Default</source>
         <translation>Standard</translation>
     </message>
     <message>
-        <location filename="../groupdialog.ui" line="40"/>
+        <location filename="../groupdialog.ui" line="22"/>
         <source>Group ID:</source>
         <translation>Gruppe-ID:</translation>
     </message>
     <message>
-        <location filename="../groupdialog.ui" line="47"/>
+        <location filename="../groupdialog.ui" line="63"/>
         <source>Users belong to this group:</source>
         <translation>Brukere tilhører denne gruppen:</translation>
     </message>
     <message>
-        <location filename="../groupdialog.cpp" line="64"/>
+        <location filename="../groupdialog.ui" line="70"/>
+        <source>Main members:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../groupdialog.cpp" line="81"/>
         <source>Error</source>
         <translation>Feil</translation>
     </message>
     <message>
-        <location filename="../groupdialog.cpp" line="64"/>
+        <location filename="../groupdialog.cpp" line="81"/>
         <source>The group name cannot be empty.</source>
         <translation>Gruppens navn kan ikke være tomt.</translation>
     </message>
@@ -98,84 +103,89 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
+        <source>Main Members</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="126"/>
         <source>Members</source>
         <translation>Medlemmer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="188"/>
+        <location filename="../mainwindow.ui" line="193"/>
         <source>Edit properties of the selected item</source>
         <translation>Rediger egenskaper for valgt element</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="161"/>
+        <location filename="../mainwindow.ui" line="166"/>
         <source>Add</source>
         <translation>Legg til</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="164"/>
+        <location filename="../mainwindow.ui" line="169"/>
         <source>Add new users or groups</source>
         <translation>Legg til nye brukere eller grupper</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="173"/>
+        <location filename="../mainwindow.ui" line="178"/>
         <source>Delete</source>
         <translation>Slett</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="176"/>
+        <location filename="../mainwindow.ui" line="181"/>
         <source>Delete selected item</source>
         <translation>Slett valgte element</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="185"/>
+        <location filename="../mainwindow.ui" line="190"/>
         <source>Properties</source>
         <translation>Egenskaper</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="197"/>
+        <location filename="../mainwindow.ui" line="202"/>
         <source>Refresh</source>
         <translation>Gjenoppfrisk</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="200"/>
+        <location filename="../mainwindow.ui" line="205"/>
         <source>Refresh the lists</source>
         <translation>Gjenoppfrisk listene</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="209"/>
-        <location filename="../mainwindow.cpp" line="201"/>
+        <location filename="../mainwindow.ui" line="214"/>
+        <location filename="../mainwindow.cpp" line="202"/>
         <source>Change Password</source>
         <translation>Forandre passord</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="212"/>
+        <location filename="../mainwindow.ui" line="217"/>
         <source>Change password for the selected user or group</source>
         <translation>Forandre passord for valgt bruker eller gruppe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="179"/>
-        <location filename="../mainwindow.cpp" line="191"/>
-        <location filename="../mainwindow.cpp" line="213"/>
+        <location filename="../mainwindow.cpp" line="180"/>
+        <location filename="../mainwindow.cpp" line="192"/>
+        <location filename="../mainwindow.cpp" line="214"/>
         <source>Confirm</source>
         <translation>Bekreft</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="179"/>
+        <location filename="../mainwindow.cpp" line="180"/>
         <source>Are you sure you want to delete the selected user?</source>
         <translation>Er du sikker på at du vil slette den valgte brukeren?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="191"/>
+        <location filename="../mainwindow.cpp" line="192"/>
         <source>Are you sure you want to delete the selected group?</source>
         <translation>Er du sikker på at du vil slette den valgte gruppen?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="203"/>
+        <location filename="../mainwindow.cpp" line="204"/>
         <source>Input the new password for %1:</source>
         <translation>Skriv inn det nye passordet til %1:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="213"/>
+        <location filename="../mainwindow.cpp" line="214"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation>Er du sikker på at du vil bruke et tomt passord?</translation>
     </message>
@@ -256,7 +266,7 @@
 <context>
     <name>UserManager</name>
     <message>
-        <location filename="../usermanager.cpp" line="229"/>
+        <location filename="../usermanager.cpp" line="230"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
         <translation>&lt;strong&gt;Handlingen (%1) mislyktes:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>

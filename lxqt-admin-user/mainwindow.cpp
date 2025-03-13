@@ -110,7 +110,8 @@ void MainWindow::reloadGroups()
         QVariant obj = QVariant::fromValue<void*>((void*)group);
         item->setData(0, Qt::UserRole, obj);
         item->setData(1, Qt::DisplayRole, group->gid());
-        item->setData(2, Qt::DisplayRole, group->members().join(QL1S(", ")));
+        item->setData(2, Qt::DisplayRole, group->mainMembers().join(QL1S(", ")));
+        item->setData(3, Qt::DisplayRole, group->members().join(QL1S(", ")));
         items.append(item);
     }
     ui.groupList->clear();
@@ -160,7 +161,7 @@ void MainWindow::onAdd()
     else if (ui.tabWidget->currentIndex() == PageGroups)
     {
         GroupInfo newGroup;
-        GroupDialog dlg(mUserManager, &newGroup, this);
+        GroupDialog dlg(true, mUserManager, &newGroup, this);
         if(dlg.exec() == QDialog::Accepted)
         {
             mUserManager->addGroup(&newGroup);
@@ -278,7 +279,7 @@ void MainWindow::onEditProperties()
         GroupInfo* group = groupFromItem(item);
         if(group) {
             GroupInfo newSettings(*group);
-            GroupDialog dlg(mUserManager, &newSettings, this);
+            GroupDialog dlg(false, mUserManager, &newSettings, this);
             if(dlg.exec() == QDialog::Accepted)
             {
                 mUserManager->modifyGroup(group, &newSettings);
