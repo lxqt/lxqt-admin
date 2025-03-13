@@ -9,37 +9,32 @@
         <translation>Gruppide seadistused</translation>
     </message>
     <message>
-        <location filename="../groupdialog.ui" line="29"/>
+        <location filename="../groupdialog.ui" line="20"/>
         <source>Group name:</source>
         <translation>Grupi nimi:</translation>
     </message>
     <message>
-        <location filename="../groupdialog.ui" line="36"/>
+        <location filename="../groupdialog.ui" line="30"/>
         <source>Default</source>
         <translation>Lase süsteemil valida</translation>
     </message>
     <message>
-        <location filename="../groupdialog.ui" line="22"/>
+        <location filename="../groupdialog.ui" line="40"/>
         <source>Group ID:</source>
         <translation>Grupi ID:</translation>
     </message>
     <message>
-        <location filename="../groupdialog.ui" line="63"/>
+        <location filename="../groupdialog.ui" line="47"/>
         <source>Users belong to this group:</source>
         <translation>Kasutajad, kes kuuluvad siia gruppi:</translation>
     </message>
     <message>
-        <location filename="../groupdialog.ui" line="70"/>
-        <source>Main members:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../groupdialog.cpp" line="81"/>
+        <location filename="../groupdialog.cpp" line="64"/>
         <source>Error</source>
         <translation>Viga</translation>
     </message>
     <message>
-        <location filename="../groupdialog.cpp" line="81"/>
+        <location filename="../groupdialog.cpp" line="64"/>
         <source>The group name cannot be empty.</source>
         <translation>Grupil peab olema nimi.</translation>
     </message>
@@ -103,89 +98,84 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
-        <source>Main Members</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="126"/>
         <source>Members</source>
         <translation>Liikmed</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="193"/>
+        <location filename="../mainwindow.ui" line="188"/>
         <source>Edit properties of the selected item</source>
         <translation>Muuda valitud kirje omadusi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="166"/>
+        <location filename="../mainwindow.ui" line="161"/>
         <source>Add</source>
         <translation>Lisa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="169"/>
+        <location filename="../mainwindow.ui" line="164"/>
         <source>Add new users or groups</source>
         <translation>Lisa uusi kasutajaid või kasutajagruppe</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="178"/>
+        <location filename="../mainwindow.ui" line="173"/>
         <source>Delete</source>
         <translation>Kustuta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="181"/>
+        <location filename="../mainwindow.ui" line="176"/>
         <source>Delete selected item</source>
         <translation>Kustuta valitud kirje</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="190"/>
+        <location filename="../mainwindow.ui" line="185"/>
         <source>Properties</source>
         <translation>Omadused</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="202"/>
+        <location filename="../mainwindow.ui" line="197"/>
         <source>Refresh</source>
         <translation>Värskenda</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="205"/>
+        <location filename="../mainwindow.ui" line="200"/>
         <source>Refresh the lists</source>
         <translation>Värskenda loendid</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="214"/>
-        <location filename="../mainwindow.cpp" line="202"/>
+        <location filename="../mainwindow.ui" line="209"/>
+        <location filename="../mainwindow.cpp" line="201"/>
         <source>Change Password</source>
         <translation>Muuda salasõna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="217"/>
+        <location filename="../mainwindow.ui" line="212"/>
         <source>Change password for the selected user or group</source>
         <translation>Muuda valitud kasutaja või grupi salasõna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="180"/>
-        <location filename="../mainwindow.cpp" line="192"/>
-        <location filename="../mainwindow.cpp" line="214"/>
+        <location filename="../mainwindow.cpp" line="179"/>
+        <location filename="../mainwindow.cpp" line="191"/>
+        <location filename="../mainwindow.cpp" line="213"/>
         <source>Confirm</source>
         <translation>Kinnita</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="180"/>
+        <location filename="../mainwindow.cpp" line="179"/>
         <source>Are you sure you want to delete the selected user?</source>
         <translation>Kas sa oled kindel, et soovid selle kasutaja kustutada?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="192"/>
+        <location filename="../mainwindow.cpp" line="191"/>
         <source>Are you sure you want to delete the selected group?</source>
         <translation>Kas sa oled kindel, et soovid selle grupi kustutada?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="204"/>
+        <location filename="../mainwindow.cpp" line="203"/>
         <source>Input the new password for %1:</source>
         <translation>Sisesta %1 uus salasõna:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="214"/>
+        <location filename="../mainwindow.cpp" line="213"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation>Kas sa oled kindel, et soovid sisestada olematut salasõna?</translation>
     </message>
@@ -266,7 +256,7 @@
 <context>
     <name>UserManager</name>
     <message>
-        <location filename="../usermanager.cpp" line="230"/>
+        <location filename="../usermanager.cpp" line="229"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
         <translation>&lt;strong&gt;Toiming (%1) ei õnnestunud:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
