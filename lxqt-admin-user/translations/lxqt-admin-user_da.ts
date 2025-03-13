@@ -31,7 +31,7 @@
     <message>
         <location filename="../groupdialog.ui" line="70"/>
         <source>Main members:</source>
-        <translation type="unfinished"></translation>
+        <translation>Hovedmedlemmer:</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="81"/>
@@ -104,7 +104,7 @@
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>Main Members</source>
-        <translation type="unfinished"></translation>
+        <translation>Hovedmedlemmer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="126"/>
