@@ -3,6 +3,5 @@ Type=Application
 Exec=lxqt-admin-user
 Icon=system-users
 Categories=LXQt;Settings;DesktopSettings;Qt;
-OnlyShowIn=LXQt;
 
 #TRANSLATIONS_DIR=translations
