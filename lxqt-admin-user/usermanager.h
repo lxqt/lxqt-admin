@@ -153,31 +153,50 @@ public:
     const QStringList& members() const {
         return mMembers;
     }
+    const QStringList& mainMembers() const {
+        return mMainMembers;
+    }
 
     void setMembers(const QStringList& members) {
         mMembers = members;
+    }
+    void setMainMembers(const QStringList& members) {
+        mMainMembers = members;
     }
 
     void addMember(const QString& userName) {
         mMembers.append(userName);
     }
+    void addMainMember(const QString& userName) {
+        mMainMembers.append(userName);
+    }
 
     void removeMember(const QString& userName) {
         mMembers.removeOne(userName);
+    }
+    void removeMainMember(const QString& userName) {
+        mMainMembers.removeOne(userName);
     }
 
     void removeAllMemberss() {
         mMembers.clear();
     }
+    void removeAllMainMembers() {
+        mMainMembers.clear();
+    }
 
     bool hasMember(const QString& userName) const {
         return mMembers.contains(userName);
+    }
+    bool hasMainMember(const QString& userName) const {
+        return mMainMembers.contains(userName);
     }
 
 private:
     gid_t mGid;
     QString mName;
     QStringList mMembers;
+    QStringList mMainMembers;
 };
 
 class UserManager : public QObject
