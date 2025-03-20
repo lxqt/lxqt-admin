@@ -21,7 +21,7 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation>開啟網路時間同步（NTP）</translation>
+        <translation>啟用網路時間同步 (NTP)</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
@@ -89,7 +89,7 @@
     <message>
         <location filename="../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
-        <translation>你的當前時區:</translation>
+        <translation>您目前所在時區：</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="32"/>
