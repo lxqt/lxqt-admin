@@ -6,16 +6,9 @@ This repository provides two GUI tools to adjust settings of the operating syste
 is running on.
 
 Both are using [polkit](https://www.freedesktop.org/wiki/Software/polkit/) to handle
-permissions. In contrast to the specific backends described below, earlier versions of
-lxqt-admin were relying on
-[system-tools-backends](http://system-tools-backends.freedesktop.org) and their wrapper
-[liboobs](https://developer.gnome.org/liboobs/). These were replaced, as both have gone
-unmaintained for years and were hence dropped from many distributions - heavily
-restricting the usage of lxqt-admin. As long as they can be built, it should still be
-possible to compile lxqt-admin release ≤ 0.10 against them in order to make use of it on
-platforms lacking systemd (like BSD).
+permissions.
 
-### Time and date configuration
+### Time and Date Configuration
 
 Adjusts the time and date. Binary is `lxqt-admin-time`.
 
@@ -36,7 +29,7 @@ to do the actual work. However, the script can still be modified to use differen
 
 ## Installing
 
-### Compiling sources
+### Compiling Sources
 
 Runtime dependencies consist of polkit and [liblxqt](https://github.com/lxqt/liblxqt).
 A polkit agent should be available with
@@ -50,7 +43,7 @@ normally have to be set to `/usr`.
 To build, run `make`. To install, run `make install` which accepts variable `DESTDIR`
 as usual.
 
-### Binary packages
+### Binary Packages
 
 Package `lxqt-admin` is available in the official repositories of all major
 distributions.
@@ -66,10 +59,10 @@ possible to install & use it on openSUSE.
 Much like similar tools provided by [lxqt-config](https://github.com/lxqt/lxqt-config),
 the tools of lxqt-admin can be launched from the
 [Configuration Center](https://github.com/lxqt/lxqt-config#configuration-center), as
-well as from the panel's main menu - Preferences - LXQt settings.
+well as from the panel's menu.
 
 The actual usage should be self-explanatory. To apply settings the GUI of the polkit
-authentication agent that's in use is launched to acquire the root password.
+authentication agent that's in use is launched to acquire the password.
 
 
 ### Translations
