@@ -32,7 +32,7 @@ class GroupDialog : public QDialog
     Q_OBJECT
 
 public:
-    GroupDialog(UserManager* userManager, GroupInfo* group, QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
+    GroupDialog(bool addDialog, UserManager* userManager, GroupInfo* group, QWidget *parent = nullptr, Qt::WindowFlags f = Qt::WindowFlags());
     ~GroupDialog();
 
     virtual void accept();
