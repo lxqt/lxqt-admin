@@ -1,3 +1,9 @@
+lxqt-admin-2.2.0 / 2025-04-17
+==============================
+ * Proper icons for the pages of the date and time config dialog.
+ * Window title for the password dialog in User and Group Settings.
+ * Tidy up some whitespaces in the code.
+
 lxqt-admin-2.1.0 / 2024-11-05
 ==============================
  * Don't translate app names.
