@@ -32,13 +32,13 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../nosdtimedatectl.cpp" line="144"/>
+        <location filename="../nosdtimedatectl.cpp" line="146"/>
         <source>lxqt-admin-time-helper</source>
         <translation>מסייע הגדרות זמן של LXQt</translation>
     </message>
     <message>
-        <location filename="../fbsdtimedatectl.cpp" line="123"/>
-        <location filename="../nosdtimedatectl.cpp" line="145"/>
+        <location filename="../fbsdtimedatectl.cpp" line="125"/>
+        <location filename="../nosdtimedatectl.cpp" line="147"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
         <translation>&lt;strong&gt;הפעולה (%1) נכשלה:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
@@ -69,17 +69,17 @@
         <translation>שגיאה</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="157"/>
+        <location filename="../timeadmindialog.cpp" line="159"/>
         <source>Change RTC to be in localtime requires a reboot</source>
         <translation>החלפת שעון זמן אמת (RTC) לזמן המקומי דורשת הפעלה מחדש</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="157"/>
+        <location filename="../timeadmindialog.cpp" line="160"/>
         <source>Change RTC to be in UTC requires a reboot</source>
         <translation>החלפת שעון זמן אמת (RTC) ל־UTC (זמן אוניברסלי מתואם) דורשת הפעלה מחדש</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="158"/>
+        <location filename="../timeadmindialog.cpp" line="161"/>
         <source>Reboot required</source>
         <translation>נדרשת הפעלה מחדש</translation>
     </message>
