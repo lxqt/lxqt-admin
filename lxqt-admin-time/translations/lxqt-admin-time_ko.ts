@@ -32,13 +32,13 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../nosdtimedatectl.cpp" line="144"/>
+        <location filename="../nosdtimedatectl.cpp" line="146"/>
         <source>lxqt-admin-time-helper</source>
         <translation>lxqt-관리자-시간-도우미</translation>
     </message>
     <message>
-        <location filename="../fbsdtimedatectl.cpp" line="123"/>
-        <location filename="../nosdtimedatectl.cpp" line="145"/>
+        <location filename="../fbsdtimedatectl.cpp" line="125"/>
+        <location filename="../nosdtimedatectl.cpp" line="147"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
         <translation>&lt;strong&gt;작업(%1) 실패:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
@@ -69,17 +69,17 @@
         <translation>오류</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="157"/>
+        <location filename="../timeadmindialog.cpp" line="159"/>
         <source>Change RTC to be in localtime requires a reboot</source>
         <translation>RTC를 현지 시간으로 변경하려면 재부팅해야 합니다</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="157"/>
+        <location filename="../timeadmindialog.cpp" line="160"/>
         <source>Change RTC to be in UTC requires a reboot</source>
         <translation>RTC를 UTC로 변경하려면 재부팅해야 합니다</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="158"/>
+        <location filename="../timeadmindialog.cpp" line="161"/>
         <source>Reboot required</source>
         <translation>재부팅 필요</translation>
     </message>

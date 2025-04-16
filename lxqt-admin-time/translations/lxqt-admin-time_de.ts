@@ -33,13 +33,13 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../nosdtimedatectl.cpp" line="144"/>
+        <location filename="../nosdtimedatectl.cpp" line="146"/>
         <source>lxqt-admin-time-helper</source>
         <translation>LXQt-Zeiteinstellung</translation>
     </message>
     <message>
-        <location filename="../fbsdtimedatectl.cpp" line="123"/>
-        <location filename="../nosdtimedatectl.cpp" line="145"/>
+        <location filename="../fbsdtimedatectl.cpp" line="125"/>
+        <location filename="../nosdtimedatectl.cpp" line="147"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
         <translation>&lt;strong&gt;Aktion (%1) fehlgeschlagen:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
@@ -70,17 +70,17 @@
         <translation>Fehler</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="157"/>
+        <location filename="../timeadmindialog.cpp" line="159"/>
         <source>Change RTC to be in localtime requires a reboot</source>
         <translation>Änderung der RTC in Lokalzeit erfordert einen Neustart</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="157"/>
+        <location filename="../timeadmindialog.cpp" line="160"/>
         <source>Change RTC to be in UTC requires a reboot</source>
         <translation>Änderung der RTC in UTC erfordert einen Neustart</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="158"/>
+        <location filename="../timeadmindialog.cpp" line="161"/>
         <source>Reboot required</source>
         <translation>Neustart erforderlich</translation>
     </message>

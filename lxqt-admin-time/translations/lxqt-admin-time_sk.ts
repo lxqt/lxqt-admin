@@ -32,13 +32,13 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../nosdtimedatectl.cpp" line="144"/>
+        <location filename="../nosdtimedatectl.cpp" line="146"/>
         <source>lxqt-admin-time-helper</source>
         <translation>lxqt-admin-time-helper</translation>
     </message>
     <message>
-        <location filename="../fbsdtimedatectl.cpp" line="123"/>
-        <location filename="../nosdtimedatectl.cpp" line="145"/>
+        <location filename="../fbsdtimedatectl.cpp" line="125"/>
+        <location filename="../nosdtimedatectl.cpp" line="147"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
         <translation>&lt;strong&gt;Akcia(%1) neúspešná:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
@@ -69,17 +69,17 @@
         <translation>Chyba</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="157"/>
+        <location filename="../timeadmindialog.cpp" line="159"/>
         <source>Change RTC to be in localtime requires a reboot</source>
         <translation>Po nastavení hardvérových hodín na lokálny čas je potrebné reštartovať počítač</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="157"/>
+        <location filename="../timeadmindialog.cpp" line="160"/>
         <source>Change RTC to be in UTC requires a reboot</source>
         <translation>Po nastavení hardvérových hodín na univerzálny koordinovaný čas je potrebné reštartovať počítač</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="158"/>
+        <location filename="../timeadmindialog.cpp" line="161"/>
         <source>Reboot required</source>
         <translation>Je potrebné reštartovať počítač</translation>
     </message>
