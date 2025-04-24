@@ -88,11 +88,12 @@ void UserManager::loadUsersAndGroups()
             continue;
         UserInfo* user = new UserInfo(pw);
         mUsers.append(user);
-        // add groups to this user
-        for(const GroupInfo* group: std::as_const(mGroups)) {
-            if(group->hasMember(user->name())) {
+        // add groups to this user and add this user to their group's main members
+        for(GroupInfo* group: mGroups) {
+            if(group->hasMember(user->name()))
                 user->addGroup(group->name());
-            }
+            if(user->gid() == group->gid())
+                group->addMainMember(user->name());
         }
     }
     endpwent();
