@@ -94,7 +94,7 @@
     <message>
         <location filename="../timezone.ui" line="32"/>
         <source>Filter</source>
-        <translation>過濾器</translation>
+        <translation>篩選</translation>
     </message>
 </context>
 <context>
