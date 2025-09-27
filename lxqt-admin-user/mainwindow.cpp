@@ -150,10 +150,12 @@ void MainWindow::onAdd()
         UserDialog dlg(mUserManager, &newUser, this);
         if(dlg.exec() == QDialog::Accepted)
         {
-            mUserManager->addUser(&newUser);
-            QByteArray newPasswd;
-            if(getNewPassword(newUser.name(), newPasswd)) {
-                mUserManager->changePassword(&newUser, newPasswd);
+            if(mUserManager->addUser(&newUser))
+            {
+                QByteArray newPasswd;
+                if(getNewPassword(newUser.name(), newPasswd)) {
+                    mUserManager->changePassword(&newUser, newPasswd);
+                }
             }
         }
     }
