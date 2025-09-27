@@ -172,6 +172,9 @@ void MainWindow::onDelete()
 {
     if(ui.tabWidget->currentIndex() == PageUsers)
     {
+        if (ui.userList->selectedItems().isEmpty())
+            return;
+
         QTreeWidgetItem* item = ui.userList->currentItem();
         UserInfo* user = userFromItem(item);
         if(user)
@@ -184,6 +187,9 @@ void MainWindow::onDelete()
     }
     else if(ui.tabWidget->currentIndex() == PageGroups)
     {
+        if (ui.groupList->selectedItems().isEmpty())
+            return;
+
         QTreeWidgetItem* item = ui.groupList->currentItem();
         GroupInfo* group = groupFromItem(item);
         if(group)
@@ -224,6 +230,9 @@ void MainWindow::onChangePasswd() {
     GroupInfo* group = nullptr;
     if(ui.tabWidget->currentIndex() == PageUsers)
     {
+        if (ui.userList->selectedItems().isEmpty())
+            return;
+
         QTreeWidgetItem* item = ui.userList->currentItem();
         user = userFromItem(item);
         if (!user)
@@ -233,6 +242,9 @@ void MainWindow::onChangePasswd() {
     }
     else if(ui.tabWidget->currentIndex() == PageGroups)
     {
+        if (ui.groupList->selectedItems().isEmpty())
+            return;
+
         QTreeWidgetItem* item = ui.groupList->currentItem();
         group = groupFromItem(item);
         if (!group)
@@ -261,6 +273,9 @@ void MainWindow::onEditProperties()
 {
     if(ui.tabWidget->currentIndex() == PageUsers)
     {
+        if (ui.userList->selectedItems().isEmpty())
+            return;
+
         QTreeWidgetItem* item = ui.userList->currentItem();
         UserInfo* user = userFromItem(item);
         if(user) {
@@ -274,6 +289,9 @@ void MainWindow::onEditProperties()
     }
     else if(ui.tabWidget->currentIndex() == PageGroups)
     {
+        if (ui.groupList->selectedItems().isEmpty())
+            return;
+
         QTreeWidgetItem* item = ui.groupList->currentItem();
         GroupInfo* group = groupFromItem(item);
         if(group) {
