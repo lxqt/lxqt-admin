@@ -3,6 +3,5 @@ Type=Application
 Exec=lxqt-admin-time
 Icon=preferences-system-time
 Categories=LXQt;Settings;DesktopSettings;Qt;
-OnlyShowIn=LXQt;
 
 #TRANSLATIONS_DIR=translations
