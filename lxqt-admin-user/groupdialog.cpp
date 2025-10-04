@@ -26,7 +26,7 @@
 #define DEFAULT_GID_MIN 1000
 #define DEFAULT_GID_MAX 32768
 
-GroupDialog::GroupDialog(UserManager* userManager, GroupInfo* group, QWidget *parent, Qt::WindowFlags f):
+GroupDialog::GroupDialog(bool addDialog, UserManager* userManager, GroupInfo* group, QWidget *parent, Qt::WindowFlags f):
     QDialog(parent, f),
     mUserManager(userManager),
     mGroup(group)
@@ -34,6 +34,13 @@ GroupDialog::GroupDialog(UserManager* userManager, GroupInfo* group, QWidget *pa
     ui.setupUi(this);
     ui.groupName->setText(group->name());
     ui.gid->setValue(group->gid());
+
+    // gray out main members wigde
+    if (addDialog)
+    {
+        ui.mainUserLabel->hide();
+        ui.mainUserList->hide();
+    }
 
     const QStringList& members = group->members(); // all users in this group
     // load all users
@@ -49,6 +56,16 @@ GroupDialog::GroupDialog(UserManager* userManager, GroupInfo* group, QWidget *pa
         QVariant obj = QVariant::fromValue<void*>((void*)user);
         item->setData(Qt::UserRole, obj);
         ui.userList->addItem(item);
+
+        // Check if user's gid is this group
+        if(!addDialog && user->gid() == group->gid())
+        {
+            QListWidgetItem* mainUserItem = new QListWidgetItem();
+            mainUserItem->setText(user->name());
+            mainUserItem->setFlags(Qt::ItemIsEnabled);
+            mainUserItem->setData(Qt::UserRole, obj);
+            ui.mainUserList->addItem(mainUserItem);
+        }
     }
 }
 
