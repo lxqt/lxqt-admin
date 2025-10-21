@@ -94,7 +94,7 @@
     <message>
         <location filename="../timezone.ui" line="32"/>
         <source>Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtroa</translation>
     </message>
 </context>
 <context>
