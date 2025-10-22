@@ -143,7 +143,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
-        <location filename="../mainwindow.cpp" line="201"/>
+        <location filename="../mainwindow.cpp" line="209"/>
         <source>Change Password</source>
         <translation>Cambiar lo senhal</translation>
     </message>
@@ -153,29 +153,29 @@
         <translation>Cambiar lo senhal per l’utilizaire o lo grop seleccionat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="179"/>
-        <location filename="../mainwindow.cpp" line="191"/>
-        <location filename="../mainwindow.cpp" line="213"/>
+        <location filename="../mainwindow.cpp" line="184"/>
+        <location filename="../mainwindow.cpp" line="199"/>
+        <location filename="../mainwindow.cpp" line="221"/>
         <source>Confirm</source>
         <translation>Confirmar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="179"/>
+        <location filename="../mainwindow.cpp" line="184"/>
         <source>Are you sure you want to delete the selected user?</source>
         <translation>Volètz vertadièrament suprimir l’utilizaire seleccionat&#xa0;?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="191"/>
+        <location filename="../mainwindow.cpp" line="199"/>
         <source>Are you sure you want to delete the selected group?</source>
         <translation>Volètz vertadièrament suprimir lo grop seleccionat&#xa0;?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="203"/>
+        <location filename="../mainwindow.cpp" line="211"/>
         <source>Input the new password for %1:</source>
         <translation>Picar lo senhal novèl per %1&#xa0;:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="213"/>
+        <location filename="../mainwindow.cpp" line="221"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation>Volètz vertadièrament definir un senhal void&#xa0;?</translation>
     </message>

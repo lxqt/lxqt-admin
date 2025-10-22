@@ -143,7 +143,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
-        <location filename="../mainwindow.cpp" line="201"/>
+        <location filename="../mainwindow.cpp" line="209"/>
         <source>Change Password</source>
         <translation>पासवर्ड बदलें</translation>
     </message>
@@ -153,29 +153,29 @@
         <translation>चयनित उपयोगकर्ता या समूह के लिए पासवर्ड बदलें</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="179"/>
-        <location filename="../mainwindow.cpp" line="191"/>
-        <location filename="../mainwindow.cpp" line="213"/>
+        <location filename="../mainwindow.cpp" line="184"/>
+        <location filename="../mainwindow.cpp" line="199"/>
+        <location filename="../mainwindow.cpp" line="221"/>
         <source>Confirm</source>
         <translation>पुष्टि करें</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="179"/>
+        <location filename="../mainwindow.cpp" line="184"/>
         <source>Are you sure you want to delete the selected user?</source>
         <translation>क्या आप चुने गए उपयोगकर्ता को हटाना चाहते हैं?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="191"/>
+        <location filename="../mainwindow.cpp" line="199"/>
         <source>Are you sure you want to delete the selected group?</source>
         <translation>क्या आप चयनित समूह को हटाना चाहते हैं?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="203"/>
+        <location filename="../mainwindow.cpp" line="211"/>
         <source>Input the new password for %1:</source>
         <translation>%1 के लिए नया पासवर्ड डालें :</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="213"/>
+        <location filename="../mainwindow.cpp" line="221"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation>क्या आप एक रिक्त पासवर्ड सेट करना चाहते हैं?</translation>
     </message>

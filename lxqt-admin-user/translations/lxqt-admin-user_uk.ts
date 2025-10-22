@@ -143,7 +143,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
-        <location filename="../mainwindow.cpp" line="201"/>
+        <location filename="../mainwindow.cpp" line="209"/>
         <source>Change Password</source>
         <translation>Змінити пароль</translation>
     </message>
@@ -153,29 +153,29 @@
         <translation>Змінити пароль для вибраного користувача або групи</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="179"/>
-        <location filename="../mainwindow.cpp" line="191"/>
-        <location filename="../mainwindow.cpp" line="213"/>
+        <location filename="../mainwindow.cpp" line="184"/>
+        <location filename="../mainwindow.cpp" line="199"/>
+        <location filename="../mainwindow.cpp" line="221"/>
         <source>Confirm</source>
         <translation>Підтвердити</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="179"/>
+        <location filename="../mainwindow.cpp" line="184"/>
         <source>Are you sure you want to delete the selected user?</source>
         <translation>Ви дійсно бажаєте видалити позначеного користувача?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="191"/>
+        <location filename="../mainwindow.cpp" line="199"/>
         <source>Are you sure you want to delete the selected group?</source>
         <translation>Ви дійсно бажаєте видалити позначену групу?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="203"/>
+        <location filename="../mainwindow.cpp" line="211"/>
         <source>Input the new password for %1:</source>
         <translation>Введіть новий пароль для %1:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="213"/>
+        <location filename="../mainwindow.cpp" line="221"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation>Дійсно хочете встановити порожній пароль?</translation>
     </message>

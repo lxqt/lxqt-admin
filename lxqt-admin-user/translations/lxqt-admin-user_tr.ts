@@ -143,7 +143,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
-        <location filename="../mainwindow.cpp" line="201"/>
+        <location filename="../mainwindow.cpp" line="209"/>
         <source>Change Password</source>
         <translation>Parolayı Değiştir</translation>
     </message>
@@ -153,29 +153,29 @@
         <translation>Seçilen kullanıcı ya da grup için parolayı değiştir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="179"/>
-        <location filename="../mainwindow.cpp" line="191"/>
-        <location filename="../mainwindow.cpp" line="213"/>
+        <location filename="../mainwindow.cpp" line="184"/>
+        <location filename="../mainwindow.cpp" line="199"/>
+        <location filename="../mainwindow.cpp" line="221"/>
         <source>Confirm</source>
         <translation>Doğrula</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="179"/>
+        <location filename="../mainwindow.cpp" line="184"/>
         <source>Are you sure you want to delete the selected user?</source>
         <translation>Seçilen kullanıcıyı silmek istediğinizden emin misiniz?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="191"/>
+        <location filename="../mainwindow.cpp" line="199"/>
         <source>Are you sure you want to delete the selected group?</source>
         <translation>Seçilen grubu silmek istediğinizden emin misiniz?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="203"/>
+        <location filename="../mainwindow.cpp" line="211"/>
         <source>Input the new password for %1:</source>
         <translation>%1 için yeni parolayı girin:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="213"/>
+        <location filename="../mainwindow.cpp" line="221"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation>Parolayı boş bırakmak istediğinizden emin misiniz?</translation>
     </message>

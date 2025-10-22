@@ -32,14 +32,13 @@
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../fbsdtimedatectl.cpp" line="122"/>
-        <location filename="../nosdtimedatectl.cpp" line="141"/>
+        <location filename="../nosdtimedatectl.cpp" line="146"/>
         <source>lxqt-admin-time-helper</source>
         <translation>Ekiyamba-okuteekateeka-eby&apos;okubala-obudde-ekya-LXQt</translation>
     </message>
     <message>
-        <location filename="../fbsdtimedatectl.cpp" line="123"/>
-        <location filename="../nosdtimedatectl.cpp" line="142"/>
+        <location filename="../fbsdtimedatectl.cpp" line="125"/>
+        <location filename="../nosdtimedatectl.cpp" line="147"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
         <translation>&lt;strong&gt;Ekikolwa (%1) kiremye:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
@@ -47,40 +46,40 @@
 <context>
     <name>TimeAdminDialog</name>
     <message>
-        <location filename="../timeadmindialog.cpp" line="45"/>
+        <location filename="../timeadmindialog.cpp" line="46"/>
         <source>Time and date configuration</source>
         <translation>Enteekateeka za saawa n&apos;ennaku</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="51"/>
+        <location filename="../timeadmindialog.cpp" line="52"/>
         <source>Date and time</source>
         <translation>Ennaku ne saawa</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="59"/>
+        <location filename="../timeadmindialog.cpp" line="60"/>
         <source>Timezone</source>
         <translation>Ekifo essaawa mwe zikolera</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="122"/>
-        <location filename="../timeadmindialog.cpp" line="132"/>
-        <location filename="../timeadmindialog.cpp" line="139"/>
-        <location filename="../timeadmindialog.cpp" line="149"/>
+        <location filename="../timeadmindialog.cpp" line="123"/>
+        <location filename="../timeadmindialog.cpp" line="133"/>
+        <location filename="../timeadmindialog.cpp" line="140"/>
+        <location filename="../timeadmindialog.cpp" line="150"/>
         <source>Error</source>
         <translation>Kiremya</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="156"/>
+        <location filename="../timeadmindialog.cpp" line="159"/>
         <source>Change RTC to be in localtime requires a reboot</source>
         <translation>RTC gikyuse ekolera ku saawa ez&apos;omu kitundu. Kyetaagisa kuddamu okukoleeza kompyuta</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="156"/>
+        <location filename="../timeadmindialog.cpp" line="160"/>
         <source>Change RTC to be in UTC requires a reboot</source>
         <translation>RTC gikyuse ekolere ku UTC. Kyetaagisa kuddamu kukoleeza kompyuta</translation>
     </message>
     <message>
-        <location filename="../timeadmindialog.cpp" line="157"/>
+        <location filename="../timeadmindialog.cpp" line="161"/>
         <source>Reboot required</source>
         <translation>Kyetaagisa kuddamu kukoleeza kompyuta</translation>
     </message>
