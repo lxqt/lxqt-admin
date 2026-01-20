@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="he">
+<TS version="2.1" language="kk">
 <context>
     <name>GroupDialog</name>
     <message>
         <location filename="../groupdialog.ui" line="14"/>
         <source>Group Settings</source>
-        <translation>הגדרות קבוצה</translation>
+        <translation>Топ баптаулары</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="20"/>
         <source>Group name:</source>
-        <translation>שם קבוצה:</translation>
+        <translation>Топ атауы:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="30"/>
         <source>Default</source>
-        <translation>ברירת מחדל</translation>
+        <translation>Бастапқы</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="40"/>
         <source>Group ID:</source>
-        <translation>מזהה קבוצה:</translation>
+        <translation>Топ идентификаторы:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="47"/>
         <source>Users belong to this group:</source>
-        <translation>משתמשים ששייכים לקבוצה הזו:</translation>
+        <translation>Осы топқа жататын пайдаланушылар:</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
         <source>Error</source>
-        <translation>שגיאה</translation>
+        <translation>Қате</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
         <source>The group name cannot be empty.</source>
-        <translation>שם הקבוצה לא יכול להישאר ריק.</translation>
+        <translation>Топ атауы бос болмауы тиіс.</translation>
     </message>
 </context>
 <context>
@@ -44,140 +44,140 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>User and Group Settings</source>
-        <translation>הגדרות משתמשים וקבוצות</translation>
+        <translation>Пайдаланушы және топ баптаулары</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="40"/>
         <source>&amp;Users</source>
-        <translation>מ&amp;שתמשים</translation>
+        <translation>&amp;Пайдаланушылар</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="59"/>
         <source>Login Name</source>
-        <translation>שם כניסה</translation>
+        <translation>Логин аты</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="64"/>
         <source>User ID</source>
-        <translation>מזהה משתמש</translation>
+        <translation>Пайдаланушы идентификаторы</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="69"/>
         <source>Full Name</source>
-        <translation>שם מלא</translation>
+        <translation>Толық аты</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="74"/>
         <source>Group</source>
-        <translation>קבוצה</translation>
+        <translation>Топ</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="79"/>
         <source>Home Directory</source>
-        <translation>תיקיית בית</translation>
+        <translation>Үй бумасы</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>Show system users (for advanced users only)</source>
-        <translation>הצגת משתמשי מערכת (למשתמשים מתקדמים בלבד)</translation>
+        <translation>Жүйелік пайдаланушыларды көрсету (тек тәжірибелі пайдаланушылар үшін)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
         <source>&amp;Groups</source>
-        <translation>&amp;קבוצות</translation>
+        <translation>&amp;Топтар</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="111"/>
         <source>Name</source>
-        <translation>שם</translation>
+        <translation>Аты</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="116"/>
         <source>Group ID</source>
-        <translation>מזהה קבוצה</translation>
+        <translation>Топ идентификаторы</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>Members</source>
-        <translation>חברים</translation>
+        <translation>Мүшелер</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="188"/>
         <source>Edit properties of the selected item</source>
-        <translation>עריכת מאפייני הפריט הנבחר</translation>
+        <translation>Таңдалған элементтің қасиеттерін түзету</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="161"/>
         <source>Add</source>
-        <translation>הוספה</translation>
+        <translation>Қосу</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="164"/>
         <source>Add new users or groups</source>
-        <translation>הוספת משתמשים או קבוצות חדשים</translation>
+        <translation>Жаңа пайдаланушыларды немесе топтарды қосу</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="173"/>
         <source>Delete</source>
-        <translation>מחיקה</translation>
+        <translation>Өшіру</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="176"/>
         <source>Delete selected item</source>
-        <translation>מחיקת הפריט הנבחר</translation>
+        <translation>Таңдалған элементті өшіру</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>Properties</source>
-        <translation>מאפיינים</translation>
+        <translation>Қасиеттер</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>Refresh</source>
-        <translation>רענון</translation>
+        <translation>Жаңарту</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="200"/>
         <source>Refresh the lists</source>
-        <translation>רענון הרשימות</translation>
+        <translation>Тізімдерді жаңарту</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
         <location filename="../mainwindow.cpp" line="209"/>
         <source>Change Password</source>
-        <translation>החלפת ססמה</translation>
+        <translation>Парольді өзгерту</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="212"/>
         <source>Change password for the selected user or group</source>
-        <translation>החלפת הססמה למשתמש או לקבוצה הנבחרים</translation>
+        <translation>Таңдалған пайдаланушы немесе топ үшін парольді өзгерту</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="184"/>
         <location filename="../mainwindow.cpp" line="199"/>
         <location filename="../mainwindow.cpp" line="221"/>
         <source>Confirm</source>
-        <translation>אישור</translation>
+        <translation>Растау</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="184"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation>למחוק את המשתמש הנבחר?</translation>
+        <translation>Таңдалған пайдаланушыны өшіруді шынымен қалайсыз ба?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="199"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation>למחוק את הקבוצה הנבחרת?</translation>
+        <translation>Таңдалған топты өшіруді шынымен қалайсыз ба?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="211"/>
         <source>Input the new password for %1:</source>
-        <translation>הקלדת הססמה החדשה עבור %1:</translation>
+        <translation>%1 үшін жаңа парольді енгізіңіз:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="221"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation>להגדיר ססמה ריקה?</translation>
+        <translation>Бос парольді орнатуды шынымен қалайсыз ба?</translation>
     </message>
 </context>
 <context>
@@ -185,72 +185,72 @@
     <message>
         <location filename="../userdialog.ui" line="14"/>
         <source>User Settings</source>
-        <translation>הגדרות משתמשים</translation>
+        <translation>Пайдаланушы баптаулары</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="24"/>
         <source>General</source>
-        <translation>כללי</translation>
+        <translation>Жалпы</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="43"/>
         <source>Full name:</source>
-        <translation>שם מלא:</translation>
+        <translation>Толық аты:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="33"/>
         <source>Login name:</source>
-        <translation>שם כניסה:</translation>
+        <translation>Логин аты:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="53"/>
         <source>User ID:</source>
-        <translation>מזהה משתמש:</translation>
+        <translation>Пайдаланушы идентификаторы:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="60"/>
         <source>Default</source>
-        <translation>ברירת מחדל</translation>
+        <translation>Бастапқы</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="70"/>
         <source>Main group:</source>
-        <translation>קבוצה ראשית:</translation>
+        <translation>Негізгі топ:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="85"/>
         <source>Groups</source>
-        <translation>קבוצות</translation>
+        <translation>Топтар</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="91"/>
         <source>The user belongs to the following groups:</source>
-        <translation>המשתמש שייך לקבוצות הבאות:</translation>
+        <translation>Пайдаланушы келесі топтарға жатады:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="109"/>
         <source>Advanced</source>
-        <translation>מתקדם</translation>
+        <translation>Кеңейтілген</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="115"/>
         <source>Login shell:</source>
-        <translation>מעטפת כניסה:</translation>
+        <translation>Кіру қоршамы:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="132"/>
         <source>Home directory:</source>
-        <translation>תיקיית בית:</translation>
+        <translation>Үй бумасы:</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="120"/>
         <source>Error</source>
-        <translation>שגיאה</translation>
+        <translation>Қате</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="120"/>
         <source>The user name cannot be empty.</source>
-        <translation>שם המשתמש לא יכול להישאר ריק.</translation>
+        <translation>Пайдаланушы аты бос болмауы керек.</translation>
     </message>
 </context>
 <context>
@@ -258,7 +258,7 @@
     <message>
         <location filename="../usermanager.cpp" line="229"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation>&lt;strong&gt;הפעולה (%1) נכשלה:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
+        <translation>&lt;strong&gt;Әрекет (%1) сәтсіз аяқталды:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
