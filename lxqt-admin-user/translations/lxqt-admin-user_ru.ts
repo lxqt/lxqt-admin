@@ -79,7 +79,7 @@
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>Show system users (for advanced users only)</source>
-        <translation>Показывать системных пользователей (только для продвинутых пользователей)</translation>
+        <translation>Показывать системных пользователей (только для опытных)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
@@ -145,7 +145,7 @@
         <location filename="../mainwindow.ui" line="209"/>
         <location filename="../mainwindow.cpp" line="209"/>
         <source>Change Password</source>
-        <translation>Изменить пароль</translation>
+        <translation>Сменить пароль</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="212"/>
@@ -162,12 +162,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="184"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation>Вы действительно хотите удалить выбранного пользователя?</translation>
+        <translation>Уверены, что хотите удалить выбранного пользователя?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="199"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation>Вы действительно хотите удалить выбранную группу?</translation>
+        <translation>Уверены, что хотите удалить выбранную группу?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="211"/>
