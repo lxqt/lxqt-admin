@@ -1,11 +1,11 @@
 project(lxqt-admin-user)
 
 # build static helper class first
-include_directories (
+include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-set ( lxqt-admin-user_SRCS
+set(lxqt-admin-user_SRCS
     main.cpp
     mainwindow.cpp
     userdialog.cpp
@@ -13,14 +13,14 @@ set ( lxqt-admin-user_SRCS
     usermanager.cpp
 )
 
-set ( lxqt-admin-user_MOCS
+set(lxqt-admin-user_MOCS
     mainwindow.h
     userdialog.h
     groupdialog.h
     usermanager.h
 )
 
-set( lxqt-admin-user_UIS
+set(lxqt-admin-user_UIS
     mainwindow.ui
     userdialog.ui
     groupdialog.ui

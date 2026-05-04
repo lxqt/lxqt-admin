@@ -5,7 +5,7 @@ include_directories (
     ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-set ( lxqt-admin-time_HDRS
+set(lxqt-admin-time_HDRS
     timeadmindialog.h
     datetime.h
     timezone.h
@@ -15,7 +15,7 @@ set ( lxqt-admin-time_HDRS
     nosdtimedatectl.h
 )
 
-set ( lxqt-admin-time_SRCS
+set (lxqt-admin-time_SRCS
     main.cpp
     timeadmindialog.cpp
     datetime.cpp
@@ -25,13 +25,13 @@ set ( lxqt-admin-time_SRCS
     nosdtimedatectl.cpp
 )
 
-set ( lxqt-admin-time_MOCS
+set (lxqt-admin-time_MOCS
     timeadmindialog.h
     datetime.h
     timezone.h
 )
 
-set( lxqt-admin-time_UIS
+set(lxqt-admin-time_UIS
     datetime.ui
     timezone.ui
 )
@@ -88,7 +88,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
 else()
     if(NOT LIBSYSTEMD_FOUND)
         configure_file(org.lxqt.lxqt-admin-time.policy.nosd.in "${CMAKE_CURRENT_BINARY_DIR}/org.lxqt.lxqt-admin-time.policy.nosd")
-        install (PROGRAMS "lxqt-admin-time-helper.nosystemd" DESTINATION bin RENAME lxqt-admin-time-helper)
+        install(PROGRAMS "lxqt-admin-time-helper.nosystemd" DESTINATION bin RENAME lxqt-admin-time-helper)
         install(FILES "${CMAKE_CURRENT_BINARY_DIR}/org.lxqt.lxqt-admin-time.policy.nosd" DESTINATION "${POLKITQT-1_POLICY_FILES_INSTALL_DIR}" RENAME org.lxqt.lxqt-admin-time.policy)
     endif()
 endif()
