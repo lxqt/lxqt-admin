@@ -41,18 +41,19 @@ qt6_wrap_ui(UIS ${lxqt-admin-time_UIS})
 
 # Translations **********************************
 lxqt_translate_ts(lxqt-admin-time_QM_FILES
-    UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
+    UPDATE_TRANSLATIONS
+        ${UPDATE_TRANSLATIONS}
     SOURCES
-    ${lxqt-admin-time_HDRS}
-    ${lxqt-admin-time_SRCS}
-    ${lxqt-admin-time_UIS}
+        ${lxqt-admin-time_HDRS}
+        ${lxqt-admin-time_SRCS}
+        ${lxqt-admin-time_UIS}
     INSTALL_DIR
-    "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
 )
 
 lxqt_translate_desktop(DESKTOP_FILES
     SOURCES
-    lxqt-admin-time.desktop.in
+        lxqt-admin-time.desktop.in
     USE_YAML
 )
 
@@ -82,12 +83,12 @@ target_link_libraries(lxqt-admin-time
 install(TARGETS lxqt-admin-time RUNTIME DESTINATION bin)
 install(FILES ${DESKTOP_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
 if(${CMAKE_SYSTEM_NAME} MATCHES "FreeBSD")
-install(PROGRAMS "lxqt-admin-time-helper.freebsd" DESTINATION bin RENAME lxqt-admin-time-helper)
-install(FILES "org.lxqt.lxqt-admin-time.policy" DESTINATION "${POLKITQT-1_POLICY_FILES_INSTALL_DIR}")
+    install(PROGRAMS "lxqt-admin-time-helper.freebsd" DESTINATION bin RENAME lxqt-admin-time-helper)
+    install(FILES "org.lxqt.lxqt-admin-time.policy" DESTINATION "${POLKITQT-1_POLICY_FILES_INSTALL_DIR}")
 else()
-if(NOT LIBSYSTEMD_FOUND)
-configure_file(org.lxqt.lxqt-admin-time.policy.nosd.in "${CMAKE_CURRENT_BINARY_DIR}/org.lxqt.lxqt-admin-time.policy.nosd")
-install (PROGRAMS "lxqt-admin-time-helper.nosystemd" DESTINATION bin RENAME lxqt-admin-time-helper)
-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/org.lxqt.lxqt-admin-time.policy.nosd" DESTINATION "${POLKITQT-1_POLICY_FILES_INSTALL_DIR}" RENAME org.lxqt.lxqt-admin-time.policy)
-endif()
+    if(NOT LIBSYSTEMD_FOUND)
+        configure_file(org.lxqt.lxqt-admin-time.policy.nosd.in "${CMAKE_CURRENT_BINARY_DIR}/org.lxqt.lxqt-admin-time.policy.nosd")
+        install (PROGRAMS "lxqt-admin-time-helper.nosystemd" DESTINATION bin RENAME lxqt-admin-time-helper)
+        install(FILES "${CMAKE_CURRENT_BINARY_DIR}/org.lxqt.lxqt-admin-time.policy.nosd" DESTINATION "${POLKITQT-1_POLICY_FILES_INSTALL_DIR}" RENAME org.lxqt.lxqt-admin-time.policy)
+    endif()
 endif()

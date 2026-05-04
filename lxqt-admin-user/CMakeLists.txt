@@ -31,18 +31,19 @@ qt6_wrap_ui(UIS ${lxqt-admin-user_UIS})
 
 # Translations **********************************
 lxqt_translate_ts(lxqt-admin-user_QM_FILES
-    UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
+    UPDATE_TRANSLATIONS
+        ${UPDATE_TRANSLATIONS}
     SOURCES
-    ${lxqt-admin-user_MOCS}
-    ${lxqt-admin-user_SRCS}
-    ${lxqt-admin-user_UIS}
+        ${lxqt-admin-user_MOCS}
+        ${lxqt-admin-user_SRCS}
+        ${lxqt-admin-user_UIS}
     INSTALL_DIR
-    "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
 )
 
 lxqt_translate_desktop(DESKTOP_FILES
     SOURCES
-    lxqt-admin-user.desktop.in
+        lxqt-admin-user.desktop.in
     USE_YAML
 )
 lxqt_app_translation_loader(lxqt-admin-user_QM_LOADER ${PROJECT_NAME})
