@@ -1,11 +1,11 @@
 project(lxqt-admin-user)
 
 # build static helper class first
-include_directories (
+include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-set ( lxqt-admin-user_SRCS
+set(lxqt-admin-user_SRCS
     main.cpp
     mainwindow.cpp
     userdialog.cpp
@@ -13,14 +13,14 @@ set ( lxqt-admin-user_SRCS
     usermanager.cpp
 )
 
-set ( lxqt-admin-user_MOCS
+set(lxqt-admin-user_MOCS
     mainwindow.h
     userdialog.h
     groupdialog.h
     usermanager.h
 )
 
-set( lxqt-admin-user_UIS
+set(lxqt-admin-user_UIS
     mainwindow.ui
     userdialog.ui
     groupdialog.ui
@@ -31,18 +31,19 @@ qt6_wrap_ui(UIS ${lxqt-admin-user_UIS})
 
 # Translations **********************************
 lxqt_translate_ts(lxqt-admin-user_QM_FILES
-    UPDATE_TRANSLATIONS ${UPDATE_TRANSLATIONS}
+    UPDATE_TRANSLATIONS
+        ${UPDATE_TRANSLATIONS}
     SOURCES
-    ${lxqt-admin-user_MOCS}
-    ${lxqt-admin-user_SRCS}
-    ${lxqt-admin-user_UIS}
+        ${lxqt-admin-user_MOCS}
+        ${lxqt-admin-user_SRCS}
+        ${lxqt-admin-user_UIS}
     INSTALL_DIR
-    "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
 )
 
 lxqt_translate_desktop(DESKTOP_FILES
     SOURCES
-    lxqt-admin-user.desktop.in
+        lxqt-admin-user.desktop.in
     USE_YAML
 )
 lxqt_app_translation_loader(lxqt-admin-user_QM_LOADER ${PROJECT_NAME})
