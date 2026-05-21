@@ -1,5 +1,3 @@
-project(lxqt-admin-user)
-
 # build static helper class first
 include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
@@ -37,8 +35,10 @@ lxqt_translate_ts(lxqt-admin-user_QM_FILES
         ${lxqt-admin-user_MOCS}
         ${lxqt-admin-user_SRCS}
         ${lxqt-admin-user_UIS}
+    TEMPLATE
+        "lxqt-admin-user"
     INSTALL_DIR
-        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+        "${LXQT_TRANSLATIONS_DIR}/lxqt-admin-user"
 )
 
 lxqt_translate_desktop(DESKTOP_FILES
@@ -46,7 +46,7 @@ lxqt_translate_desktop(DESKTOP_FILES
         lxqt-admin-user.desktop.in
     USE_YAML
 )
-lxqt_app_translation_loader(lxqt-admin-user_QM_LOADER ${PROJECT_NAME})
+lxqt_app_translation_loader(lxqt-admin-user_QM_LOADER lxqt-admin-user)
 #************************************************
 
 add_executable(lxqt-admin-user

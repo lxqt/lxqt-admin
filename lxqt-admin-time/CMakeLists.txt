@@ -1,5 +1,3 @@
-project(lxqt-admin-time)
-
 # build static helper class first
 include_directories (
     ${CMAKE_CURRENT_BINARY_DIR}
@@ -47,8 +45,10 @@ lxqt_translate_ts(lxqt-admin-time_QM_FILES
         ${lxqt-admin-time_HDRS}
         ${lxqt-admin-time_SRCS}
         ${lxqt-admin-time_UIS}
+    TEMPLATE
+        "lxqt-admin-time"
     INSTALL_DIR
-        "${LXQT_TRANSLATIONS_DIR}/${PROJECT_NAME}"
+        "${LXQT_TRANSLATIONS_DIR}/lxqt-admin-time"
 )
 
 lxqt_translate_desktop(DESKTOP_FILES
@@ -57,7 +57,7 @@ lxqt_translate_desktop(DESKTOP_FILES
     USE_YAML
 )
 
-lxqt_app_translation_loader(lxqt-admin-time_QM_LOADER ${PROJECT_NAME})
+lxqt_app_translation_loader(lxqt-admin-time_QM_LOADER lxqt-admin-time)
 #************************************************
 
 find_package(PkgConfig QUIET)
