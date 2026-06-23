@@ -40,10 +40,10 @@ class TimezonePage : public QWidget
     Q_OBJECT
 
 public:
-    explicit TimezonePage(const QStringList & zones, const QString & currentimezone, QWidget *parent = 0);
+    explicit TimezonePage(const QStringList &zones, const QString &currentTimezone, QWidget *parent = 0);
     ~TimezonePage();
     QString timezone() const;
-    inline bool isChanged() const {return mZoneChanged;}
+    inline bool isChanged() const { return mZoneChanged; }
 
 public slots:
     void reload();
@@ -58,7 +58,6 @@ private slots:
 private:
     Ui::Timezone *ui;
     bool mZoneChanged;
-    QString mCurrentTimeZone;
     QStringList mZonesList;
 };
 

@@ -28,7 +28,7 @@
 #include "timezone.h"
 #include "ui_timezone.h"
 
-TimezonePage::TimezonePage(const QStringList & zones, const QString & currentimezone, QWidget *parent) :
+TimezonePage::TimezonePage(const QStringList &zones, const QString &currentTimezone, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Timezone),
     mZoneChanged(false),
@@ -36,8 +36,8 @@ TimezonePage::TimezonePage(const QStringList & zones, const QString & currentime
 {
     ui->setupUi(this);
 
-    if (!currentimezone.isEmpty())
-        ui->label_timezone->setText(currentimezone);
+    if (!currentTimezone.isEmpty())
+        ui->label_timezone->setText(currentTimezone);
     else
         ui->label_timezone->setText(tr("None"));
 
