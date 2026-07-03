@@ -81,7 +81,7 @@ void TimeAdminDialog::onChanged()
 void TimeAdminDialog::showChangedStar()
 {
     if(mTimezoneWidget->isChanged() || mDateTimeWidget->modified())
-        setWindowTitle(mWindowTitle + QL1C('*'));
+        setWindowTitle(mWindowTitle + u'*');
     else
         setWindowTitle(mWindowTitle);
 }
