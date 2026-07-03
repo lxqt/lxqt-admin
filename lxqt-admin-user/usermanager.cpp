@@ -255,7 +255,7 @@ bool UserManager::addUser(UserInfo* user) {
         command << QStringLiteral("-g") << QString::number(user->gid());
     }
     if(!user->groups().isEmpty()) {  // set group membership
-        command << QStringLiteral("-G") << user->groups().join(QL1C(','));
+        command << QStringLiteral("-G") << user->groups().join(u',');
     }
 #ifdef Q_OS_FREEBSD
     command << QStringLiteral("-n");
@@ -297,7 +297,7 @@ bool UserManager::modifyUser(UserInfo* user, UserInfo* newSettings) {
 	isDirty=true;
     }
     if(newSettings->groups() != user->groups()) {  // change group membership
-        command << QStringLiteral("-G") << newSettings->groups().join(QL1C(','));
+        command << QStringLiteral("-G") << newSettings->groups().join(u',');
 	isDirty=true;
     }
 #ifdef Q_OS_FREEBSD
@@ -378,7 +378,7 @@ bool UserManager::modifyGroup(GroupInfo* group, GroupInfo* newSettings) {
     if(newSettings->members() != group->members()) {
         isDirty = true;
         command << QStringLiteral("-M");  // Set the list of group members.
-        command << newSettings->members().join(QL1C(','));
+        command << newSettings->members().join(u',');
     }
     command << QStringLiteral("-n");
 #endif
@@ -393,7 +393,7 @@ bool UserManager::modifyGroup(GroupInfo* group, GroupInfo* newSettings) {
         command.clear();
         command << QStringLiteral("gpasswd");
         command << QStringLiteral("-M");  // Set the list of group members.
-        command << newSettings->members().join(QL1C(','));
+        command << newSettings->members().join(u',');
         //if the group name changed the group->name() is still the old setting.
         if(newSettings->name() != group->name()) {
            command << newSettings->name();
