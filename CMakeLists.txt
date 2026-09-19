@@ -13,7 +13,7 @@ set(LIB_INSTALL_DIR "lib${LIB_SUFFIX}" CACHE PATH "Installation path for librari
 
 # Minimum Versions
 set(LXQT_MINIMUM_VERSION "2.4.0")
-set(QT_MINIMUM_VERSION "6.6.0")
+set(QT_MINIMUM_VERSION "6.10.0")
 
 find_package(Qt6Widgets ${QT_MINIMUM_VERSION} REQUIRED)
 find_package(lxqt ${LXQT_MINIMUM_VERSION} REQUIRED)
