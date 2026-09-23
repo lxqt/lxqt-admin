@@ -49,7 +49,7 @@ TimeAdminDialog::TimeAdminDialog(QWidget *parent):
     mWindowTitle = windowTitle();
 
     mDateTimeWidget = new DateTimePage(mTimeDateCtl.useNtp(), mTimeDateCtl.localRtc(), this);
-    addPage(mDateTimeWidget, tr("Date and time"), QStringLiteral("preferences-system-time"));
+    addPage(mDateTimeWidget, tr("Date and Time"), QStringLiteral("preferences-system-time"));
     connect(this, &LXQt::ConfigDialog::reset, mDateTimeWidget, &DateTimePage::reload);
     connect(mDateTimeWidget, &DateTimePage::changed, this, &TimeAdminDialog::onChanged);
 
