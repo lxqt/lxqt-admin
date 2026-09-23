@@ -52,7 +52,7 @@
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="52"/>
-        <source>Date and time</source>
+        <source>Date and Time</source>
         <translation>Дата и время</translation>
     </message>
     <message>
