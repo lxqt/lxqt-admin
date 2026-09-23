@@ -51,7 +51,7 @@
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="51"/>
-        <source>Date and time</source>
+        <source>Date and Time</source>
         <translation>Data y hora</translation>
     </message>
     <message>
