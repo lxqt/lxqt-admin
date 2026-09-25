@@ -6,37 +6,37 @@
     <message>
         <location filename="../groupdialog.ui" line="14"/>
         <source>Group Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Taldearen Ezarpenak</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="20"/>
         <source>Group name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Taldearen izena:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="30"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Lehenetsia</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="40"/>
         <source>Group ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>Taldearen IDa:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="47"/>
         <source>Users belong to this group:</source>
-        <translation type="unfinished"></translation>
+        <translation>Erabiltzaileak talde honetan daude:</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errorea</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
         <source>The group name cannot be empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Taldearen izena ezin da hutsik egon.</translation>
     </message>
 </context>
 <context>
@@ -44,7 +44,7 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>User and Group Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Erabiltzaile eta Talde Ezarpenak</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="40"/>
@@ -54,32 +54,32 @@
     <message>
         <location filename="../mainwindow.ui" line="59"/>
         <source>Login Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Saioa hasteko izena</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="64"/>
         <source>User ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Erabiltzaile IDa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="69"/>
         <source>Full Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Izen-abizenak</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="74"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Taldea</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="79"/>
         <source>Home Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Hasierako direktorioa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>Show system users (for advanced users only)</source>
-        <translation type="unfinished"></translation>
+        <translation>Erakutsi sistemaren erabiltzaileak (erabiltzaile aurreratuentzat bakarrik)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
