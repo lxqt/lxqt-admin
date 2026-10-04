@@ -6,6 +6,36 @@
 
   <action id="org.lxqt.lxqt-admin-user">
     <message>Authentication is required for user administration</message>
+    <message xml:lang="ar">لطلب مطلوب لإدارة المستخدمين</message>
+    <message xml:lang="bg">Необходима е удостоверяване за администриране на</message>
+    <message xml:lang="cs">Pro správu uživatelů je vyžadována autentizace</message>
+    <message xml:lang="da">Godkendelse kræves for brugeradministratio</message>
+    <message xml:lang="de">Authentifizierung ist für die Benutzerverwaltung erforderlich</message>
+    <message xml:lang="el">Απαιτείται πιστοποίηση για τη διαχείριση χρηστών</message>
+    <message xml:lang="es">Se requiere autenticación para la administración de usuarios</message>
+    <message xml:lang="et">Kasutajate haldamiseks on vajalik autentimine</message>
+    <message xml:lang="fi">Käyttäjähallinta edellyttää todentamista</message>
+    <message xml:lang="fr">L'authentification est requise pour l'administration des utilisateurs</message>
+    <message xml:lang="he">נדרש אימות לניהול משתמשים</message>
+    <message xml:lang="hr">Az azonosítás szükséges a felhasználókezeléshez</message>
+    <message xml:lang="id"> Otentikasi diperlukan untuk administrasi pengguna</message>
+    <message xml:lang="it">L'autenticazione è necessaria per l'amministrazione degli utenti</message>
+    <message xml:lang="ja">ユーザー管理には認証が必要です</message>
+    <message xml:lang="ko">사용자 관리를 위해 인증이 필요합니다</message>
+    <message xml:lang="lt">Vartotojo administravimui reikalinga autentikacija</message>
+    <message xml:lang="nl">Authenticatie is vereist voor gebruikersbeheer</message>
+    <message xml:lang="nb_NO">Autentisering er påkrevd for brukeradministrasjon</message>
+    <message xml:lang="pl">Autoryzacja jest wymagana do administracji użytkownikami</message>
+    <message xml:lang="pt">Autenticação é necessária para administração de usuários</message>
+    <message xml:lang="ro">Autentificarea este necesară pentru administrarea utilizatorilor</message>
+    <message xml:lang="sk">Autentifikácia je potrebná pre správu používateľov</message>
+    <message xml:lang="tr">Kullanıcı yönetimi için kimlik doğrulama gereklidir</message>
+    <message xml:lang="uk"> Аутентифікація необхідна для адміністрування користувачів</message>
+    <message xml:lang="ru">Для изменения настроек пользователей и групп требуется аутентификация</message>
+    <message xml:lang="vi">Xác thực là bắt buộc cho quản lý người dùng</message>
+    <message xml:lang="zn_CN">用户管理需要进行身份验证</message>
+    <message xml:lang="zn_TW">使用者管理需要進行身分驗證</message>
+
     <icon_name>preferences-system</icon_name>
     <defaults>
       <allow_any>auth_admin</allow_any>
