@@ -143,7 +143,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
-        <location filename="../mainwindow.cpp" line="209"/>
+        <location filename="../mainwindow.cpp" line="204"/>
         <source>Change Password</source>
         <translation>غيّر كلمة السر</translation>
     </message>
@@ -153,29 +153,29 @@
         <translation>غيّر كلمة سر المستخدم أو المجموعة المحددة</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="184"/>
-        <location filename="../mainwindow.cpp" line="199"/>
-        <location filename="../mainwindow.cpp" line="221"/>
+        <location filename="../mainwindow.cpp" line="179"/>
+        <location filename="../mainwindow.cpp" line="194"/>
+        <location filename="../mainwindow.cpp" line="216"/>
         <source>Confirm</source>
         <translation>تأكيد</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="184"/>
+        <location filename="../mainwindow.cpp" line="179"/>
         <source>Are you sure you want to delete the selected user?</source>
         <translation>أمتأكد من حذف المستخدم المحدد؟</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="199"/>
+        <location filename="../mainwindow.cpp" line="194"/>
         <source>Are you sure you want to delete the selected group?</source>
         <translation>أمتأكد من حذف المجموعة المحددة؟</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="211"/>
+        <location filename="../mainwindow.cpp" line="206"/>
         <source>Input the new password for %1:</source>
         <translation>أدخِل كلمة سر ⁨%1⁩ الجديدة:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="221"/>
+        <location filename="../mainwindow.cpp" line="216"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation>أمتأكد من ضبط كلمة سر فارغة؟</translation>
     </message>

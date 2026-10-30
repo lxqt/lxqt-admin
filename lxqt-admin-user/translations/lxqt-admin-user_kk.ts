@@ -143,7 +143,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
-        <location filename="../mainwindow.cpp" line="209"/>
+        <location filename="../mainwindow.cpp" line="204"/>
         <source>Change Password</source>
         <translation>Парольді өзгерту</translation>
     </message>
@@ -153,29 +153,29 @@
         <translation>Таңдалған пайдаланушы немесе топ үшін парольді өзгерту</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="184"/>
-        <location filename="../mainwindow.cpp" line="199"/>
-        <location filename="../mainwindow.cpp" line="221"/>
+        <location filename="../mainwindow.cpp" line="179"/>
+        <location filename="../mainwindow.cpp" line="194"/>
+        <location filename="../mainwindow.cpp" line="216"/>
         <source>Confirm</source>
         <translation>Растау</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="184"/>
+        <location filename="../mainwindow.cpp" line="179"/>
         <source>Are you sure you want to delete the selected user?</source>
         <translation>Таңдалған пайдаланушыны өшіруді шынымен қалайсыз ба?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="199"/>
+        <location filename="../mainwindow.cpp" line="194"/>
         <source>Are you sure you want to delete the selected group?</source>
         <translation>Таңдалған топты өшіруді шынымен қалайсыз ба?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="211"/>
+        <location filename="../mainwindow.cpp" line="206"/>
         <source>Input the new password for %1:</source>
         <translation>%1 үшін жаңа парольді енгізіңіз:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="221"/>
+        <location filename="../mainwindow.cpp" line="216"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation>Бос парольді орнатуды шынымен қалайсыз ба?</translation>
     </message>
