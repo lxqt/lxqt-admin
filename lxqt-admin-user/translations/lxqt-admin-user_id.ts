@@ -143,7 +143,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
-        <location filename="../mainwindow.cpp" line="209"/>
+        <location filename="../mainwindow.cpp" line="204"/>
         <source>Change Password</source>
         <translation>Ubah Kata Sandi</translation>
     </message>
@@ -153,29 +153,29 @@
         <translation>Ubah kata sandi untuk pengguna atau grup yang terpilih</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="184"/>
-        <location filename="../mainwindow.cpp" line="199"/>
-        <location filename="../mainwindow.cpp" line="221"/>
+        <location filename="../mainwindow.cpp" line="179"/>
+        <location filename="../mainwindow.cpp" line="194"/>
+        <location filename="../mainwindow.cpp" line="216"/>
         <source>Confirm</source>
         <translation>Konfirmasi</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="184"/>
+        <location filename="../mainwindow.cpp" line="179"/>
         <source>Are you sure you want to delete the selected user?</source>
         <translation>Apakah Anda yakin ingin menghapus pengguna yang terpilih?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="199"/>
+        <location filename="../mainwindow.cpp" line="194"/>
         <source>Are you sure you want to delete the selected group?</source>
         <translation>Apakah Anda yakin ingin menghapus grup yang terpilih?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="211"/>
+        <location filename="../mainwindow.cpp" line="206"/>
         <source>Input the new password for %1:</source>
         <translation>Masukkan kata sandi baru untuk %1:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="221"/>
+        <location filename="../mainwindow.cpp" line="216"/>
         <source>Are you sure you want to set a empty password?</source>
         <translation>Apakah Anda yakin ingin menetapkan kata sandi kosong?</translation>
     </message>
