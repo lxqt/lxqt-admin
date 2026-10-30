@@ -11,7 +11,7 @@
     <message>
         <location filename="../datetime.ui" line="39"/>
         <source>HH:mm:ss</source>
-        <translation>Giờ:phút:giây</translation>
+        <translation>Giờ:Phút:Giây</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="53"/>
@@ -21,12 +21,12 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation>Bật đồng bộ thời gian qua mạng (NTP)</translation>
+        <translation>Bật Đồng bộ Thời gian qua Mạng (NTP)</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation>RTC trong giờ cục bộ</translation>
+        <translation>RTC trong Giờ Địa phương</translation>
     </message>
 </context>
 <context>
@@ -34,13 +34,13 @@
     <message>
         <location filename="../nosdtimedatectl.cpp" line="146"/>
         <source>lxqt-admin-time-helper</source>
-        <translation>Trợ giúp quản trị LXQt (Thời gian)</translation>
+        <translation>Trợ giúp Quản trị LXQt (Thời gian)</translation>
     </message>
     <message>
         <location filename="../fbsdtimedatectl.cpp" line="125"/>
         <location filename="../nosdtimedatectl.cpp" line="147"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation>&lt;strong&gt;Hành động (%1) thất bại:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
+        <translation>&lt;strong&gt;Hành động (%1) Thất bại:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 <context>
@@ -48,12 +48,12 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="46"/>
         <source>Time and date configuration</source>
-        <translation>Cầu hình ngày giờ</translation>
+        <translation>Cầu hình Ngày và Giờ</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="52"/>
         <source>Date and Time</source>
-        <translation>Ngày và giờ</translation>
+        <translation>Ngày và Giờ</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="60"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../timezone.cpp" line="42"/>
         <source>None</source>
-        <translation>Không</translation>
+        <translation>Không có</translation>
     </message>
 </context>
 </TS>

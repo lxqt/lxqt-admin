@@ -6,37 +6,37 @@
     <message>
         <location filename="../groupdialog.ui" line="14"/>
         <source>Group Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Taldearen Ezarpenak</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="20"/>
         <source>Group name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Taldearen izena:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="30"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Lehenetsia</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="40"/>
         <source>Group ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>Taldearen IDa:</translation>
     </message>
     <message>
         <location filename="../groupdialog.ui" line="47"/>
         <source>Users belong to this group:</source>
-        <translation type="unfinished"></translation>
+        <translation>Erabiltzaileak talde honetakoak dira:</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errorea</translation>
     </message>
     <message>
         <location filename="../groupdialog.cpp" line="64"/>
         <source>The group name cannot be empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Taldearen izena ezin da hutsik egon.</translation>
     </message>
 </context>
 <context>
@@ -44,140 +44,140 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>User and Group Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Erabiltzaile- eta talde-ezarpenak</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="40"/>
         <source>&amp;Users</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Erabiltzaileak</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="59"/>
         <source>Login Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Saio-hasierako izena</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="64"/>
         <source>User ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Erabiltzaile-IDa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="69"/>
         <source>Full Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Izen-abizenak</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="74"/>
         <source>Group</source>
-        <translation type="unfinished"></translation>
+        <translation>Taldea</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="79"/>
         <source>Home Directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Etxeko Direktorioa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="87"/>
         <source>Show system users (for advanced users only)</source>
-        <translation type="unfinished"></translation>
+        <translation>Erakutsi sistemako erabiltzaileak (erabiltzaile aurreratuentzat soilik)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="95"/>
         <source>&amp;Groups</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Taldeak</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="111"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Izena</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="116"/>
         <source>Group ID</source>
-        <translation type="unfinished"></translation>
+        <translation>Taldearen IDa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="121"/>
         <source>Members</source>
-        <translation type="unfinished"></translation>
+        <translation>Kideak</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="188"/>
         <source>Edit properties of the selected item</source>
-        <translation type="unfinished"></translation>
+        <translation>Editatu hautatutako elementuaren propietateak</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="161"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Gehitu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="164"/>
         <source>Add new users or groups</source>
-        <translation type="unfinished"></translation>
+        <translation>Gehitu erabiltzaile edo talde berriak</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="173"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Ezabatu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="176"/>
         <source>Delete selected item</source>
-        <translation type="unfinished"></translation>
+        <translation>Ezabatu hautatutako elementua</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="185"/>
         <source>Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propietateak</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Freskatu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="200"/>
         <source>Refresh the lists</source>
-        <translation type="unfinished"></translation>
+        <translation>Freskatu zerrendak</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="209"/>
         <location filename="../mainwindow.cpp" line="209"/>
         <source>Change Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Aldatu pasahitza</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="212"/>
         <source>Change password for the selected user or group</source>
-        <translation type="unfinished"></translation>
+        <translation>Aldatu hautatutako erabiltzailearen edo taldearen pasahitza</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="184"/>
         <location filename="../mainwindow.cpp" line="199"/>
         <location filename="../mainwindow.cpp" line="221"/>
         <source>Confirm</source>
-        <translation type="unfinished"></translation>
+        <translation>Berretsi</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="184"/>
         <source>Are you sure you want to delete the selected user?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ziur zaude hautatutako erabiltzailea ezabatu nahi duzula?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="199"/>
         <source>Are you sure you want to delete the selected group?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ziur zaude hautatutako taldea ezabatu nahi duzula?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="211"/>
         <source>Input the new password for %1:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sartu %1 erabiltzailearen pasahitz berria:</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="221"/>
         <source>Are you sure you want to set a empty password?</source>
-        <translation type="unfinished"></translation>
+        <translation>Ziur zaude pasahitz huts bat ezarri nahi duzula?</translation>
     </message>
 </context>
 <context>
@@ -185,72 +185,72 @@
     <message>
         <location filename="../userdialog.ui" line="14"/>
         <source>User Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Erabiltzailearen ezarpenak</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="24"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Orokorra</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="43"/>
         <source>Full name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Izen-abizenak:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="33"/>
         <source>Login name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Saio-hasierako izena:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="53"/>
         <source>User ID:</source>
-        <translation type="unfinished"></translation>
+        <translation>Erabiltzaile-IDa:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="60"/>
         <source>Default</source>
-        <translation type="unfinished"></translation>
+        <translation>Lehenetsia</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="70"/>
         <source>Main group:</source>
-        <translation type="unfinished"></translation>
+        <translation>Talde nagusia:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="85"/>
         <source>Groups</source>
-        <translation type="unfinished"></translation>
+        <translation>Taldeak</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="91"/>
         <source>The user belongs to the following groups:</source>
-        <translation type="unfinished"></translation>
+        <translation>Erabiltzailea talde hauetako kide da:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="109"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Aurreratua</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="115"/>
         <source>Login shell:</source>
-        <translation type="unfinished"></translation>
+        <translation>Saio-hasierako shell-a:</translation>
     </message>
     <message>
         <location filename="../userdialog.ui" line="132"/>
         <source>Home directory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Etxeko direktorioa:</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="120"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Errorea</translation>
     </message>
     <message>
         <location filename="../userdialog.cpp" line="120"/>
         <source>The user name cannot be empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Erabiltzailearen izena ezin da hutsik egon.</translation>
     </message>
 </context>
 <context>
@@ -258,7 +258,7 @@
     <message>
         <location filename="../usermanager.cpp" line="229"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Ekintzak (%1) huts egin du:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 </TS>
