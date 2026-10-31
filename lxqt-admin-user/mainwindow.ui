@@ -154,8 +154,7 @@
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionAdd">
    <property name="icon">
-    <iconset theme="list-add">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="list-add"/>
    </property>
    <property name="text">
     <string>Add</string>
@@ -166,8 +165,7 @@
   </action>
   <action name="actionDelete">
    <property name="icon">
-    <iconset theme="list-remove">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="list-remove"/>
    </property>
    <property name="text">
     <string>Delete</string>
@@ -178,8 +176,7 @@
   </action>
   <action name="actionProperties">
    <property name="icon">
-    <iconset theme="document-properties">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-properties"/>
    </property>
    <property name="text">
     <string>Properties</string>
@@ -190,8 +187,7 @@
   </action>
   <action name="actionRefresh">
    <property name="icon">
-    <iconset theme="view-refresh">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="view-refresh"/>
    </property>
    <property name="text">
     <string>Refresh</string>
@@ -202,8 +198,7 @@
   </action>
   <action name="actionChangePasswd">
    <property name="icon">
-    <iconset theme="dialog-password">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="dialog-password"/>
    </property>
    <property name="text">
     <string>Change Password</string>
