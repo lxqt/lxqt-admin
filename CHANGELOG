@@ -1,3 +1,11 @@
+lxqt-admin-2.5.0 / 2026-11-05
+==============================
+ * Removed old codes of Qt < 6.7.
+ * CMake maintenance.
+ * Dropped the QL1C macro.
+ * Updated the address of Free Software Foundation.
+ * Capitalization.
+
 lxqt-admin-2.4.0 / 2026-04-20
 ==============================
 * Updated translations and bumped the version.
