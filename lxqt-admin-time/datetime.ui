@@ -100,32 +100,12 @@
    <signal>toggled(bool)</signal>
    <receiver>calendar</receiver>
    <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>221</x>
-     <y>269</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>228</x>
-     <y>162</y>
-    </hint>
-   </hints>
   </connection>
   <connection>
    <sender>ntp</sender>
    <signal>toggled(bool)</signal>
    <receiver>edit_time</receiver>
    <slot>setDisabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>105</x>
-     <y>260</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>173</x>
-     <y>55</y>
-    </hint>
-   </hints>
   </connection>
  </connections>
 </ui>
