@@ -21,12 +21,12 @@
     <message>
         <location filename="../datetime.ui" line="70"/>
         <source>Enable network time synchronization (NTP)</source>
-        <translation>Iespējot tīkla laika sinhronizāciju NTP (Network Time Protocol)</translation>
+        <translation>Iespējot tīkla laika sinhronizāciju (NTP)</translation>
     </message>
     <message>
         <location filename="../datetime.ui" line="77"/>
         <source>RTC is in local time</source>
-        <translation>RTC (Real-Time Clock) ir lokālajā laikā</translation>
+        <translation>RTC ir vietējā laikā</translation>
     </message>
 </context>
 <context>
@@ -40,7 +40,7 @@
         <location filename="../fbsdtimedatectl.cpp" line="125"/>
         <location filename="../nosdtimedatectl.cpp" line="147"/>
         <source>&lt;strong&gt;Action (%1) failed:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</source>
-        <translation>&lt;strong&gt;Darbība (%1) neizdevās&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
+        <translation>&lt;strong&gt;Darbība (%1) neizdevās:&lt;/strong&gt;&lt;br/&gt;&lt;pre&gt;%2&lt;/pre&gt;</translation>
     </message>
 </context>
 <context>
@@ -58,7 +58,7 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="60"/>
         <source>Timezone</source>
-        <translation>Laika zona</translation>
+        <translation>Laika josla</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="123"/>
@@ -71,17 +71,17 @@
     <message>
         <location filename="../timeadmindialog.cpp" line="159"/>
         <source>Change RTC to be in localtime requires a reboot</source>
-        <translation>Lai nomainītu RTC uz vietējo laiku, ir nepieciešama datora pārlādēšana</translation>
+        <translation>Lai RTC iestatītu uz vietējo laiku, jāpārstartē dators</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="160"/>
         <source>Change RTC to be in UTC requires a reboot</source>
-        <translation>Lai veiktu RTC nomaiņu uz UTC nepieciešama datora pārlādēšana</translation>
+        <translation>Lai RTC iestatītu uz UTC, jāpārstartē dators</translation>
     </message>
     <message>
         <location filename="../timeadmindialog.cpp" line="161"/>
         <source>Reboot required</source>
-        <translation>Nepieciešama datora pārlāde</translation>
+        <translation>Nepieciešama pārstartēšana</translation>
     </message>
 </context>
 <context>
@@ -89,7 +89,7 @@
     <message>
         <location filename="../timezone.ui" line="19"/>
         <source>Your current timezone:</source>
-        <translation>Pašreizējā laikazona:</translation>
+        <translation>Pašreizējā laika josla:</translation>
     </message>
     <message>
         <location filename="../timezone.ui" line="32"/>
@@ -102,7 +102,7 @@
     <message>
         <location filename="../timezone.cpp" line="42"/>
         <source>None</source>
-        <translation>Neviena</translation>
+        <translation>Nav</translation>
     </message>
 </context>
 </TS>
