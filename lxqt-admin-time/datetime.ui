@@ -26,12 +26,6 @@
    </item>
    <item>
     <widget class="QTimeEdit" name="edit_time">
-     <property name="maximumSize">
-      <size>
-       <width>400</width>
-       <height>16777215</height>
-      </size>
-     </property>
      <property name="currentSection">
       <enum>QDateTimeEdit::HourSection</enum>
      </property>
@@ -56,12 +50,6 @@
    </item>
    <item>
     <widget class="QCalendarWidget" name="calendar">
-     <property name="maximumSize">
-      <size>
-       <width>400</width>
-       <height>173</height>
-      </size>
-     </property>
     </widget>
    </item>
    <item>
