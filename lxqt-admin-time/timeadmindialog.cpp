@@ -63,7 +63,8 @@ TimeAdminDialog::TimeAdminDialog(QWidget *parent):
 
     setButtons(QDialogButtonBox::Ok|QDialogButtonBox::Cancel);
     connect(this, &LXQt::ConfigDialog::clicked, this, &TimeAdminDialog::onButtonClicked);
-    adjustSize();
+
+    resize(size().expandedTo(childrenRect().size()));
 }
 
 TimeAdminDialog::~TimeAdminDialog()
